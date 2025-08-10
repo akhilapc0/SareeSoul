@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  .form-floating label {
+    color: #6c757d;
+  }
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+  .btn-group .btn {
+    min-width: 120px;
+  }
+  .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  .content-header {
+    border-bottom: 1px solid #e3e6f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+    <section class="content-main">
+      <div class="content-header">
+        <div>
+          <h2 class="content-title card-title">Edit Category</h2>
+          <p>Create a new saree category</p>
+        </div>
+        <div>
+          <a href="/admin/categories" class="btn btn-outline-secondary">
+            <i class="material-icons md-arrow_back"></i> Back to Categories
+          </a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <header class="card-header">
+          <h4 class="card-title">Category Information</h4>
+          <small class="text-muted">Fill in the details below to create a new category</small>
+        </header>
+
+        <div class="card-body">
+          <form action="/admin/categories/edit/<%= category._id %>" method="POST" id="editCategoryForm">
+            <div class="row">
+              <div class="col-lg-8">
+                <!-- Category Name Field -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Category Name"
+                      value="<%= category?.name || '' %>"
+                    />
+                    <label for="name">Category Name</label>
+                  </div>
+                  <div id="nameError" class="text-danger"></div>
+                </div>
+
+                <!-- Category Description Field -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <textarea 
+                      class="form-control" 
+                      id="description" 
+                      name="description" 
+                      placeholder="Category Description"
+                      style="height: 120px"
+                    ><%= category?.description || '' %></textarea>
+                    <label for="description">Category Description</label>
+                  </div>
+                  <div id="descError" class="text-danger"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend Error Message -->
+            <% if (error) { %>
+              <div id="backendError"   class="text-danger mb-3"><%= error %></div>
+            <% } %>
+
+            <hr class="my-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary">
+                  <i class="material-icons md-add"></i> edit Category
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <!-- Frontend Validation -->
+  <script>
+    document.getElementById("editCategoryForm").addEventListener("submit", function (e) {
+      const name = document.getElementById("name").value.trim();
+      const description = document.getElementById("description").value.trim();
+       
+
+      let isValid = true;
+
+      // Clear previous errors
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("descError").textContent = "";
+      document.getElementById('backendError').textContent="";
+
+      if (name.length<3) {
+        document.getElementById("nameError").textContent = "Category name should have 3 characters";
+        isValid = false;
+      }
+
+      if (description.length<10) {
+        document.getElementById("descError").textContent = "Description have atleast 10 characters";
+        isValid = false;
+      }
+
+      if (!isValid) {
+        e.preventDefault(); 
+      }
+    });
+  </script>
+
+ <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const success = urlParams.get('success');
+
+  if (success === 'true') {
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      text: 'Category edited successfully!',
+      confirmButtonColor: '#3085d6'
+    }).then(() => {
+      const url = new URL(window.location);
+      url.searchParams.delete('success');
+      window.history.replaceState({}, document.title, url);
+    });
+  }
+</script>
+
+
+</body>
+</html>

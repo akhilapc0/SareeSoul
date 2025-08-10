@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  .form-floating label {
+    color: #6c757d;
+  }
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+  .btn-group .btn {
+    min-width: 120px;
+  }
+  .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  .content-header {
+    border-bottom: 1px solid #e3e6f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+    <section class="content-main">
+      <div class="content-header">
+        <div>
+          <h2 class="content-title card-title">Edit Brand</h2>
+          <p>Create a new saree brand</p>
+        </div>
+        <div>
+          <a href="/admin/brands" class="btn btn-outline-secondary">
+            <i class="material-icons md-arrow_back"></i> Back to Brands
+          </a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <header class="card-header">
+          <h4 class="card-title">Brand Information</h4>
+          <small class="text-muted">Fill in the details below to create a new brand</small>
+        </header>
+
+        <div class="card-body">
+          <form action="/admin/brands/edit/<%= brand._id %>" method="POST" id="editBrandForm">
+            <div class="row">
+              <div class="col-lg-8">
+                <!-- Brand Name Field -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Brand Name"
+                      value="<%= brand?.name || '' %>"
+                    />
+                    <label for="name">Brand Name</label>
+                  </div>
+                  <div id="nameError" class="text-danger"></div>
+                </div>
+
+                <!-- Brand Description Field -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <textarea 
+                      class="form-control" 
+                      id="description" 
+                      name="description" 
+                      placeholder="Brand Description"
+                      style="height: 120px"
+                    ><%= brand?.description || '' %></textarea>
+                    <label for="description">Brand Description</label>
+                  </div>
+                  <div id="descError" class="text-danger"></div>
+                </div>
+              </div>
+            </div>
+
+             <div class="mb-4">
+                      <label for="brandImage" class="form-label">Brand Image</label>
+                      <input type="file" class="form-control" id="brandImage" name="brandImage" accept=".jpeg,.jpg,.png"  />
+                      <div id="imageError" class="text-danger"></div>
+                    </div>
+                  </div>
+
+          
+          
+            <!-- Backend Error Message -->
+          
+              <div id="backendError"   class="text-danger mb-3"></div>
+          
+
+            <hr class="my-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary">
+                  <i class="material-icons md-add"></i> edit Brand
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <!-- Frontend Validation -->
+  <script>
+
+    document.getElementById("editBrandForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const formData=new FormData();
+      const name = document.getElementById("name").value.trim();
+      formData.append('name',name)
+      const description = document.getElementById("description").value.trim();
+      formData.append('description',description);
+      const brandImage=document.getElementById('brandImage').files[0];
+      formData.append('brandImage',brandImage);
+      const brandId = "<%= brand._id %>";
+
+      let isValid = true;
+
+      // Clear previous errors
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("descError").textContent = "";
+      document.getElementById("backendError").textContent="";
+
+      if (name.length<3) {
+        document.getElementById("nameError").textContent = "Brand name should have 3 characters";
+        isValid = false;
+      }
+
+      if (description.length<10) {
+        document.getElementById("descError").textContent = "Description have atleast 10 characters";
+        isValid = false;
+      }
+      if(!brandImage){
+        document.getElementById('imageError').textContent="Image is required";
+        isValid=false;
+      }
+
+      if (!isValid) return ;
+
+      try{
+        const res=await fetch(`/admin/brands/edit/${brandId}`,{
+          method:"POST",
+          
+          body:formData,
+        })
+        console.log(res)
+
+        const data=await res.json();
+        if(!res.ok){
+          document.getElementById('backendError').textContent=data.error || "something went wrong";
+          return;
+        }
+        Swal.fire({
+          icon:"success",
+          title:"success",
+          text:data.message || "Brand edited successfully",
+          confirmButtonColor: "#3085d6"
+        }).then(()=>{
+          document.getElementById('editBrandForm').reset();
+        });
+      }
+      catch(error){
+        document.getElementById("backendError").textContent="server error try again "+error;
+      }
+
+    });
+  </script>
+
+
+
+
+</body>
+</html>

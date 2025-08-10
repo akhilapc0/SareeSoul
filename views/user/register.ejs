@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="/user/assets/css/login.css">
+
+</head>
+
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-registration">
+          <div class="registration-card">
+            <div class="card-header">
+              <h1 class="card-title">Create Your Account</h1>
+            </div>
+
+            <div class="card-body">
+
+              <% if (typeof successMessage !=='undefined' ) { %>
+                <p style="color: green;">
+                  <%= successMessage %>
+                </p>
+                <% } %>
+
+                  <form action="/register" method="POST" id="registrationForm" class="registration-form">
+                    <div class="form-row">
+                      <div class="form-group password-field">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
+                          value="<%= formData?.firstName || '' %>" required>
+                        <% if (errors?.firstName) { %>
+                          <p style="color:red;">
+                            <%= errors.firstName %>
+                          </p>
+                          <% } %>
+                      </div>
+
+                      <div class="form-group password-field">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
+                          value="<%= formData?.lastName || '' %>" required>
+                        <% if (errors?.lastName) { %>
+                          <p style="color:red;">
+                            <%= errors.lastName %>
+                          </p>
+                          <% } %>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email">Email Address *</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email address"
+                        value="<%= formData?.email || '' %>" required>
+                      <% if (errors?.email) { %>
+                        <p style="color:red;">
+                          <%= errors.email %>
+                        </p>
+                        <% } %>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phoneNumber">Phone Number *</label>
+                      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
+                        value="<%= formData?.phoneNumber || '' %>" required>
+                      <% if (errors?.phoneNumber) { %>
+                        <p style="color:red;">
+                          <%= errors.phoneNumber %>
+                        </p>
+                        <% } %>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group password-field">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" placeholder="Create a strong password"
+                          required>
+                        <% if (errors?.password) { %>
+                          <p style="color:red;">
+                            <%= errors.password %>
+                          </p>
+                          <% } %>
+                      </div>
+                      <div class="form-group password-field">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" name="cpassword" placeholder="Confirm your password"
+                          required>
+                        <% if (errors?.cpassword) { %>
+                          <p style="color:red;">
+                            <%= errors.cpassword %>
+                          </p>
+                          <% } %>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                  </form>
+
+                  <div class="login-link">
+                    Already have an account? <a href="/login">Login here</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+</body>
+
+</html>

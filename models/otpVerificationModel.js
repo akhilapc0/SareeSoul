@@ -1,0 +1,14 @@
+const mongoose=require('mongoose');
+
+const otpVerificationSchema=new mongoose.Schema({
+    userId:     { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  email:      { type: String, required: true },
+  otp:        { type: String, required: true },
+  usageType:  { type: String, required: true }, // e.g., 'emailVerification'
+  expiresAt:  { type: Date, required: true },
+  isUsed:     { type: Boolean, default: false },
+  createdAt:  { type: Date, default: Date.now },
+  updatedAt:  { type: Date, default: null }
+})
+
+module.exports = mongoose.model('OtpVerification', otpVerificationSchema);

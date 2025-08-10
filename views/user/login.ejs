@@ -1,0 +1,426 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <% if (successMessage) { %>
+      <div class="alert alert-success">
+        <%= successMessage %>
+      </div>
+    <% } %>
+
+    <% if (errors.general) { %>
+      <div class="alert alert-danger">
+        <%= errors.general %>
+      </div>
+    <% } %>
+
+    <form action="/login" method="POST" class="card p-4 shadow-sm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input 
+          type="email" 
+          class="form-control <% if (errors.email) { %>is-invalid<% } %>" 
+          id="email" 
+          name="email" 
+          value="<%= formData.email || '' %>">
+        <% if (errors.email) { %>
+          <div class="invalid-feedback"><%= errors.email %></div>
+        <% } %>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input 
+          type="password" 
+          class="form-control <% if (errors.password) { %>is-invalid<% } %>" 
+          id="password" 
+          name="password">
+        <% if (errors.password) { %>
+          <div class="invalid-feedback"><%= errors.password %></div>
+        <% } %>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sign In - Professional Login</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="/user/assets/css/login.css">
+</head>
+
+<body>
+  <header class="header-area">
+    <div class="container">
+      <div class="header-wrap">
+        <div class="logo">
+          <a href="index.html">Evara</a>
+        </div>
+        <div class="header-info">
+          <ul>
+            <li><a href="index.html">← Back to Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-login">
+          <div class="login-card">
+            <div class="card-header">
+              <h1 class="card-title">Welcome Back</h1>
+
+            </div>
+
+            <div class="card-body">
+
+              <div class="divider">
+                <span>or sign in with email</span>
+              </div>
+
+              <% if (typeof successMessage !=='undefined' ) { %>
+                <p style="color: green;">
+                  <%= successMessage %>
+                </p>
+                <% } %>
+
+
+
+
+
+                  <form method="post" id="loginForm" class="login-form">
+                    <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email address"
+                        value="<%= formData?.email || '' %>" required>
+                      <% if (errors?.email) { %>
+                        <p style="color:red;">
+                          <%= errors.email %>
+                        </p>
+                        <% } %>
+                    </div>
+
+                    <div class="form-group password-field">
+                      <label for="password">Password</label>
+                      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                      <% if (errors?.password) { %>
+                        <p style="color:red;">
+                          <%= errors.password %>
+                        </p>
+                        <% } %>
+                          <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                            <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                              <circle cx="12" cy="12" r="3" />
+                            </svg>
+                          </button>
+                    </div>
+
+                    <div class="text-end mb-4">
+
+                      <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                      Sign In
+                    </button>
+
+                    <!-- Google Sign-in Button -->
+                    <button type="button" class="btn btn-google" onclick="signInWithGoogle()">
+                      <svg class="google-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="#4285F4"
+                          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                        <path fill="#34A853"
+                          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                        <path fill="#FBBC05"
+                          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                        <path fill="#EA4335"
+                          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                      </svg>
+                      Continue with Google
+                    </button>
+
+                  </form>
+
+                  <div class="signup-link">
+                    Don't have an account? <a href="/register">Create one here</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Loading overlay -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Signing you in...</p>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+
+    // Toggle password visibility
+    function togglePassword(fieldId) {
+      const field = document.getElementById(fieldId);
+      const toggle = field.nextElementSibling;
+      const eyeIcon = toggle.querySelector('.eye-icon');
+
+      if (field.type === 'password') {
+        field.type = 'text';
+        eyeIcon.innerHTML = `
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                    <line x1="1" y1="1" x2="23" y2="23"/>
+                `;
+      } else {
+        field.type = 'password';
+        eyeIcon.innerHTML = `
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                `;
+      }
+    }
+
+
+    // Simulate login process
+    const successMessage = "<%= successMessage || '' %>".trim();
+    if (successMessage) {
+      // Show spinner
+      document.getElementById('loadingOverlay').style.display = 'block';
+
+      setTimeout(() => {
+        document.getElementById('loadingOverlay').style.display = 'none';
+        
+      
+        // Redirect to /home after delay
+        window.location.href = "/home";
+      }, 1000);
+    }
+
+
+  </script>
+
+
+
+
+
+  <!-- <script>
+        /
+
+        // Show loading overlay
+        function showLoading() {
+            document.getElementById('loadingOverlay').classList.add('active');
+        }
+
+        // Hide loading overlay
+        function hideLoading() {
+            document.getElementById('loadingOverlay').classList.remove('active');
+        }
+
+        // Form validation and submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            // Reset previous error states
+            document.querySelectorAll('.form-group input').forEach(input => {
+                input.classList.remove('error');
+            });
+            
+            let isValid = true;
+            let errorMessage = '';
+            
+            // Validate email
+            if (!email) {
+                document.getElementById('email').classList.add('error');
+                errorMessage = 'Please enter your email address.';
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                document.getElementById('email').classList.add('error');
+                errorMessage = 'Please enter a valid email address.';
+                isValid = false;
+            } else if (!password) {
+                document.getElementById('password').classList.add('error');
+                errorMessage = 'Please enter your password.';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                showErrorMessage(errorMessage);
+                return;
+            }
+            
+            // Show loading state
+            showLoading();
+            
+            // Simulate login process
+            setTimeout(() => {
+                hideLoading();
+                showSuccessMessage('Login successful! Redirecting...');
+                
+                // Redirect after success message
+                setTimeout(() => {
+                    // window.location.href = 'dashboard.html';
+                    console.log('Redirecting to dashboard...');
+                }, 1500);
+            }, 2000);
+        });
+
+        // Google Sign-in
+        function signInWithGoogle() {
+            showLoading();
+            
+            // Simulate Google OAuth process
+            setTimeout(() => {
+                hideLoading();
+                showSuccessMessage('Google sign-in successful! Redirecting...');
+                
+                setTimeout(() => {
+                    // window.location.href = 'dashboard.html';
+                    console.log('Redirecting to dashboard...');
+                }, 1500);
+            }, 2000);
+            
+            // In a real implementation, you would use Google's OAuth API:
+            /*
+            gapi.load('auth2', function() {
+                gapi.auth2.init({
+                    client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com'
+                }).then(function() {
+                    const authInstance = gapi.auth2.getAuthInstance();
+                    authInstance.signIn().then(function(googleUser) {
+                        const profile = googleUser.getBasicProfile();
+                        const idToken = googleUser.getAuthResponse().id_token;
+                        
+                        // Send the token to your backend for verification
+                        // and user authentication
+                        
+                        console.log('ID Token: ' + idToken);
+                        console.log('Name: ' + profile.getName());
+                        console.log('Email: ' + profile.getEmail());
+                    });
+                });
+            });
+            */
+        }
+
+        // Email validation
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Show error message
+        function showErrorMessage(message) {
+            // Remove existing messages
+            const existingMessage = document.querySelector('.message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message error-message';
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <svg class="message-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>${message}</span>
+                </div>
+            `;
+
+            const form = document.getElementById('loginForm');
+            form.insertBefore(messageDiv, form.firstChild);
+
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+
+        // Show success message
+        function showSuccessMessage(message) {
+            // Remove existing messages
+            const existingMessage = document.querySelector('.message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message success-message';
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <svg class="message-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>${message}</span>
+                </div>
+            `;
+
+            const form = document.getElementById('loginForm');
+            form.insertBefore(messageDiv, form.firstChild);
+
+            // Remove message after 3 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+
+        // Auto-focus first input on page load
+        window.addEventListener('load', function() {
+            document.getElementById('email').focus();
+        });
+
+        // Handle Enter key in form fields
+        document.querySelectorAll('#loginForm input').forEach(input => {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('loginForm').dispatchEvent(new Event('submit'));
+                }
+            });
+        });
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  .search-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #999;
+    display: none;
+  }
+
+  .search-clear-btn.visible {
+    display: block;
+  }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+    <section class="content-main">
+      <div class="content-header">
+        <div>
+          <h2 class="content-title card-title">Category List</h2>
+          <p>Manage your saree categories</p>
+        </div>
+        <div>
+          <a href="/admin/categories/add" class="btn btn-primary">Add Category</a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <header class="card-header">
+          <form action="/admin/categories" method="GET" class="d-flex gap-2">
+            <div class="search-input-wrapper flex-grow-1">
+              <input type="text" name="search" id="searchInput" class="form-control"
+                placeholder="Search by category name..." value="<%= search %>" oninput="toggleClearButton()" />
+              <button type="button" class="search-clear-btn" id="clearSearchBtn" onclick="clearSearch()">×</button>
+            </div>
+          </form>
+        </header>
+
+        <div class="card-body">
+          <% if (categories.length === 0) { %>
+            <p>No categories found.</p>
+          <% } %>
+
+          <% categories.forEach(category => { %>
+            <article class="itemlist">
+              <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-6 col-8 flex-grow-1 col-name">
+                  <div class="info">
+                    <h6 class="mb-0"><%= category.name %></h6>
+                    <small>Created: <%= category.createdAt.toDateString() %></small>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-3 col-4 col-action text-end">
+                  <a href="/admin/categories/edit/<%= category._id %>" class="btn btn-sm btn-warning">Edit</a>
+                  <button class="btn btn-sm btn-danger delete-category-btn" data-category-id="<%= category._id %>">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </article>
+          <% }) %>
+
+
+          <!-- Pagination -->
+          <% if (totalPages > 1) { %>
+            <nav>
+              <ul class="pagination justify-content-center">
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                  <li class="page-item  <%= i === currentPage ? 'active' : '' %>">
+                    <a class="page-link" href="?page=<%= i %>&search=<%= search %>"><%= i %></a>
+                  </li>
+                <% } %>
+              </ul>
+            </nav>
+          <% } %>
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script>
+    function toggleClearButton() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearSearchBtn');
+      clearBtn.classList.toggle('visible', input.value.trim().length > 0);
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      document.querySelector('form').submit();
+    }
+
+    toggleClearButton();
+  </script>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <!-- SweetAlert Delete -->
+  <script>
+    document.querySelectorAll('.delete-category-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const categoryId = button.getAttribute('data-category-id');
+
+        const result = await Swal.fire({
+          title: `Are you sure?`,
+          text: `You are about to delete this category.`,
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#d33',
+          cancelButtonColor: '#aaa',
+          confirmButtonText: `Yes, delete it!`
+        });
+
+
+        if (result.isConfirmed) {
+          try {
+            const res = await fetch(`/admin/categories/delete/${categoryId}`, {
+              method: 'DELETE'
+            }); 
+
+            const data = await res.json();
+
+            if (data.success) {
+              Swal.fire({
+                icon: 'success',
+                title: `Category deleted successfully`,
+                showConfirmButton: false,
+                timer: 1500
+              }).then(() => location.reload());
+            } else {
+              Swal.fire('Error', data.message || 'Failed to delete', 'error');
+            }
+          } catch (err) {
+            Swal.fire('Error', 'Something went wrong', 'error');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
