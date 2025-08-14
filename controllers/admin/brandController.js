@@ -112,11 +112,16 @@ const postEditBrand=async(req,res)=>{
     const brandId=req.params.id;
     const {name,description}=req.body;
     const imageUrl = req.file?.path; 
+
     const {error}=brandValidation.validate({name,description});
     if(error){
       return res.status(400).json({error:"all fields are required"})
     }
-    if (!imageUrl) {
+
+    const brand=await Brand.findById(brandId);
+
+
+    if (!imageUrl && !brand?.image) {
       return res.status(400).json({ error: "All fields including image are required" });
     }
 

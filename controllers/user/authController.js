@@ -229,8 +229,7 @@ const getLogin = async (req, res) => {
   try {
 
     const successMessage = req.session.successMessage;
-    delete req.session.successMessage; // clear after reading
-
+    delete req.session.successMessage; 
     res.render('login', {
       successMessage,
       errors: {},
@@ -310,6 +309,140 @@ const loginUser = async (req, res) => {
   }
 };
 
+const getForgotPasswordPage=async(req,res)=>{
+    res.render('forgot-password',{error:"",message:"",success:""})
+}
+
+const postForgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return res.render('forgot-password', { error: 'Enter a valid email', success: '' });
+    }
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.render('forgot-password', { error: 'No account found with this email', success: '' });
+    }
+
+  
+    const existingOtp = await OtpVerification.findOne({
+      email,
+      usageType: ForgotPasswordUsageType,
+      expiresAt: { $gt: new Date() },
+      isUsed: false
+    });
+
+    let otp;
+    if (existingOtp) {
+      // Calculate remaining time in seconds
+      const remainingMs = new Date(existingOtp.expiresAt) - new Date();
+      const remainingSeconds = Math.floor(remainingMs / 1000);
+      const minutes = Math.floor(remainingSeconds / 60);
+      const seconds = remainingSeconds % 60;
+
+      return res.render('forgot-password', {
+        error: `An OTP was already sent. Please try again after ${minutes}m ${seconds}s.`,
+        success: ''
+      });
+    }
+    else {
+      otp = Math.floor(100000 + Math.random() * 900000).toString();
+      
+      await OtpVerification.deleteMany({ email, usageType: ForgotPasswordUsageType });
+
+      await OtpVerification.create({
+        userId: user._id,
+        email,
+        otp,
+        usageType: ForgotPasswordUsageType,
+        expiresAt: new Date(Date.now() + 5 * 60 * 1000),
+        isUsed: false
+      });
+    }
+
+    const resetLink = `${process.env.BASE_URL}/change-password/${encodeURIComponent(email)}/${otp}`;
+
+    
+    await sendOtpEmail(email, otp, ForgotPasswordUsageType);
+
+
+    return res.render('forgot-password', {
+      error: '',
+      success: 'Password reset link sent to your email.'
+    });
+
+  } catch (err) {
+    console.error(err);
+    return res.render('forgot-password', { error: 'Something went wrong.', success: '' });
+  }
+};
+
+// GET /change-password/:email/:otp
+const getChangePassword = async (req, res) => {
+  const { email, otp } = req.params;
+
+  // check OTP validity
+  const otpDoc = await OtpVerification.findOne({
+    email,
+    otp,
+    usageType: ForgotPasswordUsageType,
+    expiresAt: { $gt: new Date() },
+    isUsed: false
+  });
+
+  if (!otpDoc) {
+    return res.send('Invalid or expired link');
+  }
+
+  res.render('change-password', { email, otp, error: '', success: '' });
+};
+
+
+
+
+
+const postChangePassword = async (req, res) => {
+  const { email, otp } = req.params;
+  const { newPassword, confirmPassword } = req.body;
+
+  console.log(newPassword,confirmPassword)
+
+  if (newPassword !== confirmPassword) {
+    return res.render('change-password', { email, otp, error: 'Passwords do not match', success: '' });
+  }
+
+  const otpDoc = await OtpVerification.findOne({
+    email,
+    otp,
+    expiresAt: { $gt: new Date() },
+    isUsed: false
+  });
+
+  if (!otpDoc) {
+    return res.send('Invalid or expired link');
+  }
+
+  // update password
+  const hashed = await bcrypt.hash(newPassword, 10);
+  await User.updateOne({ email }, { password: hashed });
+
+  // mark OTP used
+  otpDoc.isUsed = true;
+  await otpDoc.save();
+
+   res.render('change-password', {
+    email: '',
+    otp: '',
+    error: '',
+    success: 'Password changed successfully'
+  });
+};
+
+
+
 const getHomePage = (req, res) => {
   if (!req.session.user) {
     return res.redirect('/login');
@@ -317,8 +450,6 @@ const getHomePage = (req, res) => {
 
   res.render('home', { user: req.session.user });
 };
-
-
 
 
 module.exports = {
@@ -329,8 +460,12 @@ module.exports = {
   resendOtp,
   getLogin,
   loginUser,
-  getHomePage, 
+  getHomePage,
+  getForgotPasswordPage,
+  postForgotPassword,
+  getChangePassword,
+  getChangePassword,
+  postChangePassword
 };
-
 
 

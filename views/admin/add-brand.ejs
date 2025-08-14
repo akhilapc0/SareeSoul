@@ -89,7 +89,10 @@
                       <div id="imageError" class="text-danger"></div>
                     </div>
                   </div>
+                  <!-- preview -->
+                  <img id="previewImage" style="display:none; max-width:200px; margin-top:10px;">
 
+                    <!-- Backend Error Message -->
                   <div id="backendError" class="text-danger mb-3"></div>
 
                   <hr class="my-4">
@@ -111,6 +114,28 @@
       <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
       <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
       <script src="/admin/assets/js/main.js"></script>
+
+      
+      <script>
+  
+  document.getElementById("brandImage").addEventListener("change", function () {
+    let file = this.files[0]; 
+    let preview = document.getElementById("previewImage");
+
+    if (file) {
+      let reader = new FileReader(); 
+
+      reader.onload = function (event) {
+        preview.src = event.target.result;
+        preview.style.display = "block"; 
+      };
+
+      reader.readAsDataURL(file); 
+    } else {
+      preview.style.display = "none"; 
+    }
+  });
+</script>
 
       <!-- Fetch Submission + Validation -->
       <script>
@@ -169,7 +194,7 @@
           } catch (err) {
             document.getElementById("backendError").textContent = "Server error. Try again." + err;
           }finally{
-            submitBtn.disabled=true;
+            submitBtn.disabled=false;
           }
         });
       </script>
