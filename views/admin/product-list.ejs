@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  .search-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #999;
+    display: none;
+  }
+
+  .search-clear-btn.visible {
+    display: block;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 200px;
+  }
+
+  .action-buttons .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 992px) {
+    .action-buttons {
+      min-width: 180px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .action-buttons {
+      flex-direction: column;
+      min-width: auto;
+      width: 100%;
+    }
+    
+    .action-buttons .btn {
+      width: 100%;
+      margin-bottom: 2px;
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+    <section class="content-main">
+      <div class="content-header">
+        <div>
+          <h2 class="content-title card-title">Product List</h2>
+          <p>Manage your saree Products</p>
+        </div>
+        <div>
+          <a href="/admin/products/add" class="btn btn-primary">Add Product</a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <header class="card-header">
+          <form action="/admin/products" method="GET" class="d-flex gap-2">
+            <div class="search-input-wrapper flex-grow-1">
+              <input type="text" name="search" id="searchInput" class="form-control"
+                placeholder="Search by product name..." value="<%= search %>" oninput="toggleClearButton()" />
+              <button type="button" class="search-clear-btn" id="clearSearchBtn" onclick="clearSearch()">×</button>
+            </div>
+          </form>
+        </header>
+
+        <div class="card-body">
+          <% if (products.length === 0) { %>
+            <p>No products found.</p>
+          <% } %>
+
+          <% products.forEach(product => { %>
+            <article class="itemlist">
+              <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6 col-sm-6 col-8 flex-grow-1 col-name">
+                  <div class="info">
+                    <h6 class="mb-0"><%= product.name %></h6>
+                    <small class="text-muted">
+                      Brand: <%= product.brand?.name || 'No Brand' %> | 
+                      Price: ₹<%= product.price %> | 
+                      Stock: <%= product.stock %>
+                    </small>
+                    <br>
+                    <small>Created: <%= product.createdAt.toDateString() %></small>
+                  </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-6 col-4 col-action text-end">
+                  <div class="action-buttons">
+                    <a href="/admin/products/<%= product._id %>/variants" class="btn btn-sm btn-info">
+                      Variants
+                    </a>
+                    <a href="/admin/products/edit/<%= product._id %>" class="btn btn-sm btn-warning">
+                      Edit
+                    </a>
+                    <button class="btn btn-sm btn-danger delete-product-btn" data-product-id="<%= product._id %>">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          <% }) %>
+
+          <!-- Pagination -->
+          <% if (totalPages > 1) { %>
+            <nav>
+              <ul class="pagination justify-content-center">
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                  <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+                    <a class="page-link" href="?page=<%= i %>&search=<%= search %>"><%= i %></a>
+                  </li>
+                <% } %>
+              </ul>
+            </nav>
+          <% } %>
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script>
+    function toggleClearButton() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearSearchBtn');
+      clearBtn.classList.toggle('visible', input.value.trim().length > 0);
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      document.querySelector('form').submit();
+    }
+
+    toggleClearButton();
+  </script>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <!-- SweetAlert Delete -->
+  <script>
+    document.querySelectorAll('.delete-product-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const productId = button.getAttribute('data-product-id');
+
+        const result = await Swal.fire({
+          title: 'Are you sure?',
+          text: 'You are about to delete this product and all its variants.',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#d33',
+          cancelButtonColor: '#aaa',
+          confirmButtonText: 'Yes, delete it!'
+        });
+
+        if (result.isConfirmed) {
+          try {
+            const res = await fetch(`/admin/products/delete/${productId}`, {
+              method: 'DELETE'
+            }); 
+
+            const data = await res.json();
+
+            if (data.success) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Product deleted successfully',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(() => location.reload());
+            } else {
+              Swal.fire('Error', data.message || 'Failed to delete product', 'error');
+            }
+          } catch (err) {
+            Swal.fire('Error', 'Something went wrong', 'error');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

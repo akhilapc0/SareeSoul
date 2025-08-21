@@ -40,12 +40,17 @@ const adminauthRoutes=require('./routes/admin/authRoutes');
 const adminUserRoutes=require('./routes/admin/userRoutes');
 const categoryRoutes=require('./routes/admin/categoryRoutes');
 const brandRoutes=require('./routes/admin/brandRoutes');
+const productRoutes=require('./routes/admin/productRoutes');
+const variantRoutes=require('./routes/admin/variantRoutes');
+
 
 app.use('/', authRoutes);
 app.use('/admin',adminauthRoutes);
 app.use('/admin',adminUserRoutes);
 app.use('/admin',categoryRoutes);
 app.use('/admin',brandRoutes);
+app.use('/admin',productRoutes);
+app.use('/admin',variantRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

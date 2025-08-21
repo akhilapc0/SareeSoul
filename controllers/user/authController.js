@@ -3,6 +3,7 @@ const User = require('../../models/userModel');
 const sendOtpEmail=require('../../utils/sendOtpEmail')
 const OtpVerification = require('../../models/otpVerificationModel');
 const {EmailVerificationUsageType,ForgotPasswordUsageType}=require('../../shared/constant');
+const {registerValidation}=require('../../validator/schema');
 const getRegisterPage = (req, res) => {
   res.render('register', { errorEmail: "", formData: {}, errors: {} });
 
@@ -12,218 +13,182 @@ const getRegisterPage = (req, res) => {
 
 const registerUser = async (req, res) => {
   try {
-    const { firstName, lastName, email, phoneNumber, password, cpassword } = req.body;
+    const { firstName, lastName, email, phoneNumber, password, confirmPassword } = req.body;
 
-    const errors = {};
-    const formData = { firstName, lastName, email, phoneNumber };
-    if (!firstName || !/^[A-Za-z]+$/.test(firstName) || firstName.length < 3) {
-      errors.firstName = "First name must be at least 3 letters, alphabets only";
-    }
-    if (!lastName || !/^[A-Za-z]+$/.test(lastName)) {
-      errors.lastName = "Enter a valid last name";
-    }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errors.email = "Enter a valid email";
-    }
-    if (!phoneNumber || !/^[6-9]\d{9}$/.test(phoneNumber)) {
-      errors.phoneNumber = "Enter a valid 10-digit phone number";
-    }
-    if (!password || password.length < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-      errors.password = "Password must be 6+ chars, include a capital letter and a special character";
-    }
-    if (cpassword !== password) {
-      errors.cpassword = "Passwords do not match";
+    // 2️⃣ Validate input
+    const { error } = registerValidation.validate(req.body, { abortEarly: false });
+    if (error) {
+      // Convert Joi error details into { fieldName: message }
+      const errors = {};
+      error.details.forEach(err => {
+        errors[err.path[0]] = err.message;
+      });
+
+      return res.render("register", {
+        errors,
+        formData: { firstName, lastName, email, phoneNumber }
+      });
     }
 
-   
+    // 3️⃣ Check if email exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      errors.email = "Email is already registered";
+      return res.render("register", {
+        errors: { email: "Email is already registered" },
+        formData: { firstName, lastName, email, phoneNumber }
+      });
     }
 
-    
-    if (Object.keys(errors).length > 0) {
-      return res.render('register', { errors, formData });
-    }
-
-    
+    // 4️⃣ Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    
+    // 5️⃣ Create user
     const newUser = await User.create({
       firstName,
       lastName,
       email,
       phoneNumber,
       password: hashedPassword,
-      isVerified: false, 
+      isVerified: false
     });
 
-    
+    // 6️⃣ Create OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const expiresAt = new Date(Date.now() + 2 * 60 * 1000); 
+    const expiresAt = new Date(Date.now() + 2 * 60 * 1000);
 
-   
     await OtpVerification.create({
       userId: newUser._id,
       email,
       otp,
       usageType: EmailVerificationUsageType,
       expiresAt,
-      isUsed: false,
+      isUsed: false
     });
 
-    
+    //  Send OTP email
     await sendOtpEmail(email, otp, EmailVerificationUsageType);
-    console.log(otp);
+    console.log("OTP sent:", otp);
 
-
+    // Redirect to OTP verification page
     return res.redirect(`/verify-otp?email=${email}`);
 
   } catch (err) {
     console.error(err);
-    return res.render('register', {
-      errors: { general: 'Something went wrong' },
-      formData: req.body,
+    return res.render("register", {
+      errors: { general: "Something went wrong" },
+      formData: req.body
     });
   }
 };
 
-const verifyOtp = async (req, res) => {
-  try {
-    const { email, otp } = req.body;
+const postVerifyOtp = async (req, res) => {
+  const { email, otp } = req.body;
 
-    if (!email || !otp) {
-      return res.render("verify-otp", {
-        email,
-        error: "Email and OTP are required",
-      });
-    }
+  const otpDoc = await OtpVerification.findOne({
+    email,
+    isUsed: false,
+    usageType: EmailVerificationUsageType,
+    expiresAt: { $gt: Date.now() }
+  });
 
- 
-    const otpRecord = await OtpVerification.findOne({
-      email,
-      usageType: EmailVerificationUsageType,
-    }).sort({ createdAt: -1 }); 
-
-    
-    if (!otpRecord) {
-      return res.render("verify-otp", {
-        email,
-        error: "No OTP request found for this email",
-      });
-    }
-
-    
-    if (otpRecord.expiresAt < new Date()) {
-      return res.render("verify-otp", {
-        email,
-        error: "OTP has expired. Please resend OTP.",
-      });
-    }
-
-    
-    if (otpRecord.isUsed) {
-      return res.render("verify-otp", {
-        email,
-        error: "OTP already used. Please resend OTP.",
-      });
-    }
-
-    
-    if (otpRecord.otp !== otp) {
-      return res.render("verify-otp", {
-        email,
-        error: "Invalid OTP. Please try again.",
-      });
-    }
-
-    
-    otpRecord.isUsed = true;
-    await otpRecord.save();
-
-    
-    await User.updateOne({ email }, { isVerified: true });
-
-   
-    req.session.successMessage = "Email verified successfully! You can now log in.";
-    return res.redirect("/login");
-
-  } catch (error) {
-    console.error(error);
-    return res.render("verify-otp", {
-      email: req.body.email,
-      error: "Something went wrong. Please try again.",
-    });
+  if (!otpDoc) {
+    return res.json({ success: false, message: "OTP not found or expired. Please request a new one." });
   }
+
+  if (otpDoc.otp != otp) {
+    return res.json({ success: false, message: "Invalid OTP" });
+  }
+
+  // ✅ Mark OTP as used
+  otpDoc.isUsed = true;
+  await otpDoc.save();
+
+  const user=await User.findOne({email});
+  user.isVerified=true;
+  await user.save();
+
+  // ✅ Continue registration flow
+  return res.json({ success: true, message: "OTP verified successfully!" });
 };
 
 
-const getVerifyOtpPage = (req, res) => {
+const getVerifyOtpPage = async (req, res) => {
   const { email } = req.query;
 
   if (!email) {
     return res.redirect('/register');
   }
 
-  res.render('verify-otp', {
+  // find otp for this email
+  const otpDoc = await OtpVerification.findOne({
+  email,
+  isUsed: false,
+  usageType: EmailVerificationUsageType,
+  expiresAt: { $gt: Date.now() }   // only OTPs that haven’t expired
+});
+
+  let timeRemaining = 0;
+
+  if (otpDoc) {
+    const now = Date.now();
+    const expiry = new Date(otpDoc.expiresAt).getTime();
+    timeRemaining = expiry > now ? Math.floor((expiry - now) / 1000) : 0;
+  }
+
+  res.render("verify-otp", {
     email,
-    error: "" 
+    error: "",
+    timeRemaining   // pass seconds to EJS
   });
 };
-const resendOtp = async (req, res) => {
-  try {
-    const { email } = req.query;
 
-    if (!email) {
-      return res.redirect('/register'); 
-    }
+
+
+const postResendOtp = async (req, res) => {
+  try {
+    const { email } = req.body;
 
     const user = await User.findOne({ email });
     if (!user) {
       return res.render('verify-otp', {
         email,
-        error: 'User not found. Please register again.'
+        message: "User not found",
+        timeRemaining: 0
       });
     }
 
-    
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    console.log(otp)
-    const expiresAt = new Date(Date.now() + 1 * 60 * 1000); 
+    // generate new otp (4 digit)
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    // expiry: 1 minute from now
+    const expiresAt = Date.now() + 60 * 1000;
 
-    
-    await OtpVerification.updateMany(
-      { email, usageType: EmailVerificationUsageType, isUsed: false },
-      { $set: { isUsed: true } }
-    );
+    // ❌ instead of deleteOne
+    // ✅ delete all previous OTPs for this email
+    await OtpVerification.deleteMany({ email });
 
-   
+    // save new otp
     await OtpVerification.create({
       userId: user._id,
+      usageType: EmailVerificationUsageType,
       email,
       otp,
-      usageType: EmailVerificationUsageType,
-      expiresAt,
-      isUsed: false,
+      expiresAt
     });
 
-    
-    await sendOtpEmail(email, otp, EmailVerificationUsageType);
-    console.log(otp)
-    
-    return res.redirect(`/verify-otp?email=${email}`);
+    // send via email
+    await sendOtpEmail(email, otp);
+     console.log(otp)
 
+    return res.redirect(`/verify-otp?email=${email}`)
   } catch (err) {
-    console.error(err);
-    return res.render('verify-otp', {
-      email: req.query.email,
-      error: 'Failed to resend OTP. Try again later.'
+    console.error("Resend OTP error:", err);
+    return res.render("verify-otp", {
+      email: req.body.email,
+      error: "Something went wrong, please try again.",
+      timeRemaining: 0
     });
   }
 };
-
-
 
 const getLogin = async (req, res) => {
   try {
@@ -259,7 +224,6 @@ const loginUser = async (req, res) => {
     if (!password) {
       errors.password = 'Password is required';
     }
-    console.log(errors)
 
    
     if (Object.keys(errors).length > 0) {
@@ -291,9 +255,8 @@ const loginUser = async (req, res) => {
   return res.redirect(`/verify-otp?email=${email}`)
 }
 
-     
-
     req.session.user = user; 
+
     res.render('login', {
       errors: {},
       formData: {},
@@ -307,6 +270,13 @@ const loginUser = async (req, res) => {
       successMessage: null
     });
   }
+};
+
+const logoutUser = (req, res) => {
+  req.session.destroy(() => {
+    res.clearCookie('connect.sid'); // clear cookie
+    res.redirect('/login');
+  });
 };
 
 const getForgotPasswordPage=async(req,res)=>{
@@ -444,10 +414,6 @@ const postChangePassword = async (req, res) => {
 
 
 const getHomePage = (req, res) => {
-  if (!req.session.user) {
-    return res.redirect('/login');
-  }
-
   res.render('home', { user: req.session.user });
 };
 
@@ -455,12 +421,13 @@ const getHomePage = (req, res) => {
 module.exports = {
   getRegisterPage,
   registerUser,
-  verifyOtp,
+  postVerifyOtp,
   getVerifyOtpPage,
-  resendOtp,
+  postResendOtp,
   getLogin,
   loginUser,
   getHomePage,
+  logoutUser,
   getForgotPasswordPage,
   postForgotPassword,
   getChangePassword,

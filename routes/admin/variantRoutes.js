@@ -1,0 +1,23 @@
+const express=require('express');
+const router=express.Router();
+const upload=require('../../middlewares/uploadtoCloudinary');
+const adminAuth=require('../../middlewares/adminAuth');
+const variantController=require('../../controllers/admin/variantController');
+
+
+
+router.get("/products/:productId/variants", variantController.listVariants);
+
+router.get("/products/:productId/variants/add", variantController.loadAddVariant);
+
+router.post("/products/:productId/variants/add", upload.array("images", 5), variantController.postAddVariant);
+
+
+// router.get("/products/:productId/variants/:variantId/edit", variantController.showEditForm);
+
+
+// router.post("/products/:productId/variants/:variantId/edit", variantController.updateVariant);
+
+// router.post("/products/:productId/variants/:variantId/delete", variantController.deleteVariant);
+
+module.exports = router;

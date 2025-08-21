@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <title>Register</title>
   <link rel="stylesheet" href="/user/assets/css/login.css">
-
+  <!-- joi browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/joi@17/dist/joi-browser.min.js"></script>
 </head>
 
 <body>
@@ -24,91 +25,187 @@
                 <p style="color: green;">
                   <%= successMessage %>
                 </p>
-                <% } %>
+              <% } %>
 
-                  <form action="/register" method="POST" id="registrationForm" class="registration-form">
-                    <div class="form-row">
-                      <div class="form-group password-field">
-                        <label for="firstName">First Name *</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
-                          value="<%= formData?.firstName || '' %>" required>
-                        <% if (errors?.firstName) { %>
-                          <p style="color:red;">
-                            <%= errors.firstName %>
-                          </p>
-                          <% } %>
-                      </div>
-
-                      <div class="form-group password-field">
-                        <label for="lastName">Last Name *</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
-                          value="<%= formData?.lastName || '' %>" required>
-                        <% if (errors?.lastName) { %>
-                          <p style="color:red;">
-                            <%= errors.lastName %>
-                          </p>
-                          <% } %>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="email">Email Address *</label>
-                      <input type="email" id="email" name="email" placeholder="Enter your email address"
-                        value="<%= formData?.email || '' %>" required>
-                      <% if (errors?.email) { %>
-                        <p style="color:red;">
-                          <%= errors.email %>
-                        </p>
-                        <% } %>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="phoneNumber">Phone Number *</label>
-                      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
-                        value="<%= formData?.phoneNumber || '' %>" required>
-                      <% if (errors?.phoneNumber) { %>
-                        <p style="color:red;">
-                          <%= errors.phoneNumber %>
-                        </p>
-                        <% } %>
-                    </div>
-
-                    <div class="form-row">
-                      <div class="form-group password-field">
-                        <label for="password">Password *</label>
-                        <input type="password" id="password" name="password" placeholder="Create a strong password"
-                          required>
-                        <% if (errors?.password) { %>
-                          <p style="color:red;">
-                            <%= errors.password %>
-                          </p>
-                          <% } %>
-                      </div>
-                      <div class="form-group password-field">
-                        <label for="confirmPassword">Confirm Password *</label>
-                        <input type="password" id="confirmPassword" name="cpassword" placeholder="Confirm your password"
-                          required>
-                        <% if (errors?.cpassword) { %>
-                          <p style="color:red;">
-                            <%= errors.cpassword %>
-                          </p>
-                          <% } %>
-                      </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-full">Create Account</button>
-                  </form>
-
-                  <div class="login-link">
-                    Already have an account? <a href="/login">Login here</a>
+              <form action="/register" autocomplete="off" method="POST" id="registrationForm" class="registration-form">
+                <div class="form-row">
+                  <div class="form-group password-field">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"
+                      value="<%= formData?.firstName || '' %>" required>
+                    <span class="client-error" style="color:red;"></span>
+                    <% if (errors?.firstName) { %>
+                      <p style="color:red;"><%= errors.firstName %></p>
+                    <% } %>
                   </div>
+
+                  <div class="form-group password-field">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"
+                      value="<%= formData?.lastName || '' %>" required>
+                    <span class="client-error" style="color:red;"></span>
+                    <% if (errors?.lastName) { %>
+                      <p style="color:red;"><%= errors.lastName %></p>
+                    <% } %>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email address"
+                    value="<%= formData?.email || '' %>" required>
+                  <span class="client-error" style="color:red;"></span>
+                  <% if (errors?.email) { %>
+                    <p style="color:red;"><%= errors.email %></p>
+                  <% } %>
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number *</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
+                    value="<%= formData?.phoneNumber || '' %>" required>
+                  <span class="client-error" style="color:red;"></span>
+                  <% if (errors?.phoneNumber) { %>
+                    <p style="color:red;"><%= errors.phoneNumber %></p>
+                  <% } %>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group password-field">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password"
+                      required>
+                    <span class="client-error" style="color:red;"></span>
+                    <% if (errors?.password) { %>
+                      <p style="color:red;"><%= errors.password %></p>
+                    <% } %>
+                  </div>
+
+                  <div class="form-group password-field">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
+                      required>
+                    <span class="client-error" style="color:red;"></span>
+                    <% if (errors?.confirmPassword) { %>
+                      <p style="color:red;"><%= errors.confirmPassword %></p>
+                    <% } %>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+              </form>
+
+              <div class="login-link">
+                Already have an account? <a href="/login">Login here</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/joi@17/dist/joi-browser.min.js"></script>
+s
+  <script>
+    console.log('joi loaded:', window.joi);
+    // joi schema for client-side validation
+    const schema = joi.object({
+         firstName:joi.string()
+    .pattern(/^[A-Za-z]+$/)
+    .min(3)
+    .max(30)
+    .required()
+    .messages({
+        "string.pattern.base": "First name must contain only letters",
+        'string.empty':'First name is required',
+        'string.min':'first name must be atleast 3 characters',
+        'string.max':'first name must be less than 50 characters'
+    }),
+    lastName:joi.string()
+    .pattern(/^[A-Za-z]+$/)
+    .min(2)
+    .max(30)
+    .required()
+    .messages({
+        'string.empty':'last name is required',
+        "string.pattern.base": "Enter a valid last name",
+        'string.min':'last name must be atleast 2  characters',
+        'string.max':'last name must be less than 50 characters'
+    }),
+    email:joi.string()
+    .email()
+    .max(50)
+    .required()
+    .messages({
+        'string.empty':'email is required',
+        'string.email':'please enter a valid email address',
+        'string.max':'Email must be less than or equal to 50 characters'
+    }),
+    password:joi.string()
+    .pattern(/[A-Z]/) 
+    .pattern(/[!@#$%^&*(),.?":{}|<>]/)
+    .min(6)
+    .max(20)
+    .required()
+    .messages({
+        'string.empty':'password is required',
+        'string.min':'password must be atleast  6 charaters',
+        'string-max':'password must be less than or equal to 20 characters',
+        "string.pattern.base": "Password must include a capital letter and special character"
+    }),
+    confirmPassword: joi.any()
+    .valid(joi.ref("password"))
+    .required()
+    .messages({
+      "any.only": "Passwords do not match",
+      "any.required": "Confirm password is required"
+    }),
+    phoneNumber:joi.string()
+    .pattern(/^[0-9]{10}$/)
+    .required()
+    .messages({
+        'string.empty':'phone number is required',
+        'string.pattern.base':'phone number must be exactly 10 digits'
+    })
+    });
+
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      const form = e.target;
+      const formData = {
+        firstName: form.firstName.value.trim(),
+        lastName: form.lastName.value.trim(),
+        email: form.email.value.trim(),
+        phoneNumber: form.phoneNumber.value.trim(),
+        password: form.password.value,
+        confirmPassword: form.confirmPassword.value
+      };
+
+      console.log(formData)
+
+      // Clear old client-side errors
+      document.querySelectorAll('.client-error').forEach(el => el.textContent = '');
+
+      // Validate using joi
+      const { error } = schema.validate(formData, { abortEarly: false });
+
+      if (error) {
+        e.preventDefault(); // Stop form submission
+
+        // Display client-side errors under each input
+        error.details.forEach(err => {
+          const fieldName = err.path[0];
+          const input = form.querySelector(`[name="${fieldName}"]`);
+          if (input) {
+            const errorSpan = input.parentElement.querySelector('.client-error');
+            if (errorSpan) {
+              errorSpan.textContent = err.message;
+            }
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

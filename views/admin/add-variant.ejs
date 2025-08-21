@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  .form-floating label { color: #6c757d; }
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+  .btn-group .btn { min-width: 120px; }
+  .card { border: none; box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075); }
+  .content-header { border-bottom: 1px solid #e3e6f0; padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  .text-danger { color: red; font-size: 14px; margin-top: 5px; }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+
+    <section class="content-main">
+      <div class="content-header">
+        <div>
+          <h2 class="content-title card-title">Add New Variant</h2>
+          <p>Add a variant for <strong><%= product.name %></strong></p>
+        </div>
+        <div>
+          <a href="/admin/products/<%= product._id %>/variants" class="btn btn-outline-secondary">
+            <i class="material-icons md-arrow_back"></i> Back to Variants
+          </a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <header class="card-header">
+          <h4 class="card-title">Variant Information</h4>
+          <small class="text-muted">Fill in the details below to create a new variant</small>
+        </header>
+
+        <div class="card-body">
+          <form id="addVariantForm" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-lg-8">
+
+                <!-- Colour -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="colour" name="colour" placeholder="Colour" />
+                    <label for="colour">Colour</label>
+                  </div>
+                  <div id="colourError" class="text-danger"></div>
+                </div>
+
+                <!-- Stock -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="stock" name="stock" placeholder="Stock" />
+                    <label for="stock">Stock</label>
+                  </div>
+                  <div id="stockError" class="text-danger"></div>
+                </div>
+
+               <div class="mb-4">
+  <label for="images" class="form-label">Upload Images</label>
+  <input type="file" class="form-control" id="images" name="images" multiple />
+  <div id="imagesError" class="text-danger"></div>
+
+  <!-- Add this for preview -->
+  <div id="imagePreview" style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;"></div>
+</div>
+
+
+
+              </div>
+            </div>
+
+            <!-- Backend Error -->
+            <div id="backendError" class="text-danger mb-3"></div>
+
+            <hr class="my-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                  <i class="material-icons md-add"></i> Add Variant
+                </button>
+              </div>
+            </div>
+          </form>
+
+
+
+
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <!-- Frontend Validation & Fetch -->
+  <script>
+    document.getElementById("addVariantForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const colour = document.getElementById("colour").value.trim();
+      const stock = document.getElementById("stock").value.trim();
+      const images = document.getElementById("images").files;
+
+      let isValid = true;
+
+      // Clear errors
+      document.getElementById("colourError").textContent = "";
+      document.getElementById("stockError").textContent = "";
+      document.getElementById("imagesError").textContent = "";
+      document.getElementById("backendError").textContent = "";
+
+      // Validation
+      if (!colour) {
+        document.getElementById("colourError").textContent = "Colour is required";
+        isValid = false;
+      }
+      if (!stock || isNaN(stock) || stock < 0) {
+        document.getElementById("stockError").textContent = "Stock must be a valid number ≥ 0";
+        isValid = false;
+      }
+      if (images.length === 0) {
+        document.getElementById("imagesError").textContent = "At least one image is required";
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData();
+        
+        formData.append("colour", colour);
+        formData.append("stock", stock);
+        for (let i = 0; i < images.length; i++) {
+          formData.append("images", images[i]);
+        }
+
+       for (let [key, value] of formData.entries()) {
+  console.log(key, value);
+}
+
+
+        const res = await fetch("/admin/products/<%= product._id %>/variants/add", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          document.getElementById("backendError").textContent = data.message || "Something went wrong";
+          return;
+        }
+
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: data.message || "Variant added successfully!",
+          confirmButtonColor: "#3085d6"
+        }).then(() => {
+          document.getElementById("addVariantForm").reset();
+        });
+
+      } catch (err) {
+        document.getElementById("backendError").textContent = "Server error. Try again. " + err;
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Image Preview
+const imagesInput = document.getElementById("images");
+const previewDiv = document.getElementById("imagePreview");
+
+imagesInput.addEventListener("change", () => {
+  previewDiv.innerHTML = ""; // Clear previous previews
+
+  const files = imagesInput.files;
+  if (files) {
+    Array.from(files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = document.createElement("img");
+        img.src = e.target.result;
+        img.style.width = "100px";
+        img.style.height = "100px";
+        img.style.objectFit = "cover";
+        img.style.border = "1px solid #ccc";
+        img.style.borderRadius = "5px";
+        previewDiv.appendChild(img);
+      }
+      reader.readAsDataURL(file);
+    });
+  }
+});
+
+  </script>
+</body>
+</html>

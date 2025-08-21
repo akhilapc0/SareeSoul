@@ -39,12 +39,13 @@ catch(error){
 }));
 
 passport.serializeUser((user,done)=>{
-    done(null,user.id)
+    done(null,user._id)
 })
 
 passport.deserializeUser((id,done)=>{
     User.findById(id)
     .then(user=>{
+        console.log("deserializeUser ",user)
         done(null,user);
     })
     .catch(err=>{

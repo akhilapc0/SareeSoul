@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  .form-floating label { color: #6c757d; }
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+  .btn-group .btn { min-width: 120px; }
+  .card { border: none; box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075); }
+  .content-header { border-bottom: 1px solid #e3e6f0; padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  .text-danger { color: red; font-size: 14px; margin-top: 5px; }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+
+    <section class="content-main">
+      <div class="content-header">
+        <div>
+          <h2 class="content-title card-title">Edit Product</h2>
+          <p>Update Product Information</p>
+        </div>
+        <div>
+          <a href="/admin/products" class="btn btn-outline-secondary">
+            <i class="material-icons md-arrow_back"></i> Back to Products
+          </a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <header class="card-header">
+          <h4 class="card-title">Product Information</h4>
+          <small class="text-muted">Update the details below to modify the product</small>
+        </header>
+
+        <div class="card-body">
+          <form id="editProductForm">
+            <div class="row">
+              <div class="col-lg-8">
+
+                <!-- Product Name -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Product Name" value="<%= product.name %>" />
+                    <label for="name">Product Name</label>
+                  </div>
+                  <div id="nameError" class="text-danger"></div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="description" name="description" placeholder="Product Description" style="height: 120px"><%= product.description %></textarea>
+                    <label for="description">Description</label>
+                  </div>
+                  <div id="descError" class="text-danger"></div>
+                </div>
+
+                <!-- Actual Price -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="actualPrice" name="actualPrice" placeholder="Actual Price" value="<%= product.actualPrice %>" />
+                    <label for="actualPrice">Actual Price</label>
+                  </div>
+                  <div id="actualPriceError" class="text-danger"></div>
+                </div>
+
+                <!-- Sales Price -->
+                <div class="mb-4">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="salesPrice" name="salesPrice" placeholder="Sales Price" value="<%= product.salesPrice %>" />
+                    <label for="salesPrice">Sales Price</label>
+                  </div>
+                  <div id="salesPriceError" class="text-danger"></div>
+                </div>
+
+                <!-- Category Dropdown -->
+                <div class="mb-4">
+                  <label for="categoryId" class="form-label">Category</label>
+                  <select class="form-select" id="categoryId" name="categoryId">
+                    <option value="">Select Category</option>
+                    <% categories.forEach(category => { %>
+                      <option value="<%= category._id %>" <%= product.categoryId && product.categoryId.toString() === category._id.toString() ? 'selected' : '' %>>
+                        <%= category.name %>
+                      </option>
+                    <% }) %>
+                  </select>
+                  <div id="categoryError" class="text-danger"></div>
+                </div>
+
+                <!-- Brand Dropdown -->
+                <div class="mb-4">
+                  <label for="brandId" class="form-label">Brand</label>
+                  <select class="form-select" id="brandId" name="brandId">
+                    <option value="">Select Brand</option>
+                    <% brands.forEach(brand => { %>
+                      <option value="<%= brand._id %>" <%= product.brandId && product.brandId.toString() === brand._id.toString() ? 'selected' : '' %>>
+                        <%= brand.name %>
+                      </option>
+                    <% }) %>
+                  </select>
+                  <div id="brandError" class="text-danger"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend Error -->
+            <div id="backendError" class="text-danger mb-3"></div>
+
+            <hr class="my-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                  <i class="material-icons md-edit"></i> Update Product
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <!-- Frontend Validation & Fetch -->
+  <script>
+    document.getElementById("editProductForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const description = document.getElementById("description").value.trim();
+      const actualPrice = document.getElementById("actualPrice").value.trim();
+      const salesPrice = document.getElementById("salesPrice").value.trim();
+      const categoryId = document.getElementById("categoryId").value;
+      const brandId = document.getElementById("brandId").value;
+
+      let isValid = true;
+
+      // Clear errors
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("descError").textContent = "";
+      document.getElementById("actualPriceError").textContent = "";
+      document.getElementById("salesPriceError").textContent = "";
+      document.getElementById("categoryError").textContent = "";
+      document.getElementById("brandError").textContent = "";
+      document.getElementById("backendError").textContent = "";
+
+      // Client-side Validation (mirroring Joi)
+      if (!name) {
+        document.getElementById("nameError").textContent = "Product name is required";
+        isValid = false;
+      }
+      if (!description) {
+        document.getElementById("descError").textContent = "Product description is required";
+        isValid = false;
+      }
+      if (!actualPrice || isNaN(actualPrice) || actualPrice < 0) {
+        document.getElementById("actualPriceError").textContent = "Actual price must be a valid number ≥ 0";
+        isValid = false;
+      }
+      if (!salesPrice || isNaN(salesPrice) || salesPrice < 0) {
+        document.getElementById("salesPriceError").textContent = "Sales price must be a valid number ≥ 0";
+        isValid = false;
+      }
+      if (Number(salesPrice) > Number(actualPrice)) {
+        document.getElementById("salesPriceError").textContent = "Sales price cannot be greater than actual price";
+        isValid = false;
+      }
+      if (!categoryId) {
+        document.getElementById("categoryError").textContent = "Category is required";
+        isValid = false;
+      }
+      if (!brandId) {
+        document.getElementById("brandError").textContent = "Brand is required";
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+
+      try {
+        const productId = "<%= product._id %>";
+        const res = await fetch(`/admin/products/edit/${productId}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, description, actualPrice, salesPrice, categoryId, brandId })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          document.getElementById("backendError").textContent = data.message || "Something went wrong";
+          return;
+        }
+
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: data.message || "Product updated successfully!",
+          confirmButtonColor: "#3085d6"
+        }).then(() => {
+          window.location.href = "/admin/products";
+        });
+
+      } catch (err) {
+        document.getElementById("backendError").textContent = "Server error. Try again. " + err;
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
