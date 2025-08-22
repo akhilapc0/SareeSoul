@@ -222,6 +222,26 @@ if (!Array.isArray(req.body.existingImages)) {
   }
 };
 
+const deleteVariant = async (req, res) => {
+  try {
+    const { productId, variantId } = req.params;
+
+   
+    const variant = await Variant.findByIdAndDelete(variantId);
+    if (!variant) {
+      return res.status(404).json({ success: false, message: "Variant not found" });
+    }
+
+    await Product.findByIdAndUpdate(productId, {
+      $pull: { variants: variantId }
+    });
+
+    return res.json({ success: true });
+  } catch (err) {
+    console.error("Delete Variant Error:", err);
+    return res.status(500).json({ success: false, message: "Server error" });
+  }
+};
 
 
 module.exports={
@@ -229,5 +249,6 @@ module.exports={
     loadAddVariant,
     postAddVariant,
     getEditVariant,
-    postEditVariant
+    postEditVariant,
+    deleteVariant
   };

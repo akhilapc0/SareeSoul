@@ -18,6 +18,6 @@ router.post("/products/:productId/variants/add", upload.array("images", 5), vari
 
 router.post("/products/:productId/variants/edit/:variantId", upload.array("images", 5), variantController.postEditVariant);
 
-// router.post("/products/:productId/variants/:variantId/delete", variantController.deleteVariant);
+router.delete("/products/:productId/variants/delete/:variantId", variantController.deleteVariant);
 
 module.exports = router;
