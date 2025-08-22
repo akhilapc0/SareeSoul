@@ -13,10 +13,10 @@ router.get("/products/:productId/variants/add", variantController.loadAddVariant
 router.post("/products/:productId/variants/add", upload.array("images", 5), variantController.postAddVariant);
 
 
-// router.get("/products/:productId/variants/:variantId/edit", variantController.showEditForm);
+ router.get("/products/:productId/variants/edit/:variantId", variantController.getEditVariant);
 
 
-// router.post("/products/:productId/variants/:variantId/edit", variantController.updateVariant);
+router.post("/products/:productId/variants/edit/:variantId", upload.array("images", 5), variantController.postEditVariant);
 
 // router.post("/products/:productId/variants/:variantId/delete", variantController.deleteVariant);
 

@@ -113,8 +113,13 @@ const variantValidation = Joi.object({
     "number.min": "Stock cannot be negative",
     "any.required": "Stock is required"
   }),
-
+  existingImages: Joi.array().items(
+    Joi.string().uri().messages({
+      "string.uri": "Each image must be a valid URL"
+    })
+  ).optional()  // since it's not always required
 });
+
 
 module.exports={
     registerValidation,
