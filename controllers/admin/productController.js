@@ -298,6 +298,106 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+const getProducts = async (req, res) => {
+  try {
+    // ---------------------------
+    // 1. Pagination setup
+    // ---------------------------
+    const page = parseInt(req.query.page) || 1; // current page
+    const limit = 8; // products per page
+    const skip = (page - 1) * limit;
+
+    // ---------------------------
+    // 2. Build filter object
+    // ---------------------------
+    let filter = { isBlocked: false, isListed: true };
+
+    // search by product name
+    if (req.query.search) {
+      filter.name = { $regex: req.query.search, $options: "i" };
+    }
+
+    // category filter
+    if (req.query.category) {
+      filter.category = req.query.category;
+    }
+
+    // brand filter
+    if (req.query.brand) {
+      filter.brand = req.query.brand;
+    }
+
+    // price range filter
+    if (req.query.minPrice && req.query.maxPrice) {
+      filter.price = {
+        $gte: parseInt(req.query.minPrice),
+        $lte: parseInt(req.query.maxPrice)
+      };
+    }
+
+    // ---------------------------
+    // 3. Sorting setup
+    // ---------------------------
+    let sort = {};
+    if (req.query.sort === "priceLowHigh") {
+      sort.price = 1; // ascending
+    } else if (req.query.sort === "priceHighLow") {
+      sort.price = -1; // descending
+    } else if (req.query.sort === "aToZ") {
+      sort.name = 1;
+    } else if (req.query.sort === "zToA") {
+      sort.name = -1;
+    } else if (req.query.sort === "newArrivals") {
+      sort.createdAt = -1; // newest first
+    }
+
+    // ---------------------------
+    // 4. Fetch products
+    // ---------------------------
+    const products = await Product.find(filter)
+      .sort(sort)
+      .skip(skip)
+      .limit(limit)
+      .lean();
+
+    // ---------------------------
+    // 5. Attach first variant image
+    // ---------------------------
+    for (let product of products) {
+      const variant = await Variant.findOne({ productId: product._id })
+        .sort({ createdAt: 1 }) // pick first variant
+        .lean();
+
+      product.image = variant?.images?.[0] || "/default.jpg"; 
+      // fallback image if no variant image
+    }
+
+    // ---------------------------
+    // 6. Count total for pagination
+    // ---------------------------
+    const totalProducts = await Product.countDocuments(filter);
+    const totalPages = Math.ceil(totalProducts / limit);
+
+    // ---------------------------
+    // 7. Render to EJS
+    // ---------------------------
+    res.render("user/products", {
+      products,
+      currentPage: page,
+      totalPages,
+      search: req.query.search || "",
+      sortOption: req.query.sort || "",
+      category: req.query.category || "",
+      brand: req.query.brand || "",
+      minPrice: req.query.minPrice || "",
+      maxPrice: req.query.maxPrice || ""
+    });
+
+  } catch (err) {
+    console.error("Error fetching products:", err);
+    res.status(500).send("Server error");
+  }
+};
 
 module.exports={
     loadProductList,
@@ -305,5 +405,6 @@ module.exports={
     postAddProduct,
     getEditProduct,
     postEditProduct,
-    deleteProduct
+    deleteProduct,
+    getProducts
 }

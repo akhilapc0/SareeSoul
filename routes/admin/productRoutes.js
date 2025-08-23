@@ -3,6 +3,7 @@ const router=express.Router();
 const adminAuth=require('../../middlewares/adminAuth');
 const productController=require('../../controllers/admin/productController');
 
+router.get("/products",productController.getProducts);
 
  router.get('/products',adminAuth,productController.loadProductList);
 

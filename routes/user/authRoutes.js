@@ -15,7 +15,8 @@ router.post('/resend-otp', authController.postResendOtp);
 
 
 router.get('/login',isLoggedOut,authController.getLogin)
-router.post('/login',authController.loginUser)
+router.post('/login',authController.loginUser);
+router.get('/logout',authController.logoutUser);
 
 router.get('/forgot-password',authController.getForgotPasswordPage);
 router.post('/forgot-password',authController.postForgotPassword);
@@ -29,6 +30,6 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
     res.redirect('/home')
 })
 //show home page
-router.get('/home',isLoggedIn, authController.getHomePage);
+router.get('/home', authController.getHomePage);
 
 module.exports = router;

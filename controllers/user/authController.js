@@ -272,10 +272,10 @@ const loginUser = async (req, res) => {
   }
 };
 
-const logoutUser = (req, res) => {
+const logoutUser = async(req, res) => {
   req.session.destroy(() => {
-    res.clearCookie('connect.sid'); // clear cookie
-    res.redirect('/login');
+    res.clearCookie('connect.sid'); 
+    res.redirect('/home');
   });
 };
 
@@ -414,7 +414,7 @@ const postChangePassword = async (req, res) => {
 
 
 const getHomePage = (req, res) => {
-  res.render('home', { user: req.session.user });
+  res.render('home', { user: req.session.user || null });
 };
 
 
