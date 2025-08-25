@@ -99,12 +99,6 @@
                 <div class="col-lg-7 col-md-6 col-sm-6 col-8 flex-grow-1 col-name">
                   <div class="info">
                     <h6 class="mb-0"><%= product.name %></h6>
-                    <small class="text-muted">
-                      Brand: <%= product.brand?.name || 'No Brand' %> | 
-                      Price: ₹<%= product.price %> | 
-                      Stock: <%= product.stock %>
-                    </small>
-                    <br>
                     <small>Created: <%= product.createdAt.toDateString() %></small>
                   </div>
                 </div>

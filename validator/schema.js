@@ -117,7 +117,7 @@ const variantValidation = Joi.object({
     Joi.string().uri().messages({
       "string.uri": "Each image must be a valid URL"
     })
-  ).optional()  // since it's not always required
+  ).optional()  
 });
 
 

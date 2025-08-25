@@ -44,7 +44,10 @@ const loadAddCategory = async (req, res) => {
 };
 
 
+
+
 const postAddCategory = async (req, res) => {
+  
   try {
     const { name, description } = req.body;
 

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head') %>
+  <meta name="description" content="<%= product.description %>">
+  <meta property="og:title" content="<%= product.name %>">
+  <meta property="og:description" content="<%= product.description %>">
+  <% if (variants.length > 0 && variants[0].images.length > 0) { %>
+    <meta property="og:image" content="<%= variants[0].images[0] %>">
+  <% } %>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+ 
+    .breadcrumb {
+      padding: 15px 0;
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .breadcrumb a {
+      color: #2874f0;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Product Section */
+    .product-section {
+      background: white;
+      margin: 20px 0;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    /* Image Gallery */
+    .image-gallery {
+      position: sticky;
+      top: 20px;
+    }
+
+    .main-image-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: white;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+
+    .zoomContainer {
+      z-index: 999;
+      position: absolute;
+    }
+
+    .zoomWrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .zoomLens {
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      cursor: zoom-in;
+    }
+
+    /* Thumbnails */
+    .thumbnail-container {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      object-fit: cover;
+      max-width: 80px;
+      max-height: 80px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease, border-color 0.2s ease, transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .thumbnail:hover,
+    .thumbnail.active {
+      opacity: 1;
+      border-color: #2874f0;
+      transform: scale(1.05);
+    }
+
+    /* Product Info */
+    .product-info {
+      padding-left: 20px;
+    }
+
+    .product-title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #212529;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .brand-category {
+      color: #878787;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .brand-category a {
+      color: #2874f0;
+      text-decoration: none;
+    }
+
+    .rating-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .rating-badge {
+      background: #388e3c;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rating-text {
+      color: #878787;
+      font-size: 0.9rem;
+    }
+
+    /* Price Section */
+    .price-section {
+      margin-bottom: 25px;
+      padding: 20px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .current-price {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #212529;
+      margin-right: 10px;
+    }
+
+    .original-price {
+      font-size: 1.2rem;
+      color: #878787;
+      text-decoration: line-through;
+      margin-right: 10px;
+    }
+
+    .discount-badge {
+      color: #388e3c;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .price-details {
+      font-size: 0.9rem;
+      color: #878787;
+      margin-top: 8px;
+    }
+
+    /* Color Variants */
+    .variants-section {
+      margin-bottom: 30px;
+    }
+
+    .variants-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+      color: #212529;
+    }
+
+    .color-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .color-option {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border: 3px solid #e0e0e0;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      overflow: hidden;
+    }
+
+    .color-option:hover {
+      transform: scale(1.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .color-option.active {
+      border-color: #2874f0;
+      box-shadow: 0 0 0 2px #2874f0;
+    }
+
+    .color-option img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 50px;
+      max-height: 50px;
+    }
+
+    .color-name {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: #666;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .color-option:hover .color-name,
+    .color-option.active .color-name {
+      opacity: 1;
+    }
+
+    .selected-color {
+      font-weight: 500;
+      color: #2874f0;
+    }
+
+    /* Stock Status */
+    .stock-section {
+      margin-bottom: 25px;
+    }
+
+    .stock-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .stock-status.in-stock {
+      background: #e8f5e8;
+      color: #2e7d32;
+    }
+
+    .stock-status.low-stock {
+      background: #fff3e0;
+      color: #f57c00;
+    }
+
+    .stock-status.out-of-stock {
+      background: #ffebee;
+      color: #d32f2f;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 15px 40px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-width: 200px;
+    }
+
+    .btn-primary {
+      background: #ff9f00;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #e68900;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #2874f0;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #1e5bc6;
+      transform: translateY(-1px);
+    }
+
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Features */
+    .features-section {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .features-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #212529;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .feature-icon {
+      font-size: 1.2rem;
+      color: #2874f0;
+    }
+
+    .feature-text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Product Description */
+    .description-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .description-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+      color: #212529;
+    }
+
+    .description-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* Mobile Zoom Overlay */
+    .mobile-zoom-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mobile-zoom-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .zoomContainer {
+        display: none !important;
+      }
+
+      .image-gallery {
+        position: relative;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .product-section {
+        padding: 20px;
+        margin: 10px 0;
+      }
+
+      .main-image-container {
+        height: 350px;
+      }
+
+      .product-title {
+        font-size: 1.5rem;
+      }
+
+      .current-price {
+        font-size: 1.5rem;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .product-info {
+        padding-left: 0;
+      }
+    }
+
+    /* Loading Animation */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('./partials/header') %>
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="/">Home</a> / 
+      <a href="/products">Products</a> / 
+      <% if (category) { %>
+        <a href="/category/<%= category._id %>"><%= category.name %></a> /
+      <% } %>
+      <span><%= product.name %></span>
+    </div>
+
+    <div class="product-section">
+      <div class="product-grid">
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+          <div class="main-image-container" id="imageContainer">
+            <% if (variants.length > 0 && variants[0].images.length > 0) { %>
+              <img 
+                src="<%= variants[0].images[0] %>" 
+                alt="<%= product.name %>"
+                class="main-image"
+                id="mainImage"
+              >
+            <% } %>
+          </div>
+          
+          <!-- Thumbnails -->
+          <div class="thumbnail-container" id="thumbnailContainer">
+            <% if (variants.length > 0) { %>
+              <% variants[0].images.forEach((image, index) => { %>
+                <img 
+                  src="<%= image %>" 
+                  alt="<%= product.name %> - View <%= index + 1 %>"
+                  class="thumbnail <%= index === 0 ? 'active' : '' %>"
+                  onclick="changeMainImage('<%= image %>', this)"
+                >
+              <% }) %>
+            <% } %>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <h1 class="product-title"><%= product.name %></h1>
+          
+          <div class="brand-category">
+            <% if (brand) { %>
+              Brand: <a href="/brand/<%= brand._id %>"><%= brand.name %></a>
+            <% } %>
+            <% if (category && brand) { %> | <% } %>
+            <% if (category) { %>
+              Category: <a href="/category/<%= category._id %>"><%= category.name %></a>
+            <% } %>
+          </div>
+
+          <div class="rating-section">
+            <div class="rating-badge">
+              <span>★</span>
+              <span><%= product.rating || 4.2 %></span>
+            </div>
+            <span class="rating-text">Based on customer reviews</span>
+          </div>
+
+          <!-- Price Section -->
+          <div class="price-section">
+            <span class="current-price">₹<span id="currentPrice"><%= product.salesPrice %></span></span>
+            <% if (product.actualPrice > product.salesPrice) { %>
+              <span class="original-price">₹<%= product.actualPrice %></span>
+              <span class="discount-badge">
+                <%= Math.round(((product.actualPrice - product.salesPrice) / product.actualPrice) * 100) %>% off
+              </span>
+            <% } %>
+            <div class="price-details">Inclusive of all taxes</div>
+          </div>
+
+          <!-- Color Variants -->
+          <% if (variants.length > 1) { %>
+            <div class="variants-section">
+              <div class="variants-title">
+                Color: <span class="selected-color" id="selectedColor"><%= variants[0].colour %></span>
+              </div>
+              <div class="color-options">
+                <% variants.forEach((variant, index) => { %>
+                  <div 
+                    class="color-option <%= index === 0 ? 'active' : '' %>"
+                    data-variant-index="<%= index %>"
+                    onclick="selectVariant(<%= index %>)"
+                    title="<%= variant.colour %>"
+                  >
+                    <img src="<%= variant.images[0] %>" alt="<%= variant.colour %>">
+                    <div class="color-name"><%= variant.colour %></div>
+                  </div>
+                <% }) %>
+              </div>
+            </div>
+          <% } %>
+
+          <!-- Stock Status -->
+          <div class="stock-section">
+            <% if (variants.length > 0) { %>
+              <div class="stock-status <%= variants[0].stock > 10 ? 'in-stock' : variants[0].stock > 0 ? 'low-stock' : 'out-of-stock' %>" id="stockStatus">
+                <% if (variants[0].stock > 10) { %>
+                  ✓ In Stock
+                <% } else if (variants[0].stock > 0) { %>
+                  ⚠ Only <%= variants[0].stock %> left
+                <% } else { %>
+                  ✗ Out of Stock
+                <% } %>
+              </div>
+            <% } %>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <button class="btn btn-primary" onclick="addToCart()" id="addToCartBtn">
+              <i class="bi bi-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn btn-secondary" onclick="buyNow()">
+              <i class="bi bi-lightning"></i> Buy Now
+            </button>
+            <button class="btn btn-outline-secondary" onclick="addToWishlist()">
+              <i class="bi bi-heart"></i> Add to Wishlist
+            </button>
+          </div>
+
+          <!-- Features -->
+          <div class="features-section">
+            <div class="features-title">Why choose this product?</div>
+            <div class="features-grid">
+              <div class="feature-item">
+                <span class="feature-icon">🚚</span>
+                <span class="feature-text">Free Delivery</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔄</span>
+                <span class="feature-text">7 Day Return Policy</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">💳</span>
+                <span class="feature-text">Cash on Delivery</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🛡️</span>
+                <span class="feature-text">1 Year Warranty</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Description -->
+      <div class="description-section">
+        <h2 class="description-title">Product Description</h2>
+        <div class="description-text">
+          <%= product.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./partials/footer') %>
+
+  <script>
+    let currentVariantIndex = 0;
+    const variants = <%- JSON.stringify(variants) %>;
+    const product = <%- JSON.stringify(product) %>;
+
+    // Initialize zoom
+    function initImageZoom() {
+      if ($('#mainImage').data('elevateZoom')) {
+        $('.zoomContainer').remove();
+        $('#mainImage').removeData('elevateZoom');
+      }
+      if ($(window).width() <= 768) {
+        setupMobileZoom();
+      } else {
+        setupDesktopZoom();
+      }
+    }
+
+    function setupDesktopZoom() {
+      $('#mainImage').elevateZoom({
+        zoomType: "lens",
+        lensShape: "square",
+        lensSize: 150,
+        borderSize: 2,
+        containLensZoom: true,
+        zoomWindowPosition: 1,
+        zoomWindowWidth: 300,
+        zoomWindowHeight: 300,
+        zoomLevel: 2.0,
+        zoomWindowFadeIn: 300,
+        zoomWindowFadeOut: 300,
+        lensFadeIn: 300,
+        lensFadeOut: 300
+      });
+    }
+
+    function setupMobileZoom() {
+      if ($('#mobile-zoom-overlay').length === 0) {
+        $('body').append(`
+          <div id="mobile-zoom-overlay" class="mobile-zoom-overlay">
+            <img id="mobile-zoomed-image" src="" alt="Zoomed Image">
+            <button class="close-zoom btn btn-light position-absolute top-0 end-0 m-3">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        `);
+      }
+      $('#mainImage').off('click').on('click', function() {
+        $('#mobile-zoomed-image').attr('src', $(this).attr('src'));
+        $('#mobile-zoom-overlay').fadeIn('fast');
+      });
+      $(document).off('click', '#mobile-zoom-overlay .close-zoom').on('click', '#mobile-zoom-overlay .close-zoom', function() {
+        $('#mobile-zoom-overlay').fadeOut('fast');
+      });
+    }
+
+    // Change main image
+    function changeMainImage(src, thumbnail) {
+      const mainImage = $('#mainImage');
+      mainImage.attr('src', src);
+      
+      // Update active thumbnail
+      $('.thumbnail').removeClass('active');
+      $(thumbnail).addClass('active');
+      
+      // Reinitialize zoom
+      initImageZoom();
+    }
+
+    // Select variant (color)
+    function selectVariant(index) {
+      currentVariantIndex = index;
+      const variant = variants[index];
+      
+      if (!variant) return;
+
+      // Update active color option
+      $('.color-option').removeClass('active');
+      $(`[data-variant-index="${index}"]`).addClass('active');
+      
+      // Update selected color text
+      $('#selectedColor').text(variant.colour);
+      
+      // Update main image with fade effect
+      const mainImage = $('#mainImage');
+      mainImage.addClass('loading');
+      
+      setTimeout(() => {
+        if (variant.images && variant.images.length > 0) {
+          mainImage.attr('src', variant.images[0]);
+          
+          // Update thumbnails
+          updateThumbnails(variant.images);
+          
+          // Reinitialize zoom
+          initImageZoom();
+        }
+        
+        mainImage.removeClass('loading').addClass('fade-in');
+        
+        setTimeout(() => {
+          mainImage.removeClass('fade-in');
+        }, 300);
+      }, 150);
+      
+      // Update stock status
+      updateStockStatus(variant.stock);
+      
+      // Update add to cart button
+      const addToCartBtn = $('#addToCartBtn');
+      if (variant.stock === 0) {
+        addToCartBtn.prop('disabled', true).text('🚫 Out of Stock');
+      } else {
+        addToCartBtn.prop('disabled', false).html('<i class="bi bi-cart-plus"></i> Add to Cart');
+      }
+    }
+
+    // Update thumbnails
+    function updateThumbnails(images) {
+      const thumbnailContainer = $('#thumbnailContainer');
+      thumbnailContainer.html(images.map((image, index) => `
+        <img 
+          src="${image}" 
+          alt="Product View ${index + 1}"
+          class="thumbnail ${index === 0 ? 'active' : ''}"
+          onclick="changeMainImage('${image}', this)"
+        >
+      `).join(''));
+    }
+
+    // Update stock status
+    function updateStockStatus(stock) {
+      const stockStatus = $('#stockStatus');
+      if (stock > 10) {
+        stockStatus.removeClass('low-stock out-of-stock').addClass('in-stock').html('✓ In Stock');
+      } else if (stock > 0) {
+        stockStatus.removeClass('in-stock out-of-stock').addClass('low-stock').html(`⚠ Only ${stock} left`);
+      } else {
+        stockStatus.removeClass('in-stock low-stock').addClass('out-of-stock').html('✗ Out of Stock');
+      }
+    }
+
+    // Add to wishlist
+    function addToWishlist() {
+      const variant = variants[currentVariantIndex];
+      
+      if (!variant) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Please select a valid variant.'
+        });
+        return;
+      }
+
+      const wishlistData = {
+        productId: product._id,
+        variantId: variant._id
+      };
+
+      fetch('/wishlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(wishlistData)
+      })
+      .then(response => response.json())
+      .then(result => {
+        if (result.success) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Added!',
+            text: 'Product added to wishlist.',
+            timer: 1500,
+            showConfirmButton: false
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: result.message || 'Could not add to wishlist.'
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: 'Something went wrong!'
+        });
+      });
+    }
+
+    // Initialize when page loads
+    $(document).ready(function() {
+      initImageZoom();
+      
+      // Preload images for better performance
+      variants.forEach(variant => {
+        variant.images.forEach(image => {
+          const img = new Image();
+          img.src = image;
+        });
+      });
+
+      // Reinitialize zoom on window resize
+      $(window).on('resize', initImageZoom);
+
+      // Update first thumbnail as active
+      $('.thumbnail').first().addClass('active');
+    });
+  </script>
+</body>
+</html>

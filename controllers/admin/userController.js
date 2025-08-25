@@ -50,7 +50,7 @@ const toggleUserBlockStatus=async(req,res)=>{
         }
         user.isBlocked=!user.isBlocked;
         await user.save();
-        // return res.redirect('/admin/users');
+        
         return res.json({success:true,isBlocked:user.isBlocked});
 
     }

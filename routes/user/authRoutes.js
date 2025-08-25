@@ -29,7 +29,7 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
     console.log("passport-session ",req.session.passport)
     res.redirect('/home')
 })
-//show home page
+
 router.get('/home', authController.getHomePage);
 
 module.exports = router;

@@ -150,7 +150,7 @@ const deleteBrand=async(req,res)=>{
   }
 }
 
-// DELETE PRODUCT CONTROLLER
+
 
 
 

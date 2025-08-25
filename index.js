@@ -36,6 +36,7 @@ app.set('views', [
 app.use(express.static(path.join(__dirname, 'public')));
 
 const authRoutes = require('./routes/user/authRoutes');
+const userRoutes=require('./routes/user/userRoutes');
 const adminauthRoutes=require('./routes/admin/authRoutes');
 const adminUserRoutes=require('./routes/admin/userRoutes');
 const categoryRoutes=require('./routes/admin/categoryRoutes');
@@ -45,6 +46,8 @@ const variantRoutes=require('./routes/admin/variantRoutes');
 
 
 app.use('/', authRoutes);
+app.use('/',userRoutes);
+
 app.use('/admin',adminauthRoutes);
 app.use('/admin',adminUserRoutes);
 app.use('/admin',categoryRoutes);

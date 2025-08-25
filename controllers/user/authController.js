@@ -15,10 +15,10 @@ const registerUser = async (req, res) => {
   try {
     const { firstName, lastName, email, phoneNumber, password, confirmPassword } = req.body;
 
-    // 2️⃣ Validate input
+   
     const { error } = registerValidation.validate(req.body, { abortEarly: false });
     if (error) {
-      // Convert Joi error details into { fieldName: message }
+   
       const errors = {};
       error.details.forEach(err => {
         errors[err.path[0]] = err.message;
@@ -30,7 +30,7 @@ const registerUser = async (req, res) => {
       });
     }
 
-    // 3️⃣ Check if email exists
+    
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.render("register", {
@@ -39,10 +39,10 @@ const registerUser = async (req, res) => {
       });
     }
 
-    // 4️⃣ Hash password
+   
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // 5️⃣ Create user
+    
     const newUser = await User.create({
       firstName,
       lastName,
@@ -52,7 +52,7 @@ const registerUser = async (req, res) => {
       isVerified: false
     });
 
-    // 6️⃣ Create OTP
+    
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const expiresAt = new Date(Date.now() + 2 * 60 * 1000);
 
@@ -65,11 +65,11 @@ const registerUser = async (req, res) => {
       isUsed: false
     });
 
-    //  Send OTP email
+   
     await sendOtpEmail(email, otp, EmailVerificationUsageType);
     console.log("OTP sent:", otp);
 
-    // Redirect to OTP verification page
+    
     return res.redirect(`/verify-otp?email=${email}`);
 
   } catch (err) {
@@ -99,7 +99,7 @@ const postVerifyOtp = async (req, res) => {
     return res.json({ success: false, message: "Invalid OTP" });
   }
 
-  // ✅ Mark OTP as used
+  
   otpDoc.isUsed = true;
   await otpDoc.save();
 
@@ -107,7 +107,7 @@ const postVerifyOtp = async (req, res) => {
   user.isVerified=true;
   await user.save();
 
-  // ✅ Continue registration flow
+  
   return res.json({ success: true, message: "OTP verified successfully!" });
 };
 
@@ -119,12 +119,12 @@ const getVerifyOtpPage = async (req, res) => {
     return res.redirect('/register');
   }
 
-  // find otp for this email
+
   const otpDoc = await OtpVerification.findOne({
   email,
   isUsed: false,
   usageType: EmailVerificationUsageType,
-  expiresAt: { $gt: Date.now() }   // only OTPs that haven’t expired
+  expiresAt: { $gt: Date.now() }   
 });
 
   let timeRemaining = 0;
@@ -138,7 +138,7 @@ const getVerifyOtpPage = async (req, res) => {
   res.render("verify-otp", {
     email,
     error: "",
-    timeRemaining   // pass seconds to EJS
+    timeRemaining   
   });
 };
 
@@ -157,16 +157,16 @@ const postResendOtp = async (req, res) => {
       });
     }
 
-    // generate new otp (4 digit)
+    
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    // expiry: 1 minute from now
+    
+        
     const expiresAt = Date.now() + 60 * 1000;
 
-    // ❌ instead of deleteOne
-    // ✅ delete all previous OTPs for this email
+    
     await OtpVerification.deleteMany({ email });
 
-    // save new otp
+    
     await OtpVerification.create({
       userId: user._id,
       usageType: EmailVerificationUsageType,
@@ -175,7 +175,8 @@ const postResendOtp = async (req, res) => {
       expiresAt
     });
 
-    // send via email
+    
+    
     await sendOtpEmail(email, otp);
      console.log(otp)
 
@@ -249,7 +250,14 @@ const loginUser = async (req, res) => {
         successMessage: null
       });
     }
-     
+
+    if(user.isBlocked){
+return res.render('login', {
+      errors: { email: 'user is blocked ' },
+      formData: req.body,
+      successMessage: null
+    });
+    }
 
      if (!user.isVerified) {
   return res.redirect(`/verify-otp?email=${email}`)
@@ -307,7 +315,7 @@ const postForgotPassword = async (req, res) => {
 
     let otp;
     if (existingOtp) {
-      // Calculate remaining time in seconds
+      
       const remainingMs = new Date(existingOtp.expiresAt) - new Date();
       const remainingSeconds = Math.floor(remainingMs / 1000);
       const minutes = Math.floor(remainingSeconds / 60);
@@ -350,11 +358,11 @@ const postForgotPassword = async (req, res) => {
   }
 };
 
-// GET /change-password/:email/:otp
+
 const getChangePassword = async (req, res) => {
   const { email, otp } = req.params;
 
-  // check OTP validity
+
   const otpDoc = await OtpVerification.findOne({
     email,
     otp,
@@ -395,11 +403,11 @@ const postChangePassword = async (req, res) => {
     return res.send('Invalid or expired link');
   }
 
-  // update password
+
   const hashed = await bcrypt.hash(newPassword, 10);
   await User.updateOne({ email }, { password: hashed });
 
-  // mark OTP used
+ 
   otpDoc.isUsed = true;
   await otpDoc.save();
 
@@ -414,7 +422,7 @@ const postChangePassword = async (req, res) => {
 
 
 const getHomePage = (req, res) => {
-  res.render('home', { user: req.session.user || null });
+  res.render('home', { user: req.session.user || req?.user || null });
 };
 
 
