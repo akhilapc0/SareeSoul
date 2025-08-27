@@ -2,7 +2,7 @@ const Product = require('../../models/productModel');
 const Variant=require('../../models/variantModel');
 const Brand=require('../../models/brandModel');
 const Category=require('../../models/categoryModel');
-
+const User=require('../../models/userModel')
 const getShopPage = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
@@ -130,9 +130,24 @@ const getProductDetail = async (req, res) => {
 };
 
 
+const getProfile=async(req,res)=>{
+
+  const userId=req.session?.user?._id;
+
+  console.log(userId)
+  const user=await User.findById(userId);
+  if(user){
+   res.json({
+    "message":`hi ${user.firstName}`
+   })
+} 
+}
+
+
+
 
 module.exports = {
   getShopPage,
-  getProductDetail
-
+  getProductDetail,
+getProfile
 };

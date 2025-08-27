@@ -4,10 +4,10 @@ const authController = require('../../controllers/user/authController');
 const {isLoggedIn,isLoggedOut}=require('../../middlewares/userAuth');
 const passport = require('passport');
 
-// show registration form
+
 router.get('/register', authController.getRegisterPage);
 
-// handle form submission
+
 router.post('/register', authController.registerUser);
 router.get('/verify-otp',authController.getVerifyOtpPage);
 router.post('/verify-otp',authController.postVerifyOtp)

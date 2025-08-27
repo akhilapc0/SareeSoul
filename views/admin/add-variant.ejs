@@ -91,7 +91,7 @@
 
                 <!-- Images -->
                 <div class="mb-4">
-                  <label for="images" class="form-label">Upload Images (Max 5)</label>
+                  <label for="images" class="form-label">Upload Images (Max <%=maxImageSize%>)</label>
                   <input type="file" class="form-control" id="images" name="images" accept="image/*" multiple />
                   <div id="imagesError" class="text-danger"></div>
 
@@ -147,7 +147,7 @@
       let imageFiles = []; // Final storage
       let cropper;
       let fileQueue = []; // Temporary file storage for selected images
-      const MAX_IMAGES = 5;
+      const MAX_IMAGES =<%=maxImageSize%> ;
 
       // File input change
       imagesInput.addEventListener("change", () => {

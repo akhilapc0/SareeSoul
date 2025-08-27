@@ -2,6 +2,7 @@ const { variantValidation } = require("../../validator/schema");
 const Product = require("../../models/productModel");
 const Variant = require("../../models/variantModel");
 const cloudinary = require('../../config/cloudinary');
+const {maxImageSize}=require("../../shared/constant");
 
 const listVariants=async(req,res)=>{
      try {
@@ -62,7 +63,8 @@ const loadAddVariant = async (req, res) => {
     res.render("add-variant", {
       formData: {},   
       errors: "",     
-      product         
+      product ,
+      maxImageSize        
     });
   } catch (error) {
     console.error("Error loading add variant page:", error.message);
@@ -116,6 +118,7 @@ const postAddVariant = async (req, res) => {
       success: true,
       message: "Variant added successfully",
       variant: newVariant,
+
     });
   } catch (error) {
     console.error("Error adding variant:", error.message);
@@ -137,7 +140,8 @@ const getEditVariant = async (req, res) => {
     res.render("edit-variant", {
       variant, 
       product,  
-      errors: "" 
+      errors: "" ,
+      maxImageSize
     });
   } catch (error) {
     console.error("Error loading edit variant:", error.message);
@@ -186,7 +190,7 @@ if (!Array.isArray(req.body.existingImages)) {
     const existingImages = req.body.existingImages || []; 
     const newFiles = req.files || [];                    
 
-    if (existingImages.length + newFiles.length > 5) {
+    if (existingImages.length + newFiles.length > maxImageSize) {
       return res.status(400).json({ success: false, message: "You can upload max 5 images" });
     }
 

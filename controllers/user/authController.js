@@ -54,7 +54,7 @@ const registerUser = async (req, res) => {
 
     
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const expiresAt = new Date(Date.now() + 2 * 60 * 1000);
+    const expiresAt = new Date(Date.now() + 2 * 60 * 2000);
 
     await OtpVerification.create({
       userId: newUser._id,
@@ -161,7 +161,7 @@ const postResendOtp = async (req, res) => {
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
     
         
-    const expiresAt = Date.now() + 60 * 1000;
+    const expiresAt = Date.now() + 60 * 2000;
 
     
     await OtpVerification.deleteMany({ email });

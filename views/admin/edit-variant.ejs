@@ -61,7 +61,8 @@
       <div class="card mb-4">
         <header class="card-header">
           <h4 class="card-title">Variant Information</h4>
-          <small class="text-muted">Update the fields below</small>
+          <small class="text-muted">Update the fields below,
+          </small>
         </header>
 
         <div class="card-body">
@@ -105,7 +106,7 @@
 
                 <!-- Upload New Images -->
                 <div class="mb-4">
-                  <label for="images" class="form-label">Upload New Images (Max 5 total)</label>
+                  <label for="images" class="form-label">Upload New Images (Max  total)</label>
                   <input type="file" class="form-control" id="images" accept="image/*" />
                   <div id="imagesError" class="text-danger"></div>
                   <div id="newImagePreview" style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;"></div>
@@ -145,7 +146,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    const MAX_IMAGES = 5;
+    const MAX_IMAGES = <%=maxImageSize%>;
     let newFiles = [];
     let cropper;
 
@@ -189,7 +190,7 @@
         // Check total images count
         const keptImages = Array.from(document.querySelectorAll("input[name='existingImages']")).map(i => i.value);
         if (keptImages.length + newFiles.length + 1 > MAX_IMAGES) {
-          alert("Max 5 images allowed");
+          alert(`Max  images ${MAX_IMAGES}allowed`);
           closeCropper();
           return;
         }
