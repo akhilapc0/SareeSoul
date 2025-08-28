@@ -13,7 +13,7 @@ const getRegisterPage = (req, res) => {
 
 const registerUser = async (req, res) => {
   try {
-    const { firstName, lastName, email, phoneNumber, password, confirmPassword } = req.body;
+    const { firstName, lastName, email, phoneNumber, password } = req.body;
 
    
     const { error } = registerValidation.validate(req.body, { abortEarly: false });

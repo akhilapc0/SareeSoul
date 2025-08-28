@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authController = require('../../controllers/user/authController');
-const {isLoggedIn,isLoggedOut}=require('../../middlewares/userAuth');
+const {isLoggedOut}=require('../../middlewares/userAuth');
 const passport = require('passport');
 
 
@@ -26,7 +26,6 @@ router.post('/change-password/:email/:otp',authController.postChangePassword);
 
 router.get('/auth/google',passport.authenticate('google',{scope:['profile','email']}))
 router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect:'/login'}),(req,res)=>{
-    console.log("passport-session ",req.session.passport)
     res.redirect('/home')
 })
 
