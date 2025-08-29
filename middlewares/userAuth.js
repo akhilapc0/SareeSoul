@@ -19,7 +19,7 @@ function isLoggedOut(req, res, next) {
 
 async function checkBlock(req,res,next){
   try{
-  let userId=req.session.user?._id;
+  let userId=req.session?.user?._id || req.session?.passport?.user;
   if(!userId){
     return res.redirect('/login');
   }

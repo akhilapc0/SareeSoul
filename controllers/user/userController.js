@@ -111,7 +111,8 @@ const getProductDetail = async (req, res) => {
     
     const variants = await Variant.find({ productId: productId });
 
-    const user = req.session.user ;
+    const user = req.session?.user  || req?.user;
+    //  console.log(user)
      
     const brand = await Brand.findById(product.brandId);
     const category=await Category.findById(product.categoryId);

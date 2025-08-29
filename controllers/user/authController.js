@@ -56,7 +56,7 @@ const registerUser = async (req, res) => {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const expiresAt = new Date(Date.now() + 2 * 60 * 1000);
 
-    await OtpVerification.create({
+    const otpDoc=await OtpVerification.create({
       userId: newUser._id,
       email,
       otp,
@@ -65,6 +65,7 @@ const registerUser = async (req, res) => {
       isUsed: false
     });
 
+    console.log(otpDoc)
    
     await sendOtpEmail(email, otp, EmailVerificationUsageType);
     console.log("OTP sent:", otp);
@@ -95,7 +96,7 @@ const postVerifyOtp = async (req, res) => {
     return res.json({ success: false, message: "OTP not found or expired. Please request a new one." });
   }
 
-  if (otpDoc.otp != otp) {
+  if (otpDoc.otp != otp.trim()) {
     return res.json({ success: false, message: "Invalid OTP" });
   }
 
@@ -172,7 +173,8 @@ const postResendOtp = async (req, res) => {
       usageType: EmailVerificationUsageType,
       email,
       otp,
-      expiresAt
+      expiresAt,
+      isUsed:false
     });
 
     

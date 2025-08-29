@@ -13,12 +13,13 @@ passport.use(new GoogleStrategy({
 async(accessToken,refreshToken,Profile,done)=>{
 try{
     let user=await User.findOne({googleId:Profile.id})
-    if(user){
-         if (user.isBlocked) {
-        return
+  if (user) {
+    if (user.isBlocked) {
+        return done(null, false, { message: "Your account has been blocked" });
     }
-        return done(null,user)
-    }
+    return done(null, user);
+}
+
     else{
         const fullName = Profile.displayName || "";
         const nameParts = fullName.split(" "); 
@@ -48,7 +49,7 @@ passport.serializeUser((user,done)=>{
 passport.deserializeUser((id,done)=>{
     User.findById(id)
     .then(user=>{
-        console.log("deserializeUser ",user)
+        // console.log("deserializeUser ",user)
         done(null,user);
     })
     .catch(err=>{
