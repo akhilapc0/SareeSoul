@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authController = require('../../controllers/user/authController');
-const {isLoggedIn,isLoggedOut}=require('../../middlewares/userAuth');
+const {isLoggedIn,isLoggedOut,checkUser}=require('../../middlewares/userAuth');
 const passport = require('passport');
 
 
@@ -31,5 +31,7 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
 })
 
 router.get('/home', authController.getHomePage);
+
+router.post('/check',checkUser)
 
 module.exports = router;

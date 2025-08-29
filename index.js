@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-
+const {userInfo}=require('./middlewares/userAuth')
 require('dotenv').config();
 require('./config/db');
 
@@ -19,7 +19,7 @@ app.use(session({
 }));
 
 
-
+app.use(userInfo)
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -34,6 +34,8 @@ app.set('views', [
 ]);
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 const authRoutes = require('./routes/user/authRoutes');
 const userRoutes=require('./routes/user/userRoutes');

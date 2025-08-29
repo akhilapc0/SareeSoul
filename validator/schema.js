@@ -1,7 +1,7 @@
 const Joi=require('joi');
 
 const registerValidation=Joi.object({
-    firstName:Joi.string()
+    firstName:Joi.string().trim()
     .pattern(/^[A-Za-z]+$/)
     .min(3)
     .max(30)
@@ -10,9 +10,9 @@ const registerValidation=Joi.object({
         "string.pattern.base": "First name must contain only letters",
         'string.empty':'First name is required',
         'string.min':'first name must be atleast 3 characters',
-        'string.max':'first name must be less than 50 characters'
+        'string.max':'first name must be less than 30 characters'
     }),
-    lastName:Joi.string()
+    lastName:Joi.string().trim()
     .pattern(/^[A-Za-z ]+$/)
     .min(2)
     .max(30)
@@ -21,9 +21,9 @@ const registerValidation=Joi.object({
         'string.empty':'last name is required',
         "string.pattern.base": "Enter a valid last name",
         'string.min':'last name must be atleast 2  characters',
-        'string.max':'last name must be less than 50 characters'
+        'string.max':'last name must be less than 30 characters'
     }),
-    email:Joi.string()
+    email:Joi.string().trim()
     .email()
     .max(50)
     .required()
@@ -41,7 +41,7 @@ const registerValidation=Joi.object({
     .messages({
         'string.empty':'password is required',
         'string.min':'password must be atleast  6 charaters',
-        'string-max':'password must be less than or equal to 20 characters',
+        'string.max':'password must be less than or equal to 20 characters',
         "string.pattern.base": "Password must include a capital letter and special character"
     }),
     confirmPassword: Joi.any()
