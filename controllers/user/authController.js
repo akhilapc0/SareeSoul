@@ -107,7 +107,6 @@ const postVerifyOtp = async (req, res) => {
   const user=await User.findOne({email});
   user.isVerified=true;
   await user.save();
-
   
   return res.json({ success: true, message: "OTP verified successfully!" });
 };
@@ -162,7 +161,7 @@ const postResendOtp = async (req, res) => {
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
     
         
-    const expiresAt = Date.now() + 60 * 1000;
+    const expiresAt = Date.now() + 2* 60 * 1000;
 
     
     await OtpVerification.deleteMany({ email });
@@ -196,10 +195,7 @@ const postResendOtp = async (req, res) => {
 const getLogin = async (req, res) => {
   try {
 
-    const successMessage = req.session.successMessage;
-    delete req.session.successMessage; 
     res.render('login', {
-      successMessage,
       errors: {},
       formData: {}
     });
@@ -338,12 +334,12 @@ const postForgotPassword = async (req, res) => {
         email,
         otp,
         usageType: ForgotPasswordUsageType,
-        expiresAt: new Date(Date.now() + 5 * 60 * 1000),
+        expiresAt: new Date(Date.now() + 2 * 60 * 1000),
         isUsed: false
       });
     }
 
-    const resetLink = `${process.env.BASE_URL}/change-password/${encodeURIComponent(email)}/${otp}`;
+    // const resetLink = `${process.env.BASE_URL}/change-password/${encodeURIComponent(email)}/${otp}`;
 
     
     await sendOtpEmail(email, otp, ForgotPasswordUsageType);

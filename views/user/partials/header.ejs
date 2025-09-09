@@ -1,3 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Dropdown CSS */
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu > a::after {
+    content: " ▼";
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+    background: #f8f9fa;
+    color: #007bff;
+    padding-left: 25px;
+}
+</style>
+</head>
+<body>
+
 <header class="header-area header-style-3 header-height-2">
     <!-- Top Bar -->
     <div class="header-top header-top-ptb-1 d-none d-lg-block">
@@ -28,7 +92,7 @@
             <div class="header-wrap header-space-between position-relative main-nav">
                 <!-- Logo (desktop + mobile) -->
                 <div class="logo logo-width-1">
-                    <a href="index.html"><span>sareesoul</span></a>
+                    <a href="/home"><span>sareesoul</span></a>
                 </div>
 
                 <!-- Nav + Wishlist/Cart together -->
@@ -37,8 +101,16 @@
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                         <nav>
                             <ul>
-                                <li><a class="active" href="index.html">Home</a></li>
+                                <li><a class="active" href="/home">Home</a></li>
                                 <li><a href="/shop">Shop</a></li>
+                                <li class="has-submenu">
+                                    <a href="#">Pages</a>
+                                    <ul class="submenu">
+                                        <li><a href="/wallet">Wallet</a></li>
+                                        <li><a href="/my-address">My Address</a></li>
+                                        <li><a href="/my-order">my order</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="page-about.html">About Us</a></li>
                             </ul>
                         </nav>
@@ -107,15 +179,15 @@
                 if (desktop) {
                     desktop.innerHTML = `
                         <i class="fi-rs-user"></i>
-                        <a href="/account">Welcome, ${userData.firstName}</a>
+                        <a href="/profile">Welcome, ${userData.firstName}</a>
                         | <a href="/logout">Logout</a>
                     `;
                 }
                 if (mobile) {
-                    mobile.innerHTML = `<a href="/account">Welcome, ${userData.firstName}</a> | <a href="/logout">Logout</a>`;
+                    mobile.innerHTML = `<a href="/profile">Welcome, ${userData.firstName}</a> | <a href="/logout">Logout</a>`;
                 }
                 if (mobileInfo) {
-                    mobileInfo.innerHTML = `<a href="/account">Welcome, ${userData.firstName}</a> | <a href="/logout">Logout</a>`;
+                    mobileInfo.innerHTML = `<a href="/profile">Welcome, ${userData.firstName}</a> | <a href="/logout">Logout</a>`;
                 }
             } else {
                 //not logged in
@@ -138,3 +210,6 @@
     })();
     </script>
 </header>
+
+</body>
+</html>

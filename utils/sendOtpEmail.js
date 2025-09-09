@@ -1,5 +1,5 @@
 const transporter = require("../config/nodemailer");
-const { EmailVerificationUsageType, ForgotPasswordUsageType } = require('../shared/constant');
+const { EmailVerificationUsageType, ForgotPasswordUsageType,EditEmailUsageType } = require('../shared/constant');
 
 const sendOtpEmail = async (to, otp, usageType) => {
   let subject = "";
@@ -11,7 +11,7 @@ const sendOtpEmail = async (to, otp, usageType) => {
       subject = "Change Your Password";
       htmlContent = `
         <h3>Password Change OTP</h3>
-        <p>This link  is valid for 5 minutes.</p>
+        <p>This link  is valid for 2 minutes.</p>
         <p>Click below to change your password directly:</p>
         <a href="${process.env.BASE_URL}/change-password/${to}/${otp}">Change Password</a>
       `;
@@ -22,7 +22,16 @@ const sendOtpEmail = async (to, otp, usageType) => {
       htmlContent = `
         <h3>Email Verification</h3>
         <p>Your OTP code is: <strong>${otp}</strong></p>
-        <p>This OTP is valid for 5 minutes.</p>
+        <p>This OTP is valid for 2 minutes.</p>
+      `;
+      break;
+    case EditEmailUsageType:   
+      subject = "Verify Your New Email";
+      htmlContent = `
+        <h3>Email Change Verification</h3>
+        <p>Your OTP code is: <strong>${otp}</strong></p>
+        <p>This OTP is valid for 2 minutes.</p>
+        <p>If you didn’t request to change your email, please ignore this message.</p>
       `;
       break;
 
@@ -31,7 +40,7 @@ const sendOtpEmail = async (to, otp, usageType) => {
       htmlContent = `
         <h3>OTP Verification</h3>
         <p>Your OTP code is: <strong>${otp}</strong></p>
-        <p>This OTP is valid for 5 minutes.</p>
+        <p>This OTP is valid for 2 minutes.</p>
       `;
       break;
   }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Verify Email OTP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <%- include('./partials/header') %>
+    
+    <div class="container mt-4 mb-5">
+        <!-- Page Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2 class="mb-0 text-dark">Verify OTP</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verify OTP Form Section -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-success text-white py-3">
+                        <h5 class="mb-0">
+                            <i class="fas fa-shield-alt me-2"></i>Enter OTP
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="verifyEmailOtpForm">
+                            <input type="hidden" name="newEmail" value="<%= newEmail %>">
+                            <div class="mb-3">
+                                <label for="otp" class="form-label">Enter OTP</label>
+                                <input type="text" name="otp" id="otp" class="form-control" required>
+                                <div class="text-danger" id="otpError"></div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Verify OTP</button>
+                        </form>
+
+                        <!-- Timer and Resend -->
+                        <div class="mt-3">
+                            <p id="timer"></p>
+                            <form action="/profile/resend-email-otp" method="POST">
+                                <input type="hidden" name="newEmail" value="<%= newEmail %>">
+                                <button id="resendBtn" type="submit" class="btn btn-link">Resend OTP</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <%- include('./partials/footer') %>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Simple timer
+        let timeLeft = 120; // 2 minutes
+        const timer = document.getElementById("timer");
+        const resendButton = document.getElementById("resendBtn");
+
+        function updateTimer() {
+            if (timeLeft > 0) {
+                timer.textContent = "Resend available in " + timeLeft + " seconds";
+                resendButton.disabled = true;
+                timeLeft--;
+            } else {
+                timer.textContent = "You can resend OTP now";
+                resendButton.disabled = false;
+            }
+        }
+
+        // Update timer every second
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Handle form submit
+        document.getElementById("verifyEmailOtpForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+             // 🔹 Frontend validation: OTP must be 6 digits number
+        const otpInput = document.getElementById("otp");
+        const otpError = document.getElementById("otpError");
+        otpError.innerText = ""; // clear old error
+
+        if (!/^\d{6}$/.test(data.otp)) {
+            otpError.innerText = "OTP must be 6 digits";
+            return; // stop sending request
+        }
+
+            try {
+                const res = await fetch("/profile/verify-email-otp", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await res.json();
+
+                if (!result.success) {
+                    if (result.errors && result.errors.otp) {
+                        document.getElementById("otpError").innerText = result.errors.otp;
+                    } else {
+                        Swal.fire("Error", result.message || "Invalid OTP", "error");
+                    }
+                    return;
+                }
+
+                Swal.fire({
+                    icon: "success",
+                    title: "Email Updated!",
+                    text: "Your email has been updated successfully.",
+                    timer: 2000,
+                    showConfirmButton: false,
+                }).then(() => {
+                    window.location.href = "/profile";
+                });
+
+            } catch (err) {
+                console.error(err);
+                Swal.fire("Error", "Server error", "error");
+            }
+        });
+    </script>
+</body>
+</html>

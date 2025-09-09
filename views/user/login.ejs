@@ -61,9 +61,6 @@
                 <% } %>
 
 
-
-
-
                   <form method="post" id="loginForm" class="login-form">
                     <div class="form-group">
                       <label for="email">Email Address</label>
@@ -164,24 +161,20 @@
       }
     }
 
-
-    // Simulate login process
-    const successMessage = "<%= successMessage || '' %>".trim();
-    if (successMessage) {
-      // Show spinner
-      document.getElementById('loadingOverlay').style.display = 'block';
-
-      setTimeout(() => {
-        document.getElementById('loadingOverlay').style.display = 'none';
-        
-      
-        // Redirect to /home after delay
-        window.location.href = "/home";
-      }, 1000);
-    }
-
-
   </script>
+
+  <% if (typeof successMessage !== "undefined" && successMessage) { %>
+<script>
+  const successMessage = <%- JSON.stringify(successMessage) %>;
+  document.getElementById('loadingOverlay').style.display = 'block';
+
+  setTimeout(() => {
+    document.getElementById('loadingOverlay').style.display = 'none';
+    window.location.href = "/home";
+  }, 1000);
+</script>
+<% } %>
+
 
 </body>
 

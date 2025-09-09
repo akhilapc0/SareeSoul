@@ -43,10 +43,14 @@ const categoryRoutes=require('./routes/admin/categoryRoutes');
 const brandRoutes=require('./routes/admin/brandRoutes');
 const productRoutes=require('./routes/admin/productRoutes');
 const variantRoutes=require('./routes/admin/variantRoutes');
-
+const profileRoutes=require('./routes/user/profileRoutes');
+const addressRoutes=require('./routes/user/addressRoutes');
 
 app.use('/', authRoutes);
 app.use('/',userRoutes);
+app.use('/',profileRoutes);
+app.use('/',addressRoutes);
+
 
 app.use('/admin',adminauthRoutes);
 app.use('/admin',adminUserRoutes);
@@ -59,3 +63,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`server running at http://localhost:${PORT}`);
 });
+
+
+//npx eslint .

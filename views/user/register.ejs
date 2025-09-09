@@ -21,11 +21,11 @@
 
             <div class="card-body">
 
-              <% if (typeof successMessage !=='undefined' ) { %>
+              <!-- <% if (typeof successMessage !=='undefined' ) { %>
                 <p style="color: green;">
                   <%= successMessage %>
                 </p>
-              <% } %>
+              <% } %> -->
 
               <form action="/register" autocomplete="off" method="POST" id="registrationForm" class="registration-form">
                 <div class="form-row">
@@ -106,7 +106,7 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/joi@17/dist/joi-browser.min.js"></script>
-s
+
   <script>
     console.log('joi loaded:', window.joi);
     // joi schema for client-side validation

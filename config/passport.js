@@ -22,6 +22,7 @@ try{
 
     else{
         const fullName = Profile.displayName || "";
+        
         const nameParts = fullName.split(" "); 
         const firstName = nameParts[0] || ""; 
         const lastName = nameParts.slice(1).join(" ") || ""; 
@@ -42,10 +43,12 @@ catch(error){
 }
 }));
 
+//re.session.passport.user -> user id 
 passport.serializeUser((user,done)=>{
     done(null,user._id)
 })
 
+//re.user->user data 
 passport.deserializeUser((id,done)=>{
     User.findById(id)
     .then(user=>{
