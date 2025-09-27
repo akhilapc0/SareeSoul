@@ -1,0 +1,132 @@
+2025-09-25 19:29:35 [ERROR]: (node:14632) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-25 19:29:35 [ERROR]: (node:14632) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-25 19:29:35 [INFO]: server running at http://localhost:3000
+2025-09-25 19:29:35 [INFO]:  MongoDB connected
+2025-09-25 20:38:07 [INFO]:  MongoDB connected
+g2025-09-25 21:14:32 [ERROR]: (node:3340) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-25 21:14:32 [ERROR]: (node:3340) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-25 21:14:32 [INFO]: server running at http://localhost:3000
+2025-09-25 21:14:32 [INFO]:  MongoDB connected
+2025-09-25 21:42:42 [ERROR]: (node:38996) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-25 21:42:42 [ERROR]: (node:38996) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-25 21:42:42 [INFO]: server running at http://localhost:3000
+2025-09-25 21:42:43 [INFO]:  MongoDB connected
+2025-09-26 09:25:02 [INFO]:  MongoDB connected
+2025-09-26 10:20:07 [ERROR]: (node:30056) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 10:20:07 [ERROR]: (node:30056) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 10:20:07 [INFO]: server running at http://localhost:3000
+2025-09-26 10:20:07 [INFO]:  MongoDB connected
+2025-09-26 10:54:09 [ERROR]: (node:24308) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 10:54:09 [ERROR]: (node:24308) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 10:54:09 [INFO]: server running at http://localhost:3000
+2025-09-26 10:54:09 [INFO]:  MongoDB connected
+2025-09-26 15:18:25 [ERROR]: (node:32536) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 15:18:25 [ERROR]: (node:32536) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 15:18:25 [INFO]: server running at http://localhost:3000
+2025-09-26 15:18:25 [INFO]:  MongoDB connected
+2025-09-26 15:33:32 [ERROR]: (node:17792) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 15:33:32 [ERROR]: (node:17792) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 15:33:32 [INFO]: server running at http://localhost:3000
+2025-09-26 15:33:32 [INFO]:  MongoDB connected
+2025-09-26 16:17:00 [ERROR]: (node:23380) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 16:17:00 [ERROR]: (node:23380) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 16:17:00 [INFO]: server running at http://localhost:3000
+2025-09-26 16:17:00 [INFO]:  MongoDB connected
+2025-09-26 16:17:25 [INFO]: 4
+2025-09-26 16:17:42 [INFO]: 4
+2025-09-26 16:18:17 [INFO]: 4
+2025-09-26 18:22:09 [ERROR]: (node:39524) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 18:22:09 [ERROR]: (node:39524) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 18:22:09 [INFO]: server running at http://localhost:3000
+2025-09-26 18:22:10 [INFO]:  MongoDB connected
+2025-09-26 18:24:29 [INFO]: OTP sent: 464962
+2025-09-26 18:38:58 [INFO]: OTP sent: 830517
+2025-09-26 18:39:49 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\edit-personal-info.ejs:33
+    31|                         class="rounded-circle border d-flex align-items-center justify-content-center fw-bold"
+    32|                         style="width:70px;height:70px;object-fit:cover;background:#ddd;">
+ >> 33|                         <%= user.name.charAt(0).toUpperCase() %>
+    34|                       </div>
+    35|                       <% } %>
+    36|                 </div>
+
+Cannot read properties of undefined (reading 'charAt')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:27:36)
+    at edit-personal-info (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at renderEditPersonal (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\profileController.js:24:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-26 20:01:28 [INFO]: OTP sent: 387285
+2025-09-26 20:33:20 [ERROR]: (node:39352) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-26 20:33:20 [ERROR]: (node:39352) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-26 20:33:20 [INFO]: server running at http://localhost:3000
+2025-09-26 20:33:20 [INFO]:  MongoDB connected
+2025-09-26 20:34:21 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 20:35:22 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 20:42:39 [INFO]: OTP sent: 326938
+2025-09-26 20:44:03 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 20:46:31 [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+2025-09-26 20:47:15 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 20:47:17 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 20:48:41 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 20:59:14 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 21:00:09 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-26 21:04:58 [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+2025-09-26 21:06:21 [INFO]: OTP sent: 384267
+2025-09-26 21:07:40 [ERROR]: ReferenceError: updateUser is not defined
+2025-09-27 09:03:34 [ERROR]: (node:28968) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 09:04:16 [ERROR]: (node:14692) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 09:05:38 [ERROR]: (node:38836) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 09:45:59 [INFO]: ✅ MongoDB connected
+2025-09-27 10:00:04 [INFO]: ✅ MongoDB connected
+2025-09-27 10:01:53 [INFO]: ✅ MongoDB connected
+2025-09-27 10:02:41 [INFO]: ✅ MongoDB connected
+2025-09-27 10:17:40 [INFO]: ✅ MongoDB connected
+2025-09-27 10:21:10 [INFO]: ✅ MongoDB connected
+2025-09-27 10:23:18 [INFO]: node starting
+2025-09-27 10:23:37 [INFO]: ✅ MongoDB connected
+2025-09-27 10:27:51 [INFO]: ✅ MongoDB connected
+2025-09-27 10:30:21 [INFO]: ✅ MongoDB connected
+2025-09-27 10:33:13 [INFO]: ✅ MongoDB connected
+2025-09-27 10:37:35 [INFO]: ✅ MongoDB connected
+2025-09-27 10:57:43 [INFO]: ✅ MongoDB connected
+2025-09-27 10:59:43 [INFO]: node starting
+2025-09-27 10:59:43 [INFO]: 
+2025-09-27 10:59:43 [INFO]: server running at http://localhost:3000
+2025-09-27 10:59:43 [INFO]: ✅ MongoDB connected
+2025-09-27 11:18:33 [INFO]: node starting
+2025-09-27 11:18:33 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-27 11:18:33 [INFO]: server running at http://localhost:3000
+2025-09-27 11:18:33 [INFO]: ✅ MongoDB connected
+2025-09-27 11:35:55 [INFO]: node starting
+2025-09-27 11:35:55 [ERROR]: (node:41376) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 11:35:55 [ERROR]: (node:41376) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-27 11:35:55 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-27 11:35:55 [INFO]: server running at http://localhost:3000
+2025-09-27 11:35:55 [INFO]:  MongoDB connected
+2025-09-27 13:03:25 [INFO]: node starting
+2025-09-27 13:03:25 [ERROR]: (node:7988) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 13:03:25 [ERROR]: (node:7988) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-27 13:03:25 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-27 13:03:25 [INFO]: server running at http://localhost:3000
+2025-09-27 13:03:25 [INFO]:  MongoDB connected
+2025-09-27 13:04:18 [INFO]: 4

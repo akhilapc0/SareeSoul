@@ -65,7 +65,7 @@ const registerUser = async (req, res) => {
       isUsed: false
     });
 
-    console.log(otpDoc)
+    
    
     await sendOtpEmail(email, otp, EmailVerificationUsageType);
     console.log("OTP sent:", otp);
@@ -178,7 +178,7 @@ const postResendOtp = async (req, res) => {
 
     
     
-    await sendOtpEmail(email, otp);
+    await sendOtpEmail(email, otp,EmailVerificationUsageType);
      console.log(otp)
 
     return res.redirect(`/verify-otp?email=${email}`)
@@ -261,7 +261,14 @@ return res.render('login', {
   return res.redirect(`/verify-otp?email=${email}`)
 }
 
-    req.session.user = user; 
+   req.session.user = {
+      _id: user._id.toString(),
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      defaultAddressId: user.defaultAddressId ? user.defaultAddressId.toString() : null
+    };
+    await req.session.save();
 
     res.render('login', {
       errors: {},

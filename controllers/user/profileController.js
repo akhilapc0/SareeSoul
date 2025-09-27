@@ -28,7 +28,7 @@ const renderEditPersonal = async (req, res) => {
   }
 };
 
-const updatePersonal = async (req, res) => {
+const updatePersonalInfo = async (req, res) => {
   try {
     const userId = req.session.user?._id || req.session.passport?.user;
 
@@ -307,7 +307,7 @@ const postChangePassword = async (req, res) => {
 module.exports={
     getProfilePage,
     renderEditPersonal,
-    updatePersonal,
+    updatePersonalInfo,
     renderChangeEmailPage,
     requestEmailOtp,
     renderVerifyEmailOtpPage,

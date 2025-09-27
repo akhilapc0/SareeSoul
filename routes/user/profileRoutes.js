@@ -11,7 +11,7 @@ router.get('/profile', isLoggedIn,checkBlock, profileController.getProfilePage);
 router.get('/profile/edit', isLoggedIn, checkBlock, profileController.renderEditPersonal);
 
 
-router.post('/profile/edit', isLoggedIn, checkBlock, upload.single('image'), profileController.updatePersonal);
+router.post('/profile/edit', isLoggedIn, checkBlock, upload.single('image'), profileController.updatePersonalInfo);
 
 //edit email
 router.get('/profile/change-email', isLoggedIn, checkBlock, profileController.renderChangeEmailPage);

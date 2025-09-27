@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const logger=require('./logger');
 
 require('dotenv').config();
 require('./config/db');
@@ -8,6 +9,10 @@ require('./config/db');
 const session = require('express-session');
 const passport=require('./config/passport')
 
+
+
+console.log = (...args) => logger.info(args.join(" "));
+console.error = (...args) => logger.error(args.join(" "));
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
@@ -35,32 +40,18 @@ app.set('views', [
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const authRoutes = require('./routes/user/authRoutes');
-const userRoutes=require('./routes/user/userRoutes');
-const adminauthRoutes=require('./routes/admin/authRoutes');
-const adminUserRoutes=require('./routes/admin/userRoutes');
-const categoryRoutes=require('./routes/admin/categoryRoutes');
-const brandRoutes=require('./routes/admin/brandRoutes');
-const productRoutes=require('./routes/admin/productRoutes');
-const variantRoutes=require('./routes/admin/variantRoutes');
-const profileRoutes=require('./routes/user/profileRoutes');
-const addressRoutes=require('./routes/user/addressRoutes');
+const userRoutes=require('./routes/user/index');
+const adminRoutes=require('./routes/admin/index');
 
-app.use('/', authRoutes);
 app.use('/',userRoutes);
-app.use('/',profileRoutes);
-app.use('/',addressRoutes);
+app.use('/admin',adminRoutes);
 
-
-app.use('/admin',adminauthRoutes);
-app.use('/admin',adminUserRoutes);
-app.use('/admin',categoryRoutes);
-app.use('/admin',brandRoutes);
-app.use('/admin',productRoutes);
-app.use('/admin',variantRoutes);
+console.log("node starting")
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+
+app.listen(PORT, (err) => {
+  console.log(err)
   console.log(`server running at http://localhost:${PORT}`);
 });
 

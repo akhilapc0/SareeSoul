@@ -72,6 +72,7 @@ const getShopPage = async (req, res) => {
 
    
     const totalProducts = validProducts.length;
+    console.log(totalProducts);
     const totalPages = Math.ceil(totalProducts / limit);
 
     const products = validProducts.slice(skip, skip + limit);

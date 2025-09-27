@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+    <title>My Addresses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <style>
+        /* Make default address stand out clearly */
+        .default-address {
+            border: 3px solid #28a745 !important;
+            background-color: #f0fff0 !important;
+        }
+        
+        .default-badge {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .card {
+            border: 2px solid #dee2e6;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3>My Addresses</h3>
+            <a href="/add-address" class="btn btn-primary">+ Add New Address</a>
+        </div>
+
+        <% if (addresses.length === 0) { %>
+            <div class="alert alert-info">
+                <h5>No addresses found</h5>
+                <p>Please add your first address to get started.</p>
+            </div>
+        <% } else { %>
+            <div class="row">
+                <% addresses.forEach(addr => { %>
+                    <div class="col-md-6 mb-3">
+                        <div class="card p-3 <%= String(addr._id) === String(user.defaultAddressId) ? 'default-address' : '' %>">
+                            
+                            <!-- Address Name with Default Badge -->
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0"><%= addr.name %></h5>
+                                <% if (String(addr._id) === String(user.defaultAddressId)) { %>
+                                    <span class="badge default-badge">✓ DEFAULT</span>
+                                <% } %>
+                            </div>
+                            
+                            <!-- Address Details -->
+                            <p class="mb-2">
+                                <%= addr.house %>, <%= addr.street %><br>
+                                <%= addr.city %>, <%= addr.state %> - <%= addr.pincode %>
+                            </p>
+                            <p class="mb-3"><strong>Phone:</strong> <%= addr.phone %></p>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex gap-2">
+                                <a href="/edit-address/<%= addr._id %>" class="btn btn-sm btn-warning">Edit</a>
+                                
+                                <button class="btn btn-sm btn-danger" onclick="deleteAddress('<%= addr._id %>')">
+                                    Delete
+                                </button>
+
+                                <!-- Show "Set as Default" button only for non-default addresses -->
+                                <% if (String(addr._id) !== String(user.defaultAddressId)) { %>
+                                    <button class="btn btn-sm btn-success default-btn" data-id="<%= addr._id %>">
+                                        Set as Default
+                                    </button>
+                                <% } else { %>
+                                    <button class="btn btn-sm btn-outline-success" disabled>
+                                        Current Default
+                                    </button>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+
+    <%- include('./partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+  // Delete Address Function
+  async function deleteAddress(addressId) {
+    const result = await Swal.fire({
+      title: "Delete Address?",
+      text: "Are you sure you want to delete this address?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!"
+    });
+
+    if (!result.isConfirmed) return;
+
+    try {
+      const res = await fetch(`/delete-address/${addressId}`, { method: "DELETE" });
+      const data = await res.json();
+
+      if (data.success) {
+        Swal.fire({
+          icon: "success",
+          title: "Deleted!",
+          text: "Address deleted successfully.",
+          timer: 1500,
+          showConfirmButton: false
+        }).then(() => location.reload());
+      } else {
+        Swal.fire("Error!", data.error || "Failed to delete address", "error");
+      }
+    } catch (err) {
+      Swal.fire("Error!", "Network issue, please try again", "error");
+    }
+  }
+
+  // Set Default Address Function
+  document.addEventListener('click', async function (e) {
+    if (e.target.classList.contains('default-btn')) {
+      const addressId = e.target.dataset.id;
+
+      const result = await Swal.fire({
+        title: "Set as Default?",
+        text: "This will replace your current default address.",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#28a745",
+        confirmButtonText: "Yes, set as default"
+      });
+
+      if (!result.isConfirmed) return;
+
+      try {
+        const res = await fetch(`/profile/address/${addressId}/default`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" }
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Default address updated successfully.",
+            timer: 1200,
+            showConfirmButton: false
+          }).then(() => location.reload()); // ✅ reload page to show new default
+        } else {
+          Swal.fire("Error!", data.error || "Failed to update default address", "error");
+        }
+      } catch (err) {
+        Swal.fire("Error!", "Network issue, please try again", "error");
+      }
+    }
+  });
+</script>
+
+
+</body>
+
+</html>

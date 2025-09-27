@@ -3,6 +3,7 @@ const Joi = require('joi');
 const registerValidation = Joi.object({
   firstName: Joi.string()
     .pattern(/^[A-Za-z]+$/)
+    .trim()
     .min(3)
     .max(30)
     .required()
@@ -13,6 +14,7 @@ const registerValidation = Joi.object({
       'string.max': 'first name must be less than 50 characters'
     }),
   lastName: Joi.string()
+    .trim()
     .pattern(/^[A-Za-z ]+$/)
     .min(2)
     .max(30)
@@ -21,9 +23,10 @@ const registerValidation = Joi.object({
       'string.empty': 'last name is required',
       "string.pattern.base": "Enter a valid last name",
       'string.min': 'last name must be atleast 2  characters',
-      'string.max': 'last name must be less than 50 characters'
+      'string.max': 'last name must be less than 30 characters'
     }),
   email: Joi.string()
+    .trim()
     .email()
     .max(50)
     .required()
@@ -41,7 +44,7 @@ const registerValidation = Joi.object({
     .messages({
       'string.empty': 'password is required',
       'string.min': 'password must be atleast  6 charaters',
-      'string-max': 'password must be less than or equal to 20 characters',
+      'string.max': 'password must be less than or equal to 20 characters',
       "string.pattern.base": "Password must include a capital letter and special character"
     }),
   confirmPassword: Joi.any()
@@ -52,6 +55,7 @@ const registerValidation = Joi.object({
       "any.required": "Confirm password is required"
     }),
   phoneNumber: Joi.string()
+    .trim()
     .pattern(/^[0-9]{10}$/)
     .required()
     .messages({
@@ -217,30 +221,83 @@ const changePasswordValidation = Joi.object({
 });
 
 const addressValidation = Joi.object({
-  name: Joi.string().trim().min(2).max(50).required().messages({
-    "string.empty": "name is required"
-  }),
-  phone: Joi.string().trim().pattern(/^[0-9]{10}$/).required().messages({
-    "string.empty": "phone is required",
-    "string.pattern.base": "phone must be 10 digits"
-  }),
-  pincode: Joi.string().trim().pattern(/^[0-9]{6}$/).required().messages({
-    "string.empty": "pincode is required",
-    "string.pattern.base": "pincode must be 6 digits"
-  }),
-  house: Joi.string().trim().min(2).max(100).required().messages({
-    "string.empty": "house is required"
-  }),
-  street: Joi.string().trim().min(2).max(100).required().messages({
-    "string.empty": "street is required"
-  }),
-  city: Joi.string().trim().min(2).max(50).required().messages({
-    "string.empty": "city is required"
-  }),
-  state: Joi.string().trim().min(2).max(50).required().messages({
-    "string.empty": "state is required"
-  }),
-  isDefault: Joi.boolean().default(false)
+  name: Joi.string()
+    .trim()
+    .min(2)
+    .max(50)
+    .pattern(/^[a-zA-Z\s'-]+$/) // Only letters, spaces, hyphens, apostrophes
+    .required()
+    .messages({
+      "string.empty": "Name is required",
+      "string.min": "Name must be at least 2 characters",
+      "string.max": "Name must be less than 50 characters",
+      "string.pattern.base": "Name can only contain letters, spaces, hyphens, and apostrophes"
+    }),
+
+  phone: Joi.string()
+    .trim()
+    .pattern(/^[0-9]{10}$/)
+    .required()
+    .messages({
+      "string.empty": "Phone number is required",
+      "string.pattern.base": "Phone must be exactly 10 digits"
+    }),
+
+  house: Joi.string()
+    .trim()
+    .min(1)
+    .max(100)
+    .required()
+    .messages({
+      "string.empty": "House number is required",
+      "string.max": "House number must be less than 100 characters"
+    }),
+
+  street: Joi.string()
+    .trim()
+    .min(2)
+    .max(100)
+    .required()
+    .messages({
+      "string.empty": "Street is required",
+      "string.min": "Street must be at least 2 characters",
+      "string.max": "Street must be less than 100 characters"
+    }),
+
+  city: Joi.string()
+    .trim()
+    .min(2)
+    .max(50)
+    .pattern(/^[a-zA-Z\s'-]+$/) // Only letters, spaces, hyphens, apostrophes
+    .required()
+    .messages({
+      "string.empty": "City is required",
+      "string.min": "City must be at least 2 characters",
+      "string.max": "City must be less than 50 characters",
+      "string.pattern.base": "City can only contain letters, spaces, hyphens, and apostrophes"
+    }),
+
+  state: Joi.string()
+    .trim()
+    .min(2)
+    .max(50)
+    .pattern(/^[a-zA-Z\s'-]+$/) // Only letters, spaces, hyphens, apostrophes
+    .required()
+    .messages({
+      "string.empty": "State is required",
+      "string.min": "State must be at least 2 characters",
+      "string.max": "State must be less than 50 characters",
+      "string.pattern.base": "State can only contain letters, spaces, hyphens, and apostrophes"
+    }),
+
+  pincode: Joi.string()
+    .trim()
+    .pattern(/^[0-9]{6}$/)
+    .required()
+    .messages({
+      "string.empty": "Pincode is required",
+      "string.pattern.base": "Pincode must be exactly 6 digits"
+    }),
 });
 
 module.exports = {
