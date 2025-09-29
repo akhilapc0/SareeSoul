@@ -10,7 +10,6 @@ const session = require('express-session');
 const passport=require('./config/passport')
 
 
-
 console.log = (...args) => logger.info(args.join(" "));
 console.error = (...args) => logger.error(args.join(" "));
 
@@ -51,7 +50,7 @@ console.log("node starting")
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, (err) => {
-  console.log(err)
+  if(err) console.log(err)
   console.log(`server running at http://localhost:${PORT}`);
 });
 

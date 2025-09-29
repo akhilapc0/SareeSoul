@@ -11,6 +11,7 @@ router.post('/brands/add',adminAuth,uploadtoCloudinary.single("brandImage"),bran
 
 router.get('/brands/edit/:id',adminAuth,brandController.getEditBrand);
 router.post('/brands/edit/:id',adminAuth,uploadtoCloudinary.single("brandImage"),brandController.postEditBrand);
+router.post('/brands/toggle/:id',brandController.toggleBlock);
 router.delete('/brands/delete/:id',adminAuth,brandController.deleteBrand);
 
 module.exports=router;

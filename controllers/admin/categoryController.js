@@ -139,6 +139,22 @@ const postEditCategory=async(req,res)=>{
   }
 }
 
+const toggleBlock=async(req,res)=>{
+  try{
+    const categoryId=req.params.id;
+    const category=await Category.findById(categoryId);
+    if(!category){
+      return res.status(404).json({message:"Category not found"})
+    }
+    category.isBlocked=!category.isBlocked;
+    await category.save();
+    res.json({success:true,isBlocked:category.isBlocked})
+  }
+  catch(error){
+    console.log("error toggling category:",error)
+    res.status(500).json({message:"Internal server error"})
+  }
+}
 const deleteCategory=async(req,res)=>{
   try{
       const categoryId=req.params.id;
@@ -163,5 +179,6 @@ module.exports={
     postAddCategory,
     getEditCategory,
     postEditCategory,
+    toggleBlock,
     deleteCategory
 }

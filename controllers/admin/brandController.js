@@ -134,6 +134,22 @@ const postEditBrand=async(req,res)=>{
   }
 }
 
+const toggleBlock=async(req,res)=>{
+  try{
+    const brandId=req.params.id;
+    const brand=await Brand.findById(brandId);
+    if(!brand){
+      return res.status(404).json({message:"Brand not found"})
+    }
+    brand.isBlocked=!brand.isBlocked;
+    await brand.save();
+    res.json({success:true,isBlocked:brand.isBlocked})
+  }
+  catch(error){
+    console.log("error toggling brand:",error)
+    res.status(500).json({message:"Internal server error"})
+  }
+}
 const deleteBrand=async(req,res)=>{
   try{
       const brandId=req.params.id;
@@ -160,5 +176,6 @@ module.exports={
     postAddBrand,
     getEditBrand,
     postEditBrand,
-    deleteBrand
+    deleteBrand,
+    toggleBlock
 }

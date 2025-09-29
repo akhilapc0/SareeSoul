@@ -6,7 +6,8 @@ const variantSchema=new mongoose.Schema({
     colour:{type:String,required:true},
     stock:{type:Number,required:true,default:0},
     images:[{type:String,required:true}],
-    isVisible:{type:Boolean,default:true},
+   
+    isBlocked:{type:Boolean,default:false},
     deletedAt:{type:Date,default:null}
 },
     {timestamps:true})

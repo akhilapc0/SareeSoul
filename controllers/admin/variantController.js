@@ -3,6 +3,7 @@ const Product = require("../../models/productModel");
 const Variant = require("../../models/variantModel");
 const cloudinary = require('../../config/cloudinary');
 const {maxImageSize}=require('../../shared/constant');
+const { logger } = require("../../config/nodemailer");
 
 const listVariants=async(req,res)=>{
      try {
@@ -75,11 +76,12 @@ const loadAddVariant = async (req, res) => {
 const postAddVariant = async (req, res) => {
   try {
 
-    console.log("req.body:", req.body);   
-    console.log("req.files:", req.files); 
+     logger.info("req.body:",JSON.stringify(req.body));   
+    logger.info("req.files:", req.files); 
 
     const productId=req.params.productId;
-    console.log("productId:",productId);
+   console.log("productId type:", typeof productId, "value:", productId);   
+    console.log("req.files type:", Array.isArray(req.files), "value:", req.files); 
 
     const { error, value } = variantValidation.validate(req.body, { abortEarly: false });
     if (error) {
@@ -120,8 +122,8 @@ const postAddVariant = async (req, res) => {
       variant: newVariant,
     });
   } catch (error) {
-    console.error("Error adding variant:", error.message);
-    res.status(500).json({ success: false, message: "Server error " + error });
+    // console.error("Error adding variant:", error.message);
+    res.status(500).json({ success: false, message: "Server error " + error.message });
   }
 };
 
@@ -151,23 +153,27 @@ const getEditVariant = async (req, res) => {
 const postEditVariant = async (req, res) => {
   try {
     const { productId, variantId } = req.params;
-    console.log("productId:", productId, "variantId:", variantId);
-    console.log(req.body)
-
-if (!Array.isArray(req.body.existingImages)) {
-  req.body.existingImages = req.body.existingImages
-    ? [req.body.existingImages]
-    : [];
-}
+    console.log(`productId: ${productId}  variantId: ${variantId}`);
+    
+    if (!Array.isArray(req.body.existingImages)) {
+      req.body.existingImages = req.body.existingImages
+      ? [req.body.existingImages]
+      : [];
+    }
+    console.log("hihihi")
 
     const { error, value } = variantValidation.validate(req.body, { abortEarly: false });
+    
     if (error) {
+     
+      
+      console.log(error)
       const errors = {};
       error.details.forEach(err => (errors[err.path[0]] = err.message));
       return res.status(400).json({ success: false, errors });
     }
 
-    console.log("bhbnhbh.,",value)
+   
 
     
     const product = await Product.findById(productId);
@@ -209,10 +215,11 @@ if (!Array.isArray(req.body.existingImages)) {
     variant.colour = value.colour;
     variant.stock = value.stock;
     variant.images = finalImages;
-    variant.isVisible = value.isVisible !== undefined ? value.isVisible : variant.isVisible;
+   console.log("value.colour:", value.colour, typeof value.colour);
+console.log("value.stock:", value.stock, typeof value.stock);
 
     await variant.save();
-
+      
     res.status(200).json({
       success: true,
       message: "Variant updated successfully",
@@ -221,10 +228,27 @@ if (!Array.isArray(req.body.existingImages)) {
 
   } catch (error) {
     console.error("Error editing variant:", error.message);
-    res.status(500).json({ success: false, message: "Server error " + error });
+    res.status(500).json({ success: false, message: "Server error " + error.message });
   }
 };
 
+const toggleBlock = async (req, res) => {
+  try {
+    const { variantId } = req.params;
+    const { isBlocked } = req.body;
+
+    const variant = await Variant.findById(variantId);
+    if (!variant) return res.status(400).json({ success: false, message: "Variant not found" });
+
+    variant.isBlocked = isBlocked;
+    await variant.save();
+
+    res.status(200).json({ success: true, message: `Variant ${isBlocked ? 'blocked' : 'unblocked'} successfully` });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+};
 const deleteVariant = async (req, res) => {
   try {
     const { productId, variantId } = req.params;
@@ -253,5 +277,6 @@ module.exports={
     postAddVariant,
     getEditVariant,
     postEditVariant,
+    toggleBlock,
     deleteVariant
   };

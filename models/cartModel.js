@@ -1,0 +1,18 @@
+const mongoose = require("mongoose");
+
+const cartSchema = new mongoose.Schema({
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  items: [
+    {
+      productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
+      variantId: { type: mongoose.Schema.Types.ObjectId, required: true }, // color variant
+      color: { type: String, required: true },                            // variant color
+      quantity: { type: Number, default: 1 },
+      price: { type: Number, required: true },                            // sales price at time of adding
+      image: { type: String }                                             // one variant image
+    }
+  ],
+  total: { type: Number, default: 0 }                                     // total cart value
+});
+
+module.exports = mongoose.model("Cart", cartSchema);

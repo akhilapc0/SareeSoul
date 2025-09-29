@@ -417,3 +417,657 @@ TypeError: argument handler must be a function
     at TracingChannel.traceSync (node:diagnostics_channel:315:14)
     at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
     at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-28 12:12:21 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 12:17:40 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 12:29:51 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 12:41:24 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 13:08:21 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 13:11:02 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 13:13:30 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 13:15:06 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 13:20:34 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 13:26:37 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 15:13:01 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 15:23:15 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 15:23:56 [ERROR]: uncaughtException: DEBUG: Did we reach here?
+Error: DEBUG: Did we reach here?
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:13:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 15:39:51 [ERROR]: uncaughtException: jkdhfj
+Error: jkdhfj
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\index.js:12:7)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
+2025-09-28 18:23:59 [ERROR]: uncaughtException: Unexpected identifier 'deletedAt'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\models\variantModel.js:11
+    deletedAt:{type:Date,default:null}
+    ^^^^^^^^^
+
+SyntaxError: Unexpected identifier 'deletedAt'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:2:15)
+2025-09-28 18:48:54 [ERROR]: uncaughtException: Missing initializer in destructuring declaration
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\variantController.js:156
+    const {action}
+          ^^^^^^^^
+
+SyntaxError: Missing initializer in destructuring declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\variantRoutes.js:5:25)
+2025-09-28 19:09:19 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\variantController.js:216
+    if()
+       ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\variantRoutes.js:5:25)
+2025-09-28 19:10:04 [ERROR]: uncaughtException: Unexpected identifier 'variant'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\variantController.js:219
+    await variant.save();
+          ^^^^^^^
+
+SyntaxError: Unexpected identifier 'variant'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\variantRoutes.js:5:25)
+2025-09-29 10:38:06 [ERROR]: uncaughtException: Unexpected token '.'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\variantController.js:170
+      return res.status(400).json({ success: false, err.message });
+                                                       ^
+
+SyntaxError: Unexpected token '.'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\variantRoutes.js:5:25)
+2025-09-29 10:38:20 [ERROR]: uncaughtException: Unexpected token '.'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\variantController.js:170
+      return res.status(400).json({ success: false, error.message });
+                                                         ^
+
+SyntaxError: Unexpected token '.'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\variantRoutes.js:5:25)
+2025-09-29 12:23:27 [ERROR]: uncaughtException: Unexpected token ':'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\variantController.js:166
+    let per ={name::}
+                   ^
+
+SyntaxError: Unexpected token ':'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\variantRoutes.js:5:25)
+2025-09-29 16:47:26 [ERROR]: uncaughtException: Unexpected identifier 'isDeleted'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\models\categoryModel.js:18
+    isDeleted:{
+    ^^^^^^^^^
+
+SyntaxError: Unexpected identifier 'isDeleted'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:4:16)
+2025-09-29 16:48:38 [ERROR]: uncaughtException: Unexpected token '}'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\models\categoryModel.js:18
+    },
+    ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:4:16)
+2025-09-29 17:01:30 [ERROR]: uncaughtException: asycn is not defined
+ReferenceError: asycn is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\categoryController.js:141:19)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:4:26)
+2025-09-29 17:01:34 [ERROR]: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\categoryController.js:141:19)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:4:26)
+2025-09-29 17:01:45 [ERROR]: uncaughtException: Missing catch or finally after try
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\categoryController.js:144
+  }
+  ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:4:26)
+2025-09-29 17:05:04 [ERROR]: uncaughtException: Unexpected identifier 'isDeleted'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\models\brandModel.js:25
+    isDeleted:{
+    ^^^^^^^^^
+
+SyntaxError: Unexpected identifier 'isDeleted'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:3:13)
+2025-09-29 17:08:13 [ERROR]: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\brandController.js:137:19)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:4:23)
+2025-09-29 17:08:24 [ERROR]: uncaughtException: Missing catch or finally after try
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\brandController.js:140
+  }
+  ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:4:23)
+2025-09-29 17:10:08 [ERROR]: uncaughtException: Missing initializer in const declaration
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\brandController.js:139
+    const brand
+          ^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:4:23)
+2025-09-29 17:10:48 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\brandController.js:141
+    if()
+       ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:4:23)
+2025-09-29 17:13:59 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:03 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:12 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:16 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:22 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:28 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:34 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 17:14:47 [ERROR]: uncaughtException: toggl is not defined
+ReferenceError: toggl is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\brandController.js:180:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:4:23)
+2025-09-29 17:14:51 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\brandRoutes.js:14:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:21 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:22 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:27 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:28 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:33 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:33 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:42 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:41 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:47 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:47 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-09-29 19:52:58 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\admin\categoryRoutes.js:13:8)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)

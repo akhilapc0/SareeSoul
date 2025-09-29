@@ -74,3 +74,155 @@ Cannot read properties of undefined (reading 'charAt')
 2025-09-27 15:38:15 [ERROR]: (node:15772) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 (Use `node --trace-warnings ...` to show where the warning was created)
 2025-09-27 15:38:15 [ERROR]: (node:15772) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-27 20:44:47 [ERROR]: (node:36112) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 20:44:47 [ERROR]: (node:36112) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-27 20:49:45 [ERROR]: MongoServerError: E11000 duplicate key error collection: sareeSoul.users index: email_1 dup key: { email: "akhilapc0@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\collection.js:157:16)
+2025-09-27 21:13:20 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-27 21:21:49 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:39:49 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:41:43 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:53:16 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:54:58 [ERROR]: (node:41376) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-28 11:54:58 [ERROR]: (node:41376) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-28 11:55:27 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:56:18 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:04:59 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:14:17 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:23:55 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:30:49 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:39:56 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:46:28 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:57:28 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:03:57 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:10:50 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:31:05 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:33:38 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 14:58:17 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:02:55 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:10:01 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:11:10 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 18:32:20 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-28 20:50:11 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-28 20:52:20 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:34:18 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:35:44 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:41:25 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:44:16 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:50:30 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:51:17 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:53:46 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:55:34 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:56:23 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 11:57:29 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:00:52 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:04:55 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:07:22 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:09:28 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:09:59 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:11:23 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:12:00 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:19:47 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:28:21 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:30:22 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 18:36:37 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= variant._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 18:37:00 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 18:37:01 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 18:37:05 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 19:06:34 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:109
+    107|                   <h6 class="mb-1"><%= brand.name %></h6>
+    108|                   <small>Status: 
+ >> 109|                       <span class="badge <%= variant.isBlocked ? 'badge-danger' : 'badge-success' %>">
+    110|                         <%= variant.isBlocked ? 'Blocked' : 'Active' %>
+    111|                       </span>
+    112|                     </small><br/>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:36:26)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)

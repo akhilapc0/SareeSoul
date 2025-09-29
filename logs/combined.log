@@ -139,3 +139,1068 @@ Cannot read properties of undefined (reading 'charAt')
 2025-09-27 15:38:15 [INFO]:  MongoDB connected
 2025-09-27 15:46:29 [INFO]: 4
 2025-09-27 15:48:36 [INFO]: OTP sent: 984295
+2025-09-27 20:44:47 [INFO]: node starting
+2025-09-27 20:44:47 [ERROR]: (node:36112) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-27 20:44:47 [ERROR]: (node:36112) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-27 20:44:47 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-27 20:44:47 [INFO]: server running at http://localhost:3000
+2025-09-27 20:44:47 [INFO]:  MongoDB connected
+2025-09-27 20:48:04 [INFO]: 4
+2025-09-27 20:48:47 [INFO]: 4
+2025-09-27 20:49:45 [ERROR]: MongoServerError: E11000 duplicate key error collection: sareeSoul.users index: email_1 dup key: { email: "akhilapc0@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\collection.js:157:16)
+2025-09-27 20:49:55 [INFO]: passport-session  [object Object]
+2025-09-27 20:51:17 [INFO]: 4
+2025-09-27 21:01:41 [INFO]: 4
+2025-09-27 21:13:20 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-27 21:21:49 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:35:30 [INFO]:  MongoDB connected
+2025-09-28 11:39:49 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:41:43 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:53:16 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:54:58 [INFO]: node starting
+2025-09-28 11:54:58 [ERROR]: (node:41376) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-09-28 11:54:58 [ERROR]: (node:41376) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-09-28 11:54:58 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-28 11:54:58 [INFO]: server running at http://localhost:3000
+2025-09-28 11:54:58 [INFO]:  MongoDB connected
+2025-09-28 11:55:27 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 11:56:18 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:04:59 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:14:17 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:23:55 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:30:49 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:39:56 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:46:28 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 12:57:28 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:03:57 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:10:50 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:31:05 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 13:31:26 [INFO]: 4
+2025-09-28 13:33:38 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 14:58:17 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:02:55 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:10:01 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:11:10 [ERROR]: Error adding variant: Cannot convert object to primitive value
+2025-09-28 15:25:03 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:25:04 [INFO]: ENTERED postAddVariant
+2025-09-28 15:25:04 [INFO]: node starting
+2025-09-28 15:25:04 [INFO]: 
+2025-09-28 15:25:04 [INFO]: server running at http://localhost:3000
+2025-09-28 15:25:04 [INFO]:  MongoDB connected
+2025-09-28 15:32:50 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:32:51 [INFO]: node starting
+2025-09-28 15:32:51 [INFO]: 
+2025-09-28 15:32:51 [INFO]: server running at http://localhost:3000
+2025-09-28 15:32:51 [INFO]:  MongoDB connected
+2025-09-28 15:35:34 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:35:34 [INFO]: node starting
+2025-09-28 15:35:34 [INFO]: 
+2025-09-28 15:35:34 [INFO]: server running at http://localhost:3000
+2025-09-28 15:35:34 [INFO]:  MongoDB connected
+2025-09-28 15:35:49 [INFO]: productId type: string value: 68d804a5fe87c4f0833a0449
+2025-09-28 15:35:49 [INFO]: req.files type: true value: [object Object]
+2025-09-28 15:36:10 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:36:10 [INFO]: node starting
+2025-09-28 15:36:10 [INFO]: 
+2025-09-28 15:36:10 [INFO]: server running at http://localhost:3000
+2025-09-28 15:36:10 [INFO]:  MongoDB connected
+2025-09-28 15:36:42 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:36:43 [INFO]: node starting
+2025-09-28 15:36:43 [INFO]: 
+2025-09-28 15:36:43 [INFO]: server running at http://localhost:3000
+2025-09-28 15:36:43 [INFO]:  MongoDB connected
+2025-09-28 15:37:45 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:37:46 [INFO]: node starting
+2025-09-28 15:37:46 [INFO]: server running at http://localhost:3000
+2025-09-28 15:37:46 [INFO]:  MongoDB connected
+2025-09-28 15:38:00 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:38:01 [INFO]: node starting
+2025-09-28 15:38:01 [INFO]: server running at http://localhost:3000
+2025-09-28 15:38:01 [INFO]:  MongoDB connected
+2025-09-28 15:38:08 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:38:08 [INFO]: node starting
+2025-09-28 15:38:08 [INFO]: server running at http://localhost:3000
+2025-09-28 15:38:08 [INFO]:  MongoDB connected
+2025-09-28 15:39:15 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:39:16 [INFO]: node starting
+2025-09-28 15:39:16 [INFO]: server running at http://localhost:3000
+2025-09-28 15:39:16 [INFO]:  MongoDB connected
+2025-09-28 15:39:47 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:39:48 [INFO]: node starting
+2025-09-28 15:39:48 [INFO]: server running at http://localhost:3000
+2025-09-28 15:39:48 [INFO]:  MongoDB connected
+2025-09-28 15:40:34 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:40:35 [INFO]: node starting
+2025-09-28 15:40:35 [INFO]: server running at http://localhost:3000
+2025-09-28 15:40:35 [INFO]:  MongoDB connected
+2025-09-28 15:41:54 [INFO]: productId type: string value: 68d804a5fe87c4f0833a0449
+2025-09-28 15:41:54 [INFO]: req.files type: true value: [object Object]
+2025-09-28 15:58:17 [INFO]: maxImageSize: 6 type: number
+2025-09-28 15:58:18 [INFO]: node starting
+2025-09-28 15:58:18 [INFO]: server running at http://localhost:3000
+2025-09-28 15:58:18 [INFO]:  MongoDB connected
+2025-09-28 16:00:34 [INFO]: productId type: string value: 68d804a5fe87c4f0833a0449
+2025-09-28 16:00:34 [INFO]: req.files type: true value: [object Object],[object Object],[object Object],[object Object],[object Object]
+2025-09-28 16:02:52 [INFO]: 5
+2025-09-28 16:10:51 [INFO]: productId type: string value: 68d804a5fe87c4f0833a0449
+2025-09-28 16:10:51 [INFO]: req.files type: true value: [object Object],[object Object],[object Object],[object Object],[object Object]
+2025-09-28 16:11:02 [INFO]: 5
+2025-09-28 16:11:27 [INFO]: 5
+2025-09-28 16:32:02 [INFO]: productId type: string value: 68d91554806c59d22dff64bf
+2025-09-28 16:32:02 [INFO]: req.files type: true value: [object Object],[object Object],[object Object],[object Object],[object Object]
+2025-09-28 16:35:51 [INFO]: 6
+2025-09-28 16:39:38 [INFO]: 6
+2025-09-28 18:23:59 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:24:26 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:24:26 [INFO]: node starting
+2025-09-28 18:24:26 [INFO]: server running at http://localhost:3000
+2025-09-28 18:24:26 [INFO]:  MongoDB connected
+2025-09-28 18:32:20 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-28 18:32:20 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-28 18:48:53 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:49:01 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:49:02 [INFO]: node starting
+2025-09-28 18:49:02 [INFO]: server running at http://localhost:3000
+2025-09-28 18:49:02 [INFO]:  MongoDB connected
+2025-09-28 18:49:42 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:49:42 [INFO]: node starting
+2025-09-28 18:49:42 [INFO]: server running at http://localhost:3000
+2025-09-28 18:49:43 [INFO]:  MongoDB connected
+2025-09-28 18:49:50 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:49:51 [INFO]: node starting
+2025-09-28 18:49:51 [INFO]: server running at http://localhost:3000
+2025-09-28 18:49:51 [INFO]:  MongoDB connected
+2025-09-28 18:54:24 [INFO]: maxImageSize: 6 type: number
+2025-09-28 18:54:26 [INFO]: node starting
+2025-09-28 18:54:26 [INFO]: server running at http://localhost:3000
+2025-09-28 18:54:28 [INFO]:  MongoDB connected
+2025-09-28 19:07:20 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:07:20 [INFO]: node starting
+2025-09-28 19:07:20 [INFO]: server running at http://localhost:3000
+2025-09-28 19:07:20 [INFO]:  MongoDB connected
+2025-09-28 19:07:38 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:07:38 [INFO]: node starting
+2025-09-28 19:07:38 [INFO]: server running at http://localhost:3000
+2025-09-28 19:07:38 [INFO]:  MongoDB connected
+2025-09-28 19:09:04 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:09:05 [INFO]: node starting
+2025-09-28 19:09:05 [INFO]: server running at http://localhost:3000
+2025-09-28 19:09:05 [INFO]:  MongoDB connected
+2025-09-28 19:09:18 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:09:28 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:09:30 [INFO]: node starting
+2025-09-28 19:09:30 [INFO]: server running at http://localhost:3000
+2025-09-28 19:09:30 [INFO]:  MongoDB connected
+2025-09-28 19:09:34 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:09:34 [INFO]: node starting
+2025-09-28 19:09:34 [INFO]: server running at http://localhost:3000
+2025-09-28 19:09:34 [INFO]:  MongoDB connected
+2025-09-28 19:10:02 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:10:09 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:10:10 [INFO]: node starting
+2025-09-28 19:10:10 [INFO]: server running at http://localhost:3000
+2025-09-28 19:10:10 [INFO]:  MongoDB connected
+2025-09-28 19:10:15 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:10:15 [INFO]: node starting
+2025-09-28 19:10:15 [INFO]: server running at http://localhost:3000
+2025-09-28 19:10:15 [INFO]:  MongoDB connected
+2025-09-28 19:12:40 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: block
+2025-09-28 19:12:42 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: block
+2025-09-28 19:12:48 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: update
+2025-09-28 19:12:50 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: block
+2025-09-28 19:13:56 [INFO]: maxImageSize: 6 type: number
+2025-09-28 19:13:57 [INFO]: node starting
+2025-09-28 19:13:57 [INFO]: server running at http://localhost:3000
+2025-09-28 19:13:57 [INFO]:  MongoDB connected
+2025-09-28 19:14:45 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: block
+2025-09-28 19:14:48 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: update
+2025-09-28 20:13:36 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: block
+2025-09-28 20:27:53 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: block
+2025-09-28 20:34:37 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb action: update
+2025-09-28 20:42:04 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:42:05 [INFO]: node starting
+2025-09-28 20:42:05 [INFO]: server running at http://localhost:3000
+2025-09-28 20:42:05 [INFO]:  MongoDB connected
+2025-09-28 20:42:11 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:42:11 [INFO]: node starting
+2025-09-28 20:42:11 [INFO]: server running at http://localhost:3000
+2025-09-28 20:42:12 [INFO]:  MongoDB connected
+2025-09-28 20:42:29 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:42:30 [INFO]: node starting
+2025-09-28 20:42:30 [INFO]: server running at http://localhost:3000
+2025-09-28 20:42:30 [INFO]:  MongoDB connected
+2025-09-28 20:44:26 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:44:26 [INFO]: node starting
+2025-09-28 20:44:26 [INFO]: server running at http://localhost:3000
+2025-09-28 20:44:27 [INFO]:  MongoDB connected
+2025-09-28 20:44:44 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:44:45 [INFO]: node starting
+2025-09-28 20:44:45 [INFO]: server running at http://localhost:3000
+2025-09-28 20:44:46 [INFO]:  MongoDB connected
+2025-09-28 20:44:50 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:44:51 [INFO]: node starting
+2025-09-28 20:44:51 [INFO]: server running at http://localhost:3000
+2025-09-28 20:44:51 [INFO]:  MongoDB connected
+2025-09-28 20:45:26 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:45:27 [INFO]: node starting
+2025-09-28 20:45:27 [INFO]: server running at http://localhost:3000
+2025-09-28 20:45:27 [INFO]:  MongoDB connected
+2025-09-28 20:46:52 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:46:53 [INFO]: node starting
+2025-09-28 20:46:53 [INFO]: server running at http://localhost:3000
+2025-09-28 20:46:53 [INFO]:  MongoDB connected
+2025-09-28 20:47:23 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:47:24 [INFO]: node starting
+2025-09-28 20:47:24 [INFO]: server running at http://localhost:3000
+2025-09-28 20:47:24 [INFO]:  MongoDB connected
+2025-09-28 20:47:55 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:47:56 [INFO]: node starting
+2025-09-28 20:47:56 [INFO]: server running at http://localhost:3000
+2025-09-28 20:47:56 [INFO]:  MongoDB connected
+2025-09-28 20:48:11 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:48:12 [INFO]: node starting
+2025-09-28 20:48:12 [INFO]: server running at http://localhost:3000
+2025-09-28 20:48:12 [INFO]:  MongoDB connected
+2025-09-28 20:48:32 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:48:33 [INFO]: node starting
+2025-09-28 20:48:33 [INFO]: server running at http://localhost:3000
+2025-09-28 20:48:33 [INFO]:  MongoDB connected
+2025-09-28 20:49:04 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:49:04 [INFO]: node starting
+2025-09-28 20:49:04 [INFO]: server running at http://localhost:3000
+2025-09-28 20:49:04 [INFO]:  MongoDB connected
+2025-09-28 20:50:11 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-28 20:50:11 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-28 20:51:16 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:51:16 [INFO]: node starting
+2025-09-28 20:51:16 [INFO]: server running at http://localhost:3000
+2025-09-28 20:51:16 [INFO]:  MongoDB connected
+2025-09-28 20:52:20 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-28 20:52:20 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-28 20:55:03 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:55:04 [INFO]: node starting
+2025-09-28 20:55:04 [INFO]: server running at http://localhost:3000
+2025-09-28 20:55:04 [INFO]:  MongoDB connected
+2025-09-28 20:55:08 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:55:09 [INFO]: node starting
+2025-09-28 20:55:09 [INFO]: server running at http://localhost:3000
+2025-09-28 20:55:09 [INFO]:  MongoDB connected
+2025-09-28 20:55:15 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:55:16 [INFO]: node starting
+2025-09-28 20:55:16 [INFO]: server running at http://localhost:3000
+2025-09-28 20:55:16 [INFO]:  MongoDB connected
+2025-09-28 20:55:22 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-28 20:55:22 [INFO]: hihihi
+2025-09-28 20:55:55 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-28 20:55:55 [INFO]: hihihi
+2025-09-28 20:58:30 [INFO]: maxImageSize: 6 type: number
+2025-09-28 20:58:31 [INFO]: node starting
+2025-09-28 20:58:31 [INFO]: server running at http://localhost:3000
+2025-09-28 20:58:31 [INFO]:  MongoDB connected
+2025-09-28 20:58:35 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-28 20:58:35 [INFO]: hihihi
+2025-09-28 20:58:35 [INFO]: ValidationError: "action" is not allowed
+2025-09-28 21:01:05 [INFO]: maxImageSize: 6 type: number
+2025-09-28 21:01:05 [INFO]: node starting
+2025-09-28 21:01:05 [INFO]: server running at http://localhost:3000
+2025-09-28 21:01:05 [INFO]:  MongoDB connected
+2025-09-29 10:16:35 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:16:35 [INFO]: hihihi
+2025-09-29 10:16:35 [INFO]: ValidationError: "action" is not allowed
+2025-09-29 10:34:17 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:34:17 [INFO]: hihihi
+2025-09-29 10:34:18 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:34:47 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:34:49 [INFO]: node starting
+2025-09-29 10:34:49 [INFO]: server running at http://localhost:3000
+2025-09-29 10:34:49 [INFO]:  MongoDB connected
+2025-09-29 10:35:44 [INFO]: productId: 68d91554806c59d22dff64bf variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:35:44 [INFO]: hihihi
+2025-09-29 10:35:44 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:38:05 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:38:19 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:38:35 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:38:35 [INFO]: node starting
+2025-09-29 10:38:35 [INFO]: server running at http://localhost:3000
+2025-09-29 10:38:36 [INFO]:  MongoDB connected
+2025-09-29 10:41:12 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:41:12 [INFO]: node starting
+2025-09-29 10:41:12 [INFO]: server running at http://localhost:3000
+2025-09-29 10:41:12 [INFO]:  MongoDB connected
+2025-09-29 10:41:25 [INFO]: productId:68d91554806c59d22dff64bf variantId:68d915aa806c59d22dff64cb
+2025-09-29 10:41:25 [INFO]: hihihi
+2025-09-29 10:41:25 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:44:02 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:44:03 [INFO]: node starting
+2025-09-29 10:44:03 [INFO]: server running at http://localhost:3000
+2025-09-29 10:44:03 [INFO]:  MongoDB connected
+2025-09-29 10:44:16 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:44:16 [INFO]: hihihi
+2025-09-29 10:44:16 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:50:15 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:50:16 [INFO]: node starting
+2025-09-29 10:50:16 [INFO]: server running at http://localhost:3000
+2025-09-29 10:50:16 [INFO]:  MongoDB connected
+2025-09-29 10:50:30 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:50:30 [INFO]: hihihi
+2025-09-29 10:50:30 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:51:04 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:51:05 [INFO]: node starting
+2025-09-29 10:51:05 [INFO]: server running at http://localhost:3000
+2025-09-29 10:51:05 [INFO]:  MongoDB connected
+2025-09-29 10:51:17 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:51:17 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:51:38 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:51:38 [INFO]: node starting
+2025-09-29 10:51:38 [INFO]: server running at http://localhost:3000
+2025-09-29 10:51:38 [INFO]:  MongoDB connected
+2025-09-29 10:53:32 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:53:33 [INFO]: node starting
+2025-09-29 10:53:33 [INFO]: server running at http://localhost:3000
+2025-09-29 10:53:33 [INFO]:  MongoDB connected
+2025-09-29 10:53:46 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:53:46 [INFO]: hihihi
+2025-09-29 10:53:46 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:55:34 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:55:34 [INFO]: hihihi
+2025-09-29 10:55:34 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 10:56:07 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:56:08 [INFO]: node starting
+2025-09-29 10:56:08 [INFO]: server running at http://localhost:3000
+2025-09-29 10:56:08 [INFO]:  MongoDB connected
+2025-09-29 10:56:12 [INFO]: maxImageSize: 6 type: number
+2025-09-29 10:56:12 [INFO]: node starting
+2025-09-29 10:56:12 [INFO]: server running at http://localhost:3000
+2025-09-29 10:56:12 [INFO]:  MongoDB connected
+2025-09-29 10:56:23 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 10:56:23 [INFO]: hihihi
+2025-09-29 10:56:23 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 11:52:47 [INFO]:  MongoDB connected
+2025-09-29 11:55:58 [INFO]:  MongoDB connected
+2025-09-29 11:57:17 [INFO]: maxImageSize: 6 type: number
+2025-09-29 11:57:18 [INFO]: node starting
+2025-09-29 11:57:18 [INFO]: server running at http://localhost:3000
+2025-09-29 11:57:18 [INFO]:  MongoDB connected
+2025-09-29 11:57:29 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 11:57:29 [INFO]: hihihi
+2025-09-29 11:57:29 [INFO]: 
+2025-09-29 11:57:29 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:00:47 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:00:47 [INFO]: node starting
+2025-09-29 12:00:47 [INFO]: server running at http://localhost:3000
+2025-09-29 12:00:47 [INFO]:  MongoDB connected
+2025-09-29 12:00:52 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:00:52 [INFO]: hihihi
+2025-09-29 12:00:52 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:02:29 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:02:29 [INFO]: node starting
+2025-09-29 12:02:29 [INFO]: server running at http://localhost:3000
+2025-09-29 12:02:29 [INFO]:  MongoDB connected
+2025-09-29 12:02:46 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:02:46 [INFO]: node starting
+2025-09-29 12:02:46 [INFO]: server running at http://localhost:3000
+2025-09-29 12:02:47 [INFO]:  MongoDB connected
+2025-09-29 12:02:50 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:02:51 [INFO]: node starting
+2025-09-29 12:02:51 [INFO]: server running at http://localhost:3000
+2025-09-29 12:02:51 [INFO]:  MongoDB connected
+2025-09-29 12:03:49 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:03:50 [INFO]: node starting
+2025-09-29 12:03:50 [INFO]: server running at http://localhost:3000
+2025-09-29 12:03:50 [INFO]:  MongoDB connected
+2025-09-29 12:04:00 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:04:01 [INFO]: node starting
+2025-09-29 12:04:01 [INFO]: server running at http://localhost:3000
+2025-09-29 12:04:01 [INFO]:  MongoDB connected
+2025-09-29 12:04:14 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:04:15 [INFO]: node starting
+2025-09-29 12:04:15 [INFO]: server running at http://localhost:3000
+2025-09-29 12:04:15 [INFO]:  MongoDB connected
+2025-09-29 12:04:21 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:04:22 [INFO]: node starting
+2025-09-29 12:04:22 [INFO]: server running at http://localhost:3000
+2025-09-29 12:04:22 [INFO]:  MongoDB connected
+2025-09-29 12:04:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:04:26 [INFO]: node starting
+2025-09-29 12:04:26 [INFO]: server running at http://localhost:3000
+2025-09-29 12:04:26 [INFO]:  MongoDB connected
+2025-09-29 12:04:40 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:04:41 [INFO]: node starting
+2025-09-29 12:04:41 [INFO]: server running at http://localhost:3000
+2025-09-29 12:04:41 [INFO]:  MongoDB connected
+2025-09-29 12:04:47 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:04:47 [INFO]: node starting
+2025-09-29 12:04:47 [INFO]: server running at http://localhost:3000
+2025-09-29 12:04:48 [INFO]:  MongoDB connected
+2025-09-29 12:04:55 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:04:55 [INFO]: hihihi
+2025-09-29 12:04:55 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:07:22 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:07:22 [INFO]: hihihi
+2025-09-29 12:07:22 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:08:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:08:38 [INFO]: node starting
+2025-09-29 12:08:38 [INFO]: server running at http://localhost:3000
+2025-09-29 12:08:38 [INFO]:  MongoDB connected
+2025-09-29 12:09:28 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:09:28 [INFO]: hihihi
+2025-09-29 12:09:28 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:09:47 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:09:48 [INFO]: node starting
+2025-09-29 12:09:48 [INFO]: server running at http://localhost:3000
+2025-09-29 12:09:48 [INFO]:  MongoDB connected
+2025-09-29 12:09:59 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:09:59 [INFO]: hihihi
+2025-09-29 12:09:59 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:11:16 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:11:17 [INFO]: node starting
+2025-09-29 12:11:17 [INFO]: server running at http://localhost:3000
+2025-09-29 12:11:17 [INFO]:  MongoDB connected
+2025-09-29 12:11:23 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:11:23 [INFO]: hihihi
+2025-09-29 12:11:23 [INFO]: hello123
+2025-09-29 12:11:23 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:11:46 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:11:47 [INFO]: node starting
+2025-09-29 12:11:47 [INFO]: server running at http://localhost:3000
+2025-09-29 12:11:47 [INFO]:  MongoDB connected
+2025-09-29 12:12:00 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:12:00 [INFO]: hihihi
+2025-09-29 12:12:00 [INFO]: hello123
+2025-09-29 12:12:00 [INFO]: 
+2025-09-29 12:12:00 [INFO]: hello4444
+2025-09-29 12:12:00 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:12:56 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:12:56 [INFO]: node starting
+2025-09-29 12:12:56 [INFO]: server running at http://localhost:3000
+2025-09-29 12:12:56 [INFO]:  MongoDB connected
+2025-09-29 12:13:02 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:13:02 [INFO]: hihihi
+2025-09-29 12:13:02 [INFO]: hello123
+2025-09-29 12:13:02 [INFO]: 
+2025-09-29 12:13:02 [INFO]: hello4444
+2025-09-29 12:13:02 [INFO]: bhbnhbh., object
+2025-09-29 12:13:02 [INFO]: value.colour: Magenta Pink string
+2025-09-29 12:13:02 [INFO]: value.stock: 18 number
+2025-09-29 12:18:18 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:18:18 [INFO]: node starting
+2025-09-29 12:18:18 [INFO]: server running at http://localhost:3000
+2025-09-29 12:18:18 [INFO]:  MongoDB connected
+2025-09-29 12:18:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:18:28 [INFO]: node starting
+2025-09-29 12:18:28 [INFO]: server running at http://localhost:3000
+2025-09-29 12:18:28 [INFO]:  MongoDB connected
+2025-09-29 12:18:30 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:18:31 [INFO]: node starting
+2025-09-29 12:18:31 [INFO]: server running at http://localhost:3000
+2025-09-29 12:18:31 [INFO]:  MongoDB connected
+2025-09-29 12:18:41 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:18:41 [INFO]: node starting
+2025-09-29 12:18:41 [INFO]: server running at http://localhost:3000
+2025-09-29 12:18:41 [INFO]:  MongoDB connected
+2025-09-29 12:18:59 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:18:59 [INFO]: hihihi
+2025-09-29 12:18:59 [INFO]: {"colour":"Magenta Pink","stock":189,"existingImages":["https://res.cloudinary.com/dfiohkqta/image/upload/v1759057320/sareeSoul/bv6b0kkqq6pxwni09tf1.jpg","https://res.cloudinary.com/dfiohkqta/image/upload/v1759057320/sareeSoul/ikvo6zmjiappcgnr3pdj.jpg","https://res.cloudinary.com/dfiohkqta/image/upload/v1759057321/sareeSoul/yjildf8z5xnlewrsk1xj.jpg","https://res.cloudinary.com/dfiohkqta/image/upload/v1759057322/sareeSoul/dbhy0z3nzunhtc4ary49.jpg","https://res.cloudinary.com/dfiohkqta/image/upload/v1759057320/sareeSoul/nvhfcgdx3b7klkaamhoo.jpg"]}
+2025-09-29 12:18:59 [INFO]: 
+2025-09-29 12:18:59 [INFO]: hello4444
+2025-09-29 12:18:59 [INFO]: bhbnhbh object
+2025-09-29 12:18:59 [INFO]: value.colour: Magenta Pink string
+2025-09-29 12:18:59 [INFO]: value.stock: 189 number
+2025-09-29 12:19:33 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:19:34 [INFO]: node starting
+2025-09-29 12:19:34 [INFO]: server running at http://localhost:3000
+2025-09-29 12:19:34 [INFO]:  MongoDB connected
+2025-09-29 12:19:46 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:19:46 [INFO]: hihihi
+2025-09-29 12:19:47 [ERROR]: Error editing variant: TypeError: Cannot convert object to primitive value
+2025-09-29 12:20:13 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:20:14 [INFO]: node starting
+2025-09-29 12:20:14 [INFO]: server running at http://localhost:3000
+2025-09-29 12:20:14 [INFO]:  MongoDB connected
+2025-09-29 12:20:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:20:27 [INFO]: node starting
+2025-09-29 12:20:27 [INFO]: server running at http://localhost:3000
+2025-09-29 12:20:27 [INFO]:  MongoDB connected
+2025-09-29 12:20:34 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:20:35 [INFO]: node starting
+2025-09-29 12:20:35 [INFO]: server running at http://localhost:3000
+2025-09-29 12:20:35 [INFO]:  MongoDB connected
+2025-09-29 12:20:44 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:20:44 [INFO]: node starting
+2025-09-29 12:20:44 [INFO]: server running at http://localhost:3000
+2025-09-29 12:20:44 [INFO]:  MongoDB connected
+2025-09-29 12:23:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:23:31 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:23:32 [INFO]: node starting
+2025-09-29 12:23:32 [INFO]: server running at http://localhost:3000
+2025-09-29 12:23:32 [INFO]:  MongoDB connected
+2025-09-29 12:23:41 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:23:42 [INFO]: node starting
+2025-09-29 12:23:42 [INFO]: server running at http://localhost:3000
+2025-09-29 12:23:42 [INFO]:  MongoDB connected
+2025-09-29 12:23:55 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:23:55 [INFO]: hihihi
+2025-09-29 12:23:55 [INFO]: [object Object]
+2025-09-29 12:23:55 [INFO]: value.colour: Magenta Pink string
+2025-09-29 12:23:55 [INFO]: value.stock: 18 number
+2025-09-29 12:27:44 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:27:45 [INFO]: node starting
+2025-09-29 12:27:45 [INFO]: server running at http://localhost:3000
+2025-09-29 12:27:45 [INFO]:  MongoDB connected
+2025-09-29 12:28:21 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:28:21 [INFO]: hihihi
+2025-09-29 12:28:21 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:28:57 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:28:58 [INFO]: node starting
+2025-09-29 12:28:58 [INFO]: server running at http://localhost:3000
+2025-09-29 12:28:58 [INFO]:  MongoDB connected
+2025-09-29 12:29:28 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:29:28 [INFO]: node starting
+2025-09-29 12:29:28 [INFO]: server running at http://localhost:3000
+2025-09-29 12:29:28 [INFO]:  MongoDB connected
+2025-09-29 12:29:46 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:29:47 [INFO]: node starting
+2025-09-29 12:29:47 [INFO]: server running at http://localhost:3000
+2025-09-29 12:29:47 [INFO]:  MongoDB connected
+2025-09-29 12:29:53 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:29:54 [INFO]: node starting
+2025-09-29 12:29:54 [INFO]: server running at http://localhost:3000
+2025-09-29 12:29:54 [INFO]:  MongoDB connected
+2025-09-29 12:30:22 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:30:22 [INFO]: hihihi
+2025-09-29 12:30:22 [ERROR]: Error editing variant: Cannot convert object to primitive value
+2025-09-29 12:31:31 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:31:32 [INFO]: node starting
+2025-09-29 12:31:32 [INFO]: server running at http://localhost:3000
+2025-09-29 12:31:32 [INFO]:  MongoDB connected
+2025-09-29 12:31:39 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:31:40 [INFO]: node starting
+2025-09-29 12:31:40 [INFO]: server running at http://localhost:3000
+2025-09-29 12:31:40 [INFO]:  MongoDB connected
+2025-09-29 12:31:44 [INFO]: productId: 68d91554806c59d22dff64bf  variantId: 68d915aa806c59d22dff64cb
+2025-09-29 12:31:44 [INFO]: hihihi
+2025-09-29 12:31:44 [INFO]: value.colour: Magenta Pink string
+2025-09-29 12:31:44 [INFO]: value.stock: 18 number
+2025-09-29 12:33:55 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:33:56 [INFO]: node starting
+2025-09-29 12:33:56 [INFO]: server running at http://localhost:3000
+2025-09-29 12:33:56 [INFO]:  MongoDB connected
+2025-09-29 12:36:35 [INFO]: maxImageSize: 6 type: number
+2025-09-29 12:36:36 [INFO]: node starting
+2025-09-29 12:36:36 [INFO]: server running at http://localhost:3000
+2025-09-29 12:36:36 [INFO]:  MongoDB connected
+2025-09-29 12:46:38 [INFO]: 6
+2025-09-29 12:49:41 [INFO]: 6
+2025-09-29 12:49:46 [INFO]: 6
+2025-09-29 12:50:15 [INFO]: 6
+2025-09-29 12:50:21 [INFO]: 6
+2025-09-29 12:57:32 [INFO]: 6
+2025-09-29 12:57:32 [INFO]: 6
+2025-09-29 12:59:23 [INFO]: productId: 68d804a5fe87c4f0833a0449  variantId: 68d910b3806c59d22dff6498
+2025-09-29 12:59:23 [INFO]: hihihi
+2025-09-29 12:59:23 [INFO]: value.colour: blue string
+2025-09-29 12:59:23 [INFO]: value.stock: 300 number
+2025-09-29 13:41:49 [INFO]:  MongoDB connected
+2025-09-29 14:22:56 [INFO]:  MongoDB connected
+2025-09-29 16:47:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 16:47:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 16:47:38 [INFO]: node starting
+2025-09-29 16:47:38 [INFO]: server running at http://localhost:3000
+2025-09-29 16:47:38 [INFO]:  MongoDB connected
+2025-09-29 16:47:40 [INFO]: maxImageSize: 6 type: number
+2025-09-29 16:47:41 [INFO]: node starting
+2025-09-29 16:47:41 [INFO]: server running at http://localhost:3000
+2025-09-29 16:47:41 [INFO]:  MongoDB connected
+2025-09-29 16:48:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 16:48:44 [INFO]: maxImageSize: 6 type: number
+2025-09-29 16:48:45 [INFO]: node starting
+2025-09-29 16:48:45 [INFO]: server running at http://localhost:3000
+2025-09-29 16:48:45 [INFO]:  MongoDB connected
+2025-09-29 17:01:29 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:01:33 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:01:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:01:37 [INFO]: node starting
+2025-09-29 17:01:38 [INFO]: server running at http://localhost:3000
+2025-09-29 17:01:38 [INFO]:  MongoDB connected
+2025-09-29 17:01:44 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:01:56 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:01:57 [INFO]: node starting
+2025-09-29 17:01:57 [INFO]: server running at http://localhost:3000
+2025-09-29 17:01:57 [INFO]:  MongoDB connected
+2025-09-29 17:02:11 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:12 [INFO]: node starting
+2025-09-29 17:02:12 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:24 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:25 [INFO]: node starting
+2025-09-29 17:02:25 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:25 [INFO]:  MongoDB connected
+2025-09-29 17:02:28 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:29 [INFO]: node starting
+2025-09-29 17:02:29 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:29 [INFO]:  MongoDB connected
+2025-09-29 17:02:38 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:38 [INFO]: node starting
+2025-09-29 17:02:38 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:38 [INFO]:  MongoDB connected
+2025-09-29 17:02:43 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:43 [INFO]: node starting
+2025-09-29 17:02:43 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:44 [INFO]:  MongoDB connected
+2025-09-29 17:02:49 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:50 [INFO]: node starting
+2025-09-29 17:02:50 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:50 [INFO]:  MongoDB connected
+2025-09-29 17:02:58 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:02:59 [INFO]: node starting
+2025-09-29 17:02:59 [INFO]: server running at http://localhost:3000
+2025-09-29 17:02:59 [INFO]:  MongoDB connected
+2025-09-29 17:04:43 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:04:44 [INFO]: node starting
+2025-09-29 17:04:44 [INFO]: server running at http://localhost:3000
+2025-09-29 17:04:44 [INFO]:  MongoDB connected
+2025-09-29 17:05:04 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:05:14 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:05:15 [INFO]: node starting
+2025-09-29 17:05:15 [INFO]: server running at http://localhost:3000
+2025-09-29 17:05:15 [INFO]:  MongoDB connected
+2025-09-29 17:05:22 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:05:23 [INFO]: node starting
+2025-09-29 17:05:23 [INFO]: server running at http://localhost:3000
+2025-09-29 17:05:23 [INFO]:  MongoDB connected
+2025-09-29 17:06:30 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:06:31 [INFO]: node starting
+2025-09-29 17:06:31 [INFO]: server running at http://localhost:3000
+2025-09-29 17:06:31 [INFO]:  MongoDB connected
+2025-09-29 17:07:35 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:07:36 [INFO]: node starting
+2025-09-29 17:07:36 [INFO]: server running at http://localhost:3000
+2025-09-29 17:07:36 [INFO]:  MongoDB connected
+2025-09-29 17:08:12 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:08:23 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:08:31 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:08:31 [INFO]: node starting
+2025-09-29 17:08:31 [INFO]: server running at http://localhost:3000
+2025-09-29 17:08:31 [INFO]:  MongoDB connected
+2025-09-29 17:08:42 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:08:43 [INFO]: node starting
+2025-09-29 17:08:43 [INFO]: server running at http://localhost:3000
+2025-09-29 17:08:43 [INFO]:  MongoDB connected
+2025-09-29 17:09:00 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:01 [INFO]: node starting
+2025-09-29 17:09:01 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:01 [INFO]:  MongoDB connected
+2025-09-29 17:09:13 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:14 [INFO]: node starting
+2025-09-29 17:09:14 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:14 [INFO]:  MongoDB connected
+2025-09-29 17:09:18 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:19 [INFO]: node starting
+2025-09-29 17:09:19 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:19 [INFO]:  MongoDB connected
+2025-09-29 17:09:25 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:26 [INFO]: node starting
+2025-09-29 17:09:26 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:26 [INFO]:  MongoDB connected
+2025-09-29 17:09:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:38 [INFO]: node starting
+2025-09-29 17:09:38 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:38 [INFO]:  MongoDB connected
+2025-09-29 17:09:44 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:45 [INFO]: node starting
+2025-09-29 17:09:45 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:45 [INFO]:  MongoDB connected
+2025-09-29 17:09:51 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:09:52 [INFO]: node starting
+2025-09-29 17:09:52 [INFO]: server running at http://localhost:3000
+2025-09-29 17:09:52 [INFO]:  MongoDB connected
+2025-09-29 17:10:01 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:10:02 [INFO]: node starting
+2025-09-29 17:10:02 [INFO]: server running at http://localhost:3000
+2025-09-29 17:10:02 [INFO]:  MongoDB connected
+2025-09-29 17:10:07 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:10:16 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:10:16 [INFO]: node starting
+2025-09-29 17:10:16 [INFO]: server running at http://localhost:3000
+2025-09-29 17:10:16 [INFO]:  MongoDB connected
+2025-09-29 17:10:39 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:10:40 [INFO]: node starting
+2025-09-29 17:10:40 [INFO]: server running at http://localhost:3000
+2025-09-29 17:10:40 [INFO]:  MongoDB connected
+2025-09-29 17:10:48 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:10:58 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:10:59 [INFO]: node starting
+2025-09-29 17:10:59 [INFO]: server running at http://localhost:3000
+2025-09-29 17:10:59 [INFO]:  MongoDB connected
+2025-09-29 17:11:08 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:11:09 [INFO]: node starting
+2025-09-29 17:11:09 [INFO]: server running at http://localhost:3000
+2025-09-29 17:11:09 [INFO]:  MongoDB connected
+2025-09-29 17:11:19 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:11:20 [INFO]: node starting
+2025-09-29 17:11:20 [INFO]: server running at http://localhost:3000
+2025-09-29 17:11:20 [INFO]:  MongoDB connected
+2025-09-29 17:11:24 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:11:25 [INFO]: node starting
+2025-09-29 17:11:25 [INFO]: server running at http://localhost:3000
+2025-09-29 17:11:25 [INFO]:  MongoDB connected
+2025-09-29 17:11:31 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:11:32 [INFO]: node starting
+2025-09-29 17:11:32 [INFO]: server running at http://localhost:3000
+2025-09-29 17:11:32 [INFO]:  MongoDB connected
+2025-09-29 17:11:41 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:11:41 [INFO]: node starting
+2025-09-29 17:11:41 [INFO]: server running at http://localhost:3000
+2025-09-29 17:11:42 [INFO]:  MongoDB connected
+2025-09-29 17:11:46 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:11:46 [INFO]: node starting
+2025-09-29 17:11:46 [INFO]: server running at http://localhost:3000
+2025-09-29 17:11:47 [INFO]:  MongoDB connected
+2025-09-29 17:12:11 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:12:12 [INFO]: node starting
+2025-09-29 17:12:12 [INFO]: server running at http://localhost:3000
+2025-09-29 17:12:13 [INFO]:  MongoDB connected
+2025-09-29 17:12:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:12:27 [INFO]: node starting
+2025-09-29 17:12:27 [INFO]: server running at http://localhost:3000
+2025-09-29 17:12:27 [INFO]:  MongoDB connected
+2025-09-29 17:12:35 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:12:36 [INFO]: node starting
+2025-09-29 17:12:36 [INFO]: server running at http://localhost:3000
+2025-09-29 17:12:36 [INFO]:  MongoDB connected
+2025-09-29 17:12:44 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:12:45 [INFO]: node starting
+2025-09-29 17:12:45 [INFO]: server running at http://localhost:3000
+2025-09-29 17:12:45 [INFO]:  MongoDB connected
+2025-09-29 17:12:51 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:12:52 [INFO]: node starting
+2025-09-29 17:12:52 [INFO]: server running at http://localhost:3000
+2025-09-29 17:12:52 [INFO]:  MongoDB connected
+2025-09-29 17:12:58 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:12:59 [INFO]: node starting
+2025-09-29 17:12:59 [INFO]: server running at http://localhost:3000
+2025-09-29 17:12:59 [INFO]:  MongoDB connected
+2025-09-29 17:13:03 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:13:04 [INFO]: node starting
+2025-09-29 17:13:04 [INFO]: server running at http://localhost:3000
+2025-09-29 17:13:05 [INFO]:  MongoDB connected
+2025-09-29 17:13:11 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:13:11 [INFO]: node starting
+2025-09-29 17:13:11 [INFO]: server running at http://localhost:3000
+2025-09-29 17:13:11 [INFO]:  MongoDB connected
+2025-09-29 17:13:58 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:02 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:12 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:15 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:21 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:28 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:33 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:47 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:14:50 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:15:01 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:15:02 [INFO]: node starting
+2025-09-29 17:15:02 [INFO]: server running at http://localhost:3000
+2025-09-29 17:15:03 [INFO]:  MongoDB connected
+2025-09-29 17:15:05 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:15:06 [INFO]: node starting
+2025-09-29 17:15:06 [INFO]: server running at http://localhost:3000
+2025-09-29 17:15:06 [INFO]:  MongoDB connected
+2025-09-29 17:15:10 [INFO]: maxImageSize: 6 type: number
+2025-09-29 17:15:11 [INFO]: node starting
+2025-09-29 17:15:11 [INFO]: server running at http://localhost:3000
+2025-09-29 17:15:11 [INFO]:  MongoDB connected
+2025-09-29 18:05:31 [INFO]:  MongoDB connected
+2025-09-29 18:36:37 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= variant._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 18:37:00 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 18:37:01 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 18:37:05 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:118
+    116|                 <!-- Actions -->
+    117|                   <div class="btn-group">
+ >> 118|                     <% if (variant.isBlocked) { %>
+    119|                       <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+    120|                         <i class="material-icons md-lock_open"></i> Unblock
+    121|                       </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:42:8)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 19:00:36 [INFO]:  MongoDB connected
+2025-09-29 19:06:34 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\brand-list.ejs:109
+    107|                   <h6 class="mb-1"><%= brand.name %></h6>
+    108|                   <small>Status: 
+ >> 109|                       <span class="badge <%= variant.isBlocked ? 'badge-danger' : 'badge-success' %>">
+    110|                         <%= variant.isBlocked ? 'Blocked' : 'Active' %>
+    111|                       </span>
+    112|                     </small><br/>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:36:26)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:15)
+    at brand-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-29 19:18:13 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:18:14 [INFO]: node starting
+2025-09-29 19:18:14 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:18:14 [INFO]: server running at http://localhost:3000
+2025-09-29 19:18:14 [INFO]:  MongoDB connected
+2025-09-29 19:25:11 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:25:13 [INFO]: node starting
+2025-09-29 19:25:13 [INFO]: server running at http://localhost:3000
+2025-09-29 19:25:13 [INFO]:  MongoDB connected
+2025-09-29 19:25:12 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:25:13 [INFO]: node starting
+2025-09-29 19:25:14 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:25:14 [INFO]: server running at http://localhost:3000
+2025-09-29 19:25:14 [INFO]:  MongoDB connected
+2025-09-29 19:44:21 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:44:21 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:44:22 [INFO]: node starting
+2025-09-29 19:44:22 [INFO]: server running at http://localhost:3000
+2025-09-29 19:44:22 [INFO]: node starting
+2025-09-29 19:44:22 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:44:22 [INFO]: server running at http://localhost:3000
+2025-09-29 19:44:22 [INFO]:  MongoDB connected
+2025-09-29 19:44:22 [INFO]:  MongoDB connected
+2025-09-29 19:49:17 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:18 [INFO]: node starting
+2025-09-29 19:49:18 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:17 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:18 [INFO]: node starting
+2025-09-29 19:49:18 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:49:18 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:18 [INFO]:  MongoDB connected
+2025-09-29 19:49:18 [INFO]:  MongoDB connected
+2025-09-29 19:49:23 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:24 [INFO]: node starting
+2025-09-29 19:49:24 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:24 [INFO]:  MongoDB connected
+2025-09-29 19:49:28 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:29 [INFO]: node starting
+2025-09-29 19:49:29 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:29 [INFO]:  MongoDB connected
+2025-09-29 19:49:28 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:29 [INFO]: node starting
+2025-09-29 19:49:29 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:49:29 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:29 [INFO]:  MongoDB connected
+2025-09-29 19:49:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:39 [INFO]: node starting
+2025-09-29 19:49:39 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:38 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:39 [INFO]: node starting
+2025-09-29 19:49:39 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:49:39 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:39 [INFO]:  MongoDB connected
+2025-09-29 19:49:39 [INFO]:  MongoDB connected
+2025-09-29 19:49:49 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:50 [INFO]: node starting
+2025-09-29 19:49:50 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:50 [INFO]:  MongoDB connected
+2025-09-29 19:49:49 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:50 [INFO]: node starting
+2025-09-29 19:49:50 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:49:50 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:50 [INFO]:  MongoDB connected
+2025-09-29 19:49:57 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:58 [INFO]: node starting
+2025-09-29 19:49:58 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:58 [INFO]:  MongoDB connected
+2025-09-29 19:49:57 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:49:59 [INFO]: node starting
+2025-09-29 19:49:59 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:49:59 [INFO]: server running at http://localhost:3000
+2025-09-29 19:49:59 [INFO]:  MongoDB connected
+2025-09-29 19:50:05 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:06 [INFO]: node starting
+2025-09-29 19:50:06 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:06 [INFO]:  MongoDB connected
+2025-09-29 19:50:05 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:06 [INFO]: node starting
+2025-09-29 19:50:06 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:50:06 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:06 [INFO]:  MongoDB connected
+2025-09-29 19:50:16 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:17 [INFO]: node starting
+2025-09-29 19:50:17 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:18 [INFO]:  MongoDB connected
+2025-09-29 19:50:17 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:18 [INFO]: node starting
+2025-09-29 19:50:18 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:50:18 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:18 [INFO]:  MongoDB connected
+2025-09-29 19:50:25 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:26 [INFO]: node starting
+2025-09-29 19:50:26 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:26 [INFO]:  MongoDB connected
+2025-09-29 19:50:28 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:30 [INFO]: node starting
+2025-09-29 19:50:30 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:50:30 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:30 [INFO]:  MongoDB connected
+2025-09-29 19:50:33 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:34 [INFO]: node starting
+2025-09-29 19:50:34 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:34 [INFO]:  MongoDB connected
+2025-09-29 19:50:37 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:38 [INFO]: node starting
+2025-09-29 19:50:38 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:50:39 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:39 [INFO]:  MongoDB connected
+2025-09-29 19:50:42 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:43 [INFO]: node starting
+2025-09-29 19:50:43 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:43 [INFO]:  MongoDB connected
+2025-09-29 19:50:42 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:43 [INFO]: node starting
+2025-09-29 19:50:43 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:50:43 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:44 [INFO]:  MongoDB connected
+2025-09-29 19:50:49 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:50 [INFO]: node starting
+2025-09-29 19:50:50 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:50 [INFO]:  MongoDB connected
+2025-09-29 19:50:49 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:50:50 [INFO]: node starting
+2025-09-29 19:50:50 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:50:50 [INFO]: server running at http://localhost:3000
+2025-09-29 19:50:50 [INFO]:  MongoDB connected
+2025-09-29 19:51:05 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:51:07 [INFO]: node starting
+2025-09-29 19:51:07 [INFO]: server running at http://localhost:3000
+2025-09-29 19:51:08 [INFO]:  MongoDB connected
+2025-09-29 19:51:11 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:51:12 [INFO]: node starting
+2025-09-29 19:51:12 [INFO]: server running at http://localhost:3000
+2025-09-29 19:51:12 [INFO]:  MongoDB connected
+2025-09-29 19:51:12 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:51:13 [INFO]: node starting
+2025-09-29 19:51:13 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:51:13 [INFO]: server running at http://localhost:3000
+2025-09-29 19:51:13 [INFO]:  MongoDB connected
+2025-09-29 19:51:35 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:51:38 [INFO]: node starting
+2025-09-29 19:51:38 [INFO]: server running at http://localhost:3000
+2025-09-29 19:51:38 [INFO]:  MongoDB connected
+2025-09-29 19:51:43 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:51:44 [INFO]: node starting
+2025-09-29 19:51:44 [INFO]: server running at http://localhost:3000
+2025-09-29 19:51:44 [INFO]:  MongoDB connected
+2025-09-29 19:51:43 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:51:44 [INFO]: node starting
+2025-09-29 19:51:44 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:51:44 [INFO]: server running at http://localhost:3000
+2025-09-29 19:51:44 [INFO]:  MongoDB connected
+2025-09-29 19:52:20 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:21 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:26 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:27 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:32 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:32 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:40 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:40 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:46 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:46 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:52:57 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:53:10 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:53:10 [INFO]: node starting
+2025-09-29 19:53:10 [INFO]: server running at http://localhost:3000
+2025-09-29 19:53:10 [INFO]:  MongoDB connected
+2025-09-29 19:53:10 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:53:11 [INFO]: node starting
+2025-09-29 19:53:11 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-09-29 19:53:11 [INFO]: server running at http://localhost:3000
+2025-09-29 19:53:11 [INFO]:  MongoDB connected
+2025-09-29 19:53:13 [INFO]: maxImageSize: 6 type: number
+2025-09-29 19:53:14 [INFO]: node starting
+2025-09-29 19:53:14 [INFO]: server running at http://localhost:3000
+2025-09-29 19:53:14 [INFO]:  MongoDB connected
+2025-09-29 20:33:28 [INFO]:  MongoDB connected
+2025-09-29 20:35:13 [INFO]: productId: 68d4c78451724fb5dca9e955  variantId: 68d4cffb51724fb5dca9e9d0
+2025-09-29 20:35:13 [INFO]: hihihi
+2025-09-29 20:35:13 [INFO]: value.colour: black string
+2025-09-29 20:35:13 [INFO]: value.stock: 190 number
+2025-09-29 20:35:22 [INFO]: productId: 68d4c78451724fb5dca9e955  variantId: 68d4cace51724fb5dca9e9aa
+2025-09-29 20:35:22 [INFO]: hihihi
+2025-09-29 20:35:22 [INFO]: value.colour: Maroon string
+2025-09-29 20:35:22 [INFO]: value.stock: 90 number
+2025-09-29 20:36:54 [INFO]: productId: 68d4c78451724fb5dca9e955  variantId: 68d4cffb51724fb5dca9e9d0
+2025-09-29 20:36:54 [INFO]: hihihi
+2025-09-29 20:36:54 [INFO]: value.colour: black string
+2025-09-29 20:36:54 [INFO]: value.stock: 190 number
+2025-09-29 20:38:07 [INFO]: 6
+2025-09-29 20:38:21 [INFO]: 6
+2025-09-29 20:38:50 [INFO]: 6

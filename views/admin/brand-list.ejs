@@ -105,6 +105,11 @@
                 <!-- Brand Info -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <h6 class="mb-1"><%= brand.name %></h6>
+                  <small>Status: 
+                      <span class="badge <%= brand.isBlocked ? 'bg-danger' : 'bg-success' %>">
+                        <%= brand.isBlocked ? 'Blocked' : 'Active' %>
+                      </span>
+                    </small><br/>
                   <small class="text-muted">Created: <%= brand.createdAt.toDateString() %></small>
                 </div>
 
@@ -114,7 +119,20 @@
                 </div>
 
                 <!-- Actions -->
+               
+                    
+                  
+
                 <div class="col-lg-4 col-sm-12 text-end mt-2 mt-lg-0">
+                  <% if (brand.isBlocked) { %>
+                      <button type="button" class="btn btn-success" onclick="toggleBlock('<%= brand._id %>', false)">
+                        <i class="material-icons md-lock_open"></i> Unblock
+                      </button>
+                      <% } else { %>
+                        <button type="button" class="btn btn-danger" onclick="toggleBlock('<%= brand._id %>', true)">
+                          <i class="material-icons md-lock"></i> Block
+                        </button>
+                        <% } %>
                   <a href="/admin/brands/edit/<%= brand._id %>" class="btn btn-sm btn-warning me-2">
                     <i class="bi bi-pencil-square"></i> Edit
                   </a>
@@ -167,6 +185,26 @@
 
   <!-- SweetAlert Delete -->
   <script>
+    async function toggleBlock(brandId, block) {
+  try {
+    const res = await fetch(`/admin/brands/toggle/${brandId}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ isBlocked: block })
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      Swal.fire({ icon: "error", title: "Error", text: data.message || "Something went wrong" });
+      return;
+    }
+
+    Swal.fire({ icon: "success", title: block ? "Blocked" : "Unblocked", text: data.message })
+      .then(() => window.location.reload());
+  } catch (err) {
+    Swal.fire({ icon: "error", title: "Error", text: "Server error: " + err });
+  }
+}
     document.querySelectorAll('.delete-brand-btn').forEach(button => {
       button.addEventListener('click', async () => {
         const brandId = button.getAttribute('data-brand-id');
@@ -202,6 +240,7 @@
         }
       });
     });
+    
   </script>
 </body>
 </html>

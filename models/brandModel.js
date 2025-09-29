@@ -19,6 +19,11 @@ const brandSchema= new mongoose.Schema({
         default:'',
         trim:true
     },
+    isBlocked:{
+        type:Boolean,
+        default:false
+
+    },
     isDeleted:{
         type:Boolean,
         default:false

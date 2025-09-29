@@ -20,7 +20,7 @@
     "eslint": "^9.32.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "dev":"nodemon index.js"
   }
 }
