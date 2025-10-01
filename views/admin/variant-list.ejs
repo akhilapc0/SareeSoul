@@ -118,6 +118,10 @@
                   <% } else { %>
                     <button class="btn btn-sm btn-danger" onclick="toggleBlock('<%= variant._id %>', true)">Block</button>
                   <% } %>
+
+                  <button class="btn btn-sm btn-danger delete-product-btn" data-product-id="<%= product._id %>" data-variant-id="<%= variant._id %>">
+                      Delete
+                    </button>
                 </div>
 
               </div>
@@ -183,7 +187,46 @@
       }
     }
   </script>
+     <script>
+    document.querySelectorAll('.delete-product-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const variantId = button.getAttribute('data-variant-id');
+        const productId=button.getAttribute('data-product-id')
+        const result = await Swal.fire({
+          title: 'Are you sure?',
+          text: 'You are about to delete this variant.',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#d33',
+          cancelButtonColor: '#aaa',
+          confirmButtonText: 'Yes, delete it!'
+        });
 
+        if (result.isConfirmed) {
+          try {
+            const res = await fetch(`/admin/products/${productId}/variants/delete/${variantId}`, {
+              method: 'DELETE'
+            }); 
+
+            const data = await res.json();
+
+            if (data.success) {
+              Swal.fire({
+                icon: 'success',
+                title: 'variant deleted successfully',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(() => location.reload());
+            } else {
+              Swal.fire('Error', data.message || 'Failed to delete variant', 'error');
+            }
+          } catch (err) {
+            Swal.fire('Error', 'Something went wrong', 'error');
+          }
+        }
+      });
+    });
+  </script>
   <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
   <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
   <script src="/admin/assets/js/main.js"></script>

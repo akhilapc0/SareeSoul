@@ -13,6 +13,9 @@ router.post('/products/add',adminAuth,productController.postAddProduct);
 
 router.get('/products/edit/:id',adminAuth,productController.getEditProduct);
 router.put('/products/edit/:id',adminAuth,productController.postEditProduct);
+
+router.post('/products/block/:id',adminAuth,productController.toggleBlock);
+
 router.delete('/products/delete/:id',adminAuth,productController.deleteProduct);
 
 

@@ -8,6 +8,10 @@ const productSchema=new mongoose.Schema({
     categoryId:{type:mongoose.Schema.Types.ObjectId,ref:"Category"},
     brandId:{type:mongoose.Schema.Types.ObjectId,ref:'Brand'},
     rating:{type:Number,default:0},
+    isBlocked:{
+        type:Boolean,
+        default:false
+    },
     deletedAt:{type:Date,default:null}},{
         timestamps:true
     })

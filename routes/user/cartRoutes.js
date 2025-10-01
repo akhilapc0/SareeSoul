@@ -4,6 +4,9 @@ const cartController = require('../../controllers/user/cartController');
 const{isLoggedIn,checkBlock}=require('../../middlewares/userAuth')
 
 
-router.post('/add',isLoggedIn,checkBlock, cartController.addToCart);
+router.get('/cart', isLoggedIn, checkBlock, cartController.loadCart);
+router.post('/cart',isLoggedIn,checkBlock, cartController.addToCart);
+router.post('/update-quantity',isLoggedIn,checkBlock,cartController.updateQuantity);
+
 
 module.exports = router;

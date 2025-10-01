@@ -620,7 +620,7 @@
           </div>
 
           <div class="action-buttons">
-            <button class="btn btn-primary"  id="addToCartBtn" disabled>
+            <button class="btn btn-primary"  id="addToCartBtn" >
               <i class="bi bi-cart-plus"></i> Add to Cart
 
             </button>
@@ -908,6 +908,58 @@
       //direct resize handler
       $(window).on('resize', initImageZoom);
     });
+
+    
+    document.getElementById('addToCartBtn').addEventListener('click', async function() {
+  const selectedVariant = variants[currentVariantIndex];
+  
+  if (!selectedVariant || selectedVariant.stock === 0) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Out of Stock',
+      text: 'This product is currently out of stock'
+    });
+    return;
+  }
+
+  try {
+    const response = await fetch('/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        productId: product._id,
+        variantId: selectedVariant._id,
+        quantity: 1
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Added to Cart',
+        text: data.message,
+        timer: 1500
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: data.message
+      });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Failed to add to cart'
+    });
+  }
+});
   </script>
 </body>
 </html>

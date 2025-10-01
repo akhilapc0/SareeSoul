@@ -105,7 +105,9 @@ const getProductDetail = async (req, res) => {
   try {
     const productId = req.params.productId;
 
-   
+   if (!productId.match(/^[0-9a-fA-F]{24}$/)) {
+      return res.status(400).send('Invalid product ID');
+    }
     const product = await Product.findById(productId);
 
     

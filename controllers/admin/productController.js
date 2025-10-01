@@ -258,6 +258,25 @@ const postEditProduct = async (req, res) => {
   }
 };
 
+
+const toggleBlock = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { isBlocked } = req.body;
+
+    const product = await Product.findById(id);
+    if (!product) return res.status(400).json({ success: false, message: "Product not found" });
+
+    product.isBlocked = isBlocked;
+    await product.save();
+
+    res.status(200).json({ success: true, message: `product ${isBlocked ? 'blocked' : 'unblocked'} successfully` });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+};
+
 const deleteProduct = async (req, res) => {
   try {
     const productId = req.params.id; 
@@ -307,6 +326,7 @@ module.exports={
     postAddProduct,
     getEditProduct,
     postEditProduct,
+    toggleBlock,
     deleteProduct,
    
     

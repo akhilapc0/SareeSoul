@@ -226,3 +226,140 @@ variant is not defined
     at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
     at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
     at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-30 15:04:37 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\cart.ejs:293
+    291| </head>
+    292| <body>
+ >> 293|   <%- include('partials/header') %>
+    294| 
+    295|   <div class="container">
+    296|     <div class="header">
+
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\partials\header.ejs:169
+    167|     <script>
+    168|     (function() {
+ >> 169|         const userData = <%- JSON.stringify(user) %>;
+    170|         console.log(userData)
+    171| 
+    172|         function renderAuthLinks() {
+
+user is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:12:32)
+    at header (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:701:39)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:12:17)
+    at cart (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+2025-09-30 15:15:45 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-09-30 17:43:06 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\product-list.ejs:103
+    101|                     <h6 class="mb-0"><%= product.name %></h6>
+    102|                       <small>Status: 
+ >> 103|                       <span class="badge <%= variant.isBlocked ? 'badge-danger' : 'badge-success' %>">
+    104|                         <%= variant.isBlocked ? 'Blocked' : 'Active' %>
+    105|                       </span>
+    106|                     </small><br/>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:36:26)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:17)
+    at product-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-30 17:48:09 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\product-list.ejs:120
+    118|                     <button class="btn btn-sm btn-success" onclick="toggleBlock('<%= variant._id %>', false)">Unblock</button>
+    119|                   <% } else { %>
+ >> 120|                     <button class="btn btn-sm btn-danger" onclick="toggleBlock('<%= variant._id %>', true)">Block</button>
+    121|                   <% } %>
+    122|                     <a href="/admin/products/edit/<%= product._id %>" class="btn btn-sm btn-warning">
+    123|                       Edit
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:57:26)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:30:17)
+    at product-list (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-09-30 18:12:08 [ERROR]: ReferenceError: Cannot access 'product' before initialization
+2025-09-30 18:15:17 [ERROR]: ReferenceError: Cannot access 'product' before initialization
+2025-09-30 18:16:34 [ERROR]: ReferenceError: Cannot access 'product' before initialization
+2025-09-30 18:17:30 [ERROR]: ReferenceError: Cannot access 'product' before initialization
+2025-09-30 18:19:03 [ERROR]: ReferenceError: Cannot access 'product' before initialization
+2025-09-30 19:34:32 [ERROR]: Delete Variant Error: CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "Variant"
+2025-09-30 19:53:30 [ERROR]: Error: Could not find matching close tag for "<%=".
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+2025-09-30 19:54:56 [ERROR]: Delete Variant Error: CastError: Cast to ObjectId failed for value ":productId" (type string) at path "_id" for model "Product"
+2025-09-30 19:59:26 [ERROR]: Delete Variant Error: CastError: Cast to ObjectId failed for value ":productId" (type string) at path "_id" for model "Product"
+2025-09-30 20:00:21 [ERROR]: Delete Variant Error: CastError: Cast to ObjectId failed for value ":productId" (type string) at path "_id" for model "Product"
+2025-10-01 13:26:20 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\cart.ejs:3
+    1| <%- include('partials/head') %>
+    2| <body>
+ >> 3|   <%- include('partials/header') %>
+    4| 
+    5|   <div class="container my-5">
+    6|     <h2 class="mb-4">Shopping Cart</h2>
+
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\partials\header.ejs:169
+    167|     <script>
+    168|     (function() {
+ >> 169|         const userData = <%- JSON.stringify(user) %>;
+    170|         console.log(userData)
+    171| 
+    172|         function renderAuthLinks() {
+
+user is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:12:32)
+    at header (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:701:39)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:13:17)
+    at cart (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+2025-10-01 13:36:42 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 13:47:20 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 13:47:23 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 13:48:57 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 13:56:43 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 13:56:50 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 15:33:19 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 15:36:56 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 15:48:31 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 15:48:57 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 15:54:03 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:00:37 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:00:38 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:00:38 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:00:39 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:00:39 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:00:39 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:02:57 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:50:18 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:59:14 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 16:59:30 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 17:00:38 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 17:09:57 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
+2025-10-01 17:10:35 [ERROR]: CastError: Cast to ObjectId failed for value "cart" (type string) at path "_id" for model "Product"
