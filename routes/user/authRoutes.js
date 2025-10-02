@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authController = require('../../controllers/user/authController');
-const {isLoggedIn,isLoggedOut}=require('../../middlewares/userAuth');
+const {isLoggedIn,isLoggedOut,checkBlock}=require('../../middlewares/userAuth');
 const passport = require('passport');
 
 // show registration form
@@ -30,6 +30,6 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
     res.redirect('/home')
 })
 
-router.get('/home', authController.getHomePage);
+router.get('/home',checkBlock, authController.getHomePage);
 
 module.exports = router;

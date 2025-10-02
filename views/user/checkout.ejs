@@ -1,0 +1,136 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <div class="container my-5">
+    <h2 class="mb-4">Checkout</h2>
+
+    <!-- SweetAlert for flash error -->
+    <% if (error_msg && error_msg.length > 0) { %>
+      <script>
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: "<%= error_msg[0] %>"
+        });
+      </script>
+    <% } %>
+
+    <!-- ✅ Start the form here -->
+    <form id="checkoutForm" method="POST" action="/checkout/place-order">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Delivery Address Section -->
+          <div class="card shadow-sm mb-4">
+            <div class="card-header bg-white">
+              <h5 class="mb-0">Delivery Address</h5>
+            </div>
+            <div class="card-body">
+              <% if (addresses.length === 0) { %>
+                <div class="alert alert-warning">
+                  <p class="mb-2">No delivery address found</p>
+                  <a href="/add-address" class="btn btn-sm btn-primary">Add New Address</a>
+                </div>
+              <% } else { %>
+                <div class="row">
+                  <% addresses.forEach(address => { %>
+                    <div class="col-md-6 mb-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="addressId" 
+                               id="address<%= address._id %>" value="<%= address._id %>"
+                               <%= address.isDefault ? 'checked' : '' %> required>
+                        <label class="form-check-label" for="address<%= address._id %>">
+                          <div class="border rounded p-3">
+                            <h6><%= address.name %></h6>
+                            <p class="mb-1"><%= address.addressLine1 %></p>
+                            <% if (address.addressLine2) { %>
+                              <p class="mb-1"><%= address.addressLine2 %></p>
+                            <% } %>
+                            <p class="mb-1"><%= address.city %>, <%= address.state %> - <%= address.pincode %></p>
+                            <p class="mb-0">Phone: <%= address.mobile %></p>
+                            <% if (address.isDefault) { %>
+                              <span class="badge bg-success mt-2">Default</span>
+                            <% } %>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  <% }) %>
+                </div>
+                <a href="/add-address" class="btn btn-sm btn-outline-primary mt-2">Add New Address</a>
+              <% } %>
+            </div>
+          </div>
+
+          <!-- Order Items Section -->
+          <div class="card shadow-sm">
+            <div class="card-header bg-white">
+              <h5 class="mb-0">Order Items</h5>
+            </div>
+            <div class="card-body">
+              <% items.forEach(item => { %>
+                <div class="row align-items-center border-bottom pb-3 mb-3">
+                  <div class="col-md-2">
+                    <img src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>" 
+                         alt="<%= item.productId.name %>" 
+                         class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-5">
+                    <h6 class="mb-1"><%= item.productId.name %></h6>
+                    <small class="text-muted">Color: <%= item.variantId.colour %></small><br>
+                    <small class="text-muted">Quantity: <%= item.quantity %></small>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p class="mb-0">₹<%= item.productId.salesPrice %></p>
+                  </div>
+                  <div class="col-md-2 text-end">
+                    <p class="mb-0 fw-bold">₹<%= (item.quantity * item.productId.salesPrice).toFixed(2) %></p>
+                  </div>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- Order Summary -->
+          <div class="card shadow-sm sticky-top" style="top: 20px;">
+            <div class="card-header bg-white">
+              <h5 class="mb-0">Order Summary</h5>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal:</span>
+                <span>₹<%= subtotal.toFixed(2) %></span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Shipping:</span>
+                <span class="text-success">Free</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Payment Method:</span>
+                <span>COD</span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between mb-3">
+                <span class="fw-bold">Total:</span>
+                <span class="fw-bold text-primary">₹<%= subtotal.toFixed(2) %></span>
+              </div>
+              <!-- ✅ Button now inside the form -->
+              <button type="submit" class="btn btn-primary w-100" 
+                      <%= addresses.length === 0 ? 'disabled' : '' %>>
+                Place Order
+              </button>
+              <a href="/cart" class="btn btn-outline-secondary w-100 mt-2">Back to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- ✅ End of form -->
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
