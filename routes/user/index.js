@@ -7,5 +7,6 @@ router.use('/', require('./addressRoutes'));
 router.use('/', require('./profileRoutes'));
 router.use('/', require('./userRoutes'));
 router.use('/',require('./checkoutRoutes'))
+router.use('/',require('./orderRoutes'));
 
 module.exports=router;

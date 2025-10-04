@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>My Orders</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <%- include('./partials/header') %>
+
+        <div class="container mt-4 mb-5">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="mb-0 text-dark">
+                        <i class="fas fa-box me-2"></i>My Orders
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card shadow border-0">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h5 class="mb-0">
+                                <i class="fas fa-filter me-2"></i>Filter Orders
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="GET" action="/my-order">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" name="orderId"
+                                            placeholder="Search by Order ID" value="<%= search %>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="date" class="form-control" name="startDate"
+                                            value="<%= startDate %>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="date" class="form-control" name="endDate" value="<%= endDate %>">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            <i class="fas fa-search me-1"></i>Filter
+                                        </button>
+                                    </div>
+                                </div>
+                                <% if(search || startDate || endDate) { %>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <a href="/my-order" class="btn btn-outline-secondary btn-sm">
+                                                <i class="fas fa-times me-1"></i>Clear Filters
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders List -->
+            <% if(orders.length> 0) { %>
+                <% orders.forEach(order=> { %>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="card shadow border-0">
+                                <div class="card-header bg-white py-3">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3">
+                                            <small class="text-muted d-block">Order ID</small>
+                                            <strong>
+                                                <%= order.orderId %>
+                                            </strong>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <small class="text-muted d-block">Date</small>
+                                            <strong>
+                                                <%= new Date(order.createdAt).toLocaleDateString() %>
+                                            </strong>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <small class="text-muted d-block">Total Amount</small>
+                                            <strong class="text-success">₹<%= order.subtotal.toFixed(2) %></strong>
+                                        </div>
+                                        <div class="col-md-3 text-end">
+                                            <span class="badge bg-primary px-3 py-2">
+                                                <%= order.status %>
+                                            </span>
+                                            <a href="/orders/<%= order.orderId %>"
+                                                class="btn btn-sm btn-outline-primary">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <thead>
+                                                <tr class="border-bottom">
+                                                    <th>Product</th>
+                                                    <th>Colour</th>
+                                                    <th class="text-center">Quantity</th>
+                                                    <th class="text-end">Price</th>
+                                                    <th class="text-end">Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% order.items.forEach(item=> { %>
+                                                    <tr>
+                                                        <td>
+                                                            <%= item.productId?.name || 'Product' %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.variantId?.colour || 'N/A' %>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <%= item.quantity %>
+                                                        </td>
+                                                        <td class="text-end">₹<%= item.price %>
+                                                        </td>
+                                                        <td class="text-end fw-medium">₹<%= item.price * item.quantity
+                                                                %>
+                                                        </td>
+                                                    </tr>
+                                                    <% }) %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+
+                        <!-- Pagination -->
+                        <% if(totalPages> 1) { %>
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <nav>
+                                        <ul class="pagination justify-content-center">
+
+                                            <% const maxPagesToShow=5;
+                                             let startPage=Math.max(1, currentPage - Math.floor(maxPagesToShow/2)); 
+                                             let endPage=Math.min(totalPages,startPage + maxPagesToShow - 1); 
+                                                if(endPage - startPage < maxPagesToShow- 1){ 
+                                                    startPage=Math.max(1, endPage - maxPagesToShow + 1); 
+                                                } 
+                                                %>
+
+                                                <% if(currentPage> 1){ %>
+                                                    <li class="page-item">
+                                                        <a class="page-link"
+                                                            href="?page=<%= currentPage - 1 %><%= search ? '&orderId=' + search : '' %><%= startDate ? '&startDate=' + startDate : '' %><%= endDate ? '&endDate=' + endDate : '' %>">
+                                                            <i class="fas fa-chevron-left"></i>
+                                                        </a>
+                                                    </li>
+                                                    <% } %>
+
+                                                        <% for(let i=startPage; i <=endPage; i++){ %>
+                                                            <li
+                                                                class="page-item <%= i === currentPage ? 'active' : '' %>">
+                                                                <a class="page-link"
+                                                                    href="?page=<%= i %><%= search ? '&orderId=' + search : '' %><%= startDate ? '&startDate=' + startDate : '' %><%= endDate ? '&endDate=' + endDate : '' %>">
+                                                                    <%= i %>
+                                                                </a>
+                                                            </li>
+                                                            <% } %>
+
+                                                                <% if(currentPage < totalPages){ %>
+                                                                    <li class="page-item">
+                                                                        <a class="page-link"
+                                                                            href="?page=<%= currentPage + 1 %><%= search ? '&orderId=' + search : '' %><%= startDate ? '&startDate=' + startDate : '' %><%= endDate ? '&endDate=' + endDate : '' %>">
+                                                                            <i class="fas fa-chevron-right"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <% } %>
+
+                                        </ul>
+
+                                    </nav>
+                                </div>
+                            </div>
+                            <% } %>
+                                <% } else { %>
+                                    <!-- No Orders -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card shadow border-0">
+                                                <div class="card-body text-center py-5">
+                                                    <i class="fas fa-box-open fa-4x text-muted mb-3"></i>
+                                                    <h4 class="text-muted">No orders found</h4>
+                                                    <p class="text-muted">You haven't placed any orders yet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+        </div>
+
+        <%- include('./partials/footer') %>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -3,6 +3,7 @@ const User=require('../../models/userModel');
 const Address=require('../../models/addressModel');
 const Order=require('../../models/orderModel');
 const Variant=require('../../models/variantModel');
+const Counter=require('../../models/counterModel')
 const loadCheckout = async (req, res) => {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
@@ -63,7 +64,6 @@ const placeOrder = async (req, res) => {
       return res.redirect('/checkout');
     }
 
-    // Check stock again before placing order
     for (let item of cart.items) {
       if (!item.variantId || item.variantId.stock < item.quantity) {
         req.flash('error_msg', `Out of stock: ${item.productId.name}`);
@@ -73,7 +73,13 @@ const placeOrder = async (req, res) => {
 
     const subtotal = cart.items.reduce((sum, i) => sum + i.quantity * i.productId.salesPrice, 0);
 
+    const counter=await Counter.findOneAndUpdate(
+      {id:'Order'},
+      {$inc:{seq:1}},
+      {new:true,upsert:true}
+    )
     const order = new Order({
+      orderId:`ORD-${counter.seq}`,
       userId,
       address: address.toObject(),
       items: cart.items.map(i => ({
@@ -90,15 +96,14 @@ const placeOrder = async (req, res) => {
 
     await order.save();
 
-    // Deduct stock
+    
     for (let item of cart.items) {
       await Variant.findByIdAndUpdate(item.variantId._id, { $inc: { stock: -item.quantity } });
     }
 
-    // Empty cart
     await Cart.findOneAndUpdate({ userId }, { items: [] });
 
-   return res.redirect(`/order-success/${order._id}`);
+   return res.redirect(`/order-success/${order.orderId}`);
 
   } catch (err) {
     console.error(err);
@@ -112,12 +117,16 @@ const loadOrderSuccess = async (req, res) => {
     const orderId = req.params.id;
     const userId = req.session?.user?._id || req.session?.passport?.user;
     const user = req.session?.user || await User.findById(userId);
-
-    res.render('order-success', { orderId, user });
+    const order=await Order.findOne({orderId});
+    if(!order){
+      req.flash('error_msg','order not found');
+      return res.redirect('/shop')
+    }
+    res.render('order-success', { order, user,orderId:order.orderId });
   } catch (err) {
     console.error(err);
     req.flash('error_msg', 'Something went wrong');
-    res.redirect('/home');
+   return  res.redirect('/checkout');
   }
 };
 

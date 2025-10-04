@@ -458,3 +458,98 @@ error is not defined
 2025-10-02 15:11:16 [ERROR]: ReferenceError: Variant is not defined
 2025-10-02 15:12:28 [ERROR]: ReferenceError: Variant is not defined
 2025-10-02 15:25:29 [ERROR]: ReferenceError: Variant is not defined
+2025-10-03 12:59:11 [ERROR]: ValidationError: orderId: Path `orderId` is required.
+2025-10-03 12:59:11 [ERROR]: (node:36644) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-03 12:59:25 [ERROR]: ValidationError: orderId: Path `orderId` is required.
+2025-10-03 13:02:03 [ERROR]: ValidationError: orderId: Path `orderId` is required.
+2025-10-03 13:02:03 [ERROR]: (node:23808) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-03 13:04:57 [ERROR]: ValidationError: orderId: Path `orderId` is required.
+2025-10-03 13:04:57 [ERROR]: (node:25832) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-03 14:25:34 [ERROR]: ValidationError: orderId: Path `orderId` is required.
+2025-10-03 14:25:34 [ERROR]: (node:9492) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-03 16:34:57 [ERROR]: ReferenceError: Counter is not defined
+2025-10-03 16:34:57 [ERROR]: (node:17504) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-03 16:35:03 [ERROR]: ReferenceError: Counter is not defined
+2025-10-03 16:40:28 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\order-success.ejs:27
+    25|             
+    26|             <div class="alert alert-info d-inline-block">
+ >> 27|               <strong>Order ID:</strong> <%= orderId %>
+    28|             </div>
+    29| 
+    30|             <div class="mt-4">
+
+orderId is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:16:26)
+    at order-success (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at loadOrderSuccess (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\checkoutController.js:127:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-03 20:09:32 [ERROR]: Error: Failed to lookup view "my-orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getUserOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:11:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-03 20:22:07 [ERROR]: Error: Failed to lookup view "my-orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getUserOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:11:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-03 20:39:33 [ERROR]: Error: Failed to lookup view "my-orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getUserOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:11:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-03 20:39:34 [ERROR]: Error: Failed to lookup view "my-orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getUserOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:11:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-03 20:39:34 [ERROR]: Error: Failed to lookup view "my-orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getUserOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:11:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-03 20:39:35 [ERROR]: Error: Failed to lookup view "my-orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getUserOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:11:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-04 11:18:55 [ERROR]: Error: Failed to lookup view "order-detail" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getOrderDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-04 12:43:08 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\order-detail.ejs:75
+    73|                         <div class="row">
+    74|                             <div class="col-md-6">
+ >> 75|                                 <p class="mb-1"><strong><%= order.shippingAddress.name || '' %></strong></p>
+    76|                                 <p class="mb-1"><%= order.shippingAddress.address || '' %></p>
+    77|                                 <p class="mb-1"><%= order.shippingAddress.city || '' %>, <%= order.shippingAddress.state || '' %> <%= order.shippingAddress.pincode || '' %></p>
+    78|                                 <p class="mb-0"><i class="fas fa-phone me-2"></i><%= order.shippingAddress.phone || '' %></p>
+
+Cannot read properties of undefined (reading 'name')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:33:48)
+    at order-detail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getOrderDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-04 15:09:02 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
+2025-10-04 15:12:55 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
+2025-10-04 15:14:38 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
+2025-10-04 15:14:59 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
+2025-10-04 15:17:26 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
