@@ -11,5 +11,7 @@ router.post('/orders/:orderId/cancel',isLoggedIn,checkBlock,orderController.canc
 router.post('/orders/:orderId/item/:itemId/cancel',isLoggedIn,checkBlock,orderController.cancelOrderItem);
 router.post('/orders/:orderId/item/:itemId/return',isLoggedIn,checkBlock,orderController.returnItem);
 router.post('/orders/:orderId/return',isLoggedIn,checkBlock,orderController.returnOrder);
+
+router.get('/orders/:orderId/invoice', isLoggedIn, checkBlock, orderController.downloadInvoice);
 module.exports=router;
 

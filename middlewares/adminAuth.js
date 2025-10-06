@@ -1,5 +1,5 @@
 const adminAuth=async(req,res,next)=>{
-    if(!req.session.user || !req.session.user.isAdmin){
+    if(!req.session.admin || !req.session.admin.isAdmin){
        return  res.redirect('/admin/login')
     }
     next();

@@ -16,7 +16,7 @@ const postAdminLogin=async(req,res)=>{
         if(! isMatch){
             return res.render('admin-login',{error:'incorrect password'})
         }
-        req.session.user={
+        req.session.admin={
             _id:admin._id,
             email:admin.email,
             name:`${admin.firstName} ${admin.lastName}`,

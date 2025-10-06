@@ -135,6 +135,8 @@ const getProductDetail = async (req, res) => {
 
 
 
+
+
 module.exports = {
   getShopPage,
   getProductDetail

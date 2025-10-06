@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+    <body>
+        <div class="screen-overlay"></div>
+        <%- include('./partials/sidebar') %>
+
+            <main class="main-wrap">
+                <%- include('./partials/header') %>
+
+                    <section class="content-main">
+                        <div class="content-header">
+                            <div>
+                                <h2 class="content-title card-title">Order Details</h2>
+                                <p>Order ID: <%= order.orderId %>
+                                </p>
+                            </div>
+                            <div>
+                                <a href="/admin/orders" class="btn btn-light">
+                                    <i class="icon material-icons md-arrow_back"></i> Back to Orders
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Order Information -->
+                        <div class="card mb-4">
+                            <header class="card-header">
+                                <h4>Order Information</h4>
+                            </header>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <p><strong>Order ID:</strong></p>
+                                        <p>
+                                            <%= order.orderId %>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p><strong>Order Date:</strong></p>
+                                        <p>
+                                            <%= new Date(order.createdAt).toLocaleDateString() %>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p><strong>Payment Method:</strong></p>
+                                        <p>
+                                            <%= order.paymentMethod %>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p><strong>Order Status:</strong></p>
+                                        <span class="badge rounded-pill
+                <%= order.status === 'Pending' ? 'alert-warning' 
+                : order.status === 'Shipped' ? 'alert-info' 
+                : order.status === 'Delivered' ? 'alert-success' 
+                : order.status === 'Cancelled' ? 'alert-danger' 
+                : order.status === 'Returned' ? 'alert-secondary'
+                : 'alert-primary' %>">
+                                            <%= order.status %>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Customer & Shipping -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <header class="card-header">
+                                        <h4>Customer Information</h4>
+                                    </header>
+                                    <div class="card-body">
+                                        <p><strong>Name:</strong>
+                                            <%= order.userId?.fullName || 'N/A' %>
+                                        </p>
+                                        <p><strong>Email:</strong>
+                                            <%= order.userId?.email || 'N/A' %>
+                                        </p>
+                                        <p><strong>Phone:</strong>
+                                            <%= order.userId?.phoneNumber || 'N/A' %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <% if(order.address) { %>
+                                <div class="col-lg-6">
+                                    <div class="card mb-4">
+                                        <header class="card-header">
+                                            <h4>Shipping Address</h4>
+                                        </header>
+                                        <div class="card-body">
+                                            <p><strong>
+                                                    <%= order.address.fullName %>
+                                                </strong></p>
+                                            <p>
+                                                <%= order.address.street %>
+                                            </p>
+                                            <p>
+                                                <%= order.address.city %>, <%= order.address.state %> - <%=
+                                                            order.address.pincode %>
+                                            </p>
+                                            <p><strong>Phone:</strong>
+                                                <%= order.address.phone %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <!-- Order Items -->
+                        <div class="card mb-4">
+                            <header class="card-header">
+                                <h4>Order Items</h4>
+                            </header>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Color</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                                <th>Subtotal</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% order.items.forEach(item=> { %>
+                                                <tr>
+                                                    <td>
+                                                        <%= item.productId?.name || 'Product' %>
+                                                    </td>
+                                                    <td>
+                                                        <%= item.variantId?.colour || 'N/A' %>
+                                                    </td>
+                                                    <td>
+                                                        <%= item.quantity %>
+                                                    </td>
+                                                    <td>₹<%= item.price %>
+                                                    </td>
+                                                    <td>₹<%= item.price * item.quantity %>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge rounded-pill mt-1 d-block
+                      <%= item.itemStatus === 'Pending' ? 'alert-warning'
+                      : item.itemStatus === 'Shipped' ? 'alert-info'
+                      : item.itemStatus === 'Delivered' ? 'alert-success'
+                      : item.itemStatus === 'Cancelled' ? 'alert-danger'
+                      : item.itemStatus === 'Returned' ? 'alert-secondary'
+                      : 'alert-primary' %>">
+                                                            <%= item.itemStatus %>
+                                                        </span>
+
+                                                        <% if(item.returnReason) { %>
+                                                            <small class="text-muted d-block mt-1">
+                                                                <strong>Return Reason:</strong>
+                                                                <%= item.returnReason %>
+                                                            </small>
+                                                            <% } %>
+                                                                <% if(item.rejectReason) { %>
+                                                                    <small class="text-danger d-block mt-1">
+                                                                        <strong>Rejection Reason:</strong>
+                                                                        <%= item.rejectReason %>
+                                                                    </small>
+                                                                    <% } %>
+                                                                        <% if(['Pending','Shipped'].includes(item.itemStatus))
+                                                                            { %>
+                                                                            <select
+                                                                                class="form-select update-status-dropdown mt-1"
+                                                                                data-orderid="<%= order.orderId %>"
+                                                                                data-itemid="<%= item._id %>">
+                                                                                <option selected disabled>Change Status
+                                                                                </option>
+                                                                                <% if(item.itemStatus==='Pending' ) { %>
+                                                                                    <option value="Shipped">Shipped
+                                                                                    </option>
+                                                                                    <% } else
+                                                                                        if(item.itemStatus==='Shipped' )
+                                                                                        { %>
+                                                                                        <option value="Delivered">
+                                                                                            Delivered</option>
+                                                                                        <% } %>
+                                                                            </select>
+                                                                            <small
+                                                                                class="text-success update-message d-block mt-1"></small>
+                                                                            <% } %>
+
+                                                                                <% if(item.itemStatus==='ReturnRequested'
+                                                                                    ) { %>
+                                                                                    <select
+                                                                                        class="form-select request-action-dropdown mt-1"
+                                                                                        data-orderid="<%= order.orderId %>"
+                                                                                        data-itemid="<%= item._id %>">
+                                                                                        <option value="default">Choose any option
+                                                                                        </option>
+                                                                                        <option value="approve">Approve
+                                                                                        </option>
+                                                                                        <option value="reject">Reject
+                                                                                        </option>
+                                                                                    </select>
+                                                                                    <small
+                                                                                        class="text-success request-message d-block mt-1"></small>
+                                                                                    <% } %>
+                                                    </td>
+                                                </tr>
+                                                <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="row">
+                            <div class="col-lg-6 ms-auto">
+                                <div class="card mb-4">
+                                    <header class="card-header">
+                                        <h4>Order Summary</h4>
+                                    </header>
+                                    <div class="card-body">
+                                        <dl class="dlist">
+                                            <dt>Subtotal:</dt>
+                                            <dd>₹<%= order.subtotal %>
+                                            </dd>
+                                        </dl>
+                                        <% if(order.discount) { %>
+                                            <dl class="dlist">
+                                                <dt>Discount:</dt>
+                                                <dd class="text-success">-₹<%= order.discount %>
+                                                </dd>
+                                            </dl>
+                                            <% } %>
+                                                <% if(order.deliveryCharge) { %>
+                                                    <dl class="dlist">
+                                                        <dt>Delivery Charge:</dt>
+                                                        <dd>₹<%= order.deliveryCharge %>
+                                                        </dd>
+                                                    </dl>
+                                                    <% } %>
+                                                        <hr>
+                                                        <dl class="dlist">
+                                                            <dt><strong>Total Amount:</strong></dt>
+                                                            <dd><strong>₹<%= order.total %></strong></dd>
+                                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <%- include('./partials/footer') %>
+            </main>
+
+            <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+            <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+               const statusClasses = {
+    'Pending': 'alert-warning',
+    'Shipped': 'alert-info',
+    'Delivered': 'alert-success',
+    'Cancelled': 'alert-danger',
+    'Returned': 'alert-secondary'
+};
+
+// 🔹 Return request dropdown with SweetAlert confirmation + rejection reason
+document.querySelectorAll('.request-action-dropdown').forEach(dropdown => {
+    dropdown.addEventListener('change', async () => {
+        const action = dropdown.value;
+        const orderId = dropdown.dataset.orderid;
+        const itemId = dropdown.dataset.itemid;
+        const td = dropdown.closest('td');
+        const badge = td.querySelector('.badge');
+        const message = td.querySelector('.request-message');
+
+        console.log(action)
+
+        let rejectReason = '';
+
+        // If rejecting, ask for reason
+        if (action === 'reject') {
+            const result = await Swal.fire({
+                title: 'Reject Return Request',
+                text: 'Please provide a reason for rejection',
+                input: 'text',
+                inputPlaceholder: 'Enter rejection reason...',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Reject',
+                cancelButtonText: 'Cancel',
+                inputValidator: (value) => {
+                    if (!value) return 'Rejection reason is required!';
+                }
+            });
+
+            if (!result.isConfirmed || !result.value) {
+                dropdown.selectedIndex = 0; 
+                return;
+            }
+            rejectReason = result.value;
+        } else {
+            // Approve confirmation
+            const result = await Swal.fire({
+                title: 'Approve Return?',
+                text: 'Are you sure you want to approve this return request?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Approve',
+                cancelButtonText: 'Cancel'
+            });
+
+            if (!result.isConfirmed) {
+                dropdown.selectedIndex = 0;
+                return;
+            }
+        }
+
+        try {
+            const res = await fetch(`/admin/orders/${orderId}/items/${itemId}/request`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action, rejectReason })
+            });
+
+            const data = await res.json();
+            if (res.ok) {
+                const updatedItem = data.order.items.find(i => i._id === itemId);
+                badge.textContent = updatedItem.itemStatus;
+                badge.className = 'badge rounded-pill mt-1 d-block ' + (statusClasses[updatedItem.itemStatus] || 'alert-primary');
+                dropdown.remove();
+
+                if (message) {
+                    message.textContent = `Return request ${action}d successfully!`;
+                    setTimeout(() => { message.textContent = ''; }, 3000);
+                }
+
+                // Reload to show rejection reason if rejected
+                if (action === 'reject') {
+                    setTimeout(() => location.reload(), 1500);
+                }
+            } else {
+                Swal.fire('Error', data.message || 'Error processing request', 'error');
+            }
+        } catch (err) {
+            console.error(err);
+            Swal.fire('Error', 'Server error', 'error');
+        }
+    });
+});
+
+// 🔹 Normal item status dropdown with SweetAlert confirmation
+document.querySelectorAll('.update-status-dropdown').forEach(dropdown => {
+    dropdown.addEventListener('change', async () => {
+        const status = dropdown.value;
+        const orderId = dropdown.dataset.orderid;
+        const itemId = dropdown.dataset.itemid;
+        const td = dropdown.closest('td');
+        const badge = td.querySelector('.badge');
+        const message = td.querySelector('.update-message');
+
+        const result = await Swal.fire({
+            title: 'Confirm Status Change',
+            text: `Are you sure you want to change status to ${status}?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'Cancel'
+        });
+
+        if (!result.isConfirmed) {
+            dropdown.selectedIndex = 0;
+            return;
+        }
+
+        try {
+            const res = await fetch(`/admin/orders/${orderId}/items/${itemId}/status`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ status })
+            });
+
+            const data = await res.json();
+            if (res.ok) {
+                const updatedItem = data.order.items.find(i => i._id === itemId);
+                badge.textContent = updatedItem.itemStatus;
+                badge.className = 'badge rounded-pill mt-1 d-block ' + (statusClasses[updatedItem.itemStatus] || 'alert-primary');
+                dropdown.remove();
+                if (message) {
+                    message.textContent = "Status updated successfully!";
+                    setTimeout(() => { message.textContent = ''; }, 3000);
+                }
+                window.location.reload()
+            } else {
+                if (message) message.textContent = data.message || 'Error updating status';
+                else alert(data.message || 'Error');
+            }
+        } catch (err) {
+            console.error(err);
+            if (message) message.textContent = 'Server error';
+        }
+    });
+});
+            </script>
+    </body>
+
+</html>

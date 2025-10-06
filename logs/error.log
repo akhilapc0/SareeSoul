@@ -553,3 +553,77 @@ Cannot read properties of undefined (reading 'name')
 2025-10-04 15:14:38 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
 2025-10-04 15:14:59 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
 2025-10-04 15:17:26 [ERROR]: Error cancelling order: TypeError: Variant.save is not a function
+2025-10-05 11:52:08 [ERROR]: Error generating invoice: StrictPopulateError: Cannot populate path `item.variantId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2025-10-05 11:54:27 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 11:55:12 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 11:55:13 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 11:55:14 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 11:55:14 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 11:55:14 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 11:56:06 [ERROR]: Error generating invoice: ReferenceError: PDFDocument is not defined
+2025-10-05 16:05:13 [ERROR]: (node:2852) Warning: Accessing non-existent property 'getAllOrders' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-10-05 16:05:13 [ERROR]: (node:29132) Warning: Accessing non-existent property 'getAllOrders' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025-10-05 16:05:51 [ERROR]: Error: Failed to lookup view "admin/orders" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getAllOrders (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\admin\orderController.js:35:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-05 21:25:30 [ERROR]: MongoServerError: E11000 duplicate key error collection: sareeSoul.users index: email_1 dup key: { email: "akhilapc0@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\collection.js:157:16)
+2025-10-05 21:38:36 [ERROR]: Error returning order: ReferenceError: OrderId is not defined
+2025-10-05 21:38:48 [ERROR]: Error returning order: ReferenceError: OrderId is not defined
+2025-10-05 21:38:55 [ERROR]: Error returning order: ReferenceError: OrderId is not defined
+2025-10-05 21:44:25 [ERROR]: MongoServerError: E11000 duplicate key error collection: sareeSoul.users index: email_1 dup key: { email: "akhilapc0@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\collection.js:157:16)
+2025-10-06 15:51:45 [ERROR]: Error updating item status: ValidationError: status: `Partially Shipped` is not a valid enum value for path `status`.
+2025-10-06 15:52:14 [ERROR]: Error updating item status: ValidationError: status: `Partially Shipped` is not a valid enum value for path `status`.
+2025-10-06 20:30:09 [ERROR]: StrictPopulateError: Cannot populate path `variants` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2025-10-06 20:30:19 [ERROR]: StrictPopulateError: Cannot populate path `variants` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2025-10-06 20:35:49 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:681
+    679|     value="1" 
+    680|     min="1" 
+ >> 681|     max="<%= maxQuantity %>"
+    682|     style="width: 60px; margin-left: 10px;"
+    683|   >
+    684| </div>
+
+maxQuantity is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:189:26)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:148:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-06 21:25:00 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:622
+    620|           </div>
+    621| 
+ >> 622|    <% if (cartQuantity >= 5) { %>
+    623|   <button class="btn btn-secondary" disabled>
+    624|     Max 5 items allowed
+    625|   </button>
+
+cartQuantity is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:177:8)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:125:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

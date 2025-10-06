@@ -55,4 +55,5 @@ const sendOtpEmail = async (to, otp, usageType) => {
   await transporter.sendMail(mailOptions);
 };
 
+
 module.exports = sendOtpEmail;
