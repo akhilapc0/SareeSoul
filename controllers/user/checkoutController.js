@@ -1,9 +1,9 @@
-const Cart=require('../../models/cartModel');
-const User=require('../../models/userModel');
-const Address=require('../../models/addressModel');
-const Order=require('../../models/orderModel');
-const Variant=require('../../models/variantModel');
-const Counter=require('../../models/counterModel')
+import  Cart from '../../models/cartModel.js';
+import  User from '../../models/userModel.js';
+import Address from '../../models/addressModel.js';
+import  Order from '../../models/orderModel.js';
+import Variant from '../../models/variantModel.js';
+import Counter from '../../models/counterModel.js';
 const loadCheckout = async (req, res) => {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
@@ -131,8 +131,10 @@ const loadOrderSuccess = async (req, res) => {
 };
 
 
-module.exports={
+const checkoutController={
     loadCheckout,
     placeOrder,
     loadOrderSuccess
 }
+
+export default checkoutController;

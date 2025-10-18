@@ -1,11 +1,12 @@
-const express=require('express');
+import express from 'express';
+
+import  authController from '../../controllers/admin/authController.js';
+import  adminAuth from '../../middlewares/adminAuth.js';
 const router=express.Router();
-const adminController=require('../../controllers/admin/authController');
-const adminAuth=require('../../middlewares/adminAuth');
 
+router.get('/login',authController.getAdminLogin);
+router.post('/login',authController.postAdminLogin)
+router.get('/dashboard',adminAuth,authController.getDashboard);
+router.get('/logout',authController.adminLogout);
 
-router.get('/login',adminController.getAdminLogin);
-router.post('/login',adminController.postAdminLogin)
-router.get('/dashboard',adminAuth,adminController.getDashboard);
-
-module.exports=router;
+export default router;

@@ -627,3 +627,121 @@ cartQuantity is not defined
     at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
     at getProductDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:125:9)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-07 10:01:51 [ERROR]: TypeError: Cannot read properties of undefined (reading 'quantity')
+2025-10-07 11:02:29 [ERROR]: CastError: Cast to ObjectId failed for value "disabled" (type string) at path "variantId" because of "BSONError"
+2025-10-07 11:18:30 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:623
+    621| 
+    622|           <div class="action-buttons">
+ >> 623|             <button class="btn btn-primary"  id="addToCartBtn" <%=stock===6%> ?'disabled' : ''>
+    624|               <i class="bi bi-cart-plus"></i> Add to Cart
+    625| 
+    626|             </button>
+
+stock is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:177:25)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:123:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-16 09:14:04 [ERROR]: TypeError: Cannot read properties of undefined (reading '_id')
+2025-10-16 16:24:51 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:630
+    628|               <i class="bi bi-lightning"></i> Buy Now
+    629|             </button>
+ >> 630|             <% if(wishlistVariantIds.includes(variant._id.toString())){%>
+    631|             <button class="btn btn-outline-secondary" disabled >
+    632|               <i class="bi bi-heart-fill"></i> Added
+    633|             </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:177:39)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:130:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-16 16:54:30 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:628
+    626|               </button>
+    627|               
+ >> 628|               <% if(wishlistVariantIds.includes(variant._id.toString())) { %>
+    629|                 <button class="btn btn-outline-secondary" disabled>
+    630|                   <i class="bi bi-heart-fill"></i> Added
+    631|                 </button>
+
+variant is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:173:39)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:130:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-17 19:06:10 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:682
+    680|     const variants = <%- JSON.stringify(variants) %>;
+    681|     const product = <%- JSON.stringify(product) %>;
+ >> 682|     const wishlistItems=<%- JSON.stringify(wishlist || [])%>;
+    683|     const cartItems=<%- JSON.stringify(cartItems || [] )%>;
+    684| 
+    685|         const MAX_LIMIT=5;
+
+wishlist is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:189:32)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:130:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-17 19:10:25 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:683
+    681|     const product = <%- JSON.stringify(product) %>;
+    682|     const wishlistItems=<%- JSON.stringify(wishlistVariantIds  || [])%>;
+ >> 683|     const cartItems=<%- JSON.stringify(cartItems || [] )%>;
+    684| 
+    685|         const MAX_LIMIT=5;
+    686|     //initialize zoom
+
+cartItems is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:192:32)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:130:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-17 19:10:26 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\productDetail.ejs:683
+    681|     const product = <%- JSON.stringify(product) %>;
+    682|     const wishlistItems=<%- JSON.stringify(wishlistVariantIds  || [])%>;
+ >> 683|     const cartItems=<%- JSON.stringify(cartItems || [] )%>;
+    684| 
+    685|         const MAX_LIMIT=5;
+    686|     //initialize zoom
+
+cartItems is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:192:32)
+    at productDetail (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getProductDetail (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:130:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-17 19:13:14 [ERROR]: ReferenceError: Cart is not defined

@@ -1,7 +1,8 @@
-const express=require('express');
+import  express from 'express';
+
+import  adminAuth from'../../middlewares/adminAuth.js';
+import userController from '../../controllers/admin/userController.js';
 const router=express.Router();
-const adminAuth=require('../../middlewares/adminAuth');
-const userController=require('../../controllers/admin/userController');
 
 
 router.get('/users',adminAuth,userController.getUserList);
@@ -10,4 +11,4 @@ router.post('/users/:id/toggle-block',adminAuth,userController.toggleUserBlockSt
 
 
 
-module.exports=router;
+export default router;

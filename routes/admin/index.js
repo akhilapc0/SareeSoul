@@ -1,12 +1,25 @@
-const express=require('express');
+import express from'express';
+
+
+import authRoutes from './authRoutes.js';
+import categoryRoutes from './categoryRoutes.js';
+import brandRoutes from './brandRoutes.js';
+import variantRoutes from './variantRoutes.js';
+import orderRoutes from './orderRoutes.js';
+import productRoutes from './productRoutes.js'
+import userRoutes from './userRoutes.js'
+
+
+
 const router=express.Router();
 
-router.use('/',require('./authRoutes'))
-router.use('/',require('./userRoutes'))
-router.use('/',require('./categoryRoutes'))
-router.use('/',require('./brandRoutes'))
-router.use('/',require('./productRoutes'))
-router.use('/',require('./variantRoutes'))
-router.use('/',require('./orderRoutes'))
+router.use('/',authRoutes);
+router.use('/',categoryRoutes);
+router.use('/',brandRoutes);
+router.use('/',variantRoutes);
+router.use('/',orderRoutes);
+router.use('/',productRoutes);
+router.use('/',userRoutes);
 
-module.exports=router;
+
+export default router;

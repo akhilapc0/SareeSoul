@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from 'mongoose';
 
 const counterSchema=new mongoose.Schema({
     id:{
@@ -12,4 +12,4 @@ const counterSchema=new mongoose.Schema({
     }
 })
 
-module.exports=mongoose.model('Counter',counterSchema);
+export default mongoose.model('Counter',counterSchema);

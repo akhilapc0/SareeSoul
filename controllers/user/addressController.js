@@ -1,6 +1,6 @@
-const Address = require('../../models/addressModel');
-const User=require('../../models/userModel');
-const{addressValidation }= require('../../validator/schema');
+import  Address from '../../models/addressModel.js';
+import  User from '../../models/userModel.js';
+import {addressValidation } from '../../validator/schema.js';
 const getAddressList = async (req, res) => {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
@@ -205,7 +205,7 @@ const setDefaultAddress = async (req, res) => {
 
 
 
-module.exports = {
+const addressController = {
                   getAddressList,
                   getAddAddress,
                   postAddAddress,
@@ -214,3 +214,5 @@ module.exports = {
                   deleteAddress,
                   setDefaultAddress
                   };
+
+export default addressController;

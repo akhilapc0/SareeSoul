@@ -1,9 +1,15 @@
-const { variantValidation } = require("../../validator/schema");
-const Product = require("../../models/productModel");
-const Variant = require("../../models/variantModel");
-const cloudinary = require('../../config/cloudinary');
-const {maxImageSize}=require('../../shared/constant');
-const { logger } = require("../../config/nodemailer");
+import  { variantValidation } from "../../validator/schema.js";
+import  Product from "../../models/productModel.js";
+import Variant  from "../../models/variantModel.js";
+import  {cloudinary,storage}  from '../../config/cloudinary.js';
+
+import  {maxImageSize} from '../../shared/constant.js';
+
+
+
+
+
+
 
 const listVariants=async(req,res)=>{
      try {
@@ -271,7 +277,7 @@ const deleteVariant = async (req, res) => {
 };
 
 
-module.exports={
+const variantController={
     listVariants,
     loadAddVariant,
     postAddVariant,
@@ -280,3 +286,5 @@ module.exports={
     toggleBlock,
     deleteVariant
   };
+
+  export default variantController;

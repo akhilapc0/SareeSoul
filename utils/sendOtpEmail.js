@@ -1,5 +1,5 @@
-const transporter = require("../config/nodemailer");
-const { EmailVerificationUsageType, ForgotPasswordUsageType,EditEmailUsageType } = require('../shared/constant');
+import  transporter from "../config/nodemailer.js";
+import  { EmailVerificationUsageType, ForgotPasswordUsageType,EditEmailUsageType }from '../shared/constant.js';
 
 const sendOtpEmail = async (to, otp, usageType) => {
   let subject = "";
@@ -56,4 +56,4 @@ const sendOtpEmail = async (to, otp, usageType) => {
 };
 
 
-module.exports = sendOtpEmail;
+export default sendOtpEmail;

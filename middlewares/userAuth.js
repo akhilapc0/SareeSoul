@@ -1,22 +1,35 @@
-const User=require('../models/userModel');
+import  User from '../models/userModel.js';
 
-function hasUser(req) {
+export  function hasUser(req) {
   return req.session?.user || req.session?.passport?.user;
 }
 
-function isLoggedIn(req, res, next) {
-  if (hasUser(req)) return next();
+export async function isLoggedIn(req, res, next) {
+  
+  try{
+  const userId=req.session?.user?._id || req.session?.passport?.user;
+  if(!userId) return  res.redirect('/login');
 
-  res.redirect('/login');
+  const user=await User.findById(userId);
+  if(!user){
+    return res.redirect('/login')
+  }
+  req.user=user;
+  next();
+}
+catch(error){
+  console.error(error);
+  res.redirect('/login')
+}
 }
 
-function isLoggedOut(req, res, next) {
+export function isLoggedOut(req, res, next) {
 
   if (hasUser(req)) return res.redirect('/home');
   
   next();
 }
-async function checkBlock(req, res, next) {
+export async function checkBlock(req, res, next) {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
     if (!userId) {
@@ -42,13 +55,13 @@ async function checkBlock(req, res, next) {
   }
 }
 
-async function flashMessageMiddleware(req, res, next) {
+export async function flashMessageMiddleware(req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error'); 
   next();
 }
-async function setUserLocals(req, res, next) {
+export async function setUserLocals(req, res, next) {
  
   if (req.session.user) {
     try {
@@ -75,4 +88,4 @@ async function setUserLocals(req, res, next) {
   }
   next();
 }
-module.exports = { isLoggedIn, isLoggedOut,checkBlock ,flashMessageMiddleware,setUserLocals};
+

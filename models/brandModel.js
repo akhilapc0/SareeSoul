@@ -1,5 +1,5 @@
-const { required } = require('joi');
-const mongoose=require('mongoose');
+import Joi from 'joi';
+import mongoose from 'mongoose';
 const brandSchema= new mongoose.Schema({
     name:{
         type:String,
@@ -32,4 +32,4 @@ const brandSchema= new mongoose.Schema({
 {timestamps:true}
 )
 
-module.exports=mongoose.model('Brand',brandSchema);
+export default mongoose.model('Brand',brandSchema);

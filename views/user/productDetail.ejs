@@ -627,7 +627,8 @@
             <button class="btn btn-secondary">
               <i class="bi bi-lightning"></i> Buy Now
             </button>
-            <button class="btn btn-outline-secondary">
+            <button class="btn btn-outline-secondary" id="addToWishlistBtn">
+>
               <i class="bi bi-heart"></i> Add to Wishlist
             </button>
           </div>
@@ -678,7 +679,10 @@
     let currentVariantIndex = 0;
     const variants = <%- JSON.stringify(variants) %>;
     const product = <%- JSON.stringify(product) %>;
+    const wishlistItems=<%- JSON.stringify(wishlistVariantIds  || [])%>;
+    const cartItems=<%- JSON.stringify(cartItems || [] )%>;
 
+        const MAX_LIMIT=5;
     //initialize zoom
     function initImageZoom() {
       if ($('#mainImage').data('elevateZoom')) {
@@ -837,13 +841,8 @@
         //update stock status
         updateStockStatus(variant.stock);
 
-        //update add to cart button
-        const addToCartBtn = $('#addToCartBtn');
-        if (variant.stock === 0) {
-          addToCartBtn.prop('disabled', true).text('🚫 Out of Stock');
-        } else {
-          addToCartBtn.prop('disabled', false).html('<i class="bi bi-cart-plus"></i> Add to Cart');
-        }
+          UpdateAddToCartButton();
+          updateWishlistButton();
       }, 150);
     }
 
@@ -871,6 +870,41 @@
         stockStatus.removeClass('in-stock low-stock').addClass('out-of-stock').html('✗ Out of Stock');
       }
     }
+
+    function updateAddToCartButton() {
+    const selectedVariant = variants[currentVariantIndex];
+    const addToCartBtn = $('#addToCartBtn');
+
+    const cartItem = cartItems.find(item => item.variantId === selectedVariant._id);
+    const quantityInCart = cartItem ? cartItem.quantity : 0;
+
+    if (selectedVariant.stock === 0) {
+      addToCartBtn.prop('disabled', true).text('🚫 Out of Stock');
+    } else if (quantityInCart >= Math.min(selectedVariant.stock, MAX_LIMIT)) {
+      addToCartBtn.prop('disabled', true).text('⚠ Limit Reached');
+    } else {
+      addToCartBtn.prop('disabled', false).html('<i class="bi bi-cart-plus"></i> Add to Cart');
+    }
+  }
+
+      function updateWishlistButton() {
+  const selectedVariant = variants[currentVariantIndex];
+  const addToWishlistBtn = $('#addToWishlistBtn');
+
+  const inWishlist = wishlistItems.some(item => item.variantId === selectedVariant._id);
+  const inCart = cartItems.some(item => item.variantId === selectedVariant._id);
+
+  if (inCart) {
+    addToWishlistBtn.prop('disabled', true).text('✔ In Cart');
+  } 
+  else if (inWishlist) {
+    addToWishlistBtn.prop('disabled', true).text('✔ In Wishlist');
+  } 
+  else {
+    addToWishlistBtn.prop('disabled', false).html('<i class="bi bi-heart"></i> Add to Wishlist');
+  }
+}
+
 
 
     //initialize when page loads
@@ -909,6 +943,8 @@
       $(window).on('resize', initImageZoom);
     });
 
+    updateAddToCartButton();
+    updateWishlistButton();
     
     document.getElementById('addToCartBtn').addEventListener('click', async function() {
   const selectedVariant = variants[currentVariantIndex];
@@ -938,13 +974,17 @@
     const data = await response.json();
 
     if (response.ok) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Added to Cart',
-        text: data.message,
-        timer: 1500
-      });
-    } else {
+  cartItems.push({ variantId: selectedVariant._id, quantity: 1 }); // Update local list
+  updateWishlistButton(); // Disable wishlist button
+  Swal.fire({
+    icon: 'success',
+    title: 'Added to Cart',
+    text: data.message,
+    timer: 1500
+  });
+}
+
+     else {
       Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -960,6 +1000,57 @@
     });
   }
 });
+
+document.getElementById('addToWishlistBtn').addEventListener('click', async function() {
+  const selectedVariant = variants[currentVariantIndex];
+
+  if (!selectedVariant) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Variant not selected'
+    });
+    return;
+  }
+
+  try {
+    const response = await fetch('/add', {  
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        productId: product._id,
+        variantId: selectedVariant._id
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Added to Wishlist',
+        text: data.message,
+        timer: 1500
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: data.message
+      });
+    }
+  } catch (error) {
+    console.error('Wishlist Error:', error);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Failed to add to wishlist'
+    });
+  }
+});
+
   </script>
 </body>
 </html>

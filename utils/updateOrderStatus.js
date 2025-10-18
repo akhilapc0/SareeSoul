@@ -20,4 +20,4 @@
     return order.status = 'Partial';
 }
 
-module.exports = updateOrderStatus;
+export default  updateOrderStatus;

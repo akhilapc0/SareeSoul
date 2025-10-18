@@ -1,0 +1,161 @@
+<%- include('partials/head') %>
+
+<body>
+  <%- include('partials/header') %>
+
+  <div class="container my-5">
+    <h2 class="mb-4">My Wishlist</h2>
+
+    <div id="wishlist-container">
+      <div class="text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3 text-muted">Loading your wishlist...</p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    async function loadWishlist() {
+      try {
+        const response = await fetch('/wishlist/data');
+        const data = await response.json();
+
+        const container = document.getElementById('wishlist-container');
+
+        if (!data.wishlist || data.wishlist.length === 0) {
+          container.innerHTML = `
+            <div class="alert alert-info text-center">
+              <p class="mb-3">Your wishlist is empty</p>
+              <a href="/shop" class="btn btn-primary">Continue Shopping</a>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = `
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  ${data.wishlist.map(item => `
+                    <div class="wishlist-item border-bottom pb-3 mb-3" data-id="${item._id}">
+                      <div class="row align-items-center">
+                        <div class="col-md-2">
+                          <img src="${item.variantId?.images?.[0] || '/images/placeholder.jpg'}" 
+                               alt="${item.productId?.name || 'Product'}" 
+                               class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-5">
+                          <h6 class="mb-1">${item.productId?.name || 'Product'}</h6>
+                          <small class="text-muted">Color: ${item.variantId?.colour || 'N/A'}</small>
+                        </div>
+                        <div class="col-md-3 text-center">
+                          <p class="mb-0 fw-bold">₹${item.productId?.salesPrice || '0'}</p>
+                        </div>
+                        <div class="col-md-2 text-end">
+                          <button class="btn btn-danger btn-sm btn-remove" data-id="${item._id}">
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Attach event listeners to remove buttons
+        attachRemoveListeners();
+      } catch (error) {
+        console.error('Error loading wishlist:', error);
+        document.getElementById('wishlist-container').innerHTML = `
+          <div class="alert alert-danger text-center">
+            <p class="mb-3">Error loading wishlist</p>
+            <button class="btn btn-primary" onclick="loadWishlist()">Try Again</button>
+          </div>
+        `;
+      }
+    }
+
+    function attachRemoveListeners() {
+      const removeButtons = document.querySelectorAll('.btn-remove');
+      
+      removeButtons.forEach(btn => {
+        btn.addEventListener('click', async function() {
+          const id = this.dataset.id;
+
+          const confirmDelete = await Swal.fire({
+            title: "Are you sure?",
+            text: "This item will be removed from your wishlist.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, remove it",
+            cancelButtonText: "Cancel",
+          });
+
+          if (confirmDelete.isConfirmed) {
+            try {
+              const response = await fetch(`/remove/${id}`, {
+                method: "DELETE",
+              });
+              const data = await response.json();
+
+              if (response.ok) {
+                Swal.fire({
+                  icon: "success",
+                  title: "Removed!",
+                  text: data.message,
+                  timer: 1500,
+                  showConfirmButton: false
+                });
+
+                // Remove item from DOM
+                const item = document.querySelector(`[data-id="${id}"]`);
+                item.style.transition = 'opacity 0.3s';
+                item.style.opacity = '0';
+                
+                setTimeout(() => {
+                  item.remove();
+                  
+                  // Check if wishlist is empty
+                  const remainingItems = document.querySelectorAll('.wishlist-item');
+                  if (remainingItems.length === 0) {
+                    document.getElementById('wishlist-container').innerHTML = `
+                      <div class="alert alert-info text-center">
+                        <p class="mb-3">Your wishlist is empty</p>
+                        <a href="/shop" class="btn btn-primary">Continue Shopping</a>
+                      </div>
+                    `;
+                  }
+                }, 300);
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops",
+                  text: data.message || "Failed to remove item"
+                });
+              }
+            } catch (error) {
+              Swal.fire({
+                icon: "error",
+                title: "Server Error",
+                text: "Something went wrong"
+              });
+            }
+          }
+        });
+      });
+    }
+
+    // Load wishlist when page loads
+    loadWishlist();
+  </script>
+</body>
+</html>

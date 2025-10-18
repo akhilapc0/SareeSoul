@@ -1,5 +1,5 @@
-const bcrypt=require('bcryptjs');
-const User=require('../../models/userModel');
+import  bcrypt from 'bcryptjs';
+import  User from '../../models/userModel.js';
 
 const getAdminLogin=async(req,res)=>{
     res.render('admin-login',{error:null})
@@ -35,7 +35,7 @@ const postAdminLogin=async(req,res)=>{
 const getDashboard=async(req,res)=>{
     try{
         
-        res.render('dashboard',{admin:req.session.user})
+        res.render('dashboard',{admin:req.session.admin})
     }
     catch(error){
         console.error(error);
@@ -43,11 +43,28 @@ const getDashboard=async(req,res)=>{
     }
 }
 
+const adminLogout=async(req,res)=>{
+    try{
+        req.session.destroy((err)=>{
+            if(err){
+                console.log("error destroying session:",err);
+                return res.redirect('/admin/dashboard')
+            }
+            res.redirect('/admin/login');
+        })
+    }
+    catch(error){
+        console.log(error);
+        res.redirect('/admin/dashboard')
+    }
+}
 
 
 
-module.exports={
+const authController={
     getAdminLogin,
     postAdminLogin,
-    getDashboard
+    getDashboard,
+    adminLogout
 }
+export default authController;

@@ -1,10 +1,12 @@
-const express=require('express');
+import  express from 'express';
+
+import adminAuth from '../../middlewares/adminAuth.js';
+import  productController from '../../controllers/admin/productController.js';
+
 const router=express.Router();
-const adminAuth=require('../../middlewares/adminAuth');
-const productController=require('../../controllers/admin/productController');
 
 
-
+router.get('/variant-count',adminAuth,productController.countVariants)
 
  router.get('/products',adminAuth,productController.loadProductList);
 
@@ -19,4 +21,4 @@ router.post('/products/block/:id',adminAuth,productController.toggleBlock);
 router.delete('/products/delete/:id',adminAuth,productController.deleteProduct);
 
 
-module.exports=router;
+export default router;

@@ -1,8 +1,10 @@
-const express=require('express');
+import  express from 'express';
+import  adminAuth from '../../middlewares/adminAuth.js';
+import  brandController from '../../controllers/admin/brandController.js';
+import uploadtoCloudinary  from "../../middlewares/uploadtoCloudinary.js";
+
 const router=express.Router();
-const adminAuth=require('../../middlewares/adminAuth');
-const brandController=require('../../controllers/admin/brandController');
-const uploadtoCloudinary = require("../../middlewares/uploadtoCloudinary");
+
 
 router.get('/brands',adminAuth,brandController.getBrandList);
 
@@ -14,4 +16,4 @@ router.post('/brands/edit/:id',adminAuth,uploadtoCloudinary.single("brandImage")
 router.post('/brands/toggle/:id',brandController.toggleBlock);
 router.delete('/brands/delete/:id',adminAuth,brandController.deleteBrand);
 
-module.exports=router;
+export default router;

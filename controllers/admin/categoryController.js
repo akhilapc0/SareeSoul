@@ -1,5 +1,5 @@
-const Category=require('../../models/categoryModel');
-const {categoryValidation}=require('../../validator/schema');
+import Category from '../../models/categoryModel.js';
+import  {categoryValidation} from '../../validator/schema.js';
 
 const getCategoryList=async(req,res)=>{
 
@@ -13,12 +13,14 @@ const getCategoryList=async(req,res)=>{
             isDeleted:false,
             name:{$regex:search,$options:'i'}
         }
+        
         const totalCategories=await Category.countDocuments(filter);
         const categories=await Category.find(filter)
                             .sort({createdAt:-1})
                             .skip((page-1)*limit)
                             .limit(limit)
         const totalPages=Math.ceil(totalCategories/limit);
+        
        return res.render('category-list',{
             categories,
              currentPage:page,
@@ -173,7 +175,7 @@ const deleteCategory=async(req,res)=>{
 
 
 
-module.exports={
+const categoryController={
     getCategoryList,
     loadAddCategory,
     postAddCategory,
@@ -182,3 +184,6 @@ module.exports={
     toggleBlock,
     deleteCategory
 }
+
+
+export default categoryController;

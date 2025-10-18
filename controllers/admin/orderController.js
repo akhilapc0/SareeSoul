@@ -1,6 +1,6 @@
-const Order=require('../../models/orderModel');
-const Variant=require('../../models/variantModel');
-const updateOrderStatus = require('../../utils/updateOrderStatus');
+import Order from'../../models/orderModel.js';
+import Variant from'../../models/variantModel.js';
+import  updateOrderStatus  from '../../utils/updateOrderStatus.js';
 
 const getAllOrders=async(req,res)=>{
     try{
@@ -65,10 +65,10 @@ const getOrderDetails = async (req, res) => {
       return res.status(400).send('Order not found');
     }
 
-    // Make items safe
+    
     order.items = order.items || [];
 
-    // Create fullName safely
+    
     if (order.userId) {
       order.userId.fullName = `${order.userId.firstName || ''} ${order.userId.lastName || ''}`.trim();
     }
@@ -96,12 +96,12 @@ const updateOrderItemStatus = async (req, res) => {
         const item = order.items.id(itemId);
         if (!item) return res.status(404).json({ message: "Item not found in order" });
 
-        // Cannot update items in final or pending approval states
+        
         if (['Cancelled', 'Returned', 'ReturnRequested'].includes(item.itemStatus)) {
             return res.status(400).json({ message: `Cannot update item with status '${item.itemStatus}'` });
         }
 
-        // Validate transition rules
+        
         const validTransitions = {
             'Pending': ['Shipped'],
             'Shipped': ['Delivered']
@@ -110,10 +110,10 @@ const updateOrderItemStatus = async (req, res) => {
             return res.status(400).json({ message: `Invalid status transition from ${item.itemStatus} to ${status}` });
         }
 
-        // Update item status
+        
         item.itemStatus = status;
 
-        // Update overall order status automatically
+        
         updateOrderStatus(order);
 
         await order.save();
@@ -129,7 +129,7 @@ const updateOrderItemStatus = async (req, res) => {
 const handleItemRequest = async (req, res) => {
     try {
         const { orderId, itemId } = req.params;
-        const { action, rejectReason } = req.body; // optional rejection reason
+        const { action, rejectReason } = req.body;
 
         const validActions = ['approve', 'reject'];
         if (!validActions.includes(action)) {
@@ -147,22 +147,22 @@ const handleItemRequest = async (req, res) => {
         }
 
         if (action === 'approve') {
-            // Restore stock
+           
             const variant = await Variant.findById(item.variantId);
             if (variant) {
                 variant.stock += item.quantity;
                 await variant.save();
             }
             item.itemStatus = 'Returned';
-            item.rejectReason = ''; // clear previous reason if any
+            item.rejectReason = ''; 
         }
 
         if (action === 'reject') {
             item.itemStatus = 'Delivered';
-            item.rejectReason = rejectReason || ''; // save optional rejection reason
+            item.rejectReason = rejectReason || ''; 
         }
 
-        // Recalculate overall order status
+        
         updateOrderStatus(order);
 
         await order.save();
@@ -180,9 +180,11 @@ const handleItemRequest = async (req, res) => {
 
 
 
-module.exports={
+const orderController={
     getAllOrders,
     getOrderDetails,
    updateOrderItemStatus,
    handleItemRequest
 }
+
+export default orderController;

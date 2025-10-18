@@ -1,144 +1,207 @@
 <%- include('partials/head') %>
-<body>
-  <%- include('partials/header') %>
 
-  <div class="container my-5">
-    <h2 class="mb-4">Shopping Cart</h2>
-     
-    <% if (items.length === 0) { %>
-      <div class="alert alert-info text-center">
-        <p class="mb-3">Your cart is empty</p>
-        <a href="/shop" class="btn btn-primary">Continue Shopping</a>
-      </div>
-    <% } else { %>
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <% items.forEach(item => { %>
-                <% if (item.productId && !item.productId.isBlocked && !item.productId.deletedAt && item.variantId && !item.variantId.isBlocked && !item.variantId.deletedAt) { %>
-                  <div class="cart-item border-bottom pb-3 mb-3">
-                    <div class="row align-items-center">
-                      <div class="col-md-2">
-                        <img src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>" 
-                             alt="<%= item.productId.name %>" 
-                             class="img-fluid rounded">
-                      </div>
-                      <div class="col-md-4">
-                        <h6 class="mb-1"><%= item.productId.name %></h6>
-                        <small class="text-muted">Color: <%= item.variantId.colour %></small><br>
-                        <small class="text-muted">Stock: <%= item.variantId.stock %></small>
-                      </div>
-                      <div class="col-md-2 text-center">
-                        <p class="mb-0 fw-bold">₹<%= item.productId.salesPrice %></p>
-                      </div>
-                      <div class="col-md-2">
-                        <div class="input-group input-group-sm">
-                          <button class="btn btn-outline-secondary btn-decrement" 
-                                  data-variant-id="<%= item.variantId._id %>" 
-                                  type="button">-</button>
-                          <input type="text" 
-                                 class="form-control text-center quantity-input" 
-                                 value="<%= item.quantity %>" 
-                                 readonly>
-                          <button class="btn btn-outline-secondary btn-increment" 
-                                  data-variant-id="<%= item.variantId._id %>" 
-                                  type="button">+</button>
+  <body>
+    <%- include('partials/header') %>
+
+      <div class="container my-5">
+        <h2 class="mb-4">Shopping Cart</h2>
+
+        <% if (items.length===0) { %>
+          <div class="alert alert-info text-center">
+            <p class="mb-3">Your cart is empty</p>
+            <a href="/shop" class="btn btn-primary">Continue Shopping</a>
+          </div>
+          <% } else { %>
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <% items.forEach(item=> { %>
+                      <% if (item.productId && !item.productId.isBlocked && !item.productId.deletedAt && item.variantId
+                        && !item.variantId.isBlocked && !item.variantId.deletedAt) { %>
+                        <div class="cart-item border-bottom pb-3 mb-3">
+                          <div class="row align-items-center">
+                            <div class="col-md-2">
+                              <img
+                                src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>"
+                                alt="<%= item.productId.name %>" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-4">
+                              <h6 class="mb-1">
+                                <%= item.productId.name %>
+                              </h6>
+                              <small class="text-muted">Color: <%= item.variantId.colour %></small><br>
+                              <small class="text-muted">Stock: <%= item.variantId.stock %></small>
+                            </div>
+                            <div class="col-md-2 text-center">
+                              <p class="mb-0 fw-bold">₹<%= item.productId.salesPrice %>
+                              </p>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="input-group input-group-sm">
+                                <button class="btn btn-outline-secondary btn-decrement"
+                                  data-variant-id="<%= item.variantId._id %>" type="button">-</button>
+                                <input type="text" class="form-control text-center quantity-input"
+                                  value="<%= item.quantity %>" readonly>
+                                <button class="btn btn-outline-secondary btn-increment"
+                                  data-variant-id="<%= item.variantId._id %>" type="button">+</button>
+                              </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                              <p class="mb-0 fw-bold">₹<%= (item.quantity * item.productId.salesPrice).toFixed(2) %>
+                              </p>
+                            </div>
+
+                            <div class="text-end mt-2">
+                              <button class="btn btn-danger btn-sm btn-remove"
+                                data-variant-id="<%= item.variantId._id  %>">
+                                Remove
+                              </button>
+                            </div>
+
+
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-md-2 text-end">
-                        <p class="mb-0 fw-bold">₹<%= (item.quantity * item.productId.salesPrice).toFixed(2) %></p>
-                      </div>
-                    </div>
+                        <% } %>
+                          <% }); %>
                   </div>
-                <% } %>
-              <% }); %>
-            </div>
-          </div>
-        </div>
+                </div>
+              </div>
 
-        <div class="col-lg-4">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">Order Summary</h5>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Subtotal:</span>
-                <span class="fw-bold">₹<%= subtotal.toFixed(2) %></span>
+              <div class="col-lg-4">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">Order Summary</h5>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Subtotal:</span>
+                      <span class="fw-bold">₹<%= subtotal.toFixed(2) %></span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                      <span class="fw-bold">Total:</span>
+                      <span class="fw-bold text-primary">₹<%= subtotal.toFixed(2) %></span>
+                    </div>
+                    <a href="/checkout" class="btn btn-primary w-100 mb-2">Proceed to Checkout</a>
+                    <a href="/shop" class="btn btn-outline-secondary w-100">Continue Shopping</a>
+                  </div>
+                </div>
               </div>
-              <hr>
-              <div class="d-flex justify-content-between mb-3">
-                <span class="fw-bold">Total:</span>
-                <span class="fw-bold text-primary">₹<%= subtotal.toFixed(2) %></span>
-              </div>
-              <a href="/checkout" class="btn btn-primary w-100 mb-2">Proceed to Checkout</a>
-              <a href="/shop" class="btn btn-outline-secondary w-100">Continue Shopping</a>
             </div>
-          </div>
-        </div>
+            <% } %>
       </div>
-    <% } %>
-  </div>
 
-  <%- include('partials/footer') %>
+      <%- include('partials/footer') %>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const incrementBtns = document.querySelectorAll('.btn-increment');
-      const decrementBtns = document.querySelectorAll('.btn-decrement');
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const incrementBtns = document.querySelectorAll('.btn-increment');
+            const decrementBtns = document.querySelectorAll('.btn-decrement');
 
-      incrementBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          updateQuantity(this.dataset.variantId, 'increment');
-        });
-      });
+            incrementBtns.forEach(btn => {
+              btn.addEventListener('click', function () {
+                updateQuantity(this.dataset.variantId, 'increment');
+              });
+            });
 
-      decrementBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          updateQuantity(this.dataset.variantId, 'decrement');
-        });
-      });
+            decrementBtns.forEach(btn => {
+              btn.addEventListener('click', function () {
+                updateQuantity(this.dataset.variantId, 'decrement');
+              });
+            });
 
-      async function updateQuantity(variantId, action) {
-        try {
-          const response = await fetch('/update-quantity', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ variantId, action })
+            async function updateQuantity(variantId, action) {
+              try {
+                const response = await fetch('/update-quantity', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({ variantId, action })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                  Swal.fire({
+                    icon: "success",
+                    title: "updated!",
+                    text: data.message,
+                    timer: 1500,
+                    showConfirmButton: false
+                  }).then(() => {
+                    location.reload();
+                  })
+                } else {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Oops",
+                    text: data.message || "Failed to update quantity"
+                  })
+                }
+              } catch (error) {
+                console.error('Error:', error);
+                Swal.fire({
+                  icon: "error",
+                  title: "server error",
+                  text: "An error occurred  while updating quantity"
+                });
+              }
+            }
           });
 
-          const data = await response.json();
+          const removeButtons = document.querySelectorAll('.btn-remove');
 
-          if (response.ok) {
-            Swal.fire({
-                icon:"success",
-                title:"updated!",
-                text:data.message,
-                timer:1500,
-                showConfirmButton: false
-            }).then(()=>{
-                location.reload();
-            })
-            } else{
-                Swal.fire({
-                    icon:"error",
-                    title:"Oops",
-                    text:data.message || "Failed to update quantity"
-                })
-            }
-        } catch (error) {
-          console.error('Error:', error);
+removeButtons.forEach(btn => {
+  btn.addEventListener('click', async function() {
+    const variantId = this.dataset.variantId;
+
+    const confirmDelete = await Swal.fire({
+      title: "Are you sure?",
+      text: "This item will be removed from your cart.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, remove it",
+      cancelButtonText: "Cancel",
+    });
+
+    if (confirmDelete.isConfirmed) {
+      try {
+        const response = await fetch(`/remove/${variantId}`, {
+          method: "DELETE",
+        });
+        const data = await response.json();
+
+        if (response.ok) {
           Swal.fire({
-            icon:"error",
-            title:"server error",
-            text:"An error occurred  while updating quantity"
+            icon: "success",
+            title: "Removed!",
+            text: data.message,
+            timer: 1500,
+            showConfirmButton: false
+          }).then(() => {
+            location.reload();
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops",
+            text: data.message || "Failed to remove item"
           });
         }
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Server Error",
+          text: "Something went wrong"
+        });
       }
-    });
-  </script>
-</body>
-</html>
+    }
+  });
+});
+
+        </script>
+  </body>
+
+  </html>

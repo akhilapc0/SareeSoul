@@ -1,8 +1,8 @@
-const PDFDocument = require('pdfkit');
-const Order = require('../../models/orderModel');
-const User = require('../../models/userModel')
-const Variant = require('../../models/variantModel');
-const updateOrderStatus = require('../../utils/updateOrderStatus');
+import  PDFDocument from 'pdfkit';
+import  Order from '../../models/orderModel.js';
+import User  from '../../models/userModel.js'
+import  Variant from '../../models/variantModel.js';
+import  updateOrderStatus from '../../utils/updateOrderStatus.js';
 
 const getUserOrders = async (req, res) => {
     try {
@@ -34,7 +34,10 @@ const getUserOrders = async (req, res) => {
                 path: 'items.variantId',
                 select: 'colour'
             })
-        const totalOrders = await Order.countDocuments(query)
+        const totalOrders = await Order.countDocuments(query);
+
+       
+
         const totalPages = Math.ceil(totalOrders / limit);
 
         res.render('my-orders', {
@@ -89,13 +92,13 @@ const cancelOrder = async (req, res) => {
         const order = await Order.findOne({ orderId, userId });
         if (!order) return res.status(400).json({ message: 'Order not found' });
 
-        // Only allow cancellation if items are Pending or Shipped
+        
         const canCancel = order.items.every(i => ['Pending', 'Shipped'].includes(i.itemStatus));
         if (!canCancel) {
             return res.status(400).json({ message: 'Order cannot be cancelled. Some items are already delivered, cancelled, or returned.' });
         }
 
-        // Cancel all items and restore stock
+        
         for (const item of order.items) {
             const variant = await Variant.findById(item.variantId);
             if (variant) {
@@ -107,7 +110,7 @@ const cancelOrder = async (req, res) => {
             item.cancelReason = reason || '';
         }
 
-        // Update overall order status using helper
+        
         updateOrderStatus(order);
 
         await order.save();
@@ -123,7 +126,7 @@ const cancelOrderItem = async (req, res) => {
     try {
         const userId = req.session?.user?._id || req.session?.passport?.user;
         const { orderId, itemId } = req.params;
-        const { reason } = req.body; // User-provided cancel reason
+        const { reason } = req.body; 
 
         const order = await Order.findOne({ orderId, userId });
         if (!order) return res.status(400).json({ message: 'Order not found' });
@@ -131,23 +134,23 @@ const cancelOrderItem = async (req, res) => {
         const item = order.items.id(itemId);
         if (!item) return res.status(400).json({ message: 'Item not found in order' });
 
-        // Only allow cancelling if Pending or Shipped
+        
         if (!['Pending', 'Shipped'].includes(item.itemStatus)) {
             return res.status(400).json({ message: `Cannot cancel item with status: ${item.itemStatus}` });
         }
 
-        // Restore stock
+       
         const variant = await Variant.findById(item.variantId);
         if (variant) {
             variant.stock += item.quantity;
             await variant.save();
         }
 
-        // Update item status and store cancel reason
+       
         item.itemStatus = 'Cancelled';
         item.cancelReason = reason || '';
 
-        // Update overall order status
+        
         updateOrderStatus(order);
 
         await order.save();
@@ -183,7 +186,7 @@ const returnItem = async (req, res) => {
         item.itemStatus = 'ReturnRequested';
         item.returnReason = reason;
 
-        // Update overall order status
+        
         updateOrderStatus(order);
 
         await order.save();
@@ -208,19 +211,19 @@ const returnOrder = async (req, res) => {
         const order = await Order.findOne({ orderId, userId });
         if (!order) return res.status(400).json({ message: "Order not found" });
 
-        // Only delivered items can be requested for return
+        
         const deliveredItems = order.items.filter(item => item.itemStatus === "Delivered");
         if (deliveredItems.length === 0) {
             return res.status(400).json({ message: "No delivered items to return" });
         }
 
-        // Update all delivered items to ReturnRequested
+        
         deliveredItems.forEach(item => {
             item.itemStatus = "ReturnRequested";
             item.returnReason = reason;
         });
 
-        // Recalculate overall order status
+        
         updateOrderStatus(order);
 
         await order.save();
@@ -252,7 +255,7 @@ const downloadInvoice = async (req, res) => {
         
         doc.pipe(res);
 
-        // Header Section
+        
         doc.rect(0, 0, doc.page.width, 80).fill('#0d6efd');
         doc.fillColor('#ffffff')
            .fontSize(28)
@@ -261,7 +264,7 @@ const downloadInvoice = async (req, res) => {
 
         doc.fillColor('#000000').font('Helvetica');
 
-        // Order Information Box
+        
         let yPosition = 120;
         doc.fontSize(16)
            .font('Helvetica-Bold')
@@ -277,7 +280,7 @@ const downloadInvoice = async (req, res) => {
         yPosition += 15;
         doc.fontSize(11).font('Helvetica');
         
-        // Two column layout for order info
+        
         const leftColumn = 50;
         const rightColumn = 320;
         
@@ -296,7 +299,7 @@ const downloadInvoice = async (req, res) => {
 
         yPosition += 40;
 
-        // Shipping Address Section
+        
         if (order.address) {
             doc.fontSize(16)
                .font('Helvetica-Bold')
@@ -327,7 +330,7 @@ const downloadInvoice = async (req, res) => {
             yPosition += 40;
         }
 
-        // Items Section
+        
         doc.fontSize(16)
            .font('Helvetica-Bold')
            .text('Order Items', 50, yPosition);
@@ -341,7 +344,7 @@ const downloadInvoice = async (req, res) => {
 
         yPosition += 15;
 
-        // Table Header
+        
         doc.fontSize(10)
            .font('Helvetica-Bold')
            .fillColor('#ffffff');
@@ -358,9 +361,9 @@ const downloadInvoice = async (req, res) => {
         yPosition += 25;
         doc.fillColor('#000000').font('Helvetica');
 
-        // Table Rows
+        
         order.items.forEach((item, index) => {
-            // Check if we need a new page
+           
             if (yPosition > 700) {
                 doc.addPage();
                 yPosition = 50;
@@ -368,7 +371,7 @@ const downloadInvoice = async (req, res) => {
 
             const rowHeight = 30;
             
-            // Alternating row colors
+            
             if (index % 2 === 0) {
                 doc.rect(50, yPosition, 495, rowHeight).fill('#f8f9fa');
             }
@@ -390,7 +393,7 @@ const downloadInvoice = async (req, res) => {
 
         yPosition += 20;
 
-        // Summary Section
+        
         if (yPosition > 650) {
             doc.addPage();
             yPosition = 50;
@@ -409,13 +412,13 @@ const downloadInvoice = async (req, res) => {
 
         yPosition += 20;
 
-        // Summary Box
+        
         const summaryBoxX = 350;
         const summaryBoxWidth = 195;
         
         doc.fontSize(11).font('Helvetica');
         
-        // Clean all summary values
+        
         const cleanSubtotal = String(order.subtotal).replace(/[^\d.]/g, '');
         const cleanDiscount = order.discount ? String(order.discount).replace(/[^\d.]/g, '') : '0';
         const cleanDelivery = order.deliveryCharge ? String(order.deliveryCharge).replace(/[^\d.]/g, '') : '0';
@@ -441,7 +444,7 @@ const downloadInvoice = async (req, res) => {
             yPosition += 20;
         }
 
-        // Total Line
+       
         doc.strokeColor('#0d6efd')
            .lineWidth(1)
            .moveTo(summaryBoxX, yPosition)
@@ -456,7 +459,7 @@ const downloadInvoice = async (req, res) => {
            .text('Total Amount:', summaryBoxX, yPosition);
         doc.text(`Rs. ${parseFloat(cleanTotal).toFixed(2)}`, summaryBoxX + 120, yPosition, { align: 'right', width: 75 });
 
-        // Footer
+        
         const footerY = doc.page.height - 80;
         doc.fontSize(9)
            .fillColor('#666666')
@@ -477,7 +480,7 @@ const downloadInvoice = async (req, res) => {
 
 
 
-module.exports = {
+const orderController= {
     getUserOrders,
     getOrderDetail,
     cancelOrder,
@@ -487,3 +490,4 @@ module.exports = {
     downloadInvoice
 }
 
+export default orderController;

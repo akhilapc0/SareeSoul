@@ -1,4 +1,4 @@
-const User=require('../../models/userModel');
+import User from '../../models/userModel.js';
 
 const getUserList=async(req,res)=>{
     try{
@@ -63,7 +63,9 @@ const toggleUserBlockStatus=async(req,res)=>{
 
 
 
-module.exports={
+const userController={
     getUserList,
     toggleUserBlockStatus
 }
+
+export default userController;

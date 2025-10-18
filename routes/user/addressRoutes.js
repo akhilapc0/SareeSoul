@@ -1,8 +1,11 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
 
-const addressController=require('../../controllers/user/addressController');
-const{isLoggedIn,checkBlock}=require('../../middlewares/userAuth')
+
+import  addressController from '../../controllers/user/addressController.js';
+import {isLoggedIn,checkBlock} from '../../middlewares/userAuth.js';
+
+
+const router = express.Router();
 
 router.get('/my-address',isLoggedIn,checkBlock, addressController.getAddressList);
 
@@ -19,7 +22,7 @@ router.delete("/delete-address/:id", isLoggedIn, checkBlock, addressController.d
 router.patch('/profile/address/:id/default', isLoggedIn, checkBlock, addressController.setDefaultAddress);
 
 
-module.exports=router;
+export default router;
 
 
 

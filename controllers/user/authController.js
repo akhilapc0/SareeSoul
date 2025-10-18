@@ -1,9 +1,9 @@
-const bcrypt = require('bcryptjs');
-const User = require('../../models/userModel'); 
-const sendOtpEmail=require('../../utils/sendOtpEmail')
-const OtpVerification = require('../../models/otpVerificationModel');
-const {EmailVerificationUsageType,ForgotPasswordUsageType}=require('../../shared/constant');
-const {registerValidation}=require('../../validator/schema');
+import  bcrypt from 'bcryptjs';
+import  User from '../../models/userModel.js'; 
+import  sendOtpEmail from '../../utils/sendOtpEmail.js';
+import  OtpVerification from '../../models/otpVerificationModel.js';
+import  {EmailVerificationUsageType,ForgotPasswordUsageType} from '../../shared/constant.js';
+import  {registerValidation} from '../../validator/schema.js';
 const getRegisterPage = (req, res) => {
   res.render('register', { errorEmail: "", formData: {}, errors: {} });
 
@@ -431,7 +431,7 @@ const getHomePage = (req, res) => {
 };
 
 
-module.exports = {
+const authController = {
   getRegisterPage,
   registerUser,
   postVerifyOtp,
@@ -449,3 +449,4 @@ module.exports = {
 };
 
 
+export default authController;

@@ -1,7 +1,48 @@
-const Product=require('../../models/productModel');
-const Category = require("../../models/categoryModel");
-const Brand = require("../../models/brandModel");
-const {productValidation}=require('../../validator/schema');
+import  Product from '../../models/productModel.js';
+import Variant from '../../models/variantModel.js'
+import  Category  from "../../models/categoryModel.js";
+import  Brand from "../../models/brandModel.js";
+import  {productValidation} from '../../validator/schema.js';
+
+ const countVariants=async(req,res)=>{
+  try{
+      const variants=await Variant.find();
+      
+      const count={};
+      for(let variant of variants){
+        const productId=variant.productId.toString();
+        if(count[productId]){
+          
+          count[productId]+=1;
+        }
+        else{
+          count[productId]=1;
+        }
+      }
+      console.log("count object is :",JSON.stringify(count,null,2))
+      const result=[];
+      for(let productId in count){
+        const product=await Product.findById(productId).select("name");
+        result.push({
+          productName:product?product.name :"unknown",
+          variantCount:count[productId]
+
+        })
+
+      }
+              res.status(200).json({variantCount:result})
+
+  }
+  catch(error){
+    console.log(error);
+    res.status(500).send({message:"something went wrong"})
+  }
+}
+
+
+
+
+
 
 const loadProductList = async (req, res) => {
   try {
@@ -320,7 +361,8 @@ const deleteProduct = async (req, res) => {
 
 
 
-module.exports={
+const productController={
+  countVariants,
     loadProductList,
     loadAddProduct,
     postAddProduct,
@@ -331,3 +373,5 @@ module.exports={
    
     
 }
+
+export default productController;

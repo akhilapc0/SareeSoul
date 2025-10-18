@@ -1,7 +1,9 @@
-const Product = require('../../models/productModel');
-const Variant=require('../../models/variantModel');
-const Brand=require('../../models/brandModel');
-const Category=require('../../models/categoryModel');
+import  Product from '../../models/productModel.js';
+import  Variant from '../../models/variantModel.js';
+import  Brand from '../../models/brandModel.js';
+import  Category from '../../models/categoryModel.js';
+import Wishlist from '../../models/wishlistModel.js';
+import Cart from '../../models/cartModel.js';
 
 const getShopPage = async (req, res) => {
   try {
@@ -120,12 +122,31 @@ const getProductDetail = async (req, res) => {
     const brand = await Brand.findById(product.brandId);
     const category=await Category.findById(product.categoryId);
     
+    let cartItems = [];
+if (user) {
+  const cart = await Cart.find({ userId: user._id, productId });
+  cartItems = cart.map(item => ({
+    variantId: item.variantId.toString(),
+    quantity: item.quantity
+  }));
+}
+
+    let wishlistVariantIds=[];
+    if(user){
+      const wishlistItems=await Wishlist.find({userId:user._id,productId});
+      console.log("wishlistItems:",wishlistItems)
+      wishlistVariantIds=wishlistItems.map(item=>item.variantId.toString());
+      console.log("alreaady  exist variants:",wishlistVariantIds)
+    }
     res.render("productDetail", {
       product,
       variants,
       user,
       brand,
-      category
+      category,
+      wishlistVariantIds,
+      cartItems
+    
     });
   } catch (error) {
     console.error(error);
@@ -137,8 +158,10 @@ const getProductDetail = async (req, res) => {
 
 
 
-module.exports = {
+const userController= {
   getShopPage,
   getProductDetail
 
 };
+
+export default userController;

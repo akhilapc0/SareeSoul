@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Counter = require('./counterModel');
+import  mongoose from 'mongoose';
+import  Counter from './counterModel.js';
 
 
 const orderItemSchema = new mongoose.Schema({
@@ -60,4 +60,4 @@ orderSchema.pre('save', async function (next) {
     }
 });
 
-module.exports = mongoose.model('Order', orderSchema);
+export default mongoose.model('Order', orderSchema);

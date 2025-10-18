@@ -1,7 +1,7 @@
-const Cart = require('../../models/cartModel');
-const Product = require('../../models/productModel');
-const Variant = require('../../models/variantModel');
-
+import Cart from '../../models/cartModel.js';
+import  Product from '../../models/productModel.js';
+import  Variant from '../../models/variantModel.js';
+import Wishlist from '../../models/wishlistModel.js';
 const loadCart = async (req, res) => {
   try {
   
@@ -38,6 +38,7 @@ const loadCart = async (req, res) => {
 };
 
 const addToCart = async (req, res) => {
+  
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user; 
     if (!userId) return res.status(401).json({ message: 'Login required' });
@@ -72,6 +73,8 @@ const addToCart = async (req, res) => {
     
     const existingItem = cart.items.find(item => item.variantId.toString() === variantId.toString());
 
+     
+
     if (existingItem) {
       
       if (existingItem.quantity + qty > variant.stock) {
@@ -83,7 +86,10 @@ const addToCart = async (req, res) => {
     }
 
     await cart.save();
+    
+    await Wishlist.deleteOne({userId,variantId})
     return res.status(200).json({ message: 'Added to cart', cart });
+
   } catch (err) {
     console.error(err);
     return res.status(500).json({ message: 'Server error' });
@@ -137,9 +143,35 @@ return res.status(200).json({message:"quantity updated ",cart})
 
 }
 
+const removeCartItem=async(req,res)=>{
+  
+  try{
 
-module.exports={
+  const userId=req.session?.user?._id || req.session?.passport?.user;
+  const {variantId}=req.params;
+
+  const result=await Cart.updateOne(
+    {userId},
+    {$pull:{items:{variantId}}}
+  );
+
+if(result.modifiedCount === 0){
+  return res.status(400).json({message:"Item not found in cart"})
+}
+
+res.status(200).json({message:"Item removed successfully"})
+
+}
+catch(error){
+  console.error(error);
+  res.status(500).json({message:"server error"})
+}
+}
+const cartController={
   loadCart,
   addToCart,
-  updateQuantity
+  updateQuantity,
+  removeCartItem
 }
+
+export default cartController;

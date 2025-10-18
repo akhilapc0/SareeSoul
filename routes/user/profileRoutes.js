@@ -1,9 +1,12 @@
-const express = require('express');
+import  express from 'express';
+
+
+import  profileController from '../../controllers/user/profileController.js';
+import  upload from '../../middlewares/uploadtoCloudinary.js';
+import  {isLoggedIn,checkBlock} from '../../middlewares/userAuth.js';
+
 const router = express.Router();
 
-const profileController=require('../../controllers/user/profileController');
-const upload=require('../../middlewares/uploadtoCloudinary')
-const {isLoggedIn,checkBlock}=require('../../middlewares/userAuth');
 
 router.get('/profile', isLoggedIn,checkBlock, profileController.getProfilePage);
 
@@ -32,4 +35,4 @@ router.post('/profile/change-password', isLoggedIn, checkBlock, profileControlle
 
 
 
-module.exports = router;
+export default  router;

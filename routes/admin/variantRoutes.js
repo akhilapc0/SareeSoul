@@ -1,9 +1,11 @@
-const express=require('express');
+import express from 'express';
+
+import  upload from '../../middlewares/uploadtoCloudinary.js';
+import  adminAuth from '../../middlewares/adminAuth.js';
+import  variantController from '../../controllers/admin/variantController.js';
+import {maxImageSize} from '../../shared/constant.js';
+
 const router=express.Router();
-const upload=require('../../middlewares/uploadtoCloudinary');
-const adminAuth=require('../../middlewares/adminAuth');
-const variantController=require('../../controllers/admin/variantController');
-const {maxImageSize}=require('../../shared/constant');
 
 
 router.get("/products/:productId/variants", variantController.listVariants);
@@ -23,4 +25,4 @@ router.post("/products/:productId/variants/block/:variantId", variantController.
 
 router.delete("/products/:productId/variants/delete/:variantId", variantController.deleteVariant);
 
-module.exports = router;
+export default router;

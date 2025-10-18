@@ -1,7 +1,8 @@
-const express=require('express');
+import express from 'express';
+import  adminAuth from '../../middlewares/adminAuth.js';
+import  categoryController from '../../controllers/admin/categoryController.js';
+
 const router=express.Router();
-const adminAuth=require('../../middlewares/adminAuth');
-const categoryController=require('../../controllers/admin/categoryController');
 
 router.get('/categories',adminAuth,categoryController.getCategoryList);
 
@@ -13,4 +14,4 @@ router.post('/categories/edit/:id',adminAuth,categoryController.postEditCategory
 router.post('/categories/toggle/:id',adminAuth,categoryController.toggleBlock);
 router.delete('/categories/delete/:id',adminAuth,categoryController.deleteCategory);
 
-module.exports=router;
+export default router;

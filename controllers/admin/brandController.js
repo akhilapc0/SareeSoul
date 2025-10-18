@@ -1,5 +1,5 @@
-const Brand=require('../../models/brandModel');
-const {brandValidation}=require('../../validator/schema');
+import  Brand from '../../models/brandModel.js';
+import  {brandValidation} from '../../validator/schema.js';
 
 const getBrandList=async(req,res)=>{
 
@@ -170,7 +170,7 @@ const deleteBrand=async(req,res)=>{
 
 
 
-module.exports={
+const brandController={
     getBrandList,
     loadAddBrand,
     postAddBrand,
@@ -179,3 +179,5 @@ module.exports={
     deleteBrand,
     toggleBlock
 }
+
+export default brandController;

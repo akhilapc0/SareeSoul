@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import  mongoose from 'mongoose';
 
 const otpVerificationSchema=new mongoose.Schema({
     userId:     { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
@@ -11,4 +11,4 @@ const otpVerificationSchema=new mongoose.Schema({
   updatedAt:  { type: Date, default: null }
 })
 
-module.exports = mongoose.model('OtpVerification', otpVerificationSchema);
+export default  mongoose.model('OtpVerification', otpVerificationSchema);

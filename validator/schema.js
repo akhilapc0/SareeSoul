@@ -1,6 +1,6 @@
-const Joi = require('joi');
+import  Joi from 'joi';
 
-const registerValidation = Joi.object({
+export const registerValidation = Joi.object({
   firstName: Joi.string()
     .pattern(/^[A-Za-z]+$/)
     .trim()
@@ -66,17 +66,17 @@ const registerValidation = Joi.object({
 
 })
 
-const categoryValidation = Joi.object({
+export const categoryValidation = Joi.object({
   name: Joi.string().min(3).max(50).required(),
   description: Joi.string().min(3).max(500).required()
 })
 
-const brandValidation = Joi.object({
+export const brandValidation = Joi.object({
   name: Joi.string().min(3).max(50).required(),
   description: Joi.string().min(3).max(500).required()
 })
 
-const productValidation = Joi.object({
+export const productValidation = Joi.object({
   name: Joi.string().trim().min(2).max(100).required().messages({
     "string.empty": "Product name is required",
     "string.min": "Product name must have at least 2 characters",
@@ -108,7 +108,7 @@ const productValidation = Joi.object({
     "string.empty": "Category is required"
   })
 });
-const variantValidation = Joi.object({
+export const variantValidation = Joi.object({
   colour: Joi.string().trim().required().messages({
     "string.empty": "Colour is required"
   }),
@@ -126,7 +126,7 @@ const variantValidation = Joi.object({
 
 ;
 
-const personalInfoValidation = Joi.object({
+export const personalInfoValidation = Joi.object({
   firstName: Joi.string()
     .pattern(/^[A-Za-z]+$/)
     .min(3)
@@ -158,7 +158,7 @@ const personalInfoValidation = Joi.object({
     })
 });
 
-const requestEmailOtpValidation = Joi.object({
+export const requestEmailOtpValidation = Joi.object({
     newEmail: Joi.string()
     .email()
     .max(50)
@@ -170,7 +170,7 @@ const requestEmailOtpValidation = Joi.object({
     }),
 });
 
-const verifyEmailOtpValidation = Joi.object({
+export const verifyEmailOtpValidation = Joi.object({
   newEmail: Joi.string()
     .email()
     .max(50)
@@ -191,7 +191,7 @@ const verifyEmailOtpValidation = Joi.object({
     }),
 });
 
-const changePasswordValidation = Joi.object({
+export const changePasswordValidation = Joi.object({
   currentPassword: Joi.string()
     .required()
     .messages({
@@ -220,7 +220,7 @@ const changePasswordValidation = Joi.object({
     }),
 });
 
-const addressValidation = Joi.object({
+export const addressValidation = Joi.object({
   name: Joi.string()
     .trim()
     .min(2)
@@ -300,17 +300,5 @@ const addressValidation = Joi.object({
     }),
 });
 
-module.exports = {
-  registerValidation,
-  categoryValidation,
-  brandValidation,
-  productValidation,
-  variantValidation,
-  personalInfoValidation,
-  requestEmailOtpValidation,
-  verifyEmailOtpValidation ,
-  changePasswordValidation,
-  addressValidation,
 
-}
 

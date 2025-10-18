@@ -1,10 +1,11 @@
-const User = require('../../models/userModel');
-const bcrypt=require("bcryptjs")
-const {personalInfoValidation,requestEmailOtpValidation,verifyEmailOtpValidation,changePasswordValidation}=require('../../validator/schema')
+import  User from '../../models/userModel.js';
+import  bcrypt from "bcryptjs"
+import {personalInfoValidation,requestEmailOtpValidation,verifyEmailOtpValidation,changePasswordValidation} from '../../validator/schema.js';
 
-const OtpVerification = require('../../models/otpVerificationModel');
-const sendOtpEmail = require('../../utils/sendOtpEmail');
-const { EditEmailUsageType } = require('../../shared/constant');
+import  OtpVerification from '../../models/otpVerificationModel.js';
+import  sendOtpEmail from '../../utils/sendOtpEmail.js';
+
+import  { EditEmailUsageType } from '../../shared/constant.js';
 
 const getProfilePage = async (req, res) => {
   try {
@@ -304,7 +305,7 @@ const postChangePassword = async (req, res) => {
   }
 };
 
-module.exports={
+const profileController={
     getProfilePage,
     renderEditPersonal,
     updatePersonalInfo,
@@ -316,3 +317,5 @@ module.exports={
     renderChangePasswordPage,
     postChangePassword
 }
+
+export default profileController;

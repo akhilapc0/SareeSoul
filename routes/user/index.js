@@ -1,12 +1,27 @@
-const express=require('express');
+import  express from 'express';
+
+
+import cartRoutes from './cartRoutes.js';
+import authRoutes from './authRoutes.js';
+import addressRoutes from './addressRoutes.js';
+import profileRoutes from './profileRoutes.js';
+
+import userRoutes from './userRoutes.js';
+import checkoutRoutes from './checkoutRoutes.js';
+import orderRoutes from './orderRoutes.js';
+import wishlistRoutes from './wishlistRoutes.js';
+
+
+
 const router=express.Router();
 
-router.use('/', require('./cartRoutes'));      
-router.use('/', require('./authRoutes'));
-router.use('/', require('./addressRoutes'));
-router.use('/', require('./profileRoutes'));
-router.use('/', require('./userRoutes'));
-router.use('/',require('./checkoutRoutes'))
-router.use('/',require('./orderRoutes'));
+router.use('/',cartRoutes);
+router.use('/',authRoutes);
+router.use('/',addressRoutes);
+router.use('/',profileRoutes);
+router.use('/',userRoutes);
+router.use('/',checkoutRoutes);
+router.use('/',orderRoutes);
+router.use('/',wishlistRoutes);
 
-module.exports=router;
+export default router;

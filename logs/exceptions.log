@@ -21037,3 +21037,1998 @@ SyntaxError: Unexpected token ')'
     at Module.require (node:internal/modules/cjs/loader:1340:12)
     at require (node:internal/modules/helpers:141:16)
     at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\userRoutes.js:3:24)
+2025-10-07 09:59:22 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:76
+      if(existingItem.quantity +)
+                                ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 09:59:24 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:76
+      if(existingItem.quantity + )
+                                 ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 09:59:30 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:76
+      if(existingItem.quantity + qty >)
+                                      ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 09:59:30 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:76
+      if(existingItem.quantity + qty >)
+                                      ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 09:59:35 [ERROR]: uncaughtException: Unexpected token 'const'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:76
+      if(existingItem.quantity + qty >  const MAX_LIMIT=5;)
+                                        ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 09:59:37 [ERROR]: uncaughtException: Unexpected token 'const'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:76
+      if(existingItem.quantity + qty >  const MAX_LIMIT=5;)
+                                        ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:10:01 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:10:01 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:11:38 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:11:39 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:11:49 [ERROR]: uncaughtException: Missing initializer in const declaration
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const remo
+      ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:11:49 [ERROR]: uncaughtException: Missing initializer in const declaration
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const remo
+      ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:11:54 [ERROR]: uncaughtException: asyn is not defined
+ReferenceError: asyn is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142:22)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:11:54 [ERROR]: uncaughtException: asyn is not defined
+ReferenceError: asyn is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142:22)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:11:59 [ERROR]: uncaughtException: asyn is not defined
+ReferenceError: asyn is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142:22)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:11:59 [ERROR]: uncaughtException: asyn is not defined
+ReferenceError: asyn is not defined
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142:22)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:12:04 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:12:04 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:12:07 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:12:07 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:11 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:11 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:17 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:17 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:23 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:25 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:29 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:32 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:37 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:40 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:45 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:45 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:50 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:13:52 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:17:44 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:17:53 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:17:54 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:22 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:24 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:40 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:40 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:44 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:44 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:50 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:51 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:59 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:18:59 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:05 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:09 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:15 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:19 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:24 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:27 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:19:30 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:12 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:12 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:16 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:17 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:21 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:21 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:27 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:27 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:48 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:48 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:52 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:55 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:20:58 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:01 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:09 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:09 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:16 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:17 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:27 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:30 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:34 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:34 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:52 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:21:52 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:02 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:02 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:06 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:08 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:12 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:15 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:18 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:22 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:25 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:31 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:31 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:39 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:47 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:48 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:54 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:22:54 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:01 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:01 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:07 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:08 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:11 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:11 [ERROR]: uncaughtException: Malformed arrow function parameter list
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\cartController.js:142
+const removeCartItem=asyn(req,res)=>{
+                     ^^^^^^^^^^^^
+
+SyntaxError: Malformed arrow function parameter list
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:3:24)
+2025-10-07 10:23:23 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:23 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:29 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:30 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:34 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:34 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:40 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:50 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:50 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:56 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:23:57 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:24:04 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:24:05 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:24:09 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 10:24:09 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\cartRoutes.js:10:14)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+2025-10-07 11:19:47 [ERROR]: uncaughtException: Unexpected token 'if'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:108
+   if (!productId.match(/^[0-9a-fA-F]{24}$/)) {
+   ^^
+
+SyntaxError: Unexpected token 'if'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\userRoutes.js:3:24)
+2025-10-07 11:19:47 [ERROR]: uncaughtException: Unexpected token 'if'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\userController.js:108
+   if (!productId.match(/^[0-9a-fA-F]{24}$/)) {
+   ^^
+
+SyntaxError: Unexpected token 'if'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\userRoutes.js:3:24)
+2025-10-07 11:34:53 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:38
+        console.log("totalOrders in order:"+)
+                                            ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\orderRoutes.js:3:23)
+2025-10-07 11:34:53 [ERROR]: uncaughtException: Unexpected token ')'
+C:\Users\Lenovo\Desktop\P_SAREE SOUL\controllers\user\orderController.js:38
+        console.log("totalOrders in order:"+)
+                                            ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+    at Module._compile (node:internal/modules/cjs/loader:1491:20)
+    at Object..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+    at Module.require (node:internal/modules/cjs/loader:1340:12)
+    at require (node:internal/modules/helpers:141:16)
+    at Object.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\routes\user\orderRoutes.js:3:23)
+2025-10-10 18:34:01 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:34:01 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:34:03 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:34:35 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:34:36 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:34:37 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:38:17 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:41:41 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:41:41 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-10 18:41:41 [ERROR]: uncaughtException: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Lenovo\Desktop\P_SAREE SOUL\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/db.js:2:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-13 19:31:20 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Function.use (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:385:11)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/index.js:22:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 11:39:05 [ERROR]: uncaughtException: variantId is not defined
+ReferenceError: variantId is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/variantController.js:9:35
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 12:57:59 [ERROR]: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/productController.js:6:28
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:00:16 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:01:33 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:02:10 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:02:18 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:02:31 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:02:45 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-15 13:02:54 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-18 00:04:44 [ERROR]: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/authController.js:46:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-18 08:55:29 [ERROR]: uncaughtException: adminLogout is not defined
+ReferenceError: adminLogout is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/authRoutes.js:10:23
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-18 08:55:56 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/authRoutes.js:10:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-18 08:56:00 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/authRoutes.js:10:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)

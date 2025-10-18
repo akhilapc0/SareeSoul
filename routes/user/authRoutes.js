@@ -1,8 +1,8 @@
-const express = require('express');
+import  express from 'express';
 const router = express.Router();
-const authController = require('../../controllers/user/authController');
-const {isLoggedIn,isLoggedOut,checkBlock}=require('../../middlewares/userAuth');
-const passport = require('passport');
+import  authController from '../../controllers/user/authController.js';
+import {isLoggedIn,isLoggedOut,checkBlock} from '../../middlewares/userAuth.js';
+import passport from 'passport';
 
 // show registration form
 router.get('/register', authController.getRegisterPage);
@@ -32,4 +32,4 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
 
 router.get('/home',checkBlock, authController.getHomePage);
 
-module.exports = router;
+export default router;
