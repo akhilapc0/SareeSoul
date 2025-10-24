@@ -1,5 +1,5 @@
 {
-  "type":"module",
+  "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cloudinary": "^1.41.3",
@@ -17,6 +17,7 @@
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
     "pdfkit": "^0.17.2",
+    "razorpay": "^2.9.6",
     "winston": "^3.17.0"
   },
   "devDependencies": {

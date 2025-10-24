@@ -1,10 +1,248 @@
 <%- include('partials/head') %>
+
+<style>
+  :root {
+    --primary-teal: #008B8B;
+    --primary-teal-dark: #006B6B;
+    --success-green: #28a745;
+    --danger-red: #dc3545;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 15px;
+  }
+
+  .page-title {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--primary-teal);
+  }
+
+  .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 24px;
+    background: white;
+  }
+
+  .card-header {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-teal-dark) 100%);
+    color: white;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 16px 20px;
+    border: none;
+  }
+
+  .card-header h5 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .card-body {
+    padding: 24px;
+  }
+
+  /* Address Cards */
+  .address-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+  }
+
+  .address-card:hover {
+    border-color: var(--primary-teal);
+    box-shadow: 0 4px 12px rgba(0, 139, 139, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .form-check-input:checked ~ .form-check-label .address-card {
+    border-color: var(--primary-teal);
+    background: rgba(0, 139, 139, 0.05);
+  }
+
+  .address-card h6 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .address-card p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .badge.bg-success {
+    background-color: var(--success-green) !important;
+  }
+
+  /* Order Items */
+  .order-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .order-item:last-child {
+    border-bottom: none;
+  }
+
+  .order-item img {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .order-item h6 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .order-item small {
+    color: #888;
+    font-size: 0.85rem;
+  }
+
+  .order-item .price {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .order-item .total-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-teal);
+  }
+
+  /* Order Summary */
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #666;
+  }
+
+  .summary-row.total {
+    border-top: 2px solid #e0e0e0;
+    padding-top: 16px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .summary-row.total .amount {
+    color: var(--primary-teal);
+  }
+
+  /* Payment Methods */
+  .payment-method {
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .payment-method:hover {
+    border-color: var(--primary-teal);
+    background: rgba(0, 139, 139, 0.03);
+  }
+
+  .form-check-input:checked ~ .payment-method {
+    border-color: var(--primary-teal);
+    background: rgba(0, 139, 139, 0.08);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-teal-dark) 100%);
+    border: none;
+    padding: 14px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 139, 139, 0.3);
+  }
+
+  .btn-outline-secondary {
+    border: 2px solid #ddd;
+    color: #666;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-secondary:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+    color: #333;
+  }
+
+  .btn-sm {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .alert-warning {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .sticky-summary {
+    position: sticky;
+    top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 1.5rem;
+    }
+    
+    .sticky-summary {
+      position: relative;
+      top: 0;
+    }
+  }
+</style>
+
 <body>
   <%- include('partials/header') %>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <div class="container my-5">
-    <h2 class="mb-4">Checkout</h2>
+  <div class="checkout-container">
+    <h2 class="page-title">Checkout</h2>
 
     <!-- SweetAlert for flash error -->
     <% if (error_msg && error_msg.length > 0) { %>
@@ -12,45 +250,46 @@
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: "<%= error_msg[0] %>"
+          text: "<%= error_msg[0] %>",
+          confirmButtonColor: '#008B8B'
         });
       </script>
     <% } %>
 
-    <!-- ✅ Start the form here -->
     <form id="checkoutForm" method="POST" action="/checkout/place-order">
       <div class="row">
         <div class="col-lg-8">
           <!-- Delivery Address Section -->
-          <div class="card shadow-sm mb-4">
-            <div class="card-header bg-white">
-              <h5 class="mb-0">Delivery Address</h5>
+          <div class="card">
+            <div class="card-header">
+              <h5>🏠 Delivery Address</h5>
             </div>
             <div class="card-body">
               <% if (addresses.length === 0) { %>
                 <div class="alert alert-warning">
-                  <p class="mb-2">No delivery address found</p>
-                  <a href="/add-address" class="btn btn-sm btn-primary">Add New Address</a>
+                  <p class="mb-2"><strong>No delivery address found</strong></p>
+                  <p class="mb-3">Please add a delivery address to proceed with your order.</p>
+                  <a href="/add-address" class="btn btn-sm btn-primary">+ Add New Address</a>
                 </div>
               <% } else { %>
                 <div class="row">
                   <% addresses.forEach(address => { %>
                     <div class="col-md-6 mb-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="addressId" 
-                               id="address<%= address._id %>" value="<%= address._id %>"
-                               <%= address.isDefault ? 'checked' : '' %> required>
-                        <label class="form-check-label" for="address<%= address._id %>">
-                          <div class="border rounded p-3">
+                        <input class="form-check-input" type="radio" name="addressId"
+                          id="address<%= address._id %>" value="<%= address._id %>"
+                          <%= address.isDefault ? 'checked' : '' %> required>
+                        <label class="form-check-label w-100" for="address<%= address._id %>">
+                          <div class="address-card">
                             <h6><%= address.name %></h6>
-                            <p class="mb-1"><%= address.addressLine1 %></p>
+                            <p><%= address.addressLine1 %></p>
                             <% if (address.addressLine2) { %>
-                              <p class="mb-1"><%= address.addressLine2 %></p>
+                              <p><%= address.addressLine2 %></p>
                             <% } %>
-                            <p class="mb-1"><%= address.city %>, <%= address.state %> - <%= address.pincode %></p>
-                            <p class="mb-0">Phone: <%= address.mobile %></p>
+                            <p><%= address.city %>, <%= address.state %> - <%= address.pincode %></p>
+                            <p>📞 <%= address.mobile %></p>
                             <% if (address.isDefault) { %>
-                              <span class="badge bg-success mt-2">Default</span>
+                              <span class="badge bg-success">Default</span>
                             <% } %>
                           </div>
                         </label>
@@ -58,34 +297,33 @@
                     </div>
                   <% }) %>
                 </div>
-                <a href="/add-address" class="btn btn-sm btn-outline-primary mt-2">Add New Address</a>
+                <a href="/add-address" class="btn btn-sm btn-outline-primary mt-2">+ Add New Address</a>
               <% } %>
             </div>
           </div>
 
           <!-- Order Items Section -->
-          <div class="card shadow-sm">
-            <div class="card-header bg-white">
-              <h5 class="mb-0">Order Items</h5>
+          <div class="card">
+            <div class="card-header">
+              <h5>🛍️ Order Items</h5>
             </div>
             <div class="card-body">
               <% items.forEach(item => { %>
-                <div class="row align-items-center border-bottom pb-3 mb-3">
-                  <div class="col-md-2">
-                    <img src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>" 
-                         alt="<%= item.productId.name %>" 
-                         class="img-fluid rounded">
+                <div class="order-item row align-items-center">
+                  <div class="col-3 col-md-2">
+                    <img src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>"
+                      alt="<%= item.productId.name %>" class="img-fluid">
                   </div>
-                  <div class="col-md-5">
-                    <h6 class="mb-1"><%= item.productId.name %></h6>
-                    <small class="text-muted">Color: <%= item.variantId.colour %></small><br>
-                    <small class="text-muted">Quantity: <%= item.quantity %></small>
+                  <div class="col-5 col-md-5">
+                    <h6><%= item.productId.name %></h6>
+                    <small>Color: <%= item.variantId.colour %></small><br>
+                    <small>Quantity: <%= item.quantity %></small>
                   </div>
-                  <div class="col-md-3 text-center">
-                    <p class="mb-0">₹<%= item.productId.salesPrice %></p>
+                  <div class="col-2 col-md-3 text-center">
+                    <p class="price mb-0">₹<%= item.productId.salesPrice %></p>
                   </div>
-                  <div class="col-md-2 text-end">
-                    <p class="mb-0 fw-bold">₹<%= (item.quantity * item.productId.salesPrice).toFixed(2) %></p>
+                  <div class="col-2 text-end">
+                    <p class="total-price mb-0">₹<%= (item.quantity * item.productId.salesPrice).toFixed(2) %></p>
                   </div>
                 </div>
               <% }) %>
@@ -95,42 +333,156 @@
 
         <div class="col-lg-4">
           <!-- Order Summary -->
-          <div class="card shadow-sm sticky-top" style="top: 20px;">
-            <div class="card-header bg-white">
-              <h5 class="mb-0">Order Summary</h5>
+          <div class="card sticky-summary">
+            <div class="card-header">
+              <h5>💳 Order Summary</h5>
             </div>
             <div class="card-body">
-              <div class="d-flex justify-content-between mb-2">
+              <div class="summary-row">
                 <span>Subtotal:</span>
                 <span>₹<%= subtotal.toFixed(2) %></span>
               </div>
-              <div class="d-flex justify-content-between mb-2">
+              <div class="summary-row">
                 <span>Shipping:</span>
-                <span class="text-success">Free</span>
+                <span class="text-success fw-bold">FREE</span>
               </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Payment Method:</span>
-                <span>COD</span>
+
+              <div class="mt-4 mb-3">
+                <label class="form-label fw-bold" style="color: #333;">Payment Method:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="cod" value="COD" checked>
+                  <label class="form-check-label w-100" for="cod">
+                    <div class="payment-method">
+                      <strong>💵 Cash on Delivery</strong>
+                      <small class="d-block text-muted">Pay when you receive</small>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="razorpay" value="Razorpay">
+                  <label class="form-check-label w-100" for="razorpay">
+                    <div class="payment-method">
+                      <strong>💳 Online Payment</strong>
+                      <small class="d-block text-muted">Pay via Razorpay</small>
+                    </div>
+                  </label>
+                </div>
               </div>
-              <hr>
-              <div class="d-flex justify-content-between mb-3">
-                <span class="fw-bold">Total:</span>
-                <span class="fw-bold text-primary">₹<%= subtotal.toFixed(2) %></span>
+
+              <div class="summary-row total">
+                <span>Total:</span>
+                <span class="amount">₹<%= subtotal.toFixed(2) %></span>
               </div>
-              <!-- ✅ Button now inside the form -->
-              <button type="submit" class="btn btn-primary w-100" 
-                      <%= addresses.length === 0 ? 'disabled' : '' %>>
-                Place Order
+
+              <button type="submit" class="btn btn-primary w-100 mt-3" <%= addresses.length === 0 ? 'disabled' : '' %>>
+                Place Order →
               </button>
-              <a href="/cart" class="btn btn-outline-secondary w-100 mt-2">Back to Cart</a>
+              <a href="/cart" class="btn btn-outline-secondary w-100 mt-2">← Back to Cart</a>
             </div>
           </div>
         </div>
       </div>
     </form>
-    <!-- ✅ End of form -->
   </div>
 
   <%- include('partials/footer') %>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    const form = document.getElementById('checkoutForm');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const paymentMethod = form.paymentMethod.value;
+      const addressId = form.addressId.value;
+
+      if (paymentMethod === 'COD') {
+        form.submit();
+        return;
+      }
+
+      try {
+        const response = await fetch('/checkout/place-order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ addressId, paymentMethod })
+        });
+
+        const data = await response.json();
+
+        if (!data.success) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Something went wrong. Please try again.',
+            confirmButtonColor: '#008B8B'
+          });
+          return;
+        }
+
+        const options = {
+          key: data.key,
+          amount: data.amount,
+          currency: 'INR',
+          name: 'Saree Store',
+          description: 'Order Payment',
+          order_id: data.razorpayOrderId,
+          handler: async function (response) {
+            try {
+              const verifyRes = await fetch('/checkout/verify-payment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                  orderId: data.orderId,
+                  addressId
+                })
+              });
+
+              if (!verifyRes.ok) {
+                throw new Error(`HTTP error! status: ${verifyRes.status}`);
+              }
+
+              const verifyData = await verifyRes.json();
+
+              if (verifyData.success) {
+                window.location.href = verifyData.redirectUrl;
+              } else {
+                window.location.href = '/payment-failed?orderId=' + data.orderId + '&reason=Verification failed';
+              }
+            } catch (error) {
+              console.error('Error in payment handler:', error);
+              window.location.href = '/payment-failed?orderId=' + data.orderId + '&reason=Processing error';
+            }
+          },
+          modal: {
+            ondismiss: function () {
+              window.location.href = '/payment-failed?orderId=' + data.orderId + '&reason=Payment cancelled by user';
+            }
+          },
+          prefill: {
+            name: '<%= user.firstName %>',
+            email: '<%= user.email %>'
+          },
+          theme: { color: '#008B8B' }
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+
+      } catch (err) {
+        console.error('Outer error:', err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Something went wrong. Please try again.',
+          confirmButtonColor: '#008B8B'
+        });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 import Order from'../../models/orderModel.js';
 import Variant from'../../models/variantModel.js';
 import  updateOrderStatus  from '../../utils/updateOrderStatus.js';
+import Wallet from '../../models/walletModel.js';
 
 const getAllOrders=async(req,res)=>{
     try{
@@ -155,10 +156,26 @@ const handleItemRequest = async (req, res) => {
             }
             item.itemStatus = 'Returned';
             item.rejectReason = ''; 
+
+            if(order.paymentMethod === 'Razorpay' && order.paymentStatus ==='Paid'){
+                let wallet =await Wallet.findOne({userId:order.userId });
+                if(!wallet){
+                    wallet=new Wallet({userId:order.userId});
+                    await wallet.save();
+                }
+                const refundAmount =item.price * item.quantity;
+                wallet.balance += refundAmount;
+                wallet.transactions.push({
+                    type:'Credit',
+                    amount:refundAmount,
+                    reason:`Refund for returned item ${item._id} in order ${order.orderId}`
+                })
+                await wallet.save();
+            }
         }
 
         if (action === 'reject') {
-            item.itemStatus = 'Delivered';
+            item.itemStatus = 'ReturnRejected';
             item.rejectReason = rejectReason || ''; 
         }
 

@@ -194,9 +194,13 @@
           body: JSON.stringify({ name, description, actualPrice, salesPrice, categoryId, brandId })
         });
 
+        if(res.redirected){
+          window.location = res.url
+        }
         const data = await res.json();
 
         if (!res.ok) {
+          console.log("error unde ketto pc")
           document.getElementById("backendError").textContent = data.message || "Something went wrong";
           return;
         }

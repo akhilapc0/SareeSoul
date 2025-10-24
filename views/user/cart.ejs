@@ -44,8 +44,12 @@
                                 <input type="text" class="form-control text-center quantity-input"
                                   value="<%= item.quantity %>" readonly>
                                 <button class="btn btn-outline-secondary btn-increment"
-                                  data-variant-id="<%= item.variantId._id %>" type="button">+</button>
+                                  data-variant-id="<%= item.variantId._id %>" type="button" <%=item.quantity>=
+                                  item.variantId.stock ? 'disabled' : '' %>>
+                                  +
+                                </button>
                               </div>
+
                             </div>
                             <div class="col-md-2 text-end">
                               <p class="mb-0 fw-bold">₹<%= (item.quantity * item.productId.salesPrice).toFixed(2) %>
@@ -135,9 +139,9 @@
                   })
                 } else {
                   Swal.fire({
-                    icon: "error",
-                    title: "Oops",
-                    text: data.message || "Failed to update quantity"
+                    icon: "warning",
+                    title: "stock limit reached",
+                    text: data.message || "Cannot update quantity further"
                   })
                 }
               } catch (error) {
@@ -153,53 +157,53 @@
 
           const removeButtons = document.querySelectorAll('.btn-remove');
 
-removeButtons.forEach(btn => {
-  btn.addEventListener('click', async function() {
-    const variantId = this.dataset.variantId;
+          removeButtons.forEach(btn => {
+            btn.addEventListener('click', async function () {
+              const variantId = this.dataset.variantId;
 
-    const confirmDelete = await Swal.fire({
-      title: "Are you sure?",
-      text: "This item will be removed from your cart.",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonText: "Yes, remove it",
-      cancelButtonText: "Cancel",
-    });
+              const confirmDelete = await Swal.fire({
+                title: "Are you sure?",
+                text: "This item will be removed from your cart.",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, remove it",
+                cancelButtonText: "Cancel",
+              });
 
-    if (confirmDelete.isConfirmed) {
-      try {
-        const response = await fetch(`/remove/${variantId}`, {
-          method: "DELETE",
-        });
-        const data = await response.json();
+              if (confirmDelete.isConfirmed) {
+                try {
+                  const response = await fetch(`/remove/${variantId}`, {
+                    method: "DELETE",
+                  });
+                  const data = await response.json();
 
-        if (response.ok) {
-          Swal.fire({
-            icon: "success",
-            title: "Removed!",
-            text: data.message,
-            timer: 1500,
-            showConfirmButton: false
-          }).then(() => {
-            location.reload();
+                  if (response.ok) {
+                    Swal.fire({
+                      icon: "success",
+                      title: "Removed!",
+                      text: data.message,
+                      timer: 1500,
+                      showConfirmButton: false
+                    }).then(() => {
+                      location.reload();
+                    });
+                  } else {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Oops",
+                      text: data.message || "Failed to remove item"
+                    });
+                  }
+                } catch (error) {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Server Error",
+                    text: "Something went wrong"
+                  });
+                }
+              }
+            });
           });
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Oops",
-            text: data.message || "Failed to remove item"
-          });
-        }
-      } catch (error) {
-        Swal.fire({
-          icon: "error",
-          title: "Server Error",
-          text: "Something went wrong"
-        });
-      }
-    }
-  });
-});
 
         </script>
   </body>

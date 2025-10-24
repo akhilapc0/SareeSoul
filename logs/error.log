@@ -745,3 +745,48 @@ cartItems is not defined
     at getProductDetail (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:130:9)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-10-17 19:13:14 [ERROR]: ReferenceError: Cart is not defined
+2025-10-18 12:04:38 [ERROR]: TypeError: Cannot read properties of undefined (reading 'trim')
+2025-10-18 12:25:30 [ERROR]: [object Object]
+2025-10-18 13:25:34 [ERROR]: Error adding variant: logger is not defined
+2025-10-19 18:37:00 [ERROR]: Error: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\forgot-password.ejs:195
+    193| <body>
+    194|     <!-- Include Header -->
+ >> 195|     <%- include('../partials/header') %>
+    196| 
+    197|     <!-- Forgot Password Section -->
+    198|     <div class="forgot-password-wrapper">
+
+Could not find the include file "../partials/header"
+    at getIncludePath (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:185:13)
+    at includeFile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:311:19)
+    at include (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:701:16)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:12:17)
+    at forgot-password (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+2025-10-20 10:00:44 [ERROR]: Error in postAddCategory: Assignment to constant variable.
+2025-10-20 10:00:44 [ERROR]: Error in postAddCategory: Assignment to constant variable.
+2025-10-20 10:00:53 [ERROR]: Error in postAddCategory: Assignment to constant variable.
+2025-10-20 12:01:02 [ERROR]: Error in postAddCategory: E11000 duplicate key error collection: sareeSoul.categories index: name_1 dup key: { name: "akhila sarees" }
+2025-10-20 13:12:20 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
+2025-10-20 20:45:05 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
+2025-10-20 20:45:29 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
+2025-10-20 20:45:48 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
+2025-10-22 09:49:48 [ERROR]: (node:11464) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-22 10:19:38 [ERROR]: verifyPayment error: ValidationError: paymentMethod: `Razorpay` is not a valid enum value for path `paymentMethod`., status: `Paid` is not a valid enum value for path `status`.
+2025-10-22 10:29:10 [ERROR]: (node:25468) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-22 10:39:55 [ERROR]: (node:42176) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-22 10:52:43 [ERROR]: (node:19392) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-22 11:38:26 [ERROR]: (node:17568) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-22 12:09:13 [ERROR]: (node:43648) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-23 17:34:48 [ERROR]: Error handling return request: ValidationError: items.0.itemStatus: `ReturnRejected` is not a valid enum value for path `itemStatus`.
+2025-10-24 11:18:27 [ERROR]: Error fetching wallet details: MongoServerError: E11000 duplicate key error collection: sareeSoul.wallets index: userId_1 dup key: { userId: ObjectId('68d6ad648b19afc1a2fefff0') }

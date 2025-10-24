@@ -8,7 +8,7 @@ import Cart from '../../models/cartModel.js';
 const getShopPage = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = 8;
+    const limit = 4;
     const skip = (page - 1) * limit;
 
     let filter = {};

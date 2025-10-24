@@ -176,8 +176,8 @@
               body: formData,
             });
 
+            
             const data = await res.json();
-
             if (!res.ok) {
               document.getElementById("backendError").textContent = data.error || "Something went wrong";
               return;

@@ -1,71 +1,374 @@
 <%- include('partials/head') %>
+
+<style>
+  :root {
+    --primary-teal: #008B8B;
+    --primary-teal-dark: #006B6B;
+    --success-green: #28a745;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .success-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .success-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .success-header {
+    background: linear-gradient(135deg, var(--success-green) 0%, #20c997 100%);
+    padding: 50px 30px;
+    text-align: center;
+    color: white;
+  }
+
+  .success-icon {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease-in-out;
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .success-icon svg {
+    width: 60px;
+    height: 60px;
+    color: var(--success-green);
+  }
+
+  .success-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .success-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+
+  .success-body {
+    padding: 40px 30px;
+  }
+
+  .order-id-box {
+    background: linear-gradient(135deg, rgba(0, 139, 139, 0.1) 0%, rgba(0, 139, 139, 0.05) 100%);
+    border: 2px solid var(--primary-teal);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .order-id-box label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .order-id-box .order-id {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-teal);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .info-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-teal);
+  }
+
+  .info-item label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .info-item .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .timeline {
+    margin: 30px 0;
+  }
+
+  .timeline-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .timeline-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  .timeline-icon svg {
+    width: 18px;
+    height: 18px;
+    color: white;
+  }
+
+  .timeline-content {
+    flex: 1;
+    padding-top: 5px;
+  }
+
+  .timeline-content strong {
+    color: #333;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .timeline-content small {
+    color: #666;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-teal-dark) 100%);
+    color: white;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 139, 139, 0.3);
+    color: white;
+  }
+
+  .btn-outline {
+    background: white;
+    color: var(--primary-teal);
+    border: 2px solid var(--primary-teal);
+  }
+
+  .btn-outline:hover {
+    background: var(--primary-teal);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .success-header {
+      padding: 40px 20px;
+    }
+
+    .success-header h2 {
+      font-size: 1.5rem;
+    }
+
+    .success-body {
+      padding: 30px 20px;
+    }
+
+    .info-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
+
 <body>
   <%- include('partials/header') %>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <script>
-    Swal.fire({
-      icon: 'success',
-      title: 'Order Placed!',
-      text: 'Your order has been successfully placed.',
-      confirmButtonText: 'OK'
-    });
-  </script>
+  <div class="success-container">
+    <div class="success-card">
+      <div class="success-header">
+        <div class="success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+          </svg>
+        </div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Thank you for your purchase. Your order is confirmed.</p>
+      </div>
 
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card shadow-sm text-center">
-          <div class="card-body py-5">
-            <div class="mb-4">
-              <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
-            </div>
-            <h2 class="mb-3">Order Placed Successfully!</h2>
-            <p class="text-muted mb-4">Thank you for your order. Your order has been received and is being processed.</p>
-            
-            <div class="alert alert-info d-inline-block">
-              <strong>Order ID:</strong> <%= orderId %>
-            </div>
+      <div class="success-body">
+        <div class="order-id-box">
+          <label>Your Order ID</label>
+          <div class="order-id"><%= orderId %></div>
+        </div>
 
-            <div class="mt-4">
-              <p class="mb-3">You will receive an order confirmation email shortly.</p>
+        <div class="info-grid">
+          <div class="info-item">
+            <label>Total Amount</label>
+            <div class="value">₹<%= order.total.toFixed(2) %></div>
+          </div>
+          <div class="info-item">
+            <label>Payment Method</label>
+            <div class="value"><%= order.paymentMethod %></div>
+          </div>
+          <div class="info-item">
+            <label>Payment Status</label>
+            <div class="value" style="color: <%= order.paymentStatus === 'Paid' ? '#28a745' : '#ffc107' %>">
+              <%= order.paymentStatus || 'Pending' %>
             </div>
-
-            <div class="d-flex gap-3 justify-content-center mt-4">
-              <a href="/my-order" class="btn btn-primary">View Orders</a>
-              <a href="/shop" class="btn btn-outline-secondary">Continue Shopping</a>
-            </div>
+          </div>
+          <div class="info-item">
+            <label>Order Status</label>
+            <div class="value" style="color: var(--primary-teal)"><%= order.status %></div>
           </div>
         </div>
 
-        <div class="card shadow-sm mt-4">
-          <div class="card-body">
-            <h5 class="card-title mb-3">What happens next?</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="bi bi-check2 text-success me-2"></i>
-                Your order will be confirmed shortly
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-check2 text-success me-2"></i>
-                We'll prepare your items for shipping
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-check2 text-success me-2"></i>
-                You'll receive tracking information once shipped
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-check2 text-success me-2"></i>
-                Payment will be collected on delivery (COD)
-              </li>
-            </ul>
+        <div class="timeline">
+          <div class="timeline-title">📦 What Happens Next?</div>
+          
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <strong>Order Confirmed</strong>
+              <small>Your order has been received and is being processed</small>
+            </div>
           </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <strong>Items Being Prepared</strong>
+              <small>We're carefully packing your items for shipment</small>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7z"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <strong>Shipping & Tracking</strong>
+              <small>You'll receive tracking information once shipped</small>
+            </div>
+          </div>
+
+          <% if (order.paymentMethod === 'COD') { %>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <strong>Payment on Delivery</strong>
+              <small>Please keep cash ready for payment upon delivery</small>
+            </div>
+          </div>
+          <% } else { %>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <strong>Payment Received</strong>
+              <small>Your payment via Razorpay has been confirmed</small>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+        <div style="background: #f0f8ff; border-left: 4px solid #0099ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
+          <p style="margin: 0; color: #333;">
+            <strong>📧 Confirmation Email Sent</strong><br>
+            <small style="color: #666;">We've sent an order confirmation email to your registered email address.</small>
+          </p>
+        </div>
+
+        <div class="action-buttons">
+          <a href="/my-order" class="btn btn-primary">
+            📋 View My Orders
+          </a>
+          <a href="/shop" class="btn btn-outline">
+            🛍️ Continue Shopping
+          </a>
         </div>
       </div>
     </div>
   </div>
 
   <%- include('partials/footer') %>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </body>
 </html>

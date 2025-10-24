@@ -82,8 +82,8 @@ const loadAddVariant = async (req, res) => {
 const postAddVariant = async (req, res) => {
   try {
 
-     logger.info("req.body:",JSON.stringify(req.body));   
-    logger.info("req.files:", req.files); 
+     console.log("req.body:",JSON.stringify(req.body));   
+    console.log("req.files:", req.files); 
 
     const productId=req.params.productId;
    console.log("productId type:", typeof productId, "value:", productId);   
@@ -128,7 +128,7 @@ const postAddVariant = async (req, res) => {
       variant: newVariant,
     });
   } catch (error) {
-    // console.error("Error adding variant:", error.message);
+     console.error("Error adding variant:", error.message);
     res.status(500).json({ success: false, message: "Server error " + error.message });
   }
 };

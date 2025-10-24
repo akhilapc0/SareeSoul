@@ -5,7 +5,7 @@ const getBrandList=async(req,res)=>{
 
     try{
 
-        const search=(req.query.search)||'';
+        const search=(req.query.search?.trim())||'';
 
         const page= Number(req.query.page) || 1;
         const limit=5;
@@ -59,10 +59,6 @@ const postAddBrand = async (req, res) => {
       return res.status(400).json({ error: "All fields including image are required" });
     }
 
-    const brandExists = await Brand.findOne({ name });
-    if (brandExists) {
-      return res.status(409).json({ error: "Brand already exists" });
-    }
 
     const brand = new Brand({
       name,
@@ -77,6 +73,9 @@ const postAddBrand = async (req, res) => {
 
   } catch (err) {
     console.error("Error in postAddBrand:", err.message);
+    if(err.code === 11000){
+      return res.status(400).json({error:"Brand already exist"})
+    }
     return res.status(500).json({ error: "Server error. Please try again." });
   }
 };

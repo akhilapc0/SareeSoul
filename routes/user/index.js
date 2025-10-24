@@ -10,7 +10,7 @@ import userRoutes from './userRoutes.js';
 import checkoutRoutes from './checkoutRoutes.js';
 import orderRoutes from './orderRoutes.js';
 import wishlistRoutes from './wishlistRoutes.js';
-
+import walletRoutes from './walletRoutes.js';
 
 
 const router=express.Router();
@@ -23,5 +23,5 @@ router.use('/',userRoutes);
 router.use('/',checkoutRoutes);
 router.use('/',orderRoutes);
 router.use('/',wishlistRoutes);
-
+router.use('/',walletRoutes);
 export default router;

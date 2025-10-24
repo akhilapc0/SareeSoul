@@ -706,7 +706,7 @@
   submitBtn.innerHTML = '<i class="material-icons">hourglass_empty</i> Saving...';
 
   try {
-    // ✅ FIXED: Correct route without /profile
+    
     const res = await fetch(`/edit-address/${addressId}`, {
       method: "POST",
       headers: {

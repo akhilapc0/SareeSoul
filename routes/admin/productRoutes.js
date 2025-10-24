@@ -21,4 +21,7 @@ router.post('/products/block/:id',adminAuth,productController.toggleBlock);
 router.delete('/products/delete/:id',adminAuth,productController.deleteProduct);
 
 
+
+
+
 export default router;

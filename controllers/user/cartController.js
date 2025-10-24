@@ -80,6 +80,10 @@ const addToCart = async (req, res) => {
       if (existingItem.quantity + qty > variant.stock) {
         return res.status(400).json({ message: 'Not enough stock to increase quantity' });
       }
+     else if (existingItem.quantity + qty > 5) {
+      
+        return res.status(400).json({ message: 'only 5 items allowed per variant' });
+      }
       existingItem.quantity += qty;
     } else {
       cart.items.push({ productId, variantId, quantity: qty });

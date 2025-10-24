@@ -4,6 +4,11 @@ import Address from '../../models/addressModel.js';
 import  Order from '../../models/orderModel.js';
 import Variant from '../../models/variantModel.js';
 import Counter from '../../models/counterModel.js';
+import razorpayInstance from '../../utils/razorpay.js';
+import crypto from "crypto";
+
+
+
 const loadCheckout = async (req, res) => {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
@@ -47,7 +52,7 @@ const loadCheckout = async (req, res) => {
 const placeOrder = async (req, res) => {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
-    const { addressId } = req.body;
+    const { addressId,paymentMethod } = req.body;
 
     const cart = await Cart.findOne({ userId })
       .populate('items.productId')
@@ -78,6 +83,30 @@ const placeOrder = async (req, res) => {
       {$inc:{seq:1}},
       {new:true,upsert:true}
     )
+    const totalAmount=subtotal*100;
+
+    if(paymentMethod === "Razorpay"){
+          const options={
+            amount:totalAmount,
+            currency:"INR",
+            receipt:`order_${counter.seq}`
+          }
+    
+
+  const razorpayOrder=await razorpayInstance.orders.create(options);
+
+  return res.json({
+    success:true,
+    key:process.env.RAZORPAY_KEY_ID,
+    amount:totalAmount,
+    razorpayOrderId:razorpayOrder.id,
+    orderId:`ORD-${counter.seq}`
+  });
+
+    }
+
+    if(paymentMethod === 'COD')
+    {
     const order = new Order({
       orderId:`ORD-${counter.seq}`,
       userId,
@@ -104,7 +133,7 @@ const placeOrder = async (req, res) => {
     await Cart.findOneAndUpdate({ userId }, { items: [] });
 
    return res.redirect(`/order-success/${order.orderId}`);
-
+  }
   } catch (err) {
     console.error(err);
     req.flash('error_msg', 'Something went wrong, please try again');
@@ -116,25 +145,172 @@ const loadOrderSuccess = async (req, res) => {
   try {
     const orderId = req.params.id;
     const userId = req.session?.user?._id || req.session?.passport?.user;
+
+    console.log('loadOrderSuccess called');
+    console.log('orderId from params:',orderId);
+    console.log('userId:',userId);
+
     const user = req.session?.user || await User.findById(userId);
     const order=await Order.findOne({orderId});
+
+    console.log('order found:',order ?'yes':'no');
+    if(order){
+      console.log('order details:',{
+        orderId:order.orderId,
+        paymentMethod:order.paymentMethod,
+        paymentStatus:order.paymentStatus,
+        status:order.status
+      })
+    }
     if(!order){
+      console.log('order not found,redirecting to shop')
       req.flash('error_msg','order not found');
       return res.redirect('/shop')
     }
+    if(order.paymentMethod === 'Razorpay' && order.paymentStatus !=='Paid'){
+      console.log('payment not completed ,redirecting to checkout')
+      req.flash('error_msg','Payment not completed');
+      return res.redirect('/checkout')
+    }
+
+    console.log('Rendering order-success page')
     res.render('order-success', { order, user,orderId:order.orderId });
   } catch (err) {
-    console.error(err);
+    console.error(`error in loadOrderSuccess:`,err);
     req.flash('error_msg', 'Something went wrong');
    return  res.redirect('/checkout');
   }
 };
 
+const verifyPayment=async(req,res)=>{
+  try{
+    const {
+      razorpay_order_id,
+      razorpay_payment_id,
+      razorpay_signature,
+      orderId,
+      addressId
+    }=req.body;
+
+    console.log(" Payment Verification Started");
+    console.log("Razorpay IDs:", razorpay_order_id, razorpay_payment_id);
+    console.log("Signature from Razorpay:", razorpay_signature);
+
+
+    const generated_signature=crypto
+      .createHmac("sha256",process.env.RAZORPAY_KEY_SECRET)
+      .update(razorpay_order_id + "|"+ razorpay_payment_id)
+      .digest("hex");
+    
+     console.log("Generated Signature:", generated_signature);
+
+      if(generated_signature !== razorpay_signature){
+
+             console.log(" Signature mismatch");
+
+        return res.json({success:false,message:"Invalid signature"})
+      }
+         console.log(" Signature verified successfully");
+
+      const userId=req.session?.user?._id || req.session?.passport?.user;
+
+      const cart=await Cart.findOne({userId})
+                  .populate('items.productId')
+                  .populate('items.variantId')
+
+      if(!cart || cart.items.length === 0){
+        console.log(" Cart empty");
+        return res.json({success:false,message:"cart is empty"})
+      }
+
+      const address=await Address.findOne({_id:addressId,userId})
+      if(!address){
+        console.log(" Invalid address");
+        return res.json({success:false,message:"Invalid address"})
+      }
+
+      const subtotal=cart.items.reduce(
+        (sum,i)=> sum + i.quantity * i.productId.salesPrice,
+        0
+      )
+
+      const order = new Order({
+        orderId,
+        userId,
+        address:address.toObject(),
+        items:cart.items.map((i)=>({
+          productId:i.productId._id,
+          variantId:i.variantId._id,
+          quantity:i.quantity,
+          price:i.productId.salesPrice
+        })),
+        paymentMethod:'Razorpay',
+        paymentId:razorpay_payment_id,
+        subtotal,
+        total:subtotal,
+        status:'Pending',
+        paymentStatus:'Paid'
+      });
+
+      await order.save();
+
+      console.log(" Order saved:", order.orderId);
+
+      for(let item of cart.items){
+        await Variant.findByIdAndUpdate(item.variantId._id,{
+          $inc:{ stock: -item.quantity}
+        })
+      }
+
+      console.log(" Stock updated");
+
+      await Cart.findOneAndUpdate({userId},{items:[]});
+
+          console.log(" Cart cleared");
+
+        const redirectUrl=`/order-success/${order.orderId}`;
+        console.log("sending response with redirectUrl:",redirectUrl)
+
+        return res.status(200).json({
+          success:true,
+          redirectUrl:redirectUrl
+        })
+      
+
+  }
+  catch(err){
+  console.error('verifyPayment error:',err);
+  return res.status(500).json({success:false,message:"something went wrong"})
+}
+}
+
+const loadPaymentFailed=async(req,res)=>{
+  try{
+
+    const userId=req.session?.user?._id || req.session?.passport?.user;
+    const user=req.session?.user || await User.findById(userId)
+    const orderId =req.query.orderId;
+    const reason=req.query.reason || 'Payment was not completed';
+    res.render('payment-failed',{
+      user,
+      orderId,
+      reason,
+      error_msg :req.flash('error_msg')
+    })
+  }
+  catch(err){
+    console.error(err);
+    res.redirect('/cart')
+  }
+}
+
 
 const checkoutController={
     loadCheckout,
     placeOrder,
-    loadOrderSuccess
+    loadOrderSuccess,
+    verifyPayment,
+    loadPaymentFailed
 }
 
 export default checkoutController;

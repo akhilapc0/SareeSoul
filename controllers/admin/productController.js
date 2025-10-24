@@ -110,13 +110,14 @@ const loadAddProduct = async (req, res) => {
 
 const postAddProduct = async (req, res) => {
   try {
-    
+    console.log("djfkdjfk")
     const { error, value } = productValidation.validate(req.body, { abortEarly: false });
     if (error) {
       const errors = {};
       error.details.forEach(err => {
         errors[err.path[0]] = err.message;
       });
+      console.log(errors)
       return res.status(400).json({ success: false, errors });
     }
 
@@ -129,6 +130,7 @@ const postAddProduct = async (req, res) => {
       });
     }
 
+    
     
     const brand = await Brand.findById(value.brandId);
     if (!brand) {

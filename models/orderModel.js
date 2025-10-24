@@ -9,7 +9,7 @@ const orderItemSchema = new mongoose.Schema({
     price: { type: Number, required: true },
     itemStatus: {
         type: String,
-        enum: ['Pending', 'Shipped', 'Delivered', 'Cancelled', 'ReturnRequested', 'Returned'],
+        enum: ['Pending', 'Shipped', 'Delivered', 'Cancelled', 'ReturnRequested', 'Returned','ReturnRejected'],
         default: 'Pending'
     },
     returnReason: String,   
@@ -30,12 +30,18 @@ const orderSchema = new mongoose.Schema({
         pincode: String
     },
     items: [orderItemSchema],
-    paymentMethod: { type: String, enum: ['COD', 'Online'], default: 'COD' },
+    paymentMethod: { type: String, enum: ['COD', 'Razorpay'], default: 'COD' },
+    paymentId:{type:String},
+    paymentStatus:{
+        type:String,
+        enum:['Pending','Paid','Failed'],
+        default:'Pending'
+    },
     subtotal: { type: Number, required: true },
     total: { type: Number, required: true },
     status: {
     type: String,
-    enum: ['Pending', 'Shipped', 'Delivered', 'Cancelled', 'Returned', 'ReturnRequested', 'Partial', 'Partially Shipped'],
+    enum: ['Pending', 'Paid','Shipped', 'Delivered', 'Cancelled', 'Returned', 'ReturnRequested', 'Partial', 'Partially Shipped'],
     default: 'Pending'
 },
     createdAt: { type: Date, default: Date.now }

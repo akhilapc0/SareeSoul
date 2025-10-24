@@ -1,6 +1,7 @@
 import  PDFDocument from 'pdfkit';
 import  Order from '../../models/orderModel.js';
-import User  from '../../models/userModel.js'
+import User  from '../../models/userModel.js';
+import Wallet from '../../models/walletModel.js';
 import  Variant from '../../models/variantModel.js';
 import  updateOrderStatus from '../../utils/updateOrderStatus.js';
 
@@ -113,6 +114,23 @@ const cancelOrder = async (req, res) => {
         
         updateOrderStatus(order);
 
+        if(order.paymentMethod ==='Razorpay' && order.paymentStatus === 'Paid'){
+
+            let wallet=await Wallet.findOne({userId});
+            if(!wallet){
+                wallet =new Wallet({userId});
+                await wallet.save();
+            }
+        const refundAmount= order.items.reduce((sum,i)=> sum + i.price * i.quantity,0);
+            wallet.balance += refundAmount;
+            wallet.transactions.push({
+                type:'Credit',
+                amount:refundAmount,
+                reason:`Refund for cancelled order ${order.orderId}`
+            })
+            await wallet.save();
+
+        }
         await order.save();
         return res.json({ message: 'Order cancelled successfully', order });
 
@@ -152,6 +170,23 @@ const cancelOrderItem = async (req, res) => {
 
         
         updateOrderStatus(order);
+
+        if(order.paymentMethod === 'Razorpay' && order.paymentStatus === 'Paid'){
+            let wallet =await Wallet.findOne({userId});
+            if(!wallet){
+                wallet=new Wallet({userId});
+                await wallet.save();
+            }
+            const refundAmount = item.price * item.quantity;
+            wallet.balance += refundAmount;
+            wallet.transactions.push({
+                type:'Credit',
+                amount:refundAmount,
+                reason:` Refund for cancelled item ${itemId} in order ${order.orderId}`
+            });
+
+            await  wallet.save();
+        }
 
         await order.save();
 

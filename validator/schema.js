@@ -66,13 +66,14 @@ export const registerValidation = Joi.object({
 
 })
 
+
 export const categoryValidation = Joi.object({
-  name: Joi.string().min(3).max(50).required(),
+  name: Joi.string().min(3).max(50).required().lowercase().trim(),
   description: Joi.string().min(3).max(500).required()
 })
 
 export const brandValidation = Joi.object({
-  name: Joi.string().min(3).max(50).required(),
+  name: Joi.string().min(3).max(50).required().lowercase().trim(),
   description: Joi.string().min(3).max(500).required()
 })
 
