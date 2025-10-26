@@ -790,3 +790,5 @@ Could not find the include file "../partials/header"
 (Use `node --trace-deprecation ...` to show where the warning was created)
 2025-10-23 17:34:48 [ERROR]: Error handling return request: ValidationError: items.0.itemStatus: `ReturnRejected` is not a valid enum value for path `itemStatus`.
 2025-10-24 11:18:27 [ERROR]: Error fetching wallet details: MongoServerError: E11000 duplicate key error collection: sareeSoul.wallets index: userId_1 dup key: { userId: ObjectId('68d6ad648b19afc1a2fefff0') }
+2025-10-26 20:43:39 [ERROR]: (node:9516) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

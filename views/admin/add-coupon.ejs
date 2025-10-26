@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<style>
+  .form-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .form-header h3 {
+    color: #008B8B;
+    font-weight: 600;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+
+  .form-control:focus {
+    border-color: #008B8B;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 139, 139, 0.1);
+  }
+
+  .form-hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .btn-submit {
+    background: linear-gradient(135deg, #008B8B, #006B6B);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 139, 139, 0.3);
+  }
+
+  .btn-cancel {
+    background: white;
+    color: #666;
+    padding: 14px 30px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .btn-cancel:hover {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  .row {
+    display: flex;
+    gap: 15px;
+  }
+
+  .col-6 {
+    flex: 1;
+  }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <section class="content-main">
+      <div class="form-card">
+        <div class="form-header">
+          <h3>Add New Coupon</h3>
+          <p style="color: #666; margin: 0;">Create a percentage discount coupon for customers</p>
+        </div>
+
+        <form id="addCouponForm">
+          
+          <div class="form-group">
+            <label class="form-label">Coupon Code *</label>
+            <input 
+              type="text" 
+              name="code" 
+              class="form-control" 
+              placeholder="e.g., FESTIVE10"
+              required
+              style="text-transform: uppercase;"
+            >
+            <small class="form-hint">Use uppercase letters and numbers only (no spaces)</small>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Discount Value (%) *</label>
+                <input 
+                  type="number" 
+                  name="discountValue" 
+                  class="form-control" 
+                  placeholder="e.g., 10"
+                  min="1"
+                  max="100"
+                  required
+                >
+                <small class="form-hint">Between 1 and 100</small>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Maximum Discount (₹) *</label>
+                <input 
+                  type="number" 
+                  name="maxDiscount" 
+                  class="form-control" 
+                  placeholder="e.g., 500"
+                  min="1"
+                  required
+                >
+                <small class="form-hint">Discount cap in rupees</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Minimum Cart Amount (₹) *</label>
+                <input 
+                  type="number" 
+                  name="minCartAmount" 
+                  class="form-control" 
+                  placeholder="e.g., 1000"
+                  min="0"
+                  required
+                >
+                <small class="form-hint">0 = no minimum</small>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Usage Limit *</label>
+                <input 
+                  type="number" 
+                  name="usageLimit" 
+                  class="form-control" 
+                  placeholder="e.g., 100"
+                  min="1"
+                  required
+                >
+                <small class="form-hint">Total users allowed</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Validity Date *</label>
+            <input 
+              type="date" 
+              name="validityDate" 
+              class="form-control"
+              min="<%= new Date().toISOString().split('T')[0] %>"
+              required
+            >
+            <small class="form-hint">Coupon expiry date (future date only)</small>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="bi bi-plus-circle me-2"></i> Add Coupon
+          </button>
+          <a href="/admin/coupons" class="btn-cancel">Cancel</a>
+
+        </form>
+      </div>
+    </section>
+
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <script>
+    const form = document.getElementById('addCouponForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = {
+        code: form.code.value.trim().toUpperCase(),
+        discountValue: Number(form.discountValue.value),
+        minCartAmount: Number(form.minCartAmount.value),
+        maxDiscount: Number(form.maxDiscount.value),
+        validityDate: form.validityDate.value,
+        usageLimit: Number(form.usageLimit.value)
+      };
+
+      try {
+        const response = await fetch('/admin/coupons/add', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        console.log("response is:",response)
+        const data = await response.json();
+
+        console.log("data is :",data)
+
+        if (data.success) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: data.message,
+            confirmButtonColor: '#008B8B'
+          }).then(() => {
+            window.location.href = '/admin/coupons';
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: data.message,
+            confirmButtonColor: '#008B8B'
+          });
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Something went wrong!',
+          confirmButtonColor: '#008B8B'
+        });
+      }
+    });
+  </script>
+</body>
+</html>

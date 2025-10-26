@@ -7,7 +7,8 @@ import brandRoutes from './brandRoutes.js';
 import variantRoutes from './variantRoutes.js';
 import orderRoutes from './orderRoutes.js';
 import productRoutes from './productRoutes.js'
-import userRoutes from './userRoutes.js'
+import userRoutes from './userRoutes.js';
+import couponRoutes from './couponRoutes.js';
 
 
 
@@ -20,6 +21,6 @@ router.use('/',variantRoutes);
 router.use('/',orderRoutes);
 router.use('/',productRoutes);
 router.use('/',userRoutes);
-
+router.use('/coupons',couponRoutes);
 
 export default router;

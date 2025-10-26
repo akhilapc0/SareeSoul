@@ -11,7 +11,7 @@ import checkoutRoutes from './checkoutRoutes.js';
 import orderRoutes from './orderRoutes.js';
 import wishlistRoutes from './wishlistRoutes.js';
 import walletRoutes from './walletRoutes.js';
-
+import couponRoutes from './couponRoutes.js';
 
 const router=express.Router();
 
@@ -24,4 +24,6 @@ router.use('/',checkoutRoutes);
 router.use('/',orderRoutes);
 router.use('/',wishlistRoutes);
 router.use('/',walletRoutes);
+router.use('/coupon',couponRoutes);
+
 export default router;

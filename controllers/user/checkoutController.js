@@ -5,6 +5,7 @@ import  Order from '../../models/orderModel.js';
 import Variant from '../../models/variantModel.js';
 import Counter from '../../models/counterModel.js';
 import razorpayInstance from '../../utils/razorpay.js';
+import Coupon from '../../models/couponModel.js'
 import crypto from "crypto";
 
 
@@ -34,11 +35,23 @@ const loadCheckout = async (req, res) => {
     const addresses = await Address.find({ userId });
     const subtotal = cart.items.reduce((sum, i) => sum + i.quantity * i.productId.salesPrice, 0);
 
+    const availableCoupons =await Coupon.find({
+          isActive: true,
+          validityDate:{$gt: new Date()},
+          $expr:{$lt :["$usedCount","$usageLimit"]},
+          minCartAmount:{$lte: subtotal},
+          usedBy:{$nin:[userId]},
+
+
+    }).sort({ discountValue :-1});
+
+
     res.render('checkout', {
       items: cart.items,
       addresses,
       subtotal,
       user,
+      availableCoupons,
       error_msg: req.flash('error_msg')
     });
 
@@ -78,12 +91,22 @@ const placeOrder = async (req, res) => {
 
     const subtotal = cart.items.reduce((sum, i) => sum + i.quantity * i.productId.salesPrice, 0);
 
+    let discount = 0;
+    let couponId =null;
+
+    if(req.session.appliedCoupon){
+      discount =req.session.appliedCoupon.discountAmount;
+      couponId=req.session.appliedCoupon.couponId;
+    }
+
+    const total = subtotal - discount ;
+
     const counter=await Counter.findOneAndUpdate(
       {id:'Order'},
       {$inc:{seq:1}},
       {new:true,upsert:true}
     )
-    const totalAmount=subtotal*100;
+    const totalAmount= total*100;
 
     if(paymentMethod === "Razorpay"){
           const options={
@@ -119,12 +142,20 @@ const placeOrder = async (req, res) => {
       })),
       paymentMethod: 'COD',
       subtotal,
-      total: subtotal,
+      discount,
+      total,
       status: 'Pending'
     });
 
     await order.save();
 
+    if(couponId){
+      await Coupon.findByIdAndUpdate(couponId,{
+        $addToSet:{ usedBy :userId },
+        $inc:{usedCount: 1}
+      });
+      delete req.session.appliedCoupon;
+    }
     
     for (let item of cart.items) {
       await Variant.findByIdAndUpdate(item.variantId._id, { $inc: { stock: -item.quantity } });
@@ -234,6 +265,17 @@ const verifyPayment=async(req,res)=>{
         0
       )
 
+      let discount = 0;
+      let couponId =null;
+
+      if(req.session.appliedCoupon){
+        discount = req.session.appliedCoupon.discountAmount;
+        couponId = req.session.appliedCoupon.couponId;
+        console.log(' Coupon found in session:',req.session.appliedCoupon.code);
+      }
+
+      const total = subtotal -discount;
+
       const order = new Order({
         orderId,
         userId,
@@ -247,7 +289,8 @@ const verifyPayment=async(req,res)=>{
         paymentMethod:'Razorpay',
         paymentId:razorpay_payment_id,
         subtotal,
-        total:subtotal,
+        discount,
+        total,
         status:'Pending',
         paymentStatus:'Paid'
       });
@@ -255,6 +298,17 @@ const verifyPayment=async(req,res)=>{
       await order.save();
 
       console.log(" Order saved:", order.orderId);
+
+      if(couponId){
+        await Coupon.findByIdAndUpdate(couponId,{
+          $addToSet:{usedBy:userId},
+          $inc:{usedCount:1}
+        });
+        delete req.session.appliedCoupon;
+        console.log('Coupon  marked as used cleared from session')
+      }
+
+
 
       for(let item of cart.items){
         await Variant.findByIdAndUpdate(item.variantId._id,{
