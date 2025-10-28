@@ -7,6 +7,7 @@ const router=express.Router();
 
 router.get('/shop', checkBlock,userController.getShopPage);
 router.get("/product/:productId",checkBlock, userController.getProductDetail);
+router.get('/my-referrals',isLoggedIn,checkBlock,userController.getMyReferrals);
 
 export default router;
 

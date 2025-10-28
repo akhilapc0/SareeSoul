@@ -13,9 +13,27 @@ const userSchema = new mongoose.Schema({
   defaultAddressId: { type: mongoose.Schema.Types.ObjectId, ref: 'Address', default: null },
   image:            { type: String, default:"" },
 
+  referralCode:{type:String,unique:true},
+  referredBy:{type:mongoose.Schema.Types.ObjectId,ref:'User',default:null},
+  
+
+
+
+
   createdAt:        { type: Date, default: Date.now },
   updatedAt:        { type: Date, default: null },
   deletedAt:        { type: Date, default: null }
+});
+
+
+userSchema.pre('save',function(next){
+
+  if(!this.referralCode){
+    const random =Math.floor(1000 + Math.random()*9000);
+    const namePart= this.firstName ? this.firstName.substring(0,3).toUpperCase() :'USR';
+    this.referralCode=`${namePart}${random}`;
+  }
+ next();
 });
 
 export default  mongoose.model('User', userSchema);

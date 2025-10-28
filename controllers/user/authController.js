@@ -4,6 +4,8 @@ import  sendOtpEmail from '../../utils/sendOtpEmail.js';
 import  OtpVerification from '../../models/otpVerificationModel.js';
 import  {EmailVerificationUsageType,ForgotPasswordUsageType} from '../../shared/constant.js';
 import  {registerValidation} from '../../validator/schema.js';
+import Coupon from '../../models/couponModel.js';
+import Wallet from '../../models/walletModel.js';
 const getRegisterPage = (req, res) => {
   res.render('register', { errorEmail: "", formData: {}, errors: {} });
 
@@ -13,7 +15,7 @@ const getRegisterPage = (req, res) => {
 
 const registerUser = async (req, res) => {
   try {
-    const { firstName, lastName, email, phoneNumber, password, confirmPassword } = req.body;
+    const { firstName, lastName, email, phoneNumber, password, confirmPassword,referralCode } = req.body;
 
    
     const { error } = registerValidation.validate(req.body, { abortEarly: false });
@@ -26,7 +28,7 @@ const registerUser = async (req, res) => {
 
       return res.render("register", {
         errors,
-        formData: { firstName, lastName, email, phoneNumber }
+        formData: { firstName, lastName, email, phoneNumber,referralCode }
       });
     }
 
@@ -35,8 +37,19 @@ const registerUser = async (req, res) => {
     if (existingUser) {
       return res.render("register", {
         errors: { email: "Email is already registered" },
-        formData: { firstName, lastName, email, phoneNumber }
+        formData: { firstName, lastName, email, phoneNumber,referralCode }
       });
+    }
+
+    let referredByUser=null;
+    if(referralCode && referralCode.trim() !== ""){
+      referredByUser =await User.findOne({ referralCode:referralCode.trim().toUpperCase()});
+      if(!referredByUser){
+        return res.render("register",{
+          errors:{referralCode:"Invalid referral code"},
+          formData:{firstName,lastName,email,phoneNumber,referralCode}
+        })
+      }
     }
 
    
@@ -49,7 +62,8 @@ const registerUser = async (req, res) => {
       email,
       phoneNumber,
       password: hashedPassword,
-      isVerified: false
+      isVerified: false,
+      referredBy:referredByUser ? referredByUser._id :null
     });
 
     
@@ -83,32 +97,73 @@ const registerUser = async (req, res) => {
 };
 
 const postVerifyOtp = async (req, res) => {
-  const { email, otp } = req.body;
+  try {
+    const { email, otp } = req.body;
 
-  const otpDoc = await OtpVerification.findOne({
-    email,
-    isUsed: false,
-    usageType: EmailVerificationUsageType,
-    expiresAt: { $gt: Date.now() }
-  });
+    // Step 1: Check OTP validity
+    const otpDoc = await OtpVerification.findOne({
+      email,
+      otp: otp.trim(),
+      isUsed: false,
+      usageType: EmailVerificationUsageType,
+      expiresAt: { $gt: Date.now() }
+    });
 
-  if (!otpDoc) {
-    return res.json({ success: false, message: "OTP not found or expired. Please request a new one." });
+    if (!otpDoc) {
+      return res.json({ success: false, message: "OTP not found or expired. Please request a new one." });
+    }
+
+    // Step 2: Mark OTP as used
+    otpDoc.isUsed = true;
+    await otpDoc.save();
+
+    // Step 3: Verify user
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.json({ success: false, message: "User not found" });
+    }
+
+    user.isVerified = true;
+    await user.save();
+
+    // Step 4: Referral reward (Only referrer gets reward)
+    if (user.referredBy) {
+      const referrer = await User.findById(user.referredBy);
+
+      if (referrer) {
+        const rewardAmount = 100;
+
+        // Find or create referrer wallet
+        let referrerWallet = await Wallet.findOne({ userId: referrer._id });
+        if (!referrerWallet) {
+          referrerWallet = new Wallet({
+            userId: referrer._id,
+            balance: 0,
+            transactions: []
+          });
+        }
+
+        // Add ₹100 to referrer's wallet
+        referrerWallet.balance += rewardAmount;
+
+        // Record transaction
+        referrerWallet.transactions.push({
+          type: "Credit",
+          amount: rewardAmount,
+          reason: `Referral reward for inviting ${user.firstName}`,
+          createdAt: new Date()
+        });
+
+        await referrerWallet.save();
+      }
+    }
+
+    return res.json({ success: true, message: "OTP verified successfully!" });
+
+  } catch (error) {
+    console.error("Error verifying OTP:", error);
+    return res.json({ success: false, message: "Something went wrong. Please try again." });
   }
-
-  if (otpDoc.otp != otp.trim()) {
-    return res.json({ success: false, message: "Invalid OTP" });
-  }
-
-  
-  otpDoc.isUsed = true;
-  await otpDoc.save();
-
-  const user=await User.findOne({email});
-  user.isVerified=true;
-  await user.save();
-  
-  return res.json({ success: true, message: "OTP verified successfully!" });
 };
 
 

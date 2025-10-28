@@ -28949,3 +28949,329 @@ Could not find the include file "../partials/header"
 2025-10-26 20:52:48 [INFO]: order found: yes
 2025-10-26 20:52:48 [INFO]: order details: [object Object]
 2025-10-26 20:52:48 [INFO]: Rendering order-success page
+2025-10-27 13:24:01 [INFO]: node starting
+2025-10-27 13:24:01 [INFO]: server running at http://localhost:3000
+2025-10-27 13:24:02 [INFO]:  MongoDB connected
+2025-10-27 14:29:11 [INFO]: node starting
+2025-10-27 14:29:12 [INFO]: server running at http://localhost:3000
+2025-10-27 14:29:12 [INFO]:  MongoDB connected
+2025-10-27 14:34:39 [INFO]: node starting
+2025-10-27 14:34:39 [INFO]: server running at http://localhost:3000
+2025-10-27 14:34:39 [INFO]:  MongoDB connected
+2025-10-27 14:38:25 [INFO]: node starting
+2025-10-27 14:38:25 [INFO]: server running at http://localhost:3000
+2025-10-27 14:38:25 [INFO]:  MongoDB connected
+2025-10-27 14:41:51 [INFO]: node starting
+2025-10-27 14:41:51 [INFO]: server running at http://localhost:3000
+2025-10-27 14:41:51 [INFO]:  MongoDB connected
+2025-10-27 14:44:01 [INFO]: node starting
+2025-10-27 14:44:01 [INFO]: server running at http://localhost:3000
+2025-10-27 14:44:01 [INFO]:  MongoDB connected
+2025-10-27 14:44:22 [INFO]: node starting
+2025-10-27 14:44:22 [INFO]: server running at http://localhost:3000
+2025-10-27 14:44:22 [INFO]:  MongoDB connected
+2025-10-27 14:44:59 [INFO]: node starting
+2025-10-27 14:44:59 [INFO]: server running at http://localhost:3000
+2025-10-27 14:45:00 [INFO]:  MongoDB connected
+2025-10-27 14:49:45 [INFO]: node starting
+2025-10-27 14:49:46 [INFO]: server running at http://localhost:3000
+2025-10-27 14:49:47 [INFO]:  MongoDB connected
+2025-10-27 14:51:38 [INFO]: node starting
+2025-10-27 14:51:38 [INFO]: server running at http://localhost:3000
+2025-10-27 14:51:38 [INFO]:  MongoDB connected
+2025-10-27 15:04:28 [INFO]: node starting
+2025-10-27 15:04:28 [INFO]: server running at http://localhost:3000
+2025-10-27 15:04:29 [INFO]:  MongoDB connected
+2025-10-27 15:05:04 [INFO]: node starting
+2025-10-27 15:05:04 [INFO]: server running at http://localhost:3000
+2025-10-27 15:05:04 [INFO]:  MongoDB connected
+2025-10-27 15:15:41 [INFO]: node starting
+2025-10-27 15:15:41 [INFO]: server running at http://localhost:3000
+2025-10-27 15:15:41 [INFO]:  MongoDB connected
+2025-10-27 15:17:38 [INFO]: node starting
+2025-10-27 15:17:38 [INFO]: server running at http://localhost:3000
+2025-10-27 15:17:38 [INFO]:  MongoDB connected
+2025-10-27 15:18:48 [INFO]: node starting
+2025-10-27 15:18:48 [INFO]: server running at http://localhost:3000
+2025-10-27 15:18:48 [INFO]:  MongoDB connected
+2025-10-27 15:19:15 [INFO]: node starting
+2025-10-27 15:19:15 [INFO]: server running at http://localhost:3000
+2025-10-27 15:19:16 [INFO]:  MongoDB connected
+2025-10-27 15:22:50 [INFO]: node starting
+2025-10-27 15:22:50 [INFO]: server running at http://localhost:3000
+2025-10-27 15:22:50 [INFO]:  MongoDB connected
+2025-10-27 15:23:56 [INFO]: node starting
+2025-10-27 15:23:56 [INFO]: server running at http://localhost:3000
+2025-10-27 15:23:56 [INFO]:  MongoDB connected
+2025-10-27 15:24:48 [INFO]: node starting
+2025-10-27 15:24:48 [INFO]: server running at http://localhost:3000
+2025-10-27 15:24:48 [INFO]:  MongoDB connected
+2025-10-27 15:25:40 [INFO]: node starting
+2025-10-27 15:25:40 [INFO]: server running at http://localhost:3000
+2025-10-27 15:25:40 [INFO]:  MongoDB connected
+2025-10-27 15:26:14 [INFO]: node starting
+2025-10-27 15:26:14 [INFO]: server running at http://localhost:3000
+2025-10-27 15:26:14 [INFO]:  MongoDB connected
+2025-10-27 15:27:03 [INFO]: node starting
+2025-10-27 15:27:03 [INFO]: server running at http://localhost:3000
+2025-10-27 15:27:04 [INFO]:  MongoDB connected
+2025-10-27 15:27:22 [INFO]: node starting
+2025-10-27 15:27:22 [INFO]: server running at http://localhost:3000
+2025-10-27 15:27:22 [INFO]:  MongoDB connected
+2025-10-27 15:27:44 [INFO]: node starting
+2025-10-27 15:27:44 [INFO]: server running at http://localhost:3000
+2025-10-27 15:27:44 [INFO]:  MongoDB connected
+2025-10-27 15:29:23 [INFO]: node starting
+2025-10-27 15:29:23 [INFO]: server running at http://localhost:3000
+2025-10-27 15:29:23 [INFO]:  MongoDB connected
+2025-10-27 15:31:22 [INFO]: node starting
+2025-10-27 15:31:22 [INFO]: server running at http://localhost:3000
+2025-10-27 15:31:22 [INFO]:  MongoDB connected
+2025-10-27 15:37:09 [INFO]: node starting
+2025-10-27 15:37:09 [INFO]: server running at http://localhost:3000
+2025-10-27 15:37:09 [INFO]:  MongoDB connected
+2025-10-27 17:57:32 [INFO]: node starting
+2025-10-27 17:57:33 [INFO]: server running at http://localhost:3000
+2025-10-27 17:57:33 [INFO]:  MongoDB connected
+2025-10-27 17:58:21 [INFO]: node starting
+2025-10-27 17:58:21 [INFO]: server running at http://localhost:3000
+2025-10-27 17:58:22 [INFO]:  MongoDB connected
+2025-10-27 18:05:31 [INFO]: node starting
+2025-10-27 18:05:31 [INFO]: server running at http://localhost:3000
+2025-10-27 18:05:31 [INFO]:  MongoDB connected
+2025-10-27 18:07:29 [INFO]: node starting
+2025-10-27 18:07:29 [INFO]: server running at http://localhost:3000
+2025-10-27 18:07:29 [INFO]:  MongoDB connected
+2025-10-27 18:08:15 [INFO]: node starting
+2025-10-27 18:08:15 [INFO]: server running at http://localhost:3000
+2025-10-27 18:08:15 [INFO]:  MongoDB connected
+2025-10-27 18:36:03 [INFO]: node starting
+2025-10-27 18:36:03 [INFO]: server running at http://localhost:3000
+2025-10-27 18:36:04 [INFO]:  MongoDB connected
+2025-10-27 18:36:41 [INFO]: node starting
+2025-10-27 18:36:41 [INFO]: server running at http://localhost:3000
+2025-10-27 18:36:41 [INFO]:  MongoDB connected
+2025-10-27 18:39:01 [INFO]: node starting
+2025-10-27 18:39:01 [INFO]: server running at http://localhost:3000
+2025-10-27 18:39:01 [INFO]:  MongoDB connected
+2025-10-27 18:39:46 [INFO]: node starting
+2025-10-27 18:39:46 [INFO]: server running at http://localhost:3000
+2025-10-27 18:39:46 [INFO]:  MongoDB connected
+2025-10-27 18:40:26 [INFO]: node starting
+2025-10-27 18:40:26 [INFO]: server running at http://localhost:3000
+2025-10-27 18:40:26 [INFO]:  MongoDB connected
+2025-10-27 18:42:10 [INFO]: node starting
+2025-10-27 18:42:10 [INFO]: server running at http://localhost:3000
+2025-10-27 18:42:10 [INFO]:  MongoDB connected
+2025-10-27 18:43:03 [INFO]: node starting
+2025-10-27 18:43:03 [INFO]: server running at http://localhost:3000
+2025-10-27 18:43:03 [INFO]:  MongoDB connected
+2025-10-27 18:43:36 [INFO]: node starting
+2025-10-27 18:43:36 [INFO]: server running at http://localhost:3000
+2025-10-27 18:43:37 [INFO]:  MongoDB connected
+2025-10-27 18:46:52 [INFO]: node starting
+2025-10-27 18:46:52 [INFO]: server running at http://localhost:3000
+2025-10-27 18:46:52 [INFO]:  MongoDB connected
+2025-10-27 18:51:50 [INFO]: node starting
+2025-10-27 18:51:50 [INFO]: server running at http://localhost:3000
+2025-10-27 18:51:50 [INFO]:  MongoDB connected
+2025-10-27 18:59:12 [INFO]: node starting
+2025-10-27 18:59:12 [INFO]: server running at http://localhost:3000
+2025-10-27 18:59:12 [INFO]:  MongoDB connected
+2025-10-27 19:00:34 [INFO]: node starting
+2025-10-27 19:00:34 [INFO]: server running at http://localhost:3000
+2025-10-27 19:00:34 [INFO]:  MongoDB connected
+2025-10-27 19:02:49 [INFO]: node starting
+2025-10-27 19:02:49 [INFO]: server running at http://localhost:3000
+2025-10-27 19:02:49 [INFO]:  MongoDB connected
+2025-10-27 19:10:42 [INFO]: node starting
+2025-10-27 19:10:42 [INFO]: server running at http://localhost:3000
+2025-10-27 19:10:42 [INFO]:  MongoDB connected
+2025-10-27 19:13:55 [INFO]: node starting
+2025-10-27 19:13:55 [INFO]: server running at http://localhost:3000
+2025-10-27 19:13:55 [INFO]:  MongoDB connected
+2025-10-27 19:16:40 [INFO]: node starting
+2025-10-27 19:16:40 [INFO]: server running at http://localhost:3000
+2025-10-27 19:16:40 [INFO]:  MongoDB connected
+2025-10-27 19:17:37 [INFO]: node starting
+2025-10-27 19:17:37 [INFO]: server running at http://localhost:3000
+2025-10-27 19:17:38 [INFO]:  MongoDB connected
+2025-10-27 19:18:54 [INFO]: node starting
+2025-10-27 19:18:54 [INFO]: server running at http://localhost:3000
+2025-10-27 19:18:54 [INFO]:  MongoDB connected
+2025-10-27 19:19:42 [INFO]: node starting
+2025-10-27 19:19:42 [INFO]: server running at http://localhost:3000
+2025-10-27 19:19:42 [INFO]:  MongoDB connected
+2025-10-27 19:21:28 [INFO]: node starting
+2025-10-27 19:21:28 [INFO]: server running at http://localhost:3000
+2025-10-27 19:21:29 [INFO]:  MongoDB connected
+2025-10-27 19:22:31 [INFO]: node starting
+2025-10-27 19:22:31 [INFO]: server running at http://localhost:3000
+2025-10-27 19:22:31 [INFO]:  MongoDB connected
+2025-10-27 19:24:34 [INFO]: node starting
+2025-10-27 19:24:34 [INFO]: server running at http://localhost:3000
+2025-10-27 19:24:34 [INFO]:  MongoDB connected
+2025-10-27 19:25:40 [INFO]: node starting
+2025-10-27 19:25:40 [INFO]: server running at http://localhost:3000
+2025-10-27 19:25:40 [INFO]:  MongoDB connected
+2025-10-27 19:32:08 [INFO]: node starting
+2025-10-27 19:32:08 [INFO]: server running at http://localhost:3000
+2025-10-27 19:32:08 [INFO]:  MongoDB connected
+2025-10-27 19:32:35 [INFO]: node starting
+2025-10-27 19:32:35 [INFO]: server running at http://localhost:3000
+2025-10-27 19:32:35 [INFO]:  MongoDB connected
+2025-10-27 19:34:27 [INFO]: node starting
+2025-10-27 19:34:27 [INFO]: server running at http://localhost:3000
+2025-10-27 19:34:27 [INFO]:  MongoDB connected
+2025-10-27 19:35:28 [INFO]: node starting
+2025-10-27 19:35:28 [INFO]: server running at http://localhost:3000
+2025-10-27 19:35:28 [INFO]:  MongoDB connected
+2025-10-27 19:37:03 [INFO]: node starting
+2025-10-27 19:37:03 [INFO]: server running at http://localhost:3000
+2025-10-27 19:37:03 [INFO]:  MongoDB connected
+2025-10-27 19:38:35 [INFO]: node starting
+2025-10-27 19:38:35 [INFO]: server running at http://localhost:3000
+2025-10-27 19:38:35 [INFO]:  MongoDB connected
+2025-10-27 19:55:16 [INFO]: node starting
+2025-10-27 19:55:16 [INFO]: server running at http://localhost:3000
+2025-10-27 19:55:16 [INFO]:  MongoDB connected
+2025-10-27 19:56:32 [INFO]: node starting
+2025-10-27 19:56:32 [INFO]: server running at http://localhost:3000
+2025-10-27 19:56:33 [INFO]:  MongoDB connected
+2025-10-27 19:57:03 [INFO]: node starting
+2025-10-27 19:57:03 [INFO]: server running at http://localhost:3000
+2025-10-27 19:57:04 [INFO]:  MongoDB connected
+2025-10-27 19:57:19 [INFO]: node starting
+2025-10-27 19:57:19 [INFO]: server running at http://localhost:3000
+2025-10-27 19:57:19 [INFO]:  MongoDB connected
+2025-10-27 19:58:45 [INFO]: node starting
+2025-10-27 19:58:45 [INFO]: server running at http://localhost:3000
+2025-10-27 19:58:45 [INFO]:  MongoDB connected
+2025-10-27 20:37:55 [INFO]: OTP sent: 887561
+2025-10-27 20:40:55 [INFO]: 328245
+2025-10-27 20:41:15 [ERROR]: Error verifying OTP: ValidationError: image: Cast to string failed for value "[]" (type Array) at path "image", lastName: Path `lastName` is required.
+2025-10-27 20:43:25 [INFO]: OTP sent: 790100
+2025-10-27 20:47:56 [INFO]: OTP sent: 946567
+2025-10-27 20:48:08 [ERROR]: Error verifying OTP: ReferenceError: Coupon is not defined
+2025-10-27 20:52:58 [INFO]: node starting
+2025-10-27 20:52:58 [INFO]: server running at http://localhost:3000
+2025-10-27 20:52:59 [INFO]:  MongoDB connected
+2025-10-27 20:53:03 [INFO]: 187315
+2025-10-27 21:22:08 [INFO]: node starting
+2025-10-27 21:22:08 [INFO]: server running at http://localhost:3000
+2025-10-27 21:22:08 [INFO]:  MongoDB connected
+2025-10-27 21:24:34 [INFO]: node starting
+2025-10-27 21:24:34 [INFO]: server running at http://localhost:3000
+2025-10-27 21:24:34 [INFO]:  MongoDB connected
+2025-10-27 21:26:37 [INFO]: node starting
+2025-10-27 21:26:37 [INFO]: server running at http://localhost:3000
+2025-10-27 21:26:37 [INFO]:  MongoDB connected
+2025-10-27 21:29:36 [INFO]: node starting
+2025-10-27 21:29:36 [INFO]: server running at http://localhost:3000
+2025-10-27 21:29:36 [INFO]:  MongoDB connected
+2025-10-27 21:40:56 [INFO]: node starting
+2025-10-27 21:40:56 [INFO]: server running at http://localhost:3000
+2025-10-27 21:40:56 [INFO]:  MongoDB connected
+2025-10-27 21:42:21 [INFO]: node starting
+2025-10-27 21:42:21 [INFO]: server running at http://localhost:3000
+2025-10-27 21:42:21 [INFO]:  MongoDB connected
+2025-10-27 21:42:47 [INFO]: node starting
+2025-10-27 21:42:47 [INFO]: server running at http://localhost:3000
+2025-10-27 21:42:47 [INFO]:  MongoDB connected
+2025-10-27 21:44:05 [INFO]: node starting
+2025-10-27 21:44:05 [INFO]: server running at http://localhost:3000
+2025-10-27 21:44:05 [INFO]:  MongoDB connected
+2025-10-28 09:35:59 [INFO]: node starting
+2025-10-28 09:35:59 [INFO]: server running at http://localhost:3000
+2025-10-28 09:36:00 [INFO]:  MongoDB connected
+2025-10-28 10:16:32 [INFO]: node starting
+2025-10-28 10:16:32 [INFO]: server running at http://localhost:3000
+2025-10-28 10:16:32 [INFO]:  MongoDB connected
+2025-10-28 10:17:53 [INFO]: node starting
+2025-10-28 10:17:53 [INFO]: server running at http://localhost:3000
+2025-10-28 10:17:53 [INFO]:  MongoDB connected
+2025-10-28 10:18:09 [INFO]: node starting
+2025-10-28 10:18:09 [INFO]: server running at http://localhost:3000
+2025-10-28 10:18:09 [INFO]:  MongoDB connected
+2025-10-28 10:18:27 [INFO]: node starting
+2025-10-28 10:18:27 [INFO]: server running at http://localhost:3000
+2025-10-28 10:18:27 [INFO]:  MongoDB connected
+2025-10-28 10:18:54 [INFO]: Error loading referrals: ReferenceError: User is not defined
+2025-10-28 10:18:54 [INFO]: Error loading referrals: ReferenceError: User is not defined
+2025-10-28 10:19:48 [INFO]: node starting
+2025-10-28 10:19:48 [INFO]: server running at http://localhost:3000
+2025-10-28 10:19:48 [INFO]:  MongoDB connected
+2025-10-28 10:19:55 [INFO]: Error loading referrals: TypeError: Cannot read properties of null (reading 'referralCode')
+2025-10-28 10:19:56 [INFO]: Error loading referrals: TypeError: Cannot read properties of null (reading 'referralCode')
+2025-10-28 10:19:57 [INFO]: Error loading referrals: TypeError: Cannot read properties of null (reading 'referralCode')
+2025-10-28 10:24:10 [INFO]: Error loading referrals: TypeError: Cannot read properties of null (reading 'referralCode')
+2025-10-28 11:12:41 [INFO]: node starting
+2025-10-28 11:12:41 [INFO]: server running at http://localhost:3000
+2025-10-28 11:12:41 [INFO]:  MongoDB connected
+2025-10-28 11:18:04 [INFO]: node starting
+2025-10-28 11:18:04 [INFO]: server running at http://localhost:3000
+2025-10-28 11:18:04 [INFO]:  MongoDB connected
+2025-10-28 11:18:37 [INFO]: node starting
+2025-10-28 11:18:37 [INFO]: server running at http://localhost:3000
+2025-10-28 11:18:37 [INFO]:  MongoDB connected
+2025-10-28 11:18:52 [INFO]: node starting
+2025-10-28 11:18:52 [INFO]: server running at http://localhost:3000
+2025-10-28 11:18:52 [INFO]:  MongoDB connected
+2025-10-28 11:19:00 [INFO]: node starting
+2025-10-28 11:19:00 [INFO]: server running at http://localhost:3000
+2025-10-28 11:19:00 [INFO]:  MongoDB connected
+2025-10-28 11:19:44 [INFO]: node starting
+2025-10-28 11:19:44 [INFO]: server running at http://localhost:3000
+2025-10-28 11:19:45 [INFO]:  MongoDB connected
+2025-10-28 11:21:23 [INFO]: node starting
+2025-10-28 11:21:23 [INFO]: server running at http://localhost:3000
+2025-10-28 11:21:23 [INFO]:  MongoDB connected
+2025-10-28 11:22:23 [INFO]: node starting
+2025-10-28 11:22:23 [INFO]: server running at http://localhost:3000
+2025-10-28 11:22:23 [INFO]:  MongoDB connected
+2025-10-28 11:23:18 [INFO]: node starting
+2025-10-28 11:23:18 [INFO]: server running at http://localhost:3000
+2025-10-28 11:23:19 [INFO]:  MongoDB connected
+2025-10-28 11:23:44 [INFO]: node starting
+2025-10-28 11:23:44 [INFO]: server running at http://localhost:3000
+2025-10-28 11:23:44 [INFO]:  MongoDB connected
+2025-10-28 11:27:44 [INFO]: Error loading referrals: ReferenceError: Wallet is not defined
+2025-10-28 11:28:33 [INFO]: node starting
+2025-10-28 11:28:33 [INFO]: server running at http://localhost:3000
+2025-10-28 11:28:33 [INFO]:  MongoDB connected
+2025-10-28 11:29:01 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\my-referrals.ejs:175
+    173|       <div class="col-md-6">
+    174|         <div class="stats-card">
+ >> 175|           <div class="stat-number"><%= totalReferrals %></div>
+    176|           <div class="stat-label">Total Successful Referrals</div>
+    177|         </div>
+    178|       </div>
+
+totalReferrals is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:19:26)
+    at my-referrals (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getMyReferrals (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:167:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-28 11:29:26 [INFO]: node starting
+2025-10-28 11:29:26 [INFO]: server running at http://localhost:3000
+2025-10-28 11:29:26 [INFO]:  MongoDB connected
+2025-10-28 11:29:36 [INFO]: node starting
+2025-10-28 11:29:36 [INFO]: server running at http://localhost:3000
+2025-10-28 11:29:36 [INFO]:  MongoDB connected
+2025-10-28 11:35:29 [INFO]: node starting
+2025-10-28 11:35:29 [INFO]: server running at http://localhost:3000
+2025-10-28 11:35:29 [INFO]:  MongoDB connected
+2025-10-28 11:36:02 [INFO]: node starting
+2025-10-28 11:36:02 [INFO]: server running at http://localhost:3000
+2025-10-28 11:36:02 [INFO]:  MongoDB connected
+2025-10-28 11:58:35 [INFO]: node starting
+2025-10-28 11:58:35 [INFO]: server running at http://localhost:3000
+2025-10-28 11:58:35 [INFO]:  MongoDB connected
+2025-10-28 12:06:33 [INFO]: OTP sent: 378879
+2025-10-28 12:14:56 [INFO]: 7

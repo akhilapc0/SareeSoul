@@ -12,11 +12,25 @@ const productSchema=new mongoose.Schema({
         type:Boolean,
         default:false
     },
-    deletedAt:{type:Date,default:null}},{
+    deletedAt:{type:Date,default:null},
+
+
+    offer:{
+        discountPercentage:{type:Number,default:0,min:1,max:100},
+        startDate:{type:Date,default:null},
+        endDate:{type:Date,default:null},
+        isDeleted:{type:Boolean,default:false}
+    },
+
+    offerPrice:{type:Number,default:0}
+
+
+
+},
+    {
         timestamps:true
     })
 
-
-
+    
 export default mongoose.model('Product',productSchema);
 

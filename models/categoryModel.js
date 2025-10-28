@@ -20,7 +20,20 @@ const categorySchema=new mongoose.Schema({
     isDeleted:{
         type:Boolean,
         default:false
- }
+ },
+
+offer:{
+    discountPercentage:{
+        type:Number,
+        default:0,
+        min:1,
+        max:100
+    },
+    startDate:{type:Date,default:null},
+    endDate:{type:Date,default:null},
+    isDeleted:{type:Boolean,default:false}
+}
+
 },
  {
 timestamps:true

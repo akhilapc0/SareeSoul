@@ -363,6 +363,11 @@ const deleteProduct = async (req, res) => {
 
 
 
+
+
+
+
+
 const productController={
   countVariants,
     loadProductList,

@@ -35,8 +35,10 @@
                       value="<%= formData?.firstName || '' %>" required>
                     <span class="client-error" style="color:red;"></span>
                     <% if (errors?.firstName) { %>
-                      <p style="color:red;"><%= errors.firstName %></p>
-                    <% } %>
+                      <p style="color:red;">
+                        <%= errors.firstName %>
+                      </p>
+                      <% } %>
                   </div>
 
                   <div class="form-group password-field">
@@ -45,8 +47,10 @@
                       value="<%= formData?.lastName || '' %>" required>
                     <span class="client-error" style="color:red;"></span>
                     <% if (errors?.lastName) { %>
-                      <p style="color:red;"><%= errors.lastName %></p>
-                    <% } %>
+                      <p style="color:red;">
+                        <%= errors.lastName %>
+                      </p>
+                      <% } %>
                   </div>
                 </div>
 
@@ -56,8 +60,10 @@
                     value="<%= formData?.email || '' %>" required>
                   <span class="client-error" style="color:red;"></span>
                   <% if (errors?.email) { %>
-                    <p style="color:red;"><%= errors.email %></p>
-                  <% } %>
+                    <p style="color:red;">
+                      <%= errors.email %>
+                    </p>
+                    <% } %>
                 </div>
 
                 <div class="form-group">
@@ -66,8 +72,10 @@
                     value="<%= formData?.phoneNumber || '' %>" required>
                   <span class="client-error" style="color:red;"></span>
                   <% if (errors?.phoneNumber) { %>
-                    <p style="color:red;"><%= errors.phoneNumber %></p>
-                  <% } %>
+                    <p style="color:red;">
+                      <%= errors.phoneNumber %>
+                    </p>
+                    <% } %>
                 </div>
 
                 <div class="form-row">
@@ -77,20 +85,40 @@
                       required>
                     <span class="client-error" style="color:red;"></span>
                     <% if (errors?.password) { %>
-                      <p style="color:red;"><%= errors.password %></p>
-                    <% } %>
+                      <p style="color:red;">
+                        <%= errors.password %>
+                      </p>
+                      <% } %>
                   </div>
 
                   <div class="form-group password-field">
                     <label for="confirmPassword">Confirm Password *</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
-                      required>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                      placeholder="Confirm your password" required>
                     <span class="client-error" style="color:red;"></span>
                     <% if (errors?.confirmPassword) { %>
-                      <p style="color:red;"><%= errors.confirmPassword %></p>
-                    <% } %>
+                      <p style="color:red;">
+                        <%= errors.confirmPassword %>
+                      </p>
+                      <% } %>
                   </div>
                 </div>
+
+
+                <div class="form-group">
+                  <label for="referralCode">Referral Code (optional)</label>
+                  <input type="text" id="referralCode" name="referralCode" placeholder="Enter referral code (if any)"
+                    value="<%= formData?.referralCode || '' %>">
+                  <span class="client-error" style="color:red;"></span>
+                  <% if (errors?.referralCode) { %>
+                    <p style="color:red;">
+                      <%= errors.referralCode %>
+                    </p>
+                    <% } %>
+                </div>
+
+
+
 
                 <button type="submit" class="btn btn-primary btn-full">Create Account</button>
               </form>
@@ -111,63 +139,72 @@
     console.log('joi loaded:', window.joi);
     // joi schema for client-side validation
     const schema = joi.object({
-         firstName:joi.string()
-    .pattern(/^[A-Za-z]+$/)
-    .min(3)
-    .max(30)
-    .required()
-    .messages({
-        "string.pattern.base": "First name must contain only letters",
-        'string.empty':'First name is required',
-        'string.min':'first name must be atleast 3 characters',
-        'string.max':'first name must be less than 50 characters'
-    }),
-    lastName:joi.string()
-    .pattern(/^[A-Za-z]+$/)
-    .min(2)
-    .max(30)
-    .required()
-    .messages({
-        'string.empty':'last name is required',
-        "string.pattern.base": "Enter a valid last name",
-        'string.min':'last name must be atleast 2  characters',
-        'string.max':'last name must be less than 50 characters'
-    }),
-    email:joi.string()
-    .email()
-    .max(50)
-    .required()
-    .messages({
-        'string.empty':'email is required',
-        'string.email':'please enter a valid email address',
-        'string.max':'Email must be less than or equal to 50 characters'
-    }),
-    password:joi.string()
-    .pattern(/[A-Z]/) 
-    .pattern(/[!@#$%^&*(),.?":{}|<>]/)
-    .min(6)
-    .max(20)
-    .required()
-    .messages({
-        'string.empty':'password is required',
-        'string.min':'password must be atleast  6 charaters',
-        'string-max':'password must be less than or equal to 20 characters',
-        "string.pattern.base": "Password must include a capital letter and special character"
-    }),
-    confirmPassword: joi.any()
-    .valid(joi.ref("password"))
-    .required()
-    .messages({
-      "any.only": "Passwords do not match",
-      "any.required": "Confirm password is required"
-    }),
-    phoneNumber:joi.string()
-    .pattern(/^[0-9]{10}$/)
-    .required()
-    .messages({
-        'string.empty':'phone number is required',
-        'string.pattern.base':'phone number must be exactly 10 digits'
-    })
+      firstName: joi.string()
+        .pattern(/^[A-Za-z]+$/)
+        .min(3)
+        .max(30)
+        .required()
+        .messages({
+          "string.pattern.base": "First name must contain only letters",
+          'string.empty': 'First name is required',
+          'string.min': 'first name must be atleast 3 characters',
+          'string.max': 'first name must be less than 50 characters'
+        }),
+      lastName: joi.string()
+        .pattern(/^[A-Za-z]+$/)
+        .min(2)
+        .max(30)
+        .required()
+        .messages({
+          'string.empty': 'last name is required',
+          "string.pattern.base": "Enter a valid last name",
+          'string.min': 'last name must be atleast 2  characters',
+          'string.max': 'last name must be less than 50 characters'
+        }),
+      email: joi.string()
+        .email()
+        .max(50)
+        .required()
+        .messages({
+          'string.empty': 'email is required',
+          'string.email': 'please enter a valid email address',
+          'string.max': 'Email must be less than or equal to 50 characters'
+        }),
+      password: joi.string()
+        .pattern(/[A-Z]/)
+        .pattern(/[!@#$%^&*(),.?":{}|<>]/)
+        .min(6)
+        .max(20)
+        .required()
+        .messages({
+          'string.empty': 'password is required',
+          'string.min': 'password must be atleast  6 charaters',
+          'string-max': 'password must be less than or equal to 20 characters',
+          "string.pattern.base": "Password must include a capital letter and special character"
+        }),
+      confirmPassword: joi.any()
+        .valid(joi.ref("password"))
+        .required()
+        .messages({
+          "any.only": "Passwords do not match",
+          "any.required": "Confirm password is required"
+        }),
+      phoneNumber: joi.string()
+        .pattern(/^[0-9]{10}$/)
+        .required()
+        .messages({
+          'string.empty': 'phone number is required',
+          'string.pattern.base': 'phone number must be exactly 10 digits'
+        }),
+        referralCode:joi.string()
+          .alphanum()
+          .max(10)
+          .optional()
+          .messages({
+            "string.alphanum":"Referral code should contain only letters and numbers",
+            "string.max":"Referral code must be less than or equal to 10 charaters"
+          })
+      
     });
 
     document.getElementById('registrationForm').addEventListener('submit', function (e) {
@@ -178,7 +215,8 @@
         email: form.email.value.trim(),
         phoneNumber: form.phoneNumber.value.trim(),
         password: form.password.value,
-        confirmPassword: form.confirmPassword.value
+        confirmPassword: form.confirmPassword.value,
+        referralCode:form.referralCode.value.trim()
       };
 
       console.log(formData)
@@ -205,7 +243,19 @@
         });
       }
     });
+
+
   </script>
+
+  <script>
+  // Auto-fill referral code from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const refCode = urlParams.get('ref');
+  if (refCode) {
+    document.getElementById('referralCode').value = refCode;
+  }
+</script>
+
 </body>
 
 </html>

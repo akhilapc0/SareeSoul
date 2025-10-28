@@ -23719,3 +23719,15 @@ ReferenceError: Schema is not defined
     at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-28 09:32:39 [ERROR]: uncaughtException: getMyReferrals is not defined
+ReferenceError: getMyReferrals is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/userRoutes.js:10:28
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-28 09:33:00 [ERROR]: uncaughtException: getMyReferrals is not defined
+ReferenceError: getMyReferrals is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/userRoutes.js:10:39
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)

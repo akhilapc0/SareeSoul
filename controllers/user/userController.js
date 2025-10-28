@@ -4,7 +4,8 @@ import  Brand from '../../models/brandModel.js';
 import  Category from '../../models/categoryModel.js';
 import Wishlist from '../../models/wishlistModel.js';
 import Cart from '../../models/cartModel.js';
-
+import User from '../../models/userModel.js'
+import Wallet from '../../models/walletModel.js'
 const getShopPage = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
@@ -154,13 +155,36 @@ if (user) {
   }
 };
 
+const getMyReferrals = async(req, res) => {
+  try{
+    const userId=req.session?.user?._id|| req.session?.passport?.user;
+    
+    const user=await User.findById(userId);
+    const referrals=await User.find({referredBy:userId});
+    const wallet =await Wallet.findOne({userId});
+    const totalEarnings =wallet ?wallet.balance:0;
+    const totalReferrals =referrals.length;
+    res.render('my-referrals',{
+      referralCode:user.referralCode,
+      referrals,
+      totalEarnings,
+      totalReferrals,
+      BASE_URL:process.env.BASE_URL
+    })
 
+  }
+ catch(error) {
+    console.log('Error loading referrals:', error);
+    res.status(500).send('Server error');
+  }
+};
 
 
 
 const userController= {
   getShopPage,
-  getProductDetail
+  getProductDetail,
+  getMyReferrals
 
 };
 

@@ -792,3 +792,24 @@ Could not find the include file "../partials/header"
 2025-10-24 11:18:27 [ERROR]: Error fetching wallet details: MongoServerError: E11000 duplicate key error collection: sareeSoul.wallets index: userId_1 dup key: { userId: ObjectId('68d6ad648b19afc1a2fefff0') }
 2025-10-26 20:43:39 [ERROR]: (node:9516) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-27 20:41:15 [ERROR]: Error verifying OTP: ValidationError: image: Cast to string failed for value "[]" (type Array) at path "image", lastName: Path `lastName` is required.
+2025-10-27 20:48:08 [ERROR]: Error verifying OTP: ReferenceError: Coupon is not defined
+2025-10-28 11:29:01 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\my-referrals.ejs:175
+    173|       <div class="col-md-6">
+    174|         <div class="stats-card">
+ >> 175|           <div class="stat-number"><%= totalReferrals %></div>
+    176|           <div class="stat-label">Total Successful Referrals</div>
+    177|         </div>
+    178|       </div>
+
+totalReferrals is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:19:26)
+    at my-referrals (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getMyReferrals (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:167:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

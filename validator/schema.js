@@ -61,6 +61,14 @@ export const registerValidation = Joi.object({
     .messages({
       'string.empty': 'phone number is required',
       'string.pattern.base': 'phone number must be exactly 10 digits'
+    }),
+    referralCode:Joi.string()
+    .trim()
+    .optional()
+    .allow("")
+    .pattern(/^[A-Za-z0-9]+$/)
+    .messages({
+      "string.pattern.base":"Referral code must be alphanumeric only"
     })
 
 
