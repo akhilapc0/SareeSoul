@@ -298,6 +298,16 @@
       </div>
     </div>
 
+
+    <div style="text-align:right; margin-bottom:20px;">
+  <button id="addMoneyBtn" class="btn btn-success">Add Money</button>
+</div>
+
+
+
+
+
+
     <!-- Transactions Card -->
     <div class="transactions-card">
       <div class="transactions-header">
@@ -382,6 +392,57 @@
   });
 </script>
 <% } %>
+
+
+<script>
+document.getElementById('addMoneyBtn').addEventListener('click', async () => {
+  const { value: amount } = await Swal.fire({
+    title: 'Add Money to Wallet',
+    input: 'number',
+    inputLabel: 'Enter amount (₹)',
+    inputPlaceholder: 'Enter amount to add',
+    confirmButtonText: 'Add',
+    confirmButtonColor: '#008B8B',
+    showCancelButton: true
+  });
+
+  if (amount && amount > 0) {
+    try {
+      const res = await fetch('/wallet/add-money', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ amount })
+      });
+
+      const data = await res.json();
+      console.log('Response:', data); // ✅ check this in browser console
+
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: `₹${amount} added successfully!`,
+          confirmButtonColor: '#008B8B'
+        }).then(() => location.reload());
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: data.message || 'Failed to add money.',
+          confirmButtonColor: '#008B8B'
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      Swal.fire('Error', 'Something went wrong.', 'error');
+    }
+  }
+});
+</script>
+
+
 
   <%- include('partials/footer') %>
   

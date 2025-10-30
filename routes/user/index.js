@@ -23,7 +23,7 @@ router.use('/',userRoutes);
 router.use('/',checkoutRoutes);
 router.use('/',orderRoutes);
 router.use('/',wishlistRoutes);
-router.use('/',walletRoutes);
+router.use('/wallet',walletRoutes);
 router.use('/coupon',couponRoutes);
 
 export default router;

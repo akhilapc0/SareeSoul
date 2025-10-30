@@ -23751,3 +23751,23 @@ ReferenceError: calculateOfferPrice is not defined
     at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-30 18:56:35 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as post] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/walletRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-30 18:57:03 [ERROR]: uncaughtException: addMoneyToWallet is not defined
+ReferenceError: addMoneyToWallet is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/walletRoutes.js:9:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-30 18:57:35 [ERROR]: uncaughtException: addMoneyToWallet is not defined
+ReferenceError: addMoneyToWallet is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/walletRoutes.js:9:48
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)

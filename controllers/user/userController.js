@@ -98,6 +98,7 @@ const getShopPage = async (req, res) => {
 
         return{
           ...product,
+          variantId:variant._id,
           image:variant?.images?.[0] || '/user/assets/imgs/shop/product-placeholder.jpg',
           offerPrice,
           discount,

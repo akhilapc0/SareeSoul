@@ -1,10 +1,11 @@
 import express from 'express';
 
-import {getWalletDetails} from '../../controllers/user/walletController.js';
+import {addMoneyToWallet,getWalletDetails} from '../../controllers/user/walletController.js';
 import { isLoggedIn,checkBlock } from '../../middlewares/userAuth.js';
 
 const router=express.Router();
 
-router.get('/wallet',isLoggedIn,checkBlock,getWalletDetails);
+router.get('/',isLoggedIn,checkBlock,getWalletDetails);
+router.post('/add-money',isLoggedIn,checkBlock,addMoneyToWallet);
 
 export default router;

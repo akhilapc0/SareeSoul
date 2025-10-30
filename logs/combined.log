@@ -49464,3 +49464,2646 @@ totalReferrals is not defined
 2025-10-30 15:25:32 [INFO]: === END DEBUG ===
 
 2025-10-30 15:25:32 [INFO]: product with offer: [object Object]
+2025-10-30 15:38:25 [INFO]: node starting
+2025-10-30 15:38:25 [INFO]: server running at http://localhost:3000
+2025-10-30 15:38:25 [INFO]:  MongoDB connected
+2025-10-30 15:40:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:36 [INFO]: Product offer: 
+2025-10-30 15:40:36 [INFO]: Category offer: [object Object]
+2025-10-30 15:40:36 [INFO]: Current date: Thu Oct 30 2025 15:40:36 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Category has offer object
+2025-10-30 15:40:36 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Discount %: 45
+2025-10-30 15:40:36 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:40:36 [INFO]: Final product discount: 0
+2025-10-30 15:40:36 [INFO]: Final category discount: 45
+2025-10-30 15:40:36 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:36 [INFO]: Product offer: 
+2025-10-30 15:40:36 [INFO]: Category offer: [object Object]
+2025-10-30 15:40:36 [INFO]: Current date: Thu Oct 30 2025 15:40:36 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Category has offer object
+2025-10-30 15:40:36 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Discount %: 30
+2025-10-30 15:40:36 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:40:36 [INFO]: Final product discount: 0
+2025-10-30 15:40:36 [INFO]: Final category discount: 30
+2025-10-30 15:40:36 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:36 [INFO]: Product offer: 
+2025-10-30 15:40:36 [INFO]: Category offer: 
+2025-10-30 15:40:36 [INFO]: Current date: Thu Oct 30 2025 15:40:36 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Final product discount: 0
+2025-10-30 15:40:36 [INFO]: Final category discount: 0
+2025-10-30 15:40:36 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:36 [INFO]: Product offer: 
+2025-10-30 15:40:36 [INFO]: Category offer: 
+2025-10-30 15:40:36 [INFO]: Current date: Thu Oct 30 2025 15:40:36 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Final product discount: 0
+2025-10-30 15:40:36 [INFO]: Final category discount: 0
+2025-10-30 15:40:36 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:36 [INFO]: Product offer: 
+2025-10-30 15:40:36 [INFO]: Category offer: 
+2025-10-30 15:40:36 [INFO]: Current date: Thu Oct 30 2025 15:40:36 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Final product discount: 0
+2025-10-30 15:40:36 [INFO]: Final category discount: 0
+2025-10-30 15:40:36 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:36 [INFO]: Product offer: 
+2025-10-30 15:40:36 [INFO]: Category offer: 
+2025-10-30 15:40:36 [INFO]: Current date: Thu Oct 30 2025 15:40:36 GMT+0530 (India Standard Time)
+2025-10-30 15:40:36 [INFO]: Final product discount: 0
+2025-10-30 15:40:36 [INFO]: Final category discount: 0
+2025-10-30 15:40:36 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:40 [INFO]: Product offer: 
+2025-10-30 15:40:40 [INFO]: Category offer: [object Object]
+2025-10-30 15:40:40 [INFO]: Current date: Thu Oct 30 2025 15:40:40 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Category has offer object
+2025-10-30 15:40:40 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Discount %: 45
+2025-10-30 15:40:40 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:40:40 [INFO]: Final product discount: 0
+2025-10-30 15:40:40 [INFO]: Final category discount: 45
+2025-10-30 15:40:40 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:40 [INFO]: Product offer: 
+2025-10-30 15:40:40 [INFO]: Category offer: [object Object]
+2025-10-30 15:40:40 [INFO]: Current date: Thu Oct 30 2025 15:40:40 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Category has offer object
+2025-10-30 15:40:40 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Discount %: 30
+2025-10-30 15:40:40 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:40:40 [INFO]: Final product discount: 0
+2025-10-30 15:40:40 [INFO]: Final category discount: 30
+2025-10-30 15:40:40 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:40 [INFO]: Product offer: 
+2025-10-30 15:40:40 [INFO]: Category offer: 
+2025-10-30 15:40:40 [INFO]: Current date: Thu Oct 30 2025 15:40:40 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Final product discount: 0
+2025-10-30 15:40:40 [INFO]: Final category discount: 0
+2025-10-30 15:40:40 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:40 [INFO]: Product offer: 
+2025-10-30 15:40:40 [INFO]: Category offer: 
+2025-10-30 15:40:40 [INFO]: Current date: Thu Oct 30 2025 15:40:40 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Final product discount: 0
+2025-10-30 15:40:40 [INFO]: Final category discount: 0
+2025-10-30 15:40:40 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:40 [INFO]: Product offer: 
+2025-10-30 15:40:40 [INFO]: Category offer: 
+2025-10-30 15:40:40 [INFO]: Current date: Thu Oct 30 2025 15:40:40 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Final product discount: 0
+2025-10-30 15:40:40 [INFO]: Final category discount: 0
+2025-10-30 15:40:40 [INFO]: === END DEBUG ===
+
+2025-10-30 15:40:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:40:40 [INFO]: Product offer: 
+2025-10-30 15:40:40 [INFO]: Category offer: 
+2025-10-30 15:40:40 [INFO]: Current date: Thu Oct 30 2025 15:40:40 GMT+0530 (India Standard Time)
+2025-10-30 15:40:40 [INFO]: Final product discount: 0
+2025-10-30 15:40:40 [INFO]: Final category discount: 0
+2025-10-30 15:40:40 [INFO]: === END DEBUG ===
+
+2025-10-30 15:46:23 [INFO]: node starting
+2025-10-30 15:46:24 [INFO]: server running at http://localhost:3000
+2025-10-30 15:46:24 [INFO]:  MongoDB connected
+2025-10-30 15:49:02 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:02 [INFO]: Product offer: 
+2025-10-30 15:49:02 [INFO]: Category offer: 
+2025-10-30 15:49:02 [INFO]: Current date: Thu Oct 30 2025 15:49:02 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Final product discount: 0
+2025-10-30 15:49:02 [INFO]: Final category discount: 0
+2025-10-30 15:49:02 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:02 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:02 [INFO]: Product offer: 
+2025-10-30 15:49:02 [INFO]: Category offer: 
+2025-10-30 15:49:02 [INFO]: Current date: Thu Oct 30 2025 15:49:02 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Final product discount: 0
+2025-10-30 15:49:02 [INFO]: Final category discount: 0
+2025-10-30 15:49:02 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:02 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:02 [INFO]: Product offer: 
+2025-10-30 15:49:02 [INFO]: Category offer: 
+2025-10-30 15:49:02 [INFO]: Current date: Thu Oct 30 2025 15:49:02 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Final product discount: 0
+2025-10-30 15:49:02 [INFO]: Final category discount: 0
+2025-10-30 15:49:02 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:02 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:02 [INFO]: Product offer: 
+2025-10-30 15:49:02 [INFO]: Category offer: 
+2025-10-30 15:49:02 [INFO]: Current date: Thu Oct 30 2025 15:49:02 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Final product discount: 0
+2025-10-30 15:49:02 [INFO]: Final category discount: 0
+2025-10-30 15:49:02 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:02 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:02 [INFO]: Product offer: 
+2025-10-30 15:49:02 [INFO]: Category offer: [object Object]
+2025-10-30 15:49:02 [INFO]: Current date: Thu Oct 30 2025 15:49:02 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Category has offer object
+2025-10-30 15:49:02 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Discount %: 30
+2025-10-30 15:49:02 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:49:02 [INFO]: Final product discount: 0
+2025-10-30 15:49:02 [INFO]: Final category discount: 30
+2025-10-30 15:49:02 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:02 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:02 [INFO]: Product offer: 
+2025-10-30 15:49:02 [INFO]: Category offer: [object Object]
+2025-10-30 15:49:02 [INFO]: Current date: Thu Oct 30 2025 15:49:02 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Category has offer object
+2025-10-30 15:49:02 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:02 [INFO]: Discount %: 45
+2025-10-30 15:49:02 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:49:02 [INFO]: Final product discount: 0
+2025-10-30 15:49:02 [INFO]: Final category discount: 45
+2025-10-30 15:49:02 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:13 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:13 [INFO]: Product offer: 
+2025-10-30 15:49:13 [INFO]: Category offer: [object Object]
+2025-10-30 15:49:13 [INFO]: Current date: Thu Oct 30 2025 15:49:13 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Category has offer object
+2025-10-30 15:49:13 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Discount %: 30
+2025-10-30 15:49:13 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:49:13 [INFO]: Final product discount: 0
+2025-10-30 15:49:13 [INFO]: Final category discount: 30
+2025-10-30 15:49:13 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:13 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:13 [INFO]: Product offer: 
+2025-10-30 15:49:13 [INFO]: Category offer: 
+2025-10-30 15:49:13 [INFO]: Current date: Thu Oct 30 2025 15:49:13 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Final product discount: 0
+2025-10-30 15:49:13 [INFO]: Final category discount: 0
+2025-10-30 15:49:13 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:13 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:13 [INFO]: Product offer: 
+2025-10-30 15:49:13 [INFO]: Category offer: 
+2025-10-30 15:49:13 [INFO]: Current date: Thu Oct 30 2025 15:49:13 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Final product discount: 0
+2025-10-30 15:49:13 [INFO]: Final category discount: 0
+2025-10-30 15:49:13 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:13 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:13 [INFO]: Product offer: 
+2025-10-30 15:49:13 [INFO]: Category offer: 
+2025-10-30 15:49:13 [INFO]: Current date: Thu Oct 30 2025 15:49:13 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Final product discount: 0
+2025-10-30 15:49:13 [INFO]: Final category discount: 0
+2025-10-30 15:49:13 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:13 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:13 [INFO]: Product offer: 
+2025-10-30 15:49:13 [INFO]: Category offer: 
+2025-10-30 15:49:13 [INFO]: Current date: Thu Oct 30 2025 15:49:13 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Final product discount: 0
+2025-10-30 15:49:13 [INFO]: Final category discount: 0
+2025-10-30 15:49:13 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:13 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:13 [INFO]: Product offer: 
+2025-10-30 15:49:13 [INFO]: Category offer: [object Object]
+2025-10-30 15:49:13 [INFO]: Current date: Thu Oct 30 2025 15:49:13 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Category has offer object
+2025-10-30 15:49:13 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:13 [INFO]: Discount %: 45
+2025-10-30 15:49:13 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:49:13 [INFO]: Final product discount: 0
+2025-10-30 15:49:13 [INFO]: Final category discount: 45
+2025-10-30 15:49:13 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:47 [INFO]: wishlistItems: 
+2025-10-30 15:49:47 [INFO]: alreaady  exist variants: 
+2025-10-30 15:49:47 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:47 [INFO]: Product offer: 
+2025-10-30 15:49:47 [INFO]: Category offer: [object Object]
+2025-10-30 15:49:47 [INFO]: Current date: Thu Oct 30 2025 15:49:47 GMT+0530 (India Standard Time)
+2025-10-30 15:49:47 [INFO]: Category has offer object
+2025-10-30 15:49:47 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:47 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:47 [INFO]: Discount %: 45
+2025-10-30 15:49:47 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:49:47 [INFO]: Final product discount: 0
+2025-10-30 15:49:47 [INFO]: Final category discount: 45
+2025-10-30 15:49:47 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:47 [INFO]: product with offer: [object Object]
+2025-10-30 15:49:48 [INFO]: wishlistItems: 
+2025-10-30 15:49:48 [INFO]: alreaady  exist variants: 
+2025-10-30 15:49:48 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:49:48 [INFO]: Product offer: 
+2025-10-30 15:49:48 [INFO]: Category offer: [object Object]
+2025-10-30 15:49:48 [INFO]: Current date: Thu Oct 30 2025 15:49:48 GMT+0530 (India Standard Time)
+2025-10-30 15:49:48 [INFO]: Category has offer object
+2025-10-30 15:49:48 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:48 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:49:48 [INFO]: Discount %: 45
+2025-10-30 15:49:48 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:49:48 [INFO]: Final product discount: 0
+2025-10-30 15:49:48 [INFO]: Final category discount: 45
+2025-10-30 15:49:48 [INFO]: === END DEBUG ===
+
+2025-10-30 15:49:48 [INFO]: product with offer: [object Object]
+2025-10-30 15:51:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:51:46 [INFO]: Product offer: 
+2025-10-30 15:51:46 [INFO]: Category offer: [object Object]
+2025-10-30 15:51:46 [INFO]: Current date: Thu Oct 30 2025 15:51:46 GMT+0530 (India Standard Time)
+2025-10-30 15:51:46 [INFO]: Category has offer object
+2025-10-30 15:51:46 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:51:46 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:51:46 [INFO]: Discount %: 30
+2025-10-30 15:51:46 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:51:46 [INFO]: Final product discount: 0
+2025-10-30 15:51:46 [INFO]: Final category discount: 30
+2025-10-30 15:51:46 [INFO]: === END DEBUG ===
+
+2025-10-30 15:51:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:51:46 [INFO]: Product offer: 
+2025-10-30 15:51:46 [INFO]: Category offer: 
+2025-10-30 15:51:46 [INFO]: Current date: Thu Oct 30 2025 15:51:46 GMT+0530 (India Standard Time)
+2025-10-30 15:51:46 [INFO]: Final product discount: 0
+2025-10-30 15:51:46 [INFO]: Final category discount: 0
+2025-10-30 15:51:46 [INFO]: === END DEBUG ===
+
+2025-10-30 15:51:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:51:46 [INFO]: Product offer: 
+2025-10-30 15:51:46 [INFO]: Category offer: 
+2025-10-30 15:51:46 [INFO]: Current date: Thu Oct 30 2025 15:51:46 GMT+0530 (India Standard Time)
+2025-10-30 15:51:46 [INFO]: Final product discount: 0
+2025-10-30 15:51:46 [INFO]: Final category discount: 0
+2025-10-30 15:51:46 [INFO]: === END DEBUG ===
+
+2025-10-30 15:51:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:51:46 [INFO]: Product offer: 
+2025-10-30 15:51:46 [INFO]: Category offer: 
+2025-10-30 15:51:46 [INFO]: Current date: Thu Oct 30 2025 15:51:46 GMT+0530 (India Standard Time)
+2025-10-30 15:51:46 [INFO]: Final product discount: 0
+2025-10-30 15:51:46 [INFO]: Final category discount: 0
+2025-10-30 15:51:46 [INFO]: === END DEBUG ===
+
+2025-10-30 15:51:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:51:46 [INFO]: Product offer: 
+2025-10-30 15:51:46 [INFO]: Category offer: 
+2025-10-30 15:51:47 [INFO]: Current date: Thu Oct 30 2025 15:51:46 GMT+0530 (India Standard Time)
+2025-10-30 15:51:47 [INFO]: Final product discount: 0
+2025-10-30 15:51:47 [INFO]: Final category discount: 0
+2025-10-30 15:51:47 [INFO]: === END DEBUG ===
+
+2025-10-30 15:51:47 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 15:51:47 [INFO]: Product offer: 
+2025-10-30 15:51:47 [INFO]: Category offer: [object Object]
+2025-10-30 15:51:47 [INFO]: Current date: Thu Oct 30 2025 15:51:47 GMT+0530 (India Standard Time)
+2025-10-30 15:51:47 [INFO]: Category has offer object
+2025-10-30 15:51:47 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:51:47 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 15:51:47 [INFO]: Discount %: 45
+2025-10-30 15:51:47 [INFO]: ✅ Category offer is VALID
+2025-10-30 15:51:47 [INFO]: Final product discount: 0
+2025-10-30 15:51:47 [INFO]: Final category discount: 45
+2025-10-30 15:51:47 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:13:38 [INFO]: Product offer: 
+2025-10-30 16:13:38 [INFO]: Category offer: [object Object]
+2025-10-30 16:13:38 [INFO]: Current date: Thu Oct 30 2025 16:13:38 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Category has offer object
+2025-10-30 16:13:38 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Discount %: 30
+2025-10-30 16:13:38 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:13:38 [INFO]: Final product discount: 0
+2025-10-30 16:13:38 [INFO]: Final category discount: 30
+2025-10-30 16:13:38 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:13:38 [INFO]: Product offer: 
+2025-10-30 16:13:38 [INFO]: Category offer: [object Object]
+2025-10-30 16:13:38 [INFO]: Current date: Thu Oct 30 2025 16:13:38 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Category has offer object
+2025-10-30 16:13:38 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Discount %: 45
+2025-10-30 16:13:38 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:13:38 [INFO]: Final product discount: 0
+2025-10-30 16:13:38 [INFO]: Final category discount: 45
+2025-10-30 16:13:38 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:13:38 [INFO]: Product offer: 
+2025-10-30 16:13:38 [INFO]: Category offer: 
+2025-10-30 16:13:38 [INFO]: Current date: Thu Oct 30 2025 16:13:38 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Final product discount: 0
+2025-10-30 16:13:38 [INFO]: Final category discount: 0
+2025-10-30 16:13:38 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:13:38 [INFO]: Product offer: 
+2025-10-30 16:13:38 [INFO]: Category offer: 
+2025-10-30 16:13:38 [INFO]: Current date: Thu Oct 30 2025 16:13:38 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Final product discount: 0
+2025-10-30 16:13:38 [INFO]: Final category discount: 0
+2025-10-30 16:13:38 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:13:38 [INFO]: Product offer: 
+2025-10-30 16:13:38 [INFO]: Category offer: 
+2025-10-30 16:13:38 [INFO]: Current date: Thu Oct 30 2025 16:13:38 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Final product discount: 0
+2025-10-30 16:13:38 [INFO]: Final category discount: 0
+2025-10-30 16:13:38 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:13:38 [INFO]: Product offer: 
+2025-10-30 16:13:38 [INFO]: Category offer: 
+2025-10-30 16:13:38 [INFO]: Current date: Thu Oct 30 2025 16:13:38 GMT+0530 (India Standard Time)
+2025-10-30 16:13:38 [INFO]: Final product discount: 0
+2025-10-30 16:13:38 [INFO]: Final category discount: 0
+2025-10-30 16:13:38 [INFO]: === END DEBUG ===
+
+2025-10-30 16:13:39 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\shop.ejs:114
+    112|                 <form action="/cart" method="POST" class="mt-auto">
+    113|                   <input type="hidden" name="productId" value="<%= product._id %>">
+ >> 114|                   <input type="hidden" name="variantId" value="<%= product.variants[0]._id %>">
+    115| 
+    116|                   <input type="hidden" name="quantity" value="1">
+    117|                 
+
+Cannot read properties of undefined (reading '0')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:121:42)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:74:17)
+    at shop (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-10-30 16:14:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:14:52 [INFO]: Product offer: 
+2025-10-30 16:14:52 [INFO]: Category offer: [object Object]
+2025-10-30 16:14:52 [INFO]: Current date: Thu Oct 30 2025 16:14:52 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Category has offer object
+2025-10-30 16:14:52 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Discount %: 30
+2025-10-30 16:14:52 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:14:52 [INFO]: Final product discount: 0
+2025-10-30 16:14:52 [INFO]: Final category discount: 30
+2025-10-30 16:14:52 [INFO]: === END DEBUG ===
+
+2025-10-30 16:14:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:14:52 [INFO]: Product offer: 
+2025-10-30 16:14:52 [INFO]: Category offer: 
+2025-10-30 16:14:52 [INFO]: Current date: Thu Oct 30 2025 16:14:52 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Final product discount: 0
+2025-10-30 16:14:52 [INFO]: Final category discount: 0
+2025-10-30 16:14:52 [INFO]: === END DEBUG ===
+
+2025-10-30 16:14:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:14:52 [INFO]: Product offer: 
+2025-10-30 16:14:52 [INFO]: Category offer: 
+2025-10-30 16:14:52 [INFO]: Current date: Thu Oct 30 2025 16:14:52 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Final product discount: 0
+2025-10-30 16:14:52 [INFO]: Final category discount: 0
+2025-10-30 16:14:52 [INFO]: === END DEBUG ===
+
+2025-10-30 16:14:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:14:52 [INFO]: Product offer: 
+2025-10-30 16:14:52 [INFO]: Category offer: 
+2025-10-30 16:14:52 [INFO]: Current date: Thu Oct 30 2025 16:14:52 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Final product discount: 0
+2025-10-30 16:14:52 [INFO]: Final category discount: 0
+2025-10-30 16:14:52 [INFO]: === END DEBUG ===
+
+2025-10-30 16:14:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:14:52 [INFO]: Product offer: 
+2025-10-30 16:14:52 [INFO]: Category offer: 
+2025-10-30 16:14:52 [INFO]: Current date: Thu Oct 30 2025 16:14:52 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Final product discount: 0
+2025-10-30 16:14:52 [INFO]: Final category discount: 0
+2025-10-30 16:14:52 [INFO]: === END DEBUG ===
+
+2025-10-30 16:14:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:14:52 [INFO]: Product offer: 
+2025-10-30 16:14:52 [INFO]: Category offer: [object Object]
+2025-10-30 16:14:52 [INFO]: Current date: Thu Oct 30 2025 16:14:52 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Category has offer object
+2025-10-30 16:14:52 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:14:52 [INFO]: Discount %: 45
+2025-10-30 16:14:52 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:14:52 [INFO]: Final product discount: 0
+2025-10-30 16:14:52 [INFO]: Final category discount: 45
+2025-10-30 16:14:52 [INFO]: === END DEBUG ===
+
+2025-10-30 16:14:56 [ERROR]: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Variant"
+2025-10-30 16:20:11 [INFO]: node starting
+2025-10-30 16:20:11 [INFO]: server running at http://localhost:3000
+2025-10-30 16:20:11 [INFO]:  MongoDB connected
+2025-10-30 16:20:26 [INFO]: node starting
+2025-10-30 16:20:26 [INFO]: server running at http://localhost:3000
+2025-10-30 16:20:26 [INFO]:  MongoDB connected
+2025-10-30 16:20:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:20:58 [INFO]: Product offer: 
+2025-10-30 16:20:58 [INFO]: Category offer: [object Object]
+2025-10-30 16:20:58 [INFO]: Current date: Thu Oct 30 2025 16:20:58 GMT+0530 (India Standard Time)
+2025-10-30 16:20:58 [INFO]: Category has offer object
+2025-10-30 16:20:58 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:20:58 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:20:58 [INFO]: Discount %: 45
+2025-10-30 16:20:58 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:20:58 [INFO]: Final product discount: 0
+2025-10-30 16:20:59 [INFO]: Final category discount: 45
+2025-10-30 16:20:59 [INFO]: === END DEBUG ===
+
+2025-10-30 16:20:59 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:20:59 [INFO]: Product offer: 
+2025-10-30 16:20:59 [INFO]: Category offer: [object Object]
+2025-10-30 16:20:59 [INFO]: Current date: Thu Oct 30 2025 16:20:59 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: Category has offer object
+2025-10-30 16:20:59 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: Discount %: 30
+2025-10-30 16:20:59 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:20:59 [INFO]: Final product discount: 0
+2025-10-30 16:20:59 [INFO]: Final category discount: 30
+2025-10-30 16:20:59 [INFO]: === END DEBUG ===
+
+2025-10-30 16:20:59 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:20:59 [INFO]: Product offer: 
+2025-10-30 16:20:59 [INFO]: Category offer: 
+2025-10-30 16:20:59 [INFO]: Current date: Thu Oct 30 2025 16:20:59 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: Final product discount: 0
+2025-10-30 16:20:59 [INFO]: Final category discount: 0
+2025-10-30 16:20:59 [INFO]: === END DEBUG ===
+
+2025-10-30 16:20:59 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:20:59 [INFO]: Product offer: 
+2025-10-30 16:20:59 [INFO]: Category offer: 
+2025-10-30 16:20:59 [INFO]: Current date: Thu Oct 30 2025 16:20:59 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: Final product discount: 0
+2025-10-30 16:20:59 [INFO]: Final category discount: 0
+2025-10-30 16:20:59 [INFO]: === END DEBUG ===
+
+2025-10-30 16:20:59 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:20:59 [INFO]: Product offer: 
+2025-10-30 16:20:59 [INFO]: Category offer: 
+2025-10-30 16:20:59 [INFO]: Current date: Thu Oct 30 2025 16:20:59 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: Final product discount: 0
+2025-10-30 16:20:59 [INFO]: Final category discount: 0
+2025-10-30 16:20:59 [INFO]: === END DEBUG ===
+
+2025-10-30 16:20:59 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:20:59 [INFO]: Product offer: 
+2025-10-30 16:20:59 [INFO]: Category offer: 
+2025-10-30 16:20:59 [INFO]: Current date: Thu Oct 30 2025 16:20:59 GMT+0530 (India Standard Time)
+2025-10-30 16:20:59 [INFO]: Final product discount: 0
+2025-10-30 16:20:59 [INFO]: Final category discount: 0
+2025-10-30 16:20:59 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:21:07 [INFO]: Product offer: 
+2025-10-30 16:21:07 [INFO]: Category offer: [object Object]
+2025-10-30 16:21:07 [INFO]: Current date: Thu Oct 30 2025 16:21:07 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Category has offer object
+2025-10-30 16:21:07 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Discount %: 45
+2025-10-30 16:21:07 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:21:07 [INFO]: Final product discount: 0
+2025-10-30 16:21:07 [INFO]: Final category discount: 45
+2025-10-30 16:21:07 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:21:07 [INFO]: Product offer: 
+2025-10-30 16:21:07 [INFO]: Category offer: [object Object]
+2025-10-30 16:21:07 [INFO]: Current date: Thu Oct 30 2025 16:21:07 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Category has offer object
+2025-10-30 16:21:07 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Discount %: 30
+2025-10-30 16:21:07 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:21:07 [INFO]: Final product discount: 0
+2025-10-30 16:21:07 [INFO]: Final category discount: 30
+2025-10-30 16:21:07 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:21:07 [INFO]: Product offer: 
+2025-10-30 16:21:07 [INFO]: Category offer: 
+2025-10-30 16:21:07 [INFO]: Current date: Thu Oct 30 2025 16:21:07 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Final product discount: 0
+2025-10-30 16:21:07 [INFO]: Final category discount: 0
+2025-10-30 16:21:07 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:21:07 [INFO]: Product offer: 
+2025-10-30 16:21:07 [INFO]: Category offer: 
+2025-10-30 16:21:07 [INFO]: Current date: Thu Oct 30 2025 16:21:07 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Final product discount: 0
+2025-10-30 16:21:07 [INFO]: Final category discount: 0
+2025-10-30 16:21:07 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:21:07 [INFO]: Product offer: 
+2025-10-30 16:21:07 [INFO]: Category offer: 
+2025-10-30 16:21:07 [INFO]: Current date: Thu Oct 30 2025 16:21:07 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Final product discount: 0
+2025-10-30 16:21:07 [INFO]: Final category discount: 0
+2025-10-30 16:21:07 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:21:07 [INFO]: Product offer: 
+2025-10-30 16:21:07 [INFO]: Category offer: 
+2025-10-30 16:21:07 [INFO]: Current date: Thu Oct 30 2025 16:21:07 GMT+0530 (India Standard Time)
+2025-10-30 16:21:07 [INFO]: Final product discount: 0
+2025-10-30 16:21:07 [INFO]: Final category discount: 0
+2025-10-30 16:21:07 [INFO]: === END DEBUG ===
+
+2025-10-30 16:21:07 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\shop.ejs:114
+    112|                 <form action="/cart" method="POST" class="mt-auto">
+    113|                   <input type="hidden" name="productId" value="<%= product._id %>">
+ >> 114| <input type="hidden" name="variantId" value="<%= product.defaultVariantId || product.variants[0]?._id %>">
+    115| 
+    116|                   <input type="hidden" name="quantity" value="1">
+    117|                 
+
+Cannot read properties of undefined (reading '0')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:121:70)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:74:17)
+    at shop (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-10-30 16:29:25 [INFO]: node starting
+2025-10-30 16:29:25 [INFO]: server running at http://localhost:3000
+2025-10-30 16:29:25 [INFO]:  MongoDB connected
+2025-10-30 16:29:43 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:29:43 [INFO]: Product offer: 
+2025-10-30 16:29:43 [INFO]: Category offer: [object Object]
+2025-10-30 16:29:43 [INFO]: Current date: Thu Oct 30 2025 16:29:43 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Category has offer object
+2025-10-30 16:29:43 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Discount %: 30
+2025-10-30 16:29:43 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:29:43 [INFO]: Final product discount: 0
+2025-10-30 16:29:43 [INFO]: Final category discount: 30
+2025-10-30 16:29:43 [INFO]: === END DEBUG ===
+
+2025-10-30 16:29:43 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:29:43 [INFO]: Product offer: 
+2025-10-30 16:29:43 [INFO]: Category offer: [object Object]
+2025-10-30 16:29:43 [INFO]: Current date: Thu Oct 30 2025 16:29:43 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Category has offer object
+2025-10-30 16:29:43 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Discount %: 45
+2025-10-30 16:29:43 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:29:43 [INFO]: Final product discount: 0
+2025-10-30 16:29:43 [INFO]: Final category discount: 45
+2025-10-30 16:29:43 [INFO]: === END DEBUG ===
+
+2025-10-30 16:29:43 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:29:43 [INFO]: Product offer: 
+2025-10-30 16:29:43 [INFO]: Category offer: 
+2025-10-30 16:29:43 [INFO]: Current date: Thu Oct 30 2025 16:29:43 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Final product discount: 0
+2025-10-30 16:29:43 [INFO]: Final category discount: 0
+2025-10-30 16:29:43 [INFO]: === END DEBUG ===
+
+2025-10-30 16:29:43 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:29:43 [INFO]: Product offer: 
+2025-10-30 16:29:43 [INFO]: Category offer: 
+2025-10-30 16:29:43 [INFO]: Current date: Thu Oct 30 2025 16:29:43 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Final product discount: 0
+2025-10-30 16:29:43 [INFO]: Final category discount: 0
+2025-10-30 16:29:43 [INFO]: === END DEBUG ===
+
+2025-10-30 16:29:43 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:29:43 [INFO]: Product offer: 
+2025-10-30 16:29:43 [INFO]: Category offer: 
+2025-10-30 16:29:43 [INFO]: Current date: Thu Oct 30 2025 16:29:43 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Final product discount: 0
+2025-10-30 16:29:43 [INFO]: Final category discount: 0
+2025-10-30 16:29:43 [INFO]: === END DEBUG ===
+
+2025-10-30 16:29:43 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:29:43 [INFO]: Product offer: 
+2025-10-30 16:29:43 [INFO]: Category offer: 
+2025-10-30 16:29:43 [INFO]: Current date: Thu Oct 30 2025 16:29:43 GMT+0530 (India Standard Time)
+2025-10-30 16:29:43 [INFO]: Final product discount: 0
+2025-10-30 16:29:43 [INFO]: Final category discount: 0
+2025-10-30 16:29:43 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:04 [INFO]: Product offer: 
+2025-10-30 16:30:04 [INFO]: Category offer: [object Object]
+2025-10-30 16:30:04 [INFO]: Current date: Thu Oct 30 2025 16:30:04 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Category has offer object
+2025-10-30 16:30:04 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Discount %: 45
+2025-10-30 16:30:04 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:30:04 [INFO]: Final product discount: 0
+2025-10-30 16:30:04 [INFO]: Final category discount: 45
+2025-10-30 16:30:04 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:04 [INFO]: Product offer: 
+2025-10-30 16:30:04 [INFO]: Category offer: [object Object]
+2025-10-30 16:30:04 [INFO]: Current date: Thu Oct 30 2025 16:30:04 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Category has offer object
+2025-10-30 16:30:04 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Discount %: 30
+2025-10-30 16:30:04 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:30:04 [INFO]: Final product discount: 0
+2025-10-30 16:30:04 [INFO]: Final category discount: 30
+2025-10-30 16:30:04 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:04 [INFO]: Product offer: 
+2025-10-30 16:30:04 [INFO]: Category offer: 
+2025-10-30 16:30:04 [INFO]: Current date: Thu Oct 30 2025 16:30:04 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Final product discount: 0
+2025-10-30 16:30:04 [INFO]: Final category discount: 0
+2025-10-30 16:30:04 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:04 [INFO]: Product offer: 
+2025-10-30 16:30:04 [INFO]: Category offer: 
+2025-10-30 16:30:04 [INFO]: Current date: Thu Oct 30 2025 16:30:04 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Final product discount: 0
+2025-10-30 16:30:04 [INFO]: Final category discount: 0
+2025-10-30 16:30:04 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:04 [INFO]: Product offer: 
+2025-10-30 16:30:04 [INFO]: Category offer: 
+2025-10-30 16:30:04 [INFO]: Current date: Thu Oct 30 2025 16:30:04 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Final product discount: 0
+2025-10-30 16:30:04 [INFO]: Final category discount: 0
+2025-10-30 16:30:04 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:04 [INFO]: Product offer: 
+2025-10-30 16:30:04 [INFO]: Category offer: 
+2025-10-30 16:30:04 [INFO]: Current date: Thu Oct 30 2025 16:30:04 GMT+0530 (India Standard Time)
+2025-10-30 16:30:04 [INFO]: Final product discount: 0
+2025-10-30 16:30:04 [INFO]: Final category discount: 0
+2025-10-30 16:30:04 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: [object Object]
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Category has offer object
+2025-10-30 16:30:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Discount %: 30
+2025-10-30 16:30:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 30
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: [object Object]
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Category has offer object
+2025-10-30 16:30:08 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Discount %: 45
+2025-10-30 16:30:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 45
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: [object Object]
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Category has offer object
+2025-10-30 16:30:08 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Discount %: 45
+2025-10-30 16:30:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 45
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: [object Object]
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Category has offer object
+2025-10-30 16:30:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Discount %: 30
+2025-10-30 16:30:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 30
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:30:08 [INFO]: Product offer: 
+2025-10-30 16:30:08 [INFO]: Category offer: 
+2025-10-30 16:30:08 [INFO]: Current date: Thu Oct 30 2025 16:30:08 GMT+0530 (India Standard Time)
+2025-10-30 16:30:08 [INFO]: Final product discount: 0
+2025-10-30 16:30:08 [INFO]: Final category discount: 0
+2025-10-30 16:30:08 [INFO]: === END DEBUG ===
+
+2025-10-30 16:30:10 [ERROR]: StrictPopulateError: Cannot populate path `variantId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2025-10-30 16:32:04 [INFO]: node starting
+2025-10-30 16:32:04 [INFO]: server running at http://localhost:3000
+2025-10-30 16:32:04 [INFO]:  MongoDB connected
+2025-10-30 16:32:28 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:28 [INFO]: Product offer: 
+2025-10-30 16:32:28 [INFO]: Category offer: [object Object]
+2025-10-30 16:32:28 [INFO]: Current date: Thu Oct 30 2025 16:32:28 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Category has offer object
+2025-10-30 16:32:28 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Discount %: 45
+2025-10-30 16:32:28 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:32:28 [INFO]: Final product discount: 0
+2025-10-30 16:32:28 [INFO]: Final category discount: 45
+2025-10-30 16:32:28 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:28 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:28 [INFO]: Product offer: 
+2025-10-30 16:32:28 [INFO]: Category offer: 
+2025-10-30 16:32:28 [INFO]: Current date: Thu Oct 30 2025 16:32:28 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Final product discount: 0
+2025-10-30 16:32:28 [INFO]: Final category discount: 0
+2025-10-30 16:32:28 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:28 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:28 [INFO]: Product offer: 
+2025-10-30 16:32:28 [INFO]: Category offer: [object Object]
+2025-10-30 16:32:28 [INFO]: Current date: Thu Oct 30 2025 16:32:28 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Category has offer object
+2025-10-30 16:32:28 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Discount %: 30
+2025-10-30 16:32:28 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:32:28 [INFO]: Final product discount: 0
+2025-10-30 16:32:28 [INFO]: Final category discount: 30
+2025-10-30 16:32:28 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:28 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:28 [INFO]: Product offer: 
+2025-10-30 16:32:28 [INFO]: Category offer: 
+2025-10-30 16:32:28 [INFO]: Current date: Thu Oct 30 2025 16:32:28 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Final product discount: 0
+2025-10-30 16:32:28 [INFO]: Final category discount: 0
+2025-10-30 16:32:28 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:28 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:28 [INFO]: Product offer: 
+2025-10-30 16:32:28 [INFO]: Category offer: 
+2025-10-30 16:32:28 [INFO]: Current date: Thu Oct 30 2025 16:32:28 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Final product discount: 0
+2025-10-30 16:32:28 [INFO]: Final category discount: 0
+2025-10-30 16:32:28 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:28 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:28 [INFO]: Product offer: 
+2025-10-30 16:32:28 [INFO]: Category offer: 
+2025-10-30 16:32:28 [INFO]: Current date: Thu Oct 30 2025 16:32:28 GMT+0530 (India Standard Time)
+2025-10-30 16:32:28 [INFO]: Final product discount: 0
+2025-10-30 16:32:28 [INFO]: Final category discount: 0
+2025-10-30 16:32:28 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:31 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:31 [INFO]: Product offer: 
+2025-10-30 16:32:31 [INFO]: Category offer: [object Object]
+2025-10-30 16:32:31 [INFO]: Current date: Thu Oct 30 2025 16:32:31 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Category has offer object
+2025-10-30 16:32:31 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Discount %: 45
+2025-10-30 16:32:31 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:32:31 [INFO]: Final product discount: 0
+2025-10-30 16:32:31 [INFO]: Final category discount: 45
+2025-10-30 16:32:31 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:31 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:31 [INFO]: Product offer: 
+2025-10-30 16:32:31 [INFO]: Category offer: [object Object]
+2025-10-30 16:32:31 [INFO]: Current date: Thu Oct 30 2025 16:32:31 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Category has offer object
+2025-10-30 16:32:31 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Discount %: 30
+2025-10-30 16:32:31 [INFO]: ✅ Category offer is VALID
+2025-10-30 16:32:31 [INFO]: Final product discount: 0
+2025-10-30 16:32:31 [INFO]: Final category discount: 30
+2025-10-30 16:32:31 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:31 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:31 [INFO]: Product offer: 
+2025-10-30 16:32:31 [INFO]: Category offer: 
+2025-10-30 16:32:31 [INFO]: Current date: Thu Oct 30 2025 16:32:31 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Final product discount: 0
+2025-10-30 16:32:31 [INFO]: Final category discount: 0
+2025-10-30 16:32:31 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:31 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:31 [INFO]: Product offer: 
+2025-10-30 16:32:31 [INFO]: Category offer: 
+2025-10-30 16:32:31 [INFO]: Current date: Thu Oct 30 2025 16:32:31 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Final product discount: 0
+2025-10-30 16:32:31 [INFO]: Final category discount: 0
+2025-10-30 16:32:31 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:31 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:31 [INFO]: Product offer: 
+2025-10-30 16:32:31 [INFO]: Category offer: 
+2025-10-30 16:32:31 [INFO]: Current date: Thu Oct 30 2025 16:32:31 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Final product discount: 0
+2025-10-30 16:32:31 [INFO]: Final category discount: 0
+2025-10-30 16:32:31 [INFO]: === END DEBUG ===
+
+2025-10-30 16:32:31 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 16:32:31 [INFO]: Product offer: 
+2025-10-30 16:32:31 [INFO]: Category offer: 
+2025-10-30 16:32:31 [INFO]: Current date: Thu Oct 30 2025 16:32:31 GMT+0530 (India Standard Time)
+2025-10-30 16:32:31 [INFO]: Final product discount: 0
+2025-10-30 16:32:31 [INFO]: Final category discount: 0
+2025-10-30 16:32:31 [INFO]: === END DEBUG ===
+
+2025-10-30 17:22:04 [INFO]: node starting
+2025-10-30 17:22:04 [INFO]: server running at http://localhost:3000
+2025-10-30 17:22:04 [INFO]:  MongoDB connected
+2025-10-30 17:22:27 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:22:27 [INFO]: Product offer: 
+2025-10-30 17:22:27 [INFO]: Category offer: [object Object]
+2025-10-30 17:22:27 [INFO]: Current date: Thu Oct 30 2025 17:22:27 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Category has offer object
+2025-10-30 17:22:27 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Discount %: 45
+2025-10-30 17:22:27 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:22:27 [INFO]: Final product discount: 0
+2025-10-30 17:22:27 [INFO]: Final category discount: 45
+2025-10-30 17:22:27 [INFO]: === END DEBUG ===
+
+2025-10-30 17:22:27 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:22:27 [INFO]: Product offer: 
+2025-10-30 17:22:27 [INFO]: Category offer: [object Object]
+2025-10-30 17:22:27 [INFO]: Current date: Thu Oct 30 2025 17:22:27 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Category has offer object
+2025-10-30 17:22:27 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Discount %: 30
+2025-10-30 17:22:27 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:22:27 [INFO]: Final product discount: 0
+2025-10-30 17:22:27 [INFO]: Final category discount: 30
+2025-10-30 17:22:27 [INFO]: === END DEBUG ===
+
+2025-10-30 17:22:27 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:22:27 [INFO]: Product offer: 
+2025-10-30 17:22:27 [INFO]: Category offer: 
+2025-10-30 17:22:27 [INFO]: Current date: Thu Oct 30 2025 17:22:27 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Final product discount: 0
+2025-10-30 17:22:27 [INFO]: Final category discount: 0
+2025-10-30 17:22:27 [INFO]: === END DEBUG ===
+
+2025-10-30 17:22:27 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:22:27 [INFO]: Product offer: 
+2025-10-30 17:22:27 [INFO]: Category offer: 
+2025-10-30 17:22:27 [INFO]: Current date: Thu Oct 30 2025 17:22:27 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Final product discount: 0
+2025-10-30 17:22:27 [INFO]: Final category discount: 0
+2025-10-30 17:22:27 [INFO]: === END DEBUG ===
+
+2025-10-30 17:22:27 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:22:27 [INFO]: Product offer: 
+2025-10-30 17:22:27 [INFO]: Category offer: 
+2025-10-30 17:22:27 [INFO]: Current date: Thu Oct 30 2025 17:22:27 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Final product discount: 0
+2025-10-30 17:22:27 [INFO]: Final category discount: 0
+2025-10-30 17:22:27 [INFO]: === END DEBUG ===
+
+2025-10-30 17:22:27 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:22:27 [INFO]: Product offer: 
+2025-10-30 17:22:27 [INFO]: Category offer: 
+2025-10-30 17:22:27 [INFO]: Current date: Thu Oct 30 2025 17:22:27 GMT+0530 (India Standard Time)
+2025-10-30 17:22:27 [INFO]: Final product discount: 0
+2025-10-30 17:22:27 [INFO]: Final category discount: 0
+2025-10-30 17:22:27 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: [object Object]
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Category has offer object
+2025-10-30 17:23:21 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Discount %: 45
+2025-10-30 17:23:21 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 45
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: [object Object]
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Category has offer object
+2025-10-30 17:23:21 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Discount %: 30
+2025-10-30 17:23:21 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 30
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: [object Object]
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Category has offer object
+2025-10-30 17:23:21 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Discount %: 45
+2025-10-30 17:23:21 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 45
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: [object Object]
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Category has offer object
+2025-10-30 17:23:21 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Discount %: 30
+2025-10-30 17:23:21 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 30
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:23:21 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:23:21 [INFO]: Product offer: 
+2025-10-30 17:23:21 [INFO]: Category offer: 
+2025-10-30 17:23:21 [INFO]: Current date: Thu Oct 30 2025 17:23:21 GMT+0530 (India Standard Time)
+2025-10-30 17:23:21 [INFO]: Final product discount: 0
+2025-10-30 17:23:21 [INFO]: Final category discount: 0
+2025-10-30 17:23:21 [INFO]: === END DEBUG ===
+
+2025-10-30 17:28:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:28:36 [INFO]: Product offer: 
+2025-10-30 17:28:36 [INFO]: Category offer: 
+2025-10-30 17:28:36 [INFO]: Current date: Thu Oct 30 2025 17:28:36 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Final product discount: 0
+2025-10-30 17:28:36 [INFO]: Final category discount: 0
+2025-10-30 17:28:36 [INFO]: === END DEBUG ===
+
+2025-10-30 17:28:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:28:36 [INFO]: Product offer: 
+2025-10-30 17:28:36 [INFO]: Category offer: 
+2025-10-30 17:28:36 [INFO]: Current date: Thu Oct 30 2025 17:28:36 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Final product discount: 0
+2025-10-30 17:28:36 [INFO]: Final category discount: 0
+2025-10-30 17:28:36 [INFO]: === END DEBUG ===
+
+2025-10-30 17:28:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:28:36 [INFO]: Product offer: 
+2025-10-30 17:28:36 [INFO]: Category offer: 
+2025-10-30 17:28:36 [INFO]: Current date: Thu Oct 30 2025 17:28:36 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Final product discount: 0
+2025-10-30 17:28:36 [INFO]: Final category discount: 0
+2025-10-30 17:28:36 [INFO]: === END DEBUG ===
+
+2025-10-30 17:28:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:28:36 [INFO]: Product offer: 
+2025-10-30 17:28:36 [INFO]: Category offer: 
+2025-10-30 17:28:36 [INFO]: Current date: Thu Oct 30 2025 17:28:36 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Final product discount: 0
+2025-10-30 17:28:36 [INFO]: Final category discount: 0
+2025-10-30 17:28:36 [INFO]: === END DEBUG ===
+
+2025-10-30 17:28:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:28:36 [INFO]: Product offer: 
+2025-10-30 17:28:36 [INFO]: Category offer: [object Object]
+2025-10-30 17:28:36 [INFO]: Current date: Thu Oct 30 2025 17:28:36 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Category has offer object
+2025-10-30 17:28:36 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Discount %: 30
+2025-10-30 17:28:36 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:28:36 [INFO]: Final product discount: 0
+2025-10-30 17:28:36 [INFO]: Final category discount: 30
+2025-10-30 17:28:36 [INFO]: === END DEBUG ===
+
+2025-10-30 17:28:36 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:28:36 [INFO]: Product offer: 
+2025-10-30 17:28:36 [INFO]: Category offer: [object Object]
+2025-10-30 17:28:36 [INFO]: Current date: Thu Oct 30 2025 17:28:36 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Category has offer object
+2025-10-30 17:28:36 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:28:36 [INFO]: Discount %: 45
+2025-10-30 17:28:36 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:28:36 [INFO]: Final product discount: 0
+2025-10-30 17:28:36 [INFO]: Final category discount: 45
+2025-10-30 17:28:36 [INFO]: === END DEBUG ===
+
+2025-10-30 17:29:44 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:29:44 [INFO]: Product offer: 
+2025-10-30 17:29:44 [INFO]: Category offer: [object Object]
+2025-10-30 17:29:44 [INFO]: Current date: Thu Oct 30 2025 17:29:44 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Category has offer object
+2025-10-30 17:29:44 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Discount %: 45
+2025-10-30 17:29:44 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:29:44 [INFO]: Final product discount: 0
+2025-10-30 17:29:44 [INFO]: Final category discount: 45
+2025-10-30 17:29:44 [INFO]: === END DEBUG ===
+
+2025-10-30 17:29:44 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:29:44 [INFO]: Product offer: 
+2025-10-30 17:29:44 [INFO]: Category offer: [object Object]
+2025-10-30 17:29:44 [INFO]: Current date: Thu Oct 30 2025 17:29:44 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Category has offer object
+2025-10-30 17:29:44 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Discount %: 30
+2025-10-30 17:29:44 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:29:44 [INFO]: Final product discount: 0
+2025-10-30 17:29:44 [INFO]: Final category discount: 30
+2025-10-30 17:29:44 [INFO]: === END DEBUG ===
+
+2025-10-30 17:29:44 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:29:44 [INFO]: Product offer: 
+2025-10-30 17:29:44 [INFO]: Category offer: 
+2025-10-30 17:29:44 [INFO]: Current date: Thu Oct 30 2025 17:29:44 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Final product discount: 0
+2025-10-30 17:29:44 [INFO]: Final category discount: 0
+2025-10-30 17:29:44 [INFO]: === END DEBUG ===
+
+2025-10-30 17:29:44 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:29:44 [INFO]: Product offer: 
+2025-10-30 17:29:44 [INFO]: Category offer: 
+2025-10-30 17:29:44 [INFO]: Current date: Thu Oct 30 2025 17:29:44 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Final product discount: 0
+2025-10-30 17:29:44 [INFO]: Final category discount: 0
+2025-10-30 17:29:44 [INFO]: === END DEBUG ===
+
+2025-10-30 17:29:44 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:29:44 [INFO]: Product offer: 
+2025-10-30 17:29:44 [INFO]: Category offer: 
+2025-10-30 17:29:44 [INFO]: Current date: Thu Oct 30 2025 17:29:44 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Final product discount: 0
+2025-10-30 17:29:44 [INFO]: Final category discount: 0
+2025-10-30 17:29:44 [INFO]: === END DEBUG ===
+
+2025-10-30 17:29:44 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:29:44 [INFO]: Product offer: 
+2025-10-30 17:29:44 [INFO]: Category offer: 
+2025-10-30 17:29:44 [INFO]: Current date: Thu Oct 30 2025 17:29:44 GMT+0530 (India Standard Time)
+2025-10-30 17:29:44 [INFO]: Final product discount: 0
+2025-10-30 17:29:44 [INFO]: Final category discount: 0
+2025-10-30 17:29:44 [INFO]: === END DEBUG ===
+
+2025-10-30 17:34:30 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:34:30 [INFO]: Product offer: 
+2025-10-30 17:34:30 [INFO]: Category offer: [object Object]
+2025-10-30 17:34:30 [INFO]: Current date: Thu Oct 30 2025 17:34:30 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Category has offer object
+2025-10-30 17:34:30 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Discount %: 45
+2025-10-30 17:34:30 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:34:30 [INFO]: Final product discount: 0
+2025-10-30 17:34:30 [INFO]: Final category discount: 45
+2025-10-30 17:34:30 [INFO]: === END DEBUG ===
+
+2025-10-30 17:34:30 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:34:30 [INFO]: Product offer: 
+2025-10-30 17:34:30 [INFO]: Category offer: [object Object]
+2025-10-30 17:34:30 [INFO]: Current date: Thu Oct 30 2025 17:34:30 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Category has offer object
+2025-10-30 17:34:30 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Discount %: 30
+2025-10-30 17:34:30 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:34:30 [INFO]: Final product discount: 0
+2025-10-30 17:34:30 [INFO]: Final category discount: 30
+2025-10-30 17:34:30 [INFO]: === END DEBUG ===
+
+2025-10-30 17:34:30 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:34:30 [INFO]: Product offer: 
+2025-10-30 17:34:30 [INFO]: Category offer: 
+2025-10-30 17:34:30 [INFO]: Current date: Thu Oct 30 2025 17:34:30 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Final product discount: 0
+2025-10-30 17:34:30 [INFO]: Final category discount: 0
+2025-10-30 17:34:30 [INFO]: === END DEBUG ===
+
+2025-10-30 17:34:30 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:34:30 [INFO]: Product offer: 
+2025-10-30 17:34:30 [INFO]: Category offer: 
+2025-10-30 17:34:30 [INFO]: Current date: Thu Oct 30 2025 17:34:30 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Final product discount: 0
+2025-10-30 17:34:30 [INFO]: Final category discount: 0
+2025-10-30 17:34:30 [INFO]: === END DEBUG ===
+
+2025-10-30 17:34:30 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:34:30 [INFO]: Product offer: 
+2025-10-30 17:34:30 [INFO]: Category offer: 
+2025-10-30 17:34:30 [INFO]: Current date: Thu Oct 30 2025 17:34:30 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Final product discount: 0
+2025-10-30 17:34:30 [INFO]: Final category discount: 0
+2025-10-30 17:34:30 [INFO]: === END DEBUG ===
+
+2025-10-30 17:34:30 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:34:30 [INFO]: Product offer: 
+2025-10-30 17:34:30 [INFO]: Category offer: 
+2025-10-30 17:34:30 [INFO]: Current date: Thu Oct 30 2025 17:34:30 GMT+0530 (India Standard Time)
+2025-10-30 17:34:30 [INFO]: Final product discount: 0
+2025-10-30 17:34:30 [INFO]: Final category discount: 0
+2025-10-30 17:34:30 [INFO]: === END DEBUG ===
+
+2025-10-30 17:58:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:58:46 [INFO]: Product offer: 
+2025-10-30 17:58:46 [INFO]: Category offer: [object Object]
+2025-10-30 17:58:46 [INFO]: Current date: Thu Oct 30 2025 17:58:46 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Category has offer object
+2025-10-30 17:58:46 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Discount %: 45
+2025-10-30 17:58:46 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:58:46 [INFO]: Final product discount: 0
+2025-10-30 17:58:46 [INFO]: Final category discount: 45
+2025-10-30 17:58:46 [INFO]: === END DEBUG ===
+
+2025-10-30 17:58:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:58:46 [INFO]: Product offer: 
+2025-10-30 17:58:46 [INFO]: Category offer: [object Object]
+2025-10-30 17:58:46 [INFO]: Current date: Thu Oct 30 2025 17:58:46 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Category has offer object
+2025-10-30 17:58:46 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Discount %: 30
+2025-10-30 17:58:46 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:58:46 [INFO]: Final product discount: 0
+2025-10-30 17:58:46 [INFO]: Final category discount: 30
+2025-10-30 17:58:46 [INFO]: === END DEBUG ===
+
+2025-10-30 17:58:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:58:46 [INFO]: Product offer: 
+2025-10-30 17:58:46 [INFO]: Category offer: 
+2025-10-30 17:58:46 [INFO]: Current date: Thu Oct 30 2025 17:58:46 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Final product discount: 0
+2025-10-30 17:58:46 [INFO]: Final category discount: 0
+2025-10-30 17:58:46 [INFO]: === END DEBUG ===
+
+2025-10-30 17:58:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:58:46 [INFO]: Product offer: 
+2025-10-30 17:58:46 [INFO]: Category offer: 
+2025-10-30 17:58:46 [INFO]: Current date: Thu Oct 30 2025 17:58:46 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Final product discount: 0
+2025-10-30 17:58:46 [INFO]: Final category discount: 0
+2025-10-30 17:58:46 [INFO]: === END DEBUG ===
+
+2025-10-30 17:58:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:58:46 [INFO]: Product offer: 
+2025-10-30 17:58:46 [INFO]: Category offer: 
+2025-10-30 17:58:46 [INFO]: Current date: Thu Oct 30 2025 17:58:46 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Final product discount: 0
+2025-10-30 17:58:46 [INFO]: Final category discount: 0
+2025-10-30 17:58:46 [INFO]: === END DEBUG ===
+
+2025-10-30 17:58:46 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:58:46 [INFO]: Product offer: 
+2025-10-30 17:58:46 [INFO]: Category offer: 
+2025-10-30 17:58:46 [INFO]: Current date: Thu Oct 30 2025 17:58:46 GMT+0530 (India Standard Time)
+2025-10-30 17:58:46 [INFO]: Final product discount: 0
+2025-10-30 17:58:46 [INFO]: Final category discount: 0
+2025-10-30 17:58:46 [INFO]: === END DEBUG ===
+
+2025-10-30 17:59:05 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:59:05 [INFO]: Product offer: 
+2025-10-30 17:59:05 [INFO]: Category offer: [object Object]
+2025-10-30 17:59:05 [INFO]: Current date: Thu Oct 30 2025 17:59:05 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: Category has offer object
+2025-10-30 17:59:05 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: Discount %: 45
+2025-10-30 17:59:05 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:59:05 [INFO]: Final product discount: 0
+2025-10-30 17:59:05 [INFO]: Final category discount: 45
+2025-10-30 17:59:05 [INFO]: === END DEBUG ===
+
+2025-10-30 17:59:05 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:59:05 [INFO]: Product offer: 
+2025-10-30 17:59:05 [INFO]: Category offer: [object Object]
+2025-10-30 17:59:05 [INFO]: Current date: Thu Oct 30 2025 17:59:05 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: Category has offer object
+2025-10-30 17:59:05 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: Discount %: 30
+2025-10-30 17:59:05 [INFO]: ✅ Category offer is VALID
+2025-10-30 17:59:05 [INFO]: Final product discount: 0
+2025-10-30 17:59:05 [INFO]: Final category discount: 30
+2025-10-30 17:59:05 [INFO]: === END DEBUG ===
+
+2025-10-30 17:59:05 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:59:05 [INFO]: Product offer: 
+2025-10-30 17:59:05 [INFO]: Category offer: 
+2025-10-30 17:59:05 [INFO]: Current date: Thu Oct 30 2025 17:59:05 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: Final product discount: 0
+2025-10-30 17:59:05 [INFO]: Final category discount: 0
+2025-10-30 17:59:05 [INFO]: === END DEBUG ===
+
+2025-10-30 17:59:05 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:59:05 [INFO]: Product offer: 
+2025-10-30 17:59:05 [INFO]: Category offer: 
+2025-10-30 17:59:05 [INFO]: Current date: Thu Oct 30 2025 17:59:05 GMT+0530 (India Standard Time)
+2025-10-30 17:59:05 [INFO]: Final product discount: 0
+2025-10-30 17:59:05 [INFO]: Final category discount: 0
+2025-10-30 17:59:05 [INFO]: === END DEBUG ===
+
+2025-10-30 17:59:05 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:59:06 [INFO]: Product offer: 
+2025-10-30 17:59:06 [INFO]: Category offer: 
+2025-10-30 17:59:06 [INFO]: Current date: Thu Oct 30 2025 17:59:05 GMT+0530 (India Standard Time)
+2025-10-30 17:59:06 [INFO]: Final product discount: 0
+2025-10-30 17:59:06 [INFO]: Final category discount: 0
+2025-10-30 17:59:06 [INFO]: === END DEBUG ===
+
+2025-10-30 17:59:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 17:59:06 [INFO]: Product offer: 
+2025-10-30 17:59:06 [INFO]: Category offer: 
+2025-10-30 17:59:06 [INFO]: Current date: Thu Oct 30 2025 17:59:06 GMT+0530 (India Standard Time)
+2025-10-30 17:59:06 [INFO]: Final product discount: 0
+2025-10-30 17:59:06 [INFO]: Final category discount: 0
+2025-10-30 17:59:06 [INFO]: === END DEBUG ===
+
+2025-10-30 18:06:14 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:06:14 [INFO]: Product offer: 
+2025-10-30 18:06:14 [INFO]: Category offer: [object Object]
+2025-10-30 18:06:14 [INFO]: Current date: Thu Oct 30 2025 18:06:14 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Category has offer object
+2025-10-30 18:06:14 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Discount %: 45
+2025-10-30 18:06:14 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:06:14 [INFO]: Final product discount: 0
+2025-10-30 18:06:14 [INFO]: Final category discount: 45
+2025-10-30 18:06:14 [INFO]: === END DEBUG ===
+
+2025-10-30 18:06:14 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:06:14 [INFO]: Product offer: 
+2025-10-30 18:06:14 [INFO]: Category offer: [object Object]
+2025-10-30 18:06:14 [INFO]: Current date: Thu Oct 30 2025 18:06:14 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Category has offer object
+2025-10-30 18:06:14 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Discount %: 30
+2025-10-30 18:06:14 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:06:14 [INFO]: Final product discount: 0
+2025-10-30 18:06:14 [INFO]: Final category discount: 30
+2025-10-30 18:06:14 [INFO]: === END DEBUG ===
+
+2025-10-30 18:06:14 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:06:14 [INFO]: Product offer: 
+2025-10-30 18:06:14 [INFO]: Category offer: 
+2025-10-30 18:06:14 [INFO]: Current date: Thu Oct 30 2025 18:06:14 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Final product discount: 0
+2025-10-30 18:06:14 [INFO]: Final category discount: 0
+2025-10-30 18:06:14 [INFO]: === END DEBUG ===
+
+2025-10-30 18:06:14 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:06:14 [INFO]: Product offer: 
+2025-10-30 18:06:14 [INFO]: Category offer: 
+2025-10-30 18:06:14 [INFO]: Current date: Thu Oct 30 2025 18:06:14 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Final product discount: 0
+2025-10-30 18:06:14 [INFO]: Final category discount: 0
+2025-10-30 18:06:14 [INFO]: === END DEBUG ===
+
+2025-10-30 18:06:14 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:06:14 [INFO]: Product offer: 
+2025-10-30 18:06:14 [INFO]: Category offer: 
+2025-10-30 18:06:14 [INFO]: Current date: Thu Oct 30 2025 18:06:14 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Final product discount: 0
+2025-10-30 18:06:14 [INFO]: Final category discount: 0
+2025-10-30 18:06:14 [INFO]: === END DEBUG ===
+
+2025-10-30 18:06:14 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:06:14 [INFO]: Product offer: 
+2025-10-30 18:06:14 [INFO]: Category offer: 
+2025-10-30 18:06:14 [INFO]: Current date: Thu Oct 30 2025 18:06:14 GMT+0530 (India Standard Time)
+2025-10-30 18:06:14 [INFO]: Final product discount: 0
+2025-10-30 18:06:14 [INFO]: Final category discount: 0
+2025-10-30 18:06:14 [INFO]: === END DEBUG ===
+
+2025-10-30 18:08:09 [INFO]: wishlistItems: 
+2025-10-30 18:08:09 [INFO]: alreaady  exist variants: 
+2025-10-30 18:08:09 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:08:09 [INFO]: Product offer: 
+2025-10-30 18:08:09 [INFO]: Category offer: [object Object]
+2025-10-30 18:08:09 [INFO]: Current date: Thu Oct 30 2025 18:08:09 GMT+0530 (India Standard Time)
+2025-10-30 18:08:09 [INFO]: Category has offer object
+2025-10-30 18:08:09 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:08:09 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:08:09 [INFO]: Discount %: 30
+2025-10-30 18:08:09 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:08:09 [INFO]: Final product discount: 0
+2025-10-30 18:08:09 [INFO]: Final category discount: 30
+2025-10-30 18:08:09 [INFO]: === END DEBUG ===
+
+2025-10-30 18:08:09 [INFO]: product with offer: [object Object]
+2025-10-30 18:11:51 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:51 [INFO]: Product offer: 
+2025-10-30 18:11:51 [INFO]: Category offer: [object Object]
+2025-10-30 18:11:51 [INFO]: Current date: Thu Oct 30 2025 18:11:51 GMT+0530 (India Standard Time)
+2025-10-30 18:11:51 [INFO]: Category has offer object
+2025-10-30 18:11:51 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:51 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:51 [INFO]: Discount %: 45
+2025-10-30 18:11:51 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:11:51 [INFO]: Final product discount: 0
+2025-10-30 18:11:51 [INFO]: Final category discount: 45
+2025-10-30 18:11:51 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:51 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:51 [INFO]: Product offer: 
+2025-10-30 18:11:51 [INFO]: Category offer: [object Object]
+2025-10-30 18:11:51 [INFO]: Current date: Thu Oct 30 2025 18:11:51 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Category has offer object
+2025-10-30 18:11:52 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Discount %: 30
+2025-10-30 18:11:52 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 30
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: [object Object]
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Category has offer object
+2025-10-30 18:11:52 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Discount %: 45
+2025-10-30 18:11:52 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 45
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: [object Object]
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Category has offer object
+2025-10-30 18:11:52 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Discount %: 30
+2025-10-30 18:11:52 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 30
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:11:52 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:11:52 [INFO]: Product offer: 
+2025-10-30 18:11:52 [INFO]: Category offer: 
+2025-10-30 18:11:52 [INFO]: Current date: Thu Oct 30 2025 18:11:52 GMT+0530 (India Standard Time)
+2025-10-30 18:11:52 [INFO]: Final product discount: 0
+2025-10-30 18:11:52 [INFO]: Final category discount: 0
+2025-10-30 18:11:52 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:17 [INFO]: loadOrderSuccess called
+2025-10-30 18:12:17 [INFO]: orderId from params: ORD-36
+2025-10-30 18:12:17 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-10-30 18:12:17 [INFO]: order found: yes
+2025-10-30 18:12:17 [INFO]: order details: [object Object]
+2025-10-30 18:12:17 [INFO]: Rendering order-success page
+2025-10-30 18:12:23 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:23 [INFO]: Product offer: 
+2025-10-30 18:12:23 [INFO]: Category offer: [object Object]
+2025-10-30 18:12:23 [INFO]: Current date: Thu Oct 30 2025 18:12:23 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Category has offer object
+2025-10-30 18:12:23 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Discount %: 45
+2025-10-30 18:12:23 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:12:23 [INFO]: Final product discount: 0
+2025-10-30 18:12:23 [INFO]: Final category discount: 45
+2025-10-30 18:12:23 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:23 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:23 [INFO]: Product offer: 
+2025-10-30 18:12:23 [INFO]: Category offer: [object Object]
+2025-10-30 18:12:23 [INFO]: Current date: Thu Oct 30 2025 18:12:23 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Category has offer object
+2025-10-30 18:12:23 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Discount %: 30
+2025-10-30 18:12:23 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:12:23 [INFO]: Final product discount: 0
+2025-10-30 18:12:23 [INFO]: Final category discount: 30
+2025-10-30 18:12:23 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:23 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:23 [INFO]: Product offer: 
+2025-10-30 18:12:23 [INFO]: Category offer: 
+2025-10-30 18:12:23 [INFO]: Current date: Thu Oct 30 2025 18:12:23 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Final product discount: 0
+2025-10-30 18:12:23 [INFO]: Final category discount: 0
+2025-10-30 18:12:23 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:23 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:23 [INFO]: Product offer: 
+2025-10-30 18:12:23 [INFO]: Category offer: 
+2025-10-30 18:12:23 [INFO]: Current date: Thu Oct 30 2025 18:12:23 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Final product discount: 0
+2025-10-30 18:12:23 [INFO]: Final category discount: 0
+2025-10-30 18:12:23 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:23 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:23 [INFO]: Product offer: 
+2025-10-30 18:12:23 [INFO]: Category offer: 
+2025-10-30 18:12:23 [INFO]: Current date: Thu Oct 30 2025 18:12:23 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Final product discount: 0
+2025-10-30 18:12:23 [INFO]: Final category discount: 0
+2025-10-30 18:12:23 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:23 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:23 [INFO]: Product offer: 
+2025-10-30 18:12:23 [INFO]: Category offer: 
+2025-10-30 18:12:23 [INFO]: Current date: Thu Oct 30 2025 18:12:23 GMT+0530 (India Standard Time)
+2025-10-30 18:12:23 [INFO]: Final product discount: 0
+2025-10-30 18:12:23 [INFO]: Final category discount: 0
+2025-10-30 18:12:23 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:29 [INFO]: Product offer: 
+2025-10-30 18:12:29 [INFO]: Category offer: [object Object]
+2025-10-30 18:12:29 [INFO]: Current date: Thu Oct 30 2025 18:12:29 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Category has offer object
+2025-10-30 18:12:29 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Discount %: 45
+2025-10-30 18:12:29 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:12:29 [INFO]: Final product discount: 0
+2025-10-30 18:12:29 [INFO]: Final category discount: 45
+2025-10-30 18:12:29 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:29 [INFO]: Product offer: 
+2025-10-30 18:12:29 [INFO]: Category offer: [object Object]
+2025-10-30 18:12:29 [INFO]: Current date: Thu Oct 30 2025 18:12:29 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Category has offer object
+2025-10-30 18:12:29 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Discount %: 30
+2025-10-30 18:12:29 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:12:29 [INFO]: Final product discount: 0
+2025-10-30 18:12:29 [INFO]: Final category discount: 30
+2025-10-30 18:12:29 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:29 [INFO]: Product offer: 
+2025-10-30 18:12:29 [INFO]: Category offer: 
+2025-10-30 18:12:29 [INFO]: Current date: Thu Oct 30 2025 18:12:29 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Final product discount: 0
+2025-10-30 18:12:29 [INFO]: Final category discount: 0
+2025-10-30 18:12:29 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:29 [INFO]: Product offer: 
+2025-10-30 18:12:29 [INFO]: Category offer: 
+2025-10-30 18:12:29 [INFO]: Current date: Thu Oct 30 2025 18:12:29 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Final product discount: 0
+2025-10-30 18:12:29 [INFO]: Final category discount: 0
+2025-10-30 18:12:29 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:29 [INFO]: Product offer: 
+2025-10-30 18:12:29 [INFO]: Category offer: 
+2025-10-30 18:12:29 [INFO]: Current date: Thu Oct 30 2025 18:12:29 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Final product discount: 0
+2025-10-30 18:12:29 [INFO]: Final category discount: 0
+2025-10-30 18:12:29 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:29 [INFO]: Product offer: 
+2025-10-30 18:12:29 [INFO]: Category offer: 
+2025-10-30 18:12:29 [INFO]: Current date: Thu Oct 30 2025 18:12:29 GMT+0530 (India Standard Time)
+2025-10-30 18:12:29 [INFO]: Final product discount: 0
+2025-10-30 18:12:29 [INFO]: Final category discount: 0
+2025-10-30 18:12:29 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:38 [INFO]: Product offer: 
+2025-10-30 18:12:38 [INFO]: Category offer: 
+2025-10-30 18:12:38 [INFO]: Current date: Thu Oct 30 2025 18:12:38 GMT+0530 (India Standard Time)
+2025-10-30 18:12:38 [INFO]: Final product discount: 0
+2025-10-30 18:12:38 [INFO]: Final category discount: 0
+2025-10-30 18:12:38 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:38 [INFO]: Product offer: 
+2025-10-30 18:12:38 [INFO]: Category offer: 
+2025-10-30 18:12:38 [INFO]: Current date: Thu Oct 30 2025 18:12:38 GMT+0530 (India Standard Time)
+2025-10-30 18:12:38 [INFO]: Final product discount: 0
+2025-10-30 18:12:38 [INFO]: Final category discount: 0
+2025-10-30 18:12:38 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:38 [INFO]: Product offer: 
+2025-10-30 18:12:38 [INFO]: Category offer: 
+2025-10-30 18:12:38 [INFO]: Current date: Thu Oct 30 2025 18:12:38 GMT+0530 (India Standard Time)
+2025-10-30 18:12:38 [INFO]: Final product discount: 0
+2025-10-30 18:12:38 [INFO]: Final category discount: 0
+2025-10-30 18:12:38 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:38 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:38 [INFO]: Product offer: 
+2025-10-30 18:12:38 [INFO]: Category offer: 
+2025-10-30 18:12:38 [INFO]: Current date: Thu Oct 30 2025 18:12:38 GMT+0530 (India Standard Time)
+2025-10-30 18:12:38 [INFO]: Final product discount: 0
+2025-10-30 18:12:38 [INFO]: Final category discount: 0
+2025-10-30 18:12:39 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:39 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:39 [INFO]: Product offer: 
+2025-10-30 18:12:39 [INFO]: Category offer: [object Object]
+2025-10-30 18:12:39 [INFO]: Current date: Thu Oct 30 2025 18:12:39 GMT+0530 (India Standard Time)
+2025-10-30 18:12:39 [INFO]: Category has offer object
+2025-10-30 18:12:39 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:39 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:39 [INFO]: Discount %: 30
+2025-10-30 18:12:39 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:12:39 [INFO]: Final product discount: 0
+2025-10-30 18:12:39 [INFO]: Final category discount: 30
+2025-10-30 18:12:39 [INFO]: === END DEBUG ===
+
+2025-10-30 18:12:39 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:12:39 [INFO]: Product offer: 
+2025-10-30 18:12:39 [INFO]: Category offer: [object Object]
+2025-10-30 18:12:39 [INFO]: Current date: Thu Oct 30 2025 18:12:39 GMT+0530 (India Standard Time)
+2025-10-30 18:12:39 [INFO]: Category has offer object
+2025-10-30 18:12:39 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:39 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:12:39 [INFO]: Discount %: 45
+2025-10-30 18:12:39 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:12:39 [INFO]: Final product discount: 0
+2025-10-30 18:12:39 [INFO]: Final category discount: 45
+2025-10-30 18:12:39 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:48 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:48 [INFO]: Product offer: 
+2025-10-30 18:46:48 [INFO]: Category offer: [object Object]
+2025-10-30 18:46:48 [INFO]: Current date: Thu Oct 30 2025 18:46:48 GMT+0530 (India Standard Time)
+2025-10-30 18:46:48 [INFO]: Category has offer object
+2025-10-30 18:46:48 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:48 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:48 [INFO]: Discount %: 45
+2025-10-30 18:46:48 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:46:48 [INFO]: Final product discount: 0
+2025-10-30 18:46:48 [INFO]: Final category discount: 45
+2025-10-30 18:46:48 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:48 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:48 [INFO]: Product offer: 
+2025-10-30 18:46:48 [INFO]: Category offer: 
+2025-10-30 18:46:48 [INFO]: Current date: Thu Oct 30 2025 18:46:48 GMT+0530 (India Standard Time)
+2025-10-30 18:46:48 [INFO]: Final product discount: 0
+2025-10-30 18:46:48 [INFO]: Final category discount: 0
+2025-10-30 18:46:48 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:48 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:48 [INFO]: Product offer: 
+2025-10-30 18:46:48 [INFO]: Category offer: 
+2025-10-30 18:46:48 [INFO]: Current date: Thu Oct 30 2025 18:46:48 GMT+0530 (India Standard Time)
+2025-10-30 18:46:48 [INFO]: Final product discount: 0
+2025-10-30 18:46:48 [INFO]: Final category discount: 0
+2025-10-30 18:46:48 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:48 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:48 [INFO]: Product offer: 
+2025-10-30 18:46:48 [INFO]: Category offer: 
+2025-10-30 18:46:48 [INFO]: Current date: Thu Oct 30 2025 18:46:48 GMT+0530 (India Standard Time)
+2025-10-30 18:46:48 [INFO]: Final product discount: 0
+2025-10-30 18:46:48 [INFO]: Final category discount: 0
+2025-10-30 18:46:49 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:49 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:49 [INFO]: Product offer: 
+2025-10-30 18:46:49 [INFO]: Category offer: [object Object]
+2025-10-30 18:46:49 [INFO]: Current date: Thu Oct 30 2025 18:46:49 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: Category has offer object
+2025-10-30 18:46:49 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: Discount %: 30
+2025-10-30 18:46:49 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:46:49 [INFO]: Final product discount: 0
+2025-10-30 18:46:49 [INFO]: Final category discount: 30
+2025-10-30 18:46:49 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:49 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:49 [INFO]: Product offer: 
+2025-10-30 18:46:49 [INFO]: Category offer: 
+2025-10-30 18:46:49 [INFO]: Current date: Thu Oct 30 2025 18:46:49 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: Final product discount: 0
+2025-10-30 18:46:49 [INFO]: Final category discount: 0
+2025-10-30 18:46:49 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:49 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:49 [INFO]: Product offer: 
+2025-10-30 18:46:49 [INFO]: Category offer: 
+2025-10-30 18:46:49 [INFO]: Current date: Thu Oct 30 2025 18:46:49 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: Final product discount: 0
+2025-10-30 18:46:49 [INFO]: Final category discount: 0
+2025-10-30 18:46:49 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:49 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:49 [INFO]: Product offer: 
+2025-10-30 18:46:49 [INFO]: Category offer: 
+2025-10-30 18:46:49 [INFO]: Current date: Thu Oct 30 2025 18:46:49 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: Final product discount: 0
+2025-10-30 18:46:49 [INFO]: Final category discount: 0
+2025-10-30 18:46:49 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:49 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:49 [INFO]: Product offer: 
+2025-10-30 18:46:49 [INFO]: Category offer: 
+2025-10-30 18:46:49 [INFO]: Current date: Thu Oct 30 2025 18:46:49 GMT+0530 (India Standard Time)
+2025-10-30 18:46:49 [INFO]: Final product discount: 0
+2025-10-30 18:46:49 [INFO]: Final category discount: 0
+2025-10-30 18:46:49 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:50 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:50 [INFO]: Product offer: 
+2025-10-30 18:46:50 [INFO]: Category offer: [object Object]
+2025-10-30 18:46:50 [INFO]: Current date: Thu Oct 30 2025 18:46:50 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: Category has offer object
+2025-10-30 18:46:50 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: Discount %: 45
+2025-10-30 18:46:50 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:46:50 [INFO]: Final product discount: 0
+2025-10-30 18:46:50 [INFO]: Final category discount: 45
+2025-10-30 18:46:50 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:50 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:50 [INFO]: Product offer: 
+2025-10-30 18:46:50 [INFO]: Category offer: [object Object]
+2025-10-30 18:46:50 [INFO]: Current date: Thu Oct 30 2025 18:46:50 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: Category has offer object
+2025-10-30 18:46:50 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: Discount %: 30
+2025-10-30 18:46:50 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:46:50 [INFO]: Final product discount: 0
+2025-10-30 18:46:50 [INFO]: Final category discount: 30
+2025-10-30 18:46:50 [INFO]: === END DEBUG ===
+
+2025-10-30 18:46:50 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:46:50 [INFO]: Product offer: 
+2025-10-30 18:46:50 [INFO]: Category offer: 
+2025-10-30 18:46:50 [INFO]: Current date: Thu Oct 30 2025 18:46:50 GMT+0530 (India Standard Time)
+2025-10-30 18:46:50 [INFO]: Final product discount: 0
+2025-10-30 18:46:50 [INFO]: Final category discount: 0
+2025-10-30 18:46:50 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: [object Object]
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Category has offer object
+2025-10-30 18:47:08 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Discount %: 45
+2025-10-30 18:47:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 45
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: [object Object]
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Category has offer object
+2025-10-30 18:47:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Discount %: 30
+2025-10-30 18:47:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 30
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: [object Object]
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Category has offer object
+2025-10-30 18:47:08 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Discount %: 45
+2025-10-30 18:47:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 45
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: [object Object]
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Category has offer object
+2025-10-30 18:47:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Discount %: 30
+2025-10-30 18:47:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 30
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:08 [INFO]: Product offer: 
+2025-10-30 18:47:08 [INFO]: Category offer: 
+2025-10-30 18:47:08 [INFO]: Current date: Thu Oct 30 2025 18:47:08 GMT+0530 (India Standard Time)
+2025-10-30 18:47:08 [INFO]: Final product discount: 0
+2025-10-30 18:47:08 [INFO]: Final category discount: 0
+2025-10-30 18:47:08 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:20 [INFO]: wishlistItems: 
+2025-10-30 18:47:20 [INFO]: alreaady  exist variants: 
+2025-10-30 18:47:20 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:20 [INFO]: Product offer: 
+2025-10-30 18:47:20 [INFO]: Category offer: [object Object]
+2025-10-30 18:47:20 [INFO]: Current date: Thu Oct 30 2025 18:47:20 GMT+0530 (India Standard Time)
+2025-10-30 18:47:20 [INFO]: Category has offer object
+2025-10-30 18:47:20 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:20 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:20 [INFO]: Discount %: 45
+2025-10-30 18:47:20 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:47:20 [INFO]: Final product discount: 0
+2025-10-30 18:47:20 [INFO]: Final category discount: 45
+2025-10-30 18:47:20 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:20 [INFO]: product with offer: [object Object]
+2025-10-30 18:47:20 [INFO]: wishlistItems: 
+2025-10-30 18:47:20 [INFO]: alreaady  exist variants: 
+2025-10-30 18:47:20 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 18:47:20 [INFO]: Product offer: 
+2025-10-30 18:47:20 [INFO]: Category offer: [object Object]
+2025-10-30 18:47:20 [INFO]: Current date: Thu Oct 30 2025 18:47:20 GMT+0530 (India Standard Time)
+2025-10-30 18:47:20 [INFO]: Category has offer object
+2025-10-30 18:47:20 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:20 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 18:47:20 [INFO]: Discount %: 45
+2025-10-30 18:47:20 [INFO]: ✅ Category offer is VALID
+2025-10-30 18:47:20 [INFO]: Final product discount: 0
+2025-10-30 18:47:20 [INFO]: Final category discount: 45
+2025-10-30 18:47:20 [INFO]: === END DEBUG ===
+
+2025-10-30 18:47:20 [INFO]: product with offer: [object Object]
+2025-10-30 19:19:26 [INFO]: node starting
+2025-10-30 19:19:26 [INFO]: server running at http://localhost:3000
+2025-10-30 19:19:26 [INFO]:  MongoDB connected
+2025-10-30 19:20:45 [INFO]: node starting
+2025-10-30 19:20:45 [INFO]: server running at http://localhost:3000
+2025-10-30 19:20:45 [INFO]:  MongoDB connected
+2025-10-30 19:21:20 [INFO]: node starting
+2025-10-30 19:21:20 [INFO]: server running at http://localhost:3000
+2025-10-30 19:21:20 [INFO]:  MongoDB connected
+2025-10-30 19:22:55 [INFO]: node starting
+2025-10-30 19:22:55 [INFO]: server running at http://localhost:3000
+2025-10-30 19:22:55 [INFO]:  MongoDB connected
+2025-10-30 19:23:55 [INFO]: node starting
+2025-10-30 19:23:55 [INFO]: server running at http://localhost:3000
+2025-10-30 19:23:55 [INFO]:  MongoDB connected
+2025-10-30 19:24:24 [INFO]: node starting
+2025-10-30 19:24:24 [INFO]: server running at http://localhost:3000
+2025-10-30 19:24:24 [INFO]:  MongoDB connected
+2025-10-30 19:25:21 [INFO]: node starting
+2025-10-30 19:25:21 [INFO]: server running at http://localhost:3000
+2025-10-30 19:25:21 [INFO]:  MongoDB connected
+2025-10-30 19:26:54 [INFO]: node starting
+2025-10-30 19:26:54 [INFO]: server running at http://localhost:3000
+2025-10-30 19:26:54 [INFO]:  MongoDB connected
+2025-10-30 19:27:56 [INFO]: node starting
+2025-10-30 19:27:56 [INFO]: server running at http://localhost:3000
+2025-10-30 19:27:56 [INFO]:  MongoDB connected
+2025-10-30 19:32:50 [INFO]: node starting
+2025-10-30 19:32:50 [INFO]: server running at http://localhost:3000
+2025-10-30 19:32:50 [INFO]:  MongoDB connected
+2025-10-30 19:33:32 [INFO]: node starting
+2025-10-30 19:33:32 [INFO]: server running at http://localhost:3000
+2025-10-30 19:33:32 [INFO]:  MongoDB connected
+2025-10-30 19:34:22 [INFO]: node starting
+2025-10-30 19:34:22 [INFO]: server running at http://localhost:3000
+2025-10-30 19:34:22 [INFO]:  MongoDB connected
+2025-10-30 19:35:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:35:08 [INFO]: Product offer: 
+2025-10-30 19:35:08 [INFO]: Category offer: [object Object]
+2025-10-30 19:35:08 [INFO]: Current date: Thu Oct 30 2025 19:35:08 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Category has offer object
+2025-10-30 19:35:08 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Discount %: 45
+2025-10-30 19:35:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:35:08 [INFO]: Final product discount: 0
+2025-10-30 19:35:08 [INFO]: Final category discount: 45
+2025-10-30 19:35:08 [INFO]: === END DEBUG ===
+
+2025-10-30 19:35:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:35:08 [INFO]: Product offer: 
+2025-10-30 19:35:08 [INFO]: Category offer: [object Object]
+2025-10-30 19:35:08 [INFO]: Current date: Thu Oct 30 2025 19:35:08 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Category has offer object
+2025-10-30 19:35:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Discount %: 30
+2025-10-30 19:35:08 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:35:08 [INFO]: Final product discount: 0
+2025-10-30 19:35:08 [INFO]: Final category discount: 30
+2025-10-30 19:35:08 [INFO]: === END DEBUG ===
+
+2025-10-30 19:35:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:35:08 [INFO]: Product offer: 
+2025-10-30 19:35:08 [INFO]: Category offer: 
+2025-10-30 19:35:08 [INFO]: Current date: Thu Oct 30 2025 19:35:08 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Final product discount: 0
+2025-10-30 19:35:08 [INFO]: Final category discount: 0
+2025-10-30 19:35:08 [INFO]: === END DEBUG ===
+
+2025-10-30 19:35:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:35:08 [INFO]: Product offer: 
+2025-10-30 19:35:08 [INFO]: Category offer: 
+2025-10-30 19:35:08 [INFO]: Current date: Thu Oct 30 2025 19:35:08 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Final product discount: 0
+2025-10-30 19:35:08 [INFO]: Final category discount: 0
+2025-10-30 19:35:08 [INFO]: === END DEBUG ===
+
+2025-10-30 19:35:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:35:08 [INFO]: Product offer: 
+2025-10-30 19:35:08 [INFO]: Category offer: 
+2025-10-30 19:35:08 [INFO]: Current date: Thu Oct 30 2025 19:35:08 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Final product discount: 0
+2025-10-30 19:35:08 [INFO]: Final category discount: 0
+2025-10-30 19:35:08 [INFO]: === END DEBUG ===
+
+2025-10-30 19:35:08 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:35:08 [INFO]: Product offer: 
+2025-10-30 19:35:08 [INFO]: Category offer: 
+2025-10-30 19:35:08 [INFO]: Current date: Thu Oct 30 2025 19:35:08 GMT+0530 (India Standard Time)
+2025-10-30 19:35:08 [INFO]: Final product discount: 0
+2025-10-30 19:35:08 [INFO]: Final category discount: 0
+2025-10-30 19:35:08 [INFO]: === END DEBUG ===
+
+2025-10-30 19:39:49 [INFO]: node starting
+2025-10-30 19:39:49 [INFO]: server running at http://localhost:3000
+2025-10-30 19:39:49 [INFO]:  MongoDB connected
+2025-10-30 19:40:22 [INFO]: node starting
+2025-10-30 19:40:22 [INFO]: server running at http://localhost:3000
+2025-10-30 19:40:22 [INFO]:  MongoDB connected
+2025-10-30 19:49:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:49:29 [INFO]: Product offer: 
+2025-10-30 19:49:29 [INFO]: Category offer: [object Object]
+2025-10-30 19:49:29 [INFO]: Current date: Thu Oct 30 2025 19:49:29 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Category has offer object
+2025-10-30 19:49:29 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Discount %: 45
+2025-10-30 19:49:29 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:49:29 [INFO]: Final product discount: 0
+2025-10-30 19:49:29 [INFO]: Final category discount: 45
+2025-10-30 19:49:29 [INFO]: === END DEBUG ===
+
+2025-10-30 19:49:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:49:29 [INFO]: Product offer: 
+2025-10-30 19:49:29 [INFO]: Category offer: [object Object]
+2025-10-30 19:49:29 [INFO]: Current date: Thu Oct 30 2025 19:49:29 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Category has offer object
+2025-10-30 19:49:29 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Discount %: 30
+2025-10-30 19:49:29 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:49:29 [INFO]: Final product discount: 0
+2025-10-30 19:49:29 [INFO]: Final category discount: 30
+2025-10-30 19:49:29 [INFO]: === END DEBUG ===
+
+2025-10-30 19:49:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:49:29 [INFO]: Product offer: 
+2025-10-30 19:49:29 [INFO]: Category offer: 
+2025-10-30 19:49:29 [INFO]: Current date: Thu Oct 30 2025 19:49:29 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Final product discount: 0
+2025-10-30 19:49:29 [INFO]: Final category discount: 0
+2025-10-30 19:49:29 [INFO]: === END DEBUG ===
+
+2025-10-30 19:49:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:49:29 [INFO]: Product offer: 
+2025-10-30 19:49:29 [INFO]: Category offer: 
+2025-10-30 19:49:29 [INFO]: Current date: Thu Oct 30 2025 19:49:29 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Final product discount: 0
+2025-10-30 19:49:29 [INFO]: Final category discount: 0
+2025-10-30 19:49:29 [INFO]: === END DEBUG ===
+
+2025-10-30 19:49:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:49:29 [INFO]: Product offer: 
+2025-10-30 19:49:29 [INFO]: Category offer: 
+2025-10-30 19:49:29 [INFO]: Current date: Thu Oct 30 2025 19:49:29 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Final product discount: 0
+2025-10-30 19:49:29 [INFO]: Final category discount: 0
+2025-10-30 19:49:29 [INFO]: === END DEBUG ===
+
+2025-10-30 19:49:29 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:49:29 [INFO]: Product offer: 
+2025-10-30 19:49:29 [INFO]: Category offer: 
+2025-10-30 19:49:29 [INFO]: Current date: Thu Oct 30 2025 19:49:29 GMT+0530 (India Standard Time)
+2025-10-30 19:49:29 [INFO]: Final product discount: 0
+2025-10-30 19:49:29 [INFO]: Final category discount: 0
+2025-10-30 19:49:29 [INFO]: === END DEBUG ===
+
+2025-10-30 19:51:25 [INFO]: node starting
+2025-10-30 19:51:25 [INFO]: server running at http://localhost:3000
+2025-10-30 19:51:25 [INFO]:  MongoDB connected
+2025-10-30 19:51:36 [INFO]: node starting
+2025-10-30 19:51:36 [INFO]: server running at http://localhost:3000
+2025-10-30 19:51:36 [INFO]:  MongoDB connected
+2025-10-30 19:52:03 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:03 [INFO]: Product offer: 
+2025-10-30 19:52:03 [INFO]: Category offer: [object Object]
+2025-10-30 19:52:03 [INFO]: Current date: Thu Oct 30 2025 19:52:03 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Category has offer object
+2025-10-30 19:52:04 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Discount %: 45
+2025-10-30 19:52:04 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:52:04 [INFO]: Final product discount: 0
+2025-10-30 19:52:04 [INFO]: Final category discount: 45
+2025-10-30 19:52:04 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:04 [INFO]: Product offer: 
+2025-10-30 19:52:04 [INFO]: Category offer: [object Object]
+2025-10-30 19:52:04 [INFO]: Current date: Thu Oct 30 2025 19:52:04 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Category has offer object
+2025-10-30 19:52:04 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Discount %: 30
+2025-10-30 19:52:04 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:52:04 [INFO]: Final product discount: 0
+2025-10-30 19:52:04 [INFO]: Final category discount: 30
+2025-10-30 19:52:04 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:04 [INFO]: Product offer: 
+2025-10-30 19:52:04 [INFO]: Category offer: 
+2025-10-30 19:52:04 [INFO]: Current date: Thu Oct 30 2025 19:52:04 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Final product discount: 0
+2025-10-30 19:52:04 [INFO]: Final category discount: 0
+2025-10-30 19:52:04 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:04 [INFO]: Product offer: 
+2025-10-30 19:52:04 [INFO]: Category offer: 
+2025-10-30 19:52:04 [INFO]: Current date: Thu Oct 30 2025 19:52:04 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Final product discount: 0
+2025-10-30 19:52:04 [INFO]: Final category discount: 0
+2025-10-30 19:52:04 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:04 [INFO]: Product offer: 
+2025-10-30 19:52:04 [INFO]: Category offer: 
+2025-10-30 19:52:04 [INFO]: Current date: Thu Oct 30 2025 19:52:04 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Final product discount: 0
+2025-10-30 19:52:04 [INFO]: Final category discount: 0
+2025-10-30 19:52:04 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:04 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:04 [INFO]: Product offer: 
+2025-10-30 19:52:04 [INFO]: Category offer: 
+2025-10-30 19:52:04 [INFO]: Current date: Thu Oct 30 2025 19:52:04 GMT+0530 (India Standard Time)
+2025-10-30 19:52:04 [INFO]: Final product discount: 0
+2025-10-30 19:52:04 [INFO]: Final category discount: 0
+2025-10-30 19:52:04 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: [object Object]
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Category has offer object
+2025-10-30 19:52:06 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Discount %: 45
+2025-10-30 19:52:06 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 45
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: [object Object]
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Category has offer object
+2025-10-30 19:52:06 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Discount %: 30
+2025-10-30 19:52:06 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 30
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: [object Object]
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Category has offer object
+2025-10-30 19:52:06 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Discount %: 45
+2025-10-30 19:52:06 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 45
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: [object Object]
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Category has offer object
+2025-10-30 19:52:06 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Discount %: 30
+2025-10-30 19:52:06 [INFO]: ✅ Category offer is VALID
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 30
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 19:52:06 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 19:52:06 [INFO]: Product offer: 
+2025-10-30 19:52:06 [INFO]: Category offer: 
+2025-10-30 19:52:06 [INFO]: Current date: Thu Oct 30 2025 19:52:06 GMT+0530 (India Standard Time)
+2025-10-30 19:52:06 [INFO]: Final product discount: 0
+2025-10-30 19:52:06 [INFO]: Final category discount: 0
+2025-10-30 19:52:06 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:18 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:18 [INFO]: Product offer: 
+2025-10-30 20:01:18 [INFO]: Category offer: [object Object]
+2025-10-30 20:01:18 [INFO]: Current date: Thu Oct 30 2025 20:01:18 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Category has offer object
+2025-10-30 20:01:18 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Discount %: 45
+2025-10-30 20:01:18 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:01:18 [INFO]: Final product discount: 0
+2025-10-30 20:01:18 [INFO]: Final category discount: 45
+2025-10-30 20:01:18 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:18 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:18 [INFO]: Product offer: 
+2025-10-30 20:01:18 [INFO]: Category offer: [object Object]
+2025-10-30 20:01:18 [INFO]: Current date: Thu Oct 30 2025 20:01:18 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Category has offer object
+2025-10-30 20:01:18 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Discount %: 30
+2025-10-30 20:01:18 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:01:18 [INFO]: Final product discount: 0
+2025-10-30 20:01:18 [INFO]: Final category discount: 30
+2025-10-30 20:01:18 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:18 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:18 [INFO]: Product offer: 
+2025-10-30 20:01:18 [INFO]: Category offer: 
+2025-10-30 20:01:18 [INFO]: Current date: Thu Oct 30 2025 20:01:18 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Final product discount: 0
+2025-10-30 20:01:18 [INFO]: Final category discount: 0
+2025-10-30 20:01:18 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:18 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:18 [INFO]: Product offer: 
+2025-10-30 20:01:18 [INFO]: Category offer: 
+2025-10-30 20:01:18 [INFO]: Current date: Thu Oct 30 2025 20:01:18 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Final product discount: 0
+2025-10-30 20:01:18 [INFO]: Final category discount: 0
+2025-10-30 20:01:18 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:18 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:18 [INFO]: Product offer: 
+2025-10-30 20:01:18 [INFO]: Category offer: 
+2025-10-30 20:01:18 [INFO]: Current date: Thu Oct 30 2025 20:01:18 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Final product discount: 0
+2025-10-30 20:01:18 [INFO]: Final category discount: 0
+2025-10-30 20:01:18 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:18 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:18 [INFO]: Product offer: 
+2025-10-30 20:01:18 [INFO]: Category offer: 
+2025-10-30 20:01:18 [INFO]: Current date: Thu Oct 30 2025 20:01:18 GMT+0530 (India Standard Time)
+2025-10-30 20:01:18 [INFO]: Final product discount: 0
+2025-10-30 20:01:18 [INFO]: Final category discount: 0
+2025-10-30 20:01:18 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:40 [INFO]: Product offer: 
+2025-10-30 20:01:40 [INFO]: Category offer: [object Object]
+2025-10-30 20:01:40 [INFO]: Current date: Thu Oct 30 2025 20:01:40 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Category has offer object
+2025-10-30 20:01:40 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Discount %: 45
+2025-10-30 20:01:40 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:01:40 [INFO]: Final product discount: 0
+2025-10-30 20:01:40 [INFO]: Final category discount: 45
+2025-10-30 20:01:40 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:40 [INFO]: Product offer: 
+2025-10-30 20:01:40 [INFO]: Category offer: [object Object]
+2025-10-30 20:01:40 [INFO]: Current date: Thu Oct 30 2025 20:01:40 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Category has offer object
+2025-10-30 20:01:40 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Discount %: 30
+2025-10-30 20:01:40 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:01:40 [INFO]: Final product discount: 0
+2025-10-30 20:01:40 [INFO]: Final category discount: 30
+2025-10-30 20:01:40 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:40 [INFO]: Product offer: 
+2025-10-30 20:01:40 [INFO]: Category offer: 
+2025-10-30 20:01:40 [INFO]: Current date: Thu Oct 30 2025 20:01:40 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Final product discount: 0
+2025-10-30 20:01:40 [INFO]: Final category discount: 0
+2025-10-30 20:01:40 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:40 [INFO]: Product offer: 
+2025-10-30 20:01:40 [INFO]: Category offer: 
+2025-10-30 20:01:40 [INFO]: Current date: Thu Oct 30 2025 20:01:40 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Final product discount: 0
+2025-10-30 20:01:40 [INFO]: Final category discount: 0
+2025-10-30 20:01:40 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:40 [INFO]: Product offer: 
+2025-10-30 20:01:40 [INFO]: Category offer: 
+2025-10-30 20:01:40 [INFO]: Current date: Thu Oct 30 2025 20:01:40 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Final product discount: 0
+2025-10-30 20:01:40 [INFO]: Final category discount: 0
+2025-10-30 20:01:40 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:40 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:40 [INFO]: Product offer: 
+2025-10-30 20:01:40 [INFO]: Category offer: 
+2025-10-30 20:01:40 [INFO]: Current date: Thu Oct 30 2025 20:01:40 GMT+0530 (India Standard Time)
+2025-10-30 20:01:40 [INFO]: Final product discount: 0
+2025-10-30 20:01:40 [INFO]: Final category discount: 0
+2025-10-30 20:01:40 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:59 [INFO]: wishlistItems: 
+2025-10-30 20:01:59 [INFO]: alreaady  exist variants: 
+2025-10-30 20:01:59 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:01:59 [INFO]: Product offer: 
+2025-10-30 20:01:59 [INFO]: Category offer: 
+2025-10-30 20:01:59 [INFO]: Current date: Thu Oct 30 2025 20:01:59 GMT+0530 (India Standard Time)
+2025-10-30 20:01:59 [INFO]: Final product discount: 0
+2025-10-30 20:01:59 [INFO]: Final category discount: 0
+2025-10-30 20:01:59 [INFO]: === END DEBUG ===
+
+2025-10-30 20:01:59 [INFO]: product with offer: [object Object]
+2025-10-30 20:02:10 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:02:10 [INFO]: Product offer: 
+2025-10-30 20:02:10 [INFO]: Category offer: [object Object]
+2025-10-30 20:02:10 [INFO]: Current date: Thu Oct 30 2025 20:02:10 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Category has offer object
+2025-10-30 20:02:10 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Discount %: 45
+2025-10-30 20:02:10 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:02:10 [INFO]: Final product discount: 0
+2025-10-30 20:02:10 [INFO]: Final category discount: 45
+2025-10-30 20:02:10 [INFO]: === END DEBUG ===
+
+2025-10-30 20:02:10 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:02:10 [INFO]: Product offer: 
+2025-10-30 20:02:10 [INFO]: Category offer: [object Object]
+2025-10-30 20:02:10 [INFO]: Current date: Thu Oct 30 2025 20:02:10 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Category has offer object
+2025-10-30 20:02:10 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Discount %: 30
+2025-10-30 20:02:10 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:02:10 [INFO]: Final product discount: 0
+2025-10-30 20:02:10 [INFO]: Final category discount: 30
+2025-10-30 20:02:10 [INFO]: === END DEBUG ===
+
+2025-10-30 20:02:10 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:02:10 [INFO]: Product offer: 
+2025-10-30 20:02:10 [INFO]: Category offer: 
+2025-10-30 20:02:10 [INFO]: Current date: Thu Oct 30 2025 20:02:10 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Final product discount: 0
+2025-10-30 20:02:10 [INFO]: Final category discount: 0
+2025-10-30 20:02:10 [INFO]: === END DEBUG ===
+
+2025-10-30 20:02:10 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:02:10 [INFO]: Product offer: 
+2025-10-30 20:02:10 [INFO]: Category offer: 
+2025-10-30 20:02:10 [INFO]: Current date: Thu Oct 30 2025 20:02:10 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Final product discount: 0
+2025-10-30 20:02:10 [INFO]: Final category discount: 0
+2025-10-30 20:02:10 [INFO]: === END DEBUG ===
+
+2025-10-30 20:02:10 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:02:10 [INFO]: Product offer: 
+2025-10-30 20:02:10 [INFO]: Category offer: 
+2025-10-30 20:02:10 [INFO]: Current date: Thu Oct 30 2025 20:02:10 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Final product discount: 0
+2025-10-30 20:02:10 [INFO]: Final category discount: 0
+2025-10-30 20:02:10 [INFO]: === END DEBUG ===
+
+2025-10-30 20:02:10 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:02:10 [INFO]: Product offer: 
+2025-10-30 20:02:10 [INFO]: Category offer: 
+2025-10-30 20:02:10 [INFO]: Current date: Thu Oct 30 2025 20:02:10 GMT+0530 (India Standard Time)
+2025-10-30 20:02:10 [INFO]: Final product discount: 0
+2025-10-30 20:02:10 [INFO]: Final category discount: 0
+2025-10-30 20:02:10 [INFO]: === END DEBUG ===
+
+2025-10-30 20:02:17 [ERROR]: VersionError: No matching document found for id "68dd0e6e3c6179e3df4b1b20" version 51 modifiedPaths "items, items.0, items.0.quantity"
+2025-10-30 20:09:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:09:58 [INFO]: Product offer: 
+2025-10-30 20:09:58 [INFO]: Category offer: 
+2025-10-30 20:09:58 [INFO]: Current date: Thu Oct 30 2025 20:09:58 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Final product discount: 0
+2025-10-30 20:09:58 [INFO]: Final category discount: 0
+2025-10-30 20:09:58 [INFO]: === END DEBUG ===
+
+2025-10-30 20:09:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:09:58 [INFO]: Product offer: 
+2025-10-30 20:09:58 [INFO]: Category offer: 
+2025-10-30 20:09:58 [INFO]: Current date: Thu Oct 30 2025 20:09:58 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Final product discount: 0
+2025-10-30 20:09:58 [INFO]: Final category discount: 0
+2025-10-30 20:09:58 [INFO]: === END DEBUG ===
+
+2025-10-30 20:09:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:09:58 [INFO]: Product offer: 
+2025-10-30 20:09:58 [INFO]: Category offer: [object Object]
+2025-10-30 20:09:58 [INFO]: Current date: Thu Oct 30 2025 20:09:58 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Category has offer object
+2025-10-30 20:09:58 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Discount %: 45
+2025-10-30 20:09:58 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:09:58 [INFO]: Final product discount: 0
+2025-10-30 20:09:58 [INFO]: Final category discount: 45
+2025-10-30 20:09:58 [INFO]: === END DEBUG ===
+
+2025-10-30 20:09:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:09:58 [INFO]: Product offer: 
+2025-10-30 20:09:58 [INFO]: Category offer: 
+2025-10-30 20:09:58 [INFO]: Current date: Thu Oct 30 2025 20:09:58 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Final product discount: 0
+2025-10-30 20:09:58 [INFO]: Final category discount: 0
+2025-10-30 20:09:58 [INFO]: === END DEBUG ===
+
+2025-10-30 20:09:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:09:58 [INFO]: Product offer: 
+2025-10-30 20:09:58 [INFO]: Category offer: [object Object]
+2025-10-30 20:09:58 [INFO]: Current date: Thu Oct 30 2025 20:09:58 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Category has offer object
+2025-10-30 20:09:58 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Discount %: 30
+2025-10-30 20:09:58 [INFO]: ✅ Category offer is VALID
+2025-10-30 20:09:58 [INFO]: Final product discount: 0
+2025-10-30 20:09:58 [INFO]: Final category discount: 30
+2025-10-30 20:09:58 [INFO]: === END DEBUG ===
+
+2025-10-30 20:09:58 [INFO]: === CALCULATE OFFER DEBUG ===
+2025-10-30 20:09:58 [INFO]: Product offer: 
+2025-10-30 20:09:58 [INFO]: Category offer: 
+2025-10-30 20:09:58 [INFO]: Current date: Thu Oct 30 2025 20:09:58 GMT+0530 (India Standard Time)
+2025-10-30 20:09:58 [INFO]: Final product discount: 0
+2025-10-30 20:09:58 [INFO]: Final category discount: 0
+2025-10-30 20:09:58 [INFO]: === END DEBUG ===
+

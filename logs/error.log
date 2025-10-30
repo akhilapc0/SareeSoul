@@ -815,3 +815,44 @@ totalReferrals is not defined
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-10-30 14:51:12 [ERROR]: (node:53296) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-10-30 16:13:39 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\shop.ejs:114
+    112|                 <form action="/cart" method="POST" class="mt-auto">
+    113|                   <input type="hidden" name="productId" value="<%= product._id %>">
+ >> 114|                   <input type="hidden" name="variantId" value="<%= product.variants[0]._id %>">
+    115| 
+    116|                   <input type="hidden" name="quantity" value="1">
+    117|                 
+
+Cannot read properties of undefined (reading '0')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:121:42)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:74:17)
+    at shop (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-10-30 16:14:56 [ERROR]: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Variant"
+2025-10-30 16:21:07 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\shop.ejs:114
+    112|                 <form action="/cart" method="POST" class="mt-auto">
+    113|                   <input type="hidden" name="productId" value="<%= product._id %>">
+ >> 114| <input type="hidden" name="variantId" value="<%= product.defaultVariantId || product.variants[0]?._id %>">
+    115| 
+    116|                   <input type="hidden" name="quantity" value="1">
+    117|                 
+
+Cannot read properties of undefined (reading '0')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:121:70)
+    at Array.forEach (<anonymous>)
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:74:17)
+    at shop (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+2025-10-30 16:30:10 [ERROR]: StrictPopulateError: Cannot populate path `variantId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+2025-10-30 20:02:17 [ERROR]: VersionError: No matching document found for id "68dd0e6e3c6179e3df4b1b20" version 51 modifiedPaths "items, items.0, items.0.quantity"

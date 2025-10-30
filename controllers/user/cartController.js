@@ -49,7 +49,7 @@ const addToCart = async (req, res) => {
     
     const product = await Product.findById(productId)
     .populate('categoryId')
-    .populate('brandId');
+    .populate('brandId')
     if (!product || product.deletedAt || product.isBlocked) return res.status(400).json({ message: 'Product not available' });
 
     if(product.categoryId?.isBlocked || product.categoryId?.deletedAt){
