@@ -5,14 +5,19 @@ import  Category from '../../models/categoryModel.js';
 import Wishlist from '../../models/wishlistModel.js';
 import Cart from '../../models/cartModel.js';
 import User from '../../models/userModel.js'
-import Wallet from '../../models/walletModel.js'
+import Wallet from '../../models/walletModel.js';
+import offerController from '../admin/offerController.js';
+
 const getShopPage = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = 4;
+    const limit = 8;
     const skip = (page - 1) * limit;
 
-    let filter = {};
+    let filter = {
+      deletedAt:null,
+      isBlocked:false
+    };
 
     
     if (req.query.search) {
@@ -21,7 +26,10 @@ const getShopPage = async (req, res) => {
 
     
     if (req.query.category) {
-      const categoryDoc = await Category.findOne({ name: req.query.category });
+      const categoryDoc = await Category.findOne({
+        name:{$regex:new RegExp(`^${req.query.category}$`,'i')},
+        isDeleted:false
+      })
       if (categoryDoc) {
         filter.categoryId = categoryDoc._id;
       }
@@ -29,63 +37,88 @@ const getShopPage = async (req, res) => {
 
     
     if (req.query.brand) {
-      const brandDoc = await Brand.findOne({ name: req.query.brand });
+      const brandDoc = await Brand.findOne({
+        name:{$regex:new RegExp(`^${req.query.brand}$`,'i')}
+      });
       if (brandDoc) {
         filter.brandId = brandDoc._id;
       }
     }
 
     
-    if (req.query.minPrice && req.query.maxPrice) {
-      filter.salesPrice = {
-        $gte: parseInt(req.query.minPrice),
-        $lte: parseInt(req.query.maxPrice)
+    if (req.query.minPrice || req.query.maxPrice) {
+      filter.salesPrice = {};
+      if(req.query.minPrice){
+        filter.salesPrice.$gte= parseInt(req.query.minPrice);
+      }
+      if(req.query.maxPrice){
+        filter.salesPrice.$lte=parseInt(req.query.maxPrice)
       };
     }
 
     
     let sort = {};
     if (req.query.sort === "priceLowHigh") {
-      sort.price = 1;
+      sort.salesPrice = 1;
     } else if (req.query.sort === "priceHighLow") {
-      sort.price = -1;
+      sort.salesPrice = -1;
     } else if (req.query.sort === "aToZ") {
       sort.name = 1;
     } else if (req.query.sort === "zToA") {
       sort.name = -1;
     } else if (req.query.sort === "newArrivals") {
       sort.createdAt = -1;
+    }else{
+      sort.createdAt=-1;
     }
 
     
-    const productsRaw = await Product.find(filter).sort(sort).lean();
+    const productsRaw = await Product.find(filter)
+    .populate('categoryId')
+    .populate('brandId')
+    .skip(skip)
+    .limit(limit)
+    .sort(sort)
+    .lean();
 
     
-    let validProducts = [];
-    for (let product of productsRaw) {
-      const variant = await Variant.findOne({ productId: product._id })
-        .sort({ createdAt: 1 })
+    const products=await Promise.all(
+      productsRaw.map(async(product)=>{
+        const variant=await Variant.findOne({productId:product._id})
+        .sort({createdAt:1})
         .lean();
 
-      if (!variant) continue; 
+        if(!variant) return  null;
 
-      product.image = variant?.images?.[0];
-      validProducts.push(product);
-    }
+        const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
 
+          product,
+          product.categoryId
+        )
+
+        return{
+          ...product,
+          image:variant?.images?.[0] || '/user/assets/imgs/shop/product-placeholder.jpg',
+          offerPrice,
+          discount,
+          hasOffer
+        }
+
+
+      })
+    )
    
-    const totalProducts = validProducts.length;
-    console.log(totalProducts);
-    const totalPages = Math.ceil(totalProducts / limit);
+    const validProducts=products.filter(p=> p!==null);
+    const totalProducts=await Product.countDocuments(filter);
+    const totalPages=Math.ceil(totalProducts/limit);
 
-    const products = validProducts.slice(skip, skip + limit);
 
-    const brands = await Brand.find();
-    const categories = await Category.find();
+    const brands=await Brand.find();
+    const categories=await Category.find({isDeleted:false});
 
     res.render("shop", {
       user: req.session.user || req?.user || null ,
-      products,
+      products:validProducts,
       brands,
       categories,
       currentPage: page,
@@ -111,17 +144,22 @@ const getProductDetail = async (req, res) => {
    if (!productId.match(/^[0-9a-fA-F]{24}$/)) {
       return res.status(400).send('Invalid product ID');
     }
-    const product = await Product.findById(productId);
-
+    const product = await Product.findById(productId)
+                    .populate('categoryId')
+                    .lean();
+    
+    if(!product){
+      return res.status(400).send('Product not found')
+    }
     
     
     const variants = await Variant.find({ productId: productId });
 
     const user = req.session?.user  || req?.user;
-    //  console.log(user)
+
      
     const brand = await Brand.findById(product.brandId);
-    const category=await Category.findById(product.categoryId);
+    const category=product.categoryId;
     
     let cartItems = [];
 if (user) {
@@ -139,8 +177,29 @@ if (user) {
       wishlistVariantIds=wishlistItems.map(item=>item.variantId.toString());
       console.log("alreaady  exist variants:",wishlistVariantIds)
     }
+
+
+    const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(product,category);
+
+    const productWithOffer={
+      ...product,
+      offerPrice:Math.round(offerPrice),
+      discount,
+      hasOffer,
+      savings:hasOffer ?Math.round(product.salesPrice-offerPrice) :0
+    }
+
+    console.log('product with offer:',{
+      name:productWithOffer.name,
+      salesPrice:productWithOffer.salesPrice,
+      offerPrice:productWithOffer.offerPrice,
+      discount:productWithOffer.discount,
+      hasOffer:productWithOffer.hasOffer
+    })
+
+
     res.render("productDetail", {
-      product,
+      product:productWithOffer,
       variants,
       user,
       brand,
@@ -150,7 +209,7 @@ if (user) {
     
     });
   } catch (error) {
-    console.error(error);
+    console.error('product detail error:',error);
     res.status(500).send("Server Error");
   }
 };

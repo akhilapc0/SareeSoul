@@ -9,7 +9,7 @@ import orderRoutes from './orderRoutes.js';
 import productRoutes from './productRoutes.js'
 import userRoutes from './userRoutes.js';
 import couponRoutes from './couponRoutes.js';
-
+import offerRoutes from './offerRoutes.js';
 
 
 const router=express.Router();
@@ -22,5 +22,6 @@ router.use('/',orderRoutes);
 router.use('/',productRoutes);
 router.use('/',userRoutes);
 router.use('/coupons',couponRoutes);
+router.use('/offer',offerRoutes);
 
 export default router;

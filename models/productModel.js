@@ -16,13 +16,11 @@ const productSchema=new mongoose.Schema({
 
 
     offer:{
-        discountPercentage:{type:Number,default:0,min:1,max:100},
-        startDate:{type:Date,default:null},
-        endDate:{type:Date,default:null},
-        isDeleted:{type:Boolean,default:false}
+        discountPercentage:{type:Number,min:0,max:100},
+        startDate:{type:Date},
+        endDate:{type:Date},
     },
 
-    offerPrice:{type:Number,default:0}
 
 
 

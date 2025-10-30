@@ -25,13 +25,13 @@ const categorySchema=new mongoose.Schema({
 offer:{
     discountPercentage:{
         type:Number,
-        default:0,
-        min:1,
+        
+        min:0,
         max:100
     },
-    startDate:{type:Date,default:null},
-    endDate:{type:Date,default:null},
-    isDeleted:{type:Boolean,default:false}
+    startDate:{type:Date},
+    endDate:{type:Date},
+    
 }
 
 },

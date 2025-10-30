@@ -3,45 +3,8 @@ import Variant from '../../models/variantModel.js'
 import  Category  from "../../models/categoryModel.js";
 import  Brand from "../../models/brandModel.js";
 import  {productValidation} from '../../validator/schema.js';
-
- const countVariants=async(req,res)=>{
-  try{
-      const variants=await Variant.find();
-      
-      const count={};
-      for(let variant of variants){
-        const productId=variant.productId.toString();
-        if(count[productId]){
-          
-          count[productId]+=1;
-        }
-        else{
-          count[productId]=1;
-        }
-      }
-      console.log("count object is :",JSON.stringify(count,null,2))
-      const result=[];
-      for(let productId in count){
-        const product=await Product.findById(productId).select("name");
-        result.push({
-          productName:product?product.name :"unknown",
-          variantCount:count[productId]
-
-        })
-
-      }
-              res.status(200).json({variantCount:result})
-
-  }
-  catch(error){
-    console.log(error);
-    res.status(500).send({message:"something went wrong"})
-  }
-}
-
-
-
-
+import offerController from '../../controllers/admin/offerController.js';
+ 
 
 
 const loadProductList = async (req, res) => {
@@ -73,11 +36,34 @@ const loadProductList = async (req, res) => {
       .limit(limit);
 
    
+      const productsWithOffers=products.map(product=>{
+        const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
+          product,
+          product.categoryId
+        );
+
+        console.log('product:',product.name);
+        console.log('category:',product.categoryId?.name);
+        console.log('offer price:',offerPrice);
+        console.log('Discount:',discount);
+        console.log('Has offer:',hasOffer);
+        console.log('---');
+
+        return {
+          ...product.toObject(),
+          offerPrice,
+          discount,
+          hasOffer
+        }
+      });
+
+
+
     const totalPages = Math.ceil(totalProducts / limit);
 
     
     return res.render("product-list", {
-      products,
+      products:productsWithOffers,
       currentPage: page,
       totalPages,
       search
@@ -369,7 +355,7 @@ const deleteProduct = async (req, res) => {
 
 
 const productController={
-  countVariants,
+  
     loadProductList,
     loadAddProduct,
     postAddProduct,

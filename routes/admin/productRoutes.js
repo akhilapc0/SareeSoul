@@ -6,7 +6,7 @@ import  productController from '../../controllers/admin/productController.js';
 const router=express.Router();
 
 
-router.get('/variant-count',adminAuth,productController.countVariants)
+
 
  router.get('/products',adminAuth,productController.loadProductList);
 

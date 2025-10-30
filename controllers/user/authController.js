@@ -6,6 +6,10 @@ import  {EmailVerificationUsageType,ForgotPasswordUsageType} from '../../shared/
 import  {registerValidation} from '../../validator/schema.js';
 import Coupon from '../../models/couponModel.js';
 import Wallet from '../../models/walletModel.js';
+import Product from '../../models/productModel.js';
+import Variant from '../../models/variantModel.js';
+import offerController from '../admin/offerController.js';
+
 const getRegisterPage = (req, res) => {
   res.render('register', { errorEmail: "", formData: {}, errors: {} });
 
@@ -481,8 +485,57 @@ const postChangePassword = async (req, res) => {
 
 
 
-const getHomePage = (req, res) => {
-  res.render('home', { user: req.session.user || req?.user || null });
+const getHomePage = async(req, res) => {
+  try{
+
+    const productRaw=await Product.find({
+      deletedAt:null,
+      isBlocked:false
+    })
+    .populate('categoryId')
+    .populate('brandId')
+    .sort({createdAt:-1})
+    .limit(8)
+    .lean()
+
+
+    const featuredProducts=await Promise.all(
+      productRaw.map(async (product)=>{
+        const variant=await Variant.findOne({productId:product._id})
+        .sort({createdAt:1})
+        .lean();
+
+        if(!variant) return null;
+
+        const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
+          product,
+          product.categoryId
+        )
+
+        return {
+          ...product,
+          image:variant?.images?.[0]|| '/user/assets/imgs/shop/product-placeholder.jpg',
+          offerPrice,
+          discount,
+          hasOffer
+        }
+
+
+      }))
+
+      const validProducts=featuredProducts.filter(p=>p !==null)
+
+      res.render('home',{
+        user:req.session.user || req?.user || null,
+        featuredProducts: validProducts
+      })
+
+  }
+  catch(error){
+    console.error('Error loading home page:',error);
+    res.status(500).send('server error')
+  }
+
 };
 
 

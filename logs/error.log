@@ -813,3 +813,5 @@ totalReferrals is not defined
     at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
     at getMyReferrals (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/userController.js:167:9)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-30 14:51:12 [ERROR]: (node:53296) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

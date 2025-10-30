@@ -23731,3 +23731,23 @@ ReferenceError: getMyReferrals is not defined
     at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-28 19:03:35 [ERROR]: uncaughtException: countVariants is not defined
+ReferenceError: countVariants is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/productController.js:335:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-28 19:04:31 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/productRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-10-29 01:34:29 [ERROR]: uncaughtException: calculateOfferPrice is not defined
+ReferenceError: calculateOfferPrice is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/offerController.js:184:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)

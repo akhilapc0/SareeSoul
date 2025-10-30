@@ -40,6 +40,34 @@
     white-space: nowrap;
   }
 
+  /* Offer badge styling */
+  .offer-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+
+  .price-info {
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .offer-price {
+    color: #28a745;
+    font-weight: bold;
+  }
+
+  .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+  }
+
   @media (max-width: 992px) {
     .action-buttons {
       min-width: 180px;
@@ -98,8 +126,25 @@
               <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6 col-sm-6 col-8 flex-grow-1 col-name">
                   <div class="info">
-                    <h6 class="mb-0"><%= product.name %></h6>
-                      <small>Status: 
+                    <h6 class="mb-0">
+                      <%= product.name %>
+                      <!-- Show offer badge if there's an active offer -->
+                      <% if (product.hasOffer) { %>
+                        <span class="offer-badge"><%= product.discount %>% OFF</span>
+                      <% } %>
+                    </h6>
+                    
+                    <!-- Show price information -->
+                    <div class="price-info mt-1">
+                      <% if (product.hasOffer) { %>
+                        <span class="offer-price">₹<%= product.offerPrice %></span>
+                        <span class="original-price">₹<%= product.salesPrice %></span>
+                      <% } else { %>
+                        <span>₹<%= product.salesPrice %></span>
+                      <% } %>
+                    </div>
+                    
+                    <small>Status: 
                       <span class="badge <%= product.isBlocked ? 'bg-danger' : 'bg-success' %>">
                         <%= product.isBlocked ? 'Blocked' : 'Active' %>
                       </span>
@@ -111,17 +156,33 @@
                 <div class="col-lg-5 col-md-6 col-sm-6 col-4 col-action text-end">
                   <div class="action-buttons">
 
+                    <!-- Offer Management Buttons -->
+                    <% if (product.offer && product.offer.discountPercentage) { %>
+                      <!-- Product has an offer - show Remove button -->
+                      <button class="btn btn-sm btn-secondary" onclick="removeProductOffer('<%= product._id %>')">
+                        Remove Offer
+                      </button>
+                    <% } else { %>
+                      <!-- No offer - show Add button -->
+                      <button class="btn btn-sm btn-primary" onclick="addProductOffer('<%= product._id %>')">
+                        Add Offer
+                      </button>
+                    <% } %>
+
                     <a href="/admin/products/<%= product._id %>/variants" class="btn btn-sm btn-info">
                       Variants
                     </a>
-                     <% if (product.isBlocked) { %>
-                    <button class="btn btn-sm btn-success" onclick="toggleBlock('<%= product._id %>', false)">Unblock</button>
-                  <% } else { %>
-                    <button class="btn btn-sm btn-danger" onclick="toggleBlock('<%= product._id %>', true)">Block</button>
-                  <% } %>
+                    
+                    <% if (product.isBlocked) { %>
+                      <button class="btn btn-sm btn-success" onclick="toggleBlock('<%= product._id %>', false)">Unblock</button>
+                    <% } else { %>
+                      <button class="btn btn-sm btn-danger" onclick="toggleBlock('<%= product._id %>', true)">Block</button>
+                    <% } %>
+                    
                     <a href="/admin/products/edit/<%= product._id %>" class="btn btn-sm btn-warning">
                       Edit
                     </a>
+                    
                     <button class="btn btn-sm btn-danger delete-product-btn" data-product-id="<%= product._id %>">
                       Delete
                     </button>
@@ -164,7 +225,124 @@
 
     toggleClearButton();
 
-    
+    // ========================================
+    // OFFER MANAGEMENT FUNCTIONS
+    // ========================================
+
+    // Add Product Offer
+    async function addProductOffer(productId) {
+      const { value: formValues } = await Swal.fire({
+        title: 'Add Product Offer',
+        html: `
+          <div style="text-align: left;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Discount Percentage (%)</label>
+            <input id="discount" type="number" min="1" max="100" class="swal2-input" placeholder="Enter discount %" style="width: 90%;">
+            
+            <label style="display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 600;">Start Date</label>
+            <input id="startDate" type="date" class="swal2-input" style="width: 90%;">
+            
+            <label style="display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 600;">End Date</label>
+            <input id="endDate" type="date" class="swal2-input" style="width: 90%;">
+          </div>
+        `,
+        focusConfirm: false,
+        showCancelButton: true,
+        confirmButtonText: 'Add Offer',
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#6c757d',
+        preConfirm: () => {
+          const discount = document.getElementById('discount').value;
+          const startDate = document.getElementById('startDate').value;
+          const endDate = document.getElementById('endDate').value;
+
+          if (!discount || !startDate || !endDate) {
+            Swal.showValidationMessage('All fields are required!');
+            return false;
+          }
+
+          if (discount < 1 || discount > 100) {
+            Swal.showValidationMessage('Discount must be between 1-100%');
+            return false;
+          }
+
+          if (new Date(startDate) >= new Date(endDate)) {
+            Swal.showValidationMessage('End date must be after start date');
+            return false;
+          }
+
+          return { discount, startDate, endDate };
+        }
+      });
+
+      if (formValues) {
+        try {
+          const res = await fetch(`/admin/offer/product/add-offer/${productId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              discountPercentage: formValues.discount,
+              startDate: formValues.startDate,
+              endDate: formValues.endDate
+            })
+          });
+
+          const data = await res.json();
+
+          if (data.success) {
+            Swal.fire({
+              icon: 'success',
+              title: 'Offer Added!',
+              text: data.message,
+              timer: 1500,
+              showConfirmButton: false
+            }).then(() => location.reload());
+          } else {
+            Swal.fire('Error', data.message, 'error');
+          }
+        } catch (err) {
+          Swal.fire('Error', 'Server error: ' + err, 'error');
+        }
+      }
+    }
+
+    // Remove Product Offer
+    async function removeProductOffer(productId) {
+      const result = await Swal.fire({
+        title: 'Remove Offer?',
+        text: 'Are you sure you want to remove this offer?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Yes, remove it!'
+      });
+
+      if (result.isConfirmed) {
+        try {
+          const res = await fetch(`/admin/offer/product/remove-offer/${productId}`, {
+            method: 'DELETE'
+          });
+
+          const data = await res.json();
+
+          if (data.success) {
+            Swal.fire({
+              icon: 'success',
+              title: 'Offer Removed!',
+              text: data.message,
+              timer: 1500,
+              showConfirmButton: false
+            }).then(() => location.reload());
+          } else {
+            Swal.fire('Error', data.message, 'error');
+          }
+        } catch (err) {
+          Swal.fire('Error', 'Server error: ' + err, 'error');
+        }
+      }
+    }
+
+    // Toggle Block/Unblock
     async function toggleBlock(productId, block) {
       try {
         const res = await fetch(`/admin/products/block/${productId}`, {

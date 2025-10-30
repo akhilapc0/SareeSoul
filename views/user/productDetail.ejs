@@ -508,6 +508,45 @@
       max-height: 90%;
       cursor: zoom-out;
     }
+    .product-offer-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 15px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .offer-price-main {
+    color: #28a745;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .price-savings {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
   </style>
 </head>
 
@@ -553,7 +592,15 @@
         </div>
 
         <div class="product-info">
-          <h1 class="product-title"><%= product.name %></h1>
+          <h1 class="product-title">
+  <%= product.name %>
+  <% if (product.hasOffer) { %>
+    <span class="product-offer-badge" style="font-size: 0.8rem; padding: 5px 12px;">
+      <%= product.discount %>% OFF
+    </span>
+  <% } %>
+</h1>
+
           
           <div class="brand-category">
             <% if (brand) { %>
@@ -573,16 +620,43 @@
             <span class="rating-text">Based on customer reviews</span>
           </div>
 
-          <div class="price-section">
-            <span class="current-price">₹<span id="currentPrice"><%= product.salesPrice %></span></span>
-            <% if (product.actualPrice > product.salesPrice) { %>
-              <span class="original-price">₹<%= product.actualPrice %></span>
-              <span class="discount-badge">
-                <%= Math.round(((product.actualPrice - product.salesPrice) / product.actualPrice) * 100) %>% off
+        <div class="price-section">
+          <% if (product.hasOffer) { %>
+            <!-- Price with Offer -->
+            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+              <span class="offer-price-main">₹<span id="currentPrice">
+                  <%= product.offerPrice %>
+                </span></span>
+              <span class="original-price">₹<%= product.salesPrice %></span>
+              <span class="product-offer-badge">
+                <%= product.discount %>% OFF
               </span>
-            <% } %>
-            <div class="price-details">Inclusive of all taxes</div>
-          </div>
+            </div>
+        
+            <div class="price-savings">
+              🎉 You save ₹<%= Math.round(product.salesPrice - product.offerPrice) %>
+            </div>
+            <% } else { %>
+              <!-- Price without Offer -->
+              <span class="current-price">₹<span id="currentPrice">
+                  <%= product.salesPrice %>
+                </span></span>
+              <% if (product.actualPrice> product.salesPrice) { %>
+                <span class="original-price">₹<%= product.actualPrice %></span>
+                <span class="discount-badge">
+                  <%= Math.round(((product.actualPrice - product.salesPrice) / product.actualPrice) * 100) %>% off
+                </span>
+                <% } %>
+                  <% } %>
+        
+                    <div class="price-details" style="margin-top: 10px;">
+                      Inclusive of all taxes
+                      <% if (product.hasOffer) { %>
+                        • <strong>Special Offer Price</strong>
+                        <% } %>
+                    </div>
+        </div>
+
 
           <% if (variants.length > 1) { %>
             <div class="variants-section">
