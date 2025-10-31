@@ -875,3 +875,24 @@ walletBalance is not defined
     at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
     at loadCheckout (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/checkoutController.js:49:9)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-31 20:51:06 [ERROR]: TypeError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\checkout.ejs:488
+    486|                 </div>
+    487|                 <div class="card-body">
+ >> 488|                   <% items.forEach(item=> { %>
+    489|                     <div class="order-item row align-items-center">
+    490|                       <div class="col-3 col-md-2 position-relative">
+    491|                         <img
+
+Cannot read properties of undefined (reading 'forEach')
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:82:14)
+    at checkout (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at loadCheckout (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/checkoutController.js:87:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-31 21:18:58 [ERROR]: (node:56128) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

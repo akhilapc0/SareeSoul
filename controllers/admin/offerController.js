@@ -177,13 +177,13 @@ const removeCategoryOffer=async(req,res)=>{
 const calculateOfferPrice = (product, category) => {
     const now = new Date();
     
-    // ⭐ ADD THESE LOGS
-    console.log('=== CALCULATE OFFER DEBUG ===');
+    
+    
     console.log('Product offer:', product.offer);
     console.log('Category offer:', category?.offer);
     console.log('Current date:', now);
     
-    // Check product offer validity
+    
     let productDiscount = 0;
     if (product.offer) {
         console.log('Product has offer object');
@@ -193,13 +193,13 @@ const calculateOfferPrice = (product, category) => {
         
         if (now >= product.offer.startDate && now <= product.offer.endDate) {
             productDiscount = product.offer.discountPercentage;
-            console.log('✅ Product offer is VALID');
+            console.log(' Product offer is VALID');
         } else {
-            console.log('❌ Product offer is EXPIRED or NOT STARTED');
+            console.log(' Product offer is EXPIRED or NOT STARTED');
         }
     }
     
-    // Check category offer validity
+    
     let categoryDiscount = 0;
     if (category?.offer) {
         console.log('Category has offer object');
@@ -209,17 +209,17 @@ const calculateOfferPrice = (product, category) => {
         
         if (now >= category.offer.startDate && now <= category.offer.endDate) {
             categoryDiscount = category.offer.discountPercentage;
-            console.log('✅ Category offer is VALID');
+            console.log(' Category offer is VALID');
         } else {
-            console.log('❌ Category offer is EXPIRED or NOT STARTED');
+            console.log(' Category offer is EXPIRED or NOT STARTED');
         }
     }
     
     console.log('Final product discount:', productDiscount);
     console.log('Final category discount:', categoryDiscount);
-    console.log('=== END DEBUG ===\n');
     
-    // Apply the greater discount
+    
+    
     const finalDiscount = Math.max(productDiscount, categoryDiscount);
     const offerPrice = product.salesPrice - (product.salesPrice * finalDiscount / 100);
     

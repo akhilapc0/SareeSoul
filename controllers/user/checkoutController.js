@@ -8,7 +8,7 @@ import razorpayInstance from '../../utils/razorpay.js';
 import Coupon from '../../models/couponModel.js'
 import crypto from "crypto";
 import Wallet from '../../models/walletModel.js';
-
+import offerController from '../admin/offerController.js';
 
 
 const loadCheckout = async (req, res) => {
@@ -17,7 +17,10 @@ const loadCheckout = async (req, res) => {
     const user = req.session?.user || await User.findById(userId);
 
     const cart = await Cart.findOne({ userId })
-      .populate('items.productId')
+      .populate({
+        path:'items.productId',
+        populate:{path:'categoryId'}
+      })
       .populate('items.variantId');
 
     if (!cart || cart.items.length === 0) {
@@ -34,7 +37,38 @@ const loadCheckout = async (req, res) => {
     }
 
     const addresses = await Address.find({ userId });
-    const subtotal = cart.items.reduce((sum, i) => sum + i.quantity * i.productId.salesPrice, 0);
+    
+    let originalSubtotal=0;
+    let offerSubtotal =0;
+    let totalOfferSavings=0;
+
+    const itemsWithOffers=cart.items.map(item=>{
+      const{offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
+        item.productId,
+        item.productId.categoryId
+      );
+
+      const itemOriginalPrice=item.quantity * item.productId.salesPrice;
+      const itemOfferPrice=item.quantity * Math.round(offerPrice);
+      const itemSavings=hasOffer ?(itemOriginalPrice-itemOfferPrice) : 0;
+
+      originalSubtotal +=itemOriginalPrice;
+      offerSubtotal +=itemOfferPrice;
+      totalOfferSavings +=itemSavings;
+
+      return {
+        ...item.toObject(),
+        offerPrice:Math.round(offerPrice),
+        discount,
+        hasOffer,
+        itemTotal:itemOfferPrice,
+        itemOriginalTotal:itemOfferPrice,
+        itemOriginalTotal:itemOriginalPrice
+      }
+
+
+    });
+
 
     const wallet=await Wallet.findOne({userId});
     const walletBalance=wallet ? wallet.balance : 0;
@@ -43,7 +77,7 @@ const loadCheckout = async (req, res) => {
           isActive: true,
           validityDate:{$gt: new Date()},
           $expr:{$lt :["$usedCount","$usageLimit"]},
-          minCartAmount:{$lte: subtotal},
+          minCartAmount:{$lte: offerSubtotal},
           usedBy:{$nin:[userId]},
 
 
@@ -51,9 +85,11 @@ const loadCheckout = async (req, res) => {
 
 
     res.render('checkout', {
-      items: cart.items,
+      items: itemsWithOffers,
       addresses,
-      subtotal,
+      subtotal:offerSubtotal,
+      originalSubtotal:originalSubtotal,
+      offerSavings:totalOfferSavings,
       user,
       availableCoupons,
       walletBalance,
@@ -172,7 +208,7 @@ const placeOrder = async (req, res) => {
       });
 
       await order.save();
-      
+
       if(couponId){
         await Coupon.findByIdAndUpdate(couponId,{
           $addToSet:{usedBy:userId},$inc:{usedCount:1}

@@ -2,17 +2,20 @@ import Cart from '../../models/cartModel.js';
 import  Product from '../../models/productModel.js';
 import  Variant from '../../models/variantModel.js';
 import Wishlist from '../../models/wishlistModel.js';
+import User from '../../models/userModel.js';
+import offerController from '../admin/offerController.js';
+
 const loadCart = async (req, res) => {
   try {
-  
     const userId = req.session?.user?._id || req.session?.passport?.user;
     if (!userId) return res.redirect('/login');
 
-    const user=req.session?.user || await User.findById(userId);
+    const user = req.session?.user || await User.findById(userId);
    
     const cart = await Cart.findOne({ userId })
       .populate({
         path: 'items.productId',
+        populate: { path: 'categoryId' },
         select: 'name description actualPrice salesPrice categoryId brandId isBlocked deletedAt'
       })
       .populate({
@@ -22,20 +25,52 @@ const loadCart = async (req, res) => {
 
     const items = cart ? cart.items : [];
 
-    
-    let subtotal = 0;
-    items.forEach(item => {
-      if (item.productId && !item.productId.isBlocked && !item.variantId.isBlocked) {
-        subtotal += item.quantity * item.productId.salesPrice;
-      }
-    });
+    // Calculate subtotals with offer prices
+    let originalSubtotal = 0;
+    let offerSubtotal = 0;
+    let totalSavings = 0;
 
-    res.render('cart', { items, subtotal,user });
+    const itemsWithOffers = items
+      .filter(item => item.productId && !item.productId.isBlocked && !item.variantId.isBlocked)
+      .map(item => {
+        const { offerPrice, discount, hasOffer } = offerController.calculateOfferPrice(
+          item.productId,
+          item.productId.categoryId
+        );
+
+        const itemOriginalPrice = item.quantity * item.productId.salesPrice;
+        const itemOfferPrice = item.quantity * Math.round(offerPrice);
+        const itemSavings = hasOffer ? (itemOriginalPrice - itemOfferPrice) : 0;
+
+        originalSubtotal += itemOriginalPrice;
+        offerSubtotal += itemOfferPrice;
+        totalSavings += itemSavings;
+
+        return {
+          ...item.toObject(),
+          offerPrice: Math.round(offerPrice),
+          discount,
+          hasOffer,
+          itemTotal: itemOfferPrice,
+          itemOriginalTotal: itemOriginalPrice,
+          itemSavings
+        };
+      });
+
+    res.render('cart', {
+      items: itemsWithOffers,
+      originalSubtotal: originalSubtotal.toFixed(2),
+      offerSubtotal: offerSubtotal.toFixed(2),
+      totalSavings: totalSavings.toFixed(2),
+      user
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send('Server error');
   }
 };
+
+
 
 const addToCart = async (req, res) => {
   
