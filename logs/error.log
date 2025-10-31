@@ -856,3 +856,22 @@ Cannot read properties of undefined (reading '0')
     at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
 2025-10-30 16:30:10 [ERROR]: StrictPopulateError: Cannot populate path `variantId` because it is not in your schema. Set the `strictPopulate` option to false to override.
 2025-10-30 20:02:17 [ERROR]: VersionError: No matching document found for id "68dd0e6e3c6179e3df4b1b20" version 51 modifiedPaths "items, items.0, items.0.quantity"
+2025-10-30 20:33:00 [ERROR]: ReferenceError: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user\checkout.ejs:659
+    657|                                     <strong>👛 Pay Using Wallet</strong>
+    658|                                     <small class="d-block text-muted">
+ >> 659|                                       Available Balance: ₹<%= walletBalance %>
+    660|                                     </small>
+    661|                                   </div>
+    662|                                 </label>
+
+walletBalance is not defined
+    at eval (eval at compile (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:162:26)
+    at checkout (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at loadCheckout (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/checkoutController.js:49:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

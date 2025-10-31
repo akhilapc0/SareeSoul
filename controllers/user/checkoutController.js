@@ -7,6 +7,7 @@ import Counter from '../../models/counterModel.js';
 import razorpayInstance from '../../utils/razorpay.js';
 import Coupon from '../../models/couponModel.js'
 import crypto from "crypto";
+import Wallet from '../../models/walletModel.js';
 
 
 
@@ -35,6 +36,9 @@ const loadCheckout = async (req, res) => {
     const addresses = await Address.find({ userId });
     const subtotal = cart.items.reduce((sum, i) => sum + i.quantity * i.productId.salesPrice, 0);
 
+    const wallet=await Wallet.findOne({userId});
+    const walletBalance=wallet ? wallet.balance : 0;
+
     const availableCoupons =await Coupon.find({
           isActive: true,
           validityDate:{$gt: new Date()},
@@ -52,6 +56,7 @@ const loadCheckout = async (req, res) => {
       subtotal,
       user,
       availableCoupons,
+      walletBalance,
       error_msg: req.flash('error_msg')
     });
 
@@ -127,6 +132,70 @@ const placeOrder = async (req, res) => {
   });
 
     }
+
+    if(paymentMethod ==='Wallet'){
+
+      
+      const wallet = await Wallet.findOne({userId});
+
+      if(!wallet ||wallet.balance < total){
+        return res.json({
+          success:false,
+          message:"Insufficient wallet balance"
+        });
+      }
+      wallet.balance -=total;
+
+      wallet.transactions.push({type:'Debit',amount:total,
+        reason:'Order placed using wallet',createdAt: new Date()
+      });
+
+      await wallet.save();
+
+      const order=new Order({
+        orderId:`ORD-${counter.seq}`,
+        userId,
+        address:address.toObject(),
+        items:cart.items.map(i=>({
+          productId:i.productId._id,
+          variantId:i.variantId._id,
+          quantity:i.quantity,
+          price:i.productId.salesPrice
+        })),
+        paymentMethod:'Wallet',
+        subtotal,
+        discount,
+        total,
+        status:'Pending',
+        paymentStatus:'Paid'
+
+      });
+
+      await order.save();
+      
+      if(couponId){
+        await Coupon.findByIdAndUpdate(couponId,{
+          $addToSet:{usedBy:userId},$inc:{usedCount:1}
+        });
+        delete req.session.appliedCoupon
+      }
+      for(let item of cart.items){
+        await Variant.findByIdAndUpdate(item.variantId._id,{
+          $inc:{stock:-item.quantity}
+        })
+      }
+
+      await Cart.findOneAndUpdate({userId},{items:[]})
+      return res.json({
+        success:true,
+        message:"order placed successfully using wallet",
+        redirectUrl:`/order-success/${order.orderId}`
+      });
+
+    }
+
+
+
 
     if(paymentMethod === 'COD')
     {
