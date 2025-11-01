@@ -54734,3 +54734,2957 @@ Cannot read properties of undefined (reading 'forEach')
 2025-10-31 21:27:59 [INFO]: order found: yes
 2025-10-31 21:27:59 [INFO]: order details: [object Object]
 2025-10-31 21:27:59 [INFO]: Rendering order-success page
+2025-10-31 23:03:02 [INFO]: node starting
+2025-10-31 23:03:02 [INFO]: server running at http://localhost:3000
+2025-10-31 23:03:02 [INFO]:  MongoDB connected
+2025-10-31 23:51:07 [INFO]: node starting
+2025-10-31 23:51:07 [INFO]: server running at http://localhost:3000
+2025-10-31 23:51:07 [INFO]:  MongoDB connected
+2025-10-31 23:53:02 [INFO]: node starting
+2025-10-31 23:53:02 [INFO]: server running at http://localhost:3000
+2025-10-31 23:53:02 [INFO]:  MongoDB connected
+2025-10-31 23:54:08 [INFO]: node starting
+2025-10-31 23:54:08 [INFO]: server running at http://localhost:3000
+2025-10-31 23:54:08 [INFO]:  MongoDB connected
+2025-10-31 23:54:30 [INFO]: node starting
+2025-10-31 23:54:30 [INFO]: server running at http://localhost:3000
+2025-10-31 23:54:30 [INFO]:  MongoDB connected
+2025-10-31 23:55:13 [INFO]: node starting
+2025-10-31 23:55:13 [INFO]: server running at http://localhost:3000
+2025-10-31 23:55:13 [INFO]:  MongoDB connected
+2025-10-31 23:55:48 [INFO]: node starting
+2025-10-31 23:55:48 [INFO]: server running at http://localhost:3000
+2025-10-31 23:55:48 [INFO]:  MongoDB connected
+2025-10-31 23:56:51 [INFO]: node starting
+2025-10-31 23:56:52 [INFO]: server running at http://localhost:3000
+2025-10-31 23:56:52 [INFO]:  MongoDB connected
+2025-10-31 23:57:05 [INFO]: node starting
+2025-10-31 23:57:05 [INFO]: server running at http://localhost:3000
+2025-10-31 23:57:06 [INFO]:  MongoDB connected
+2025-11-01 00:01:11 [INFO]: node starting
+2025-11-01 00:01:11 [INFO]: server running at http://localhost:3000
+2025-11-01 00:01:13 [INFO]:  MongoDB connected
+2025-11-01 00:06:01 [INFO]: node starting
+2025-11-01 00:06:01 [INFO]: server running at http://localhost:3000
+2025-11-01 00:06:01 [INFO]:  MongoDB connected
+2025-11-01 00:06:36 [INFO]: node starting
+2025-11-01 00:06:36 [INFO]: server running at http://localhost:3000
+2025-11-01 00:06:36 [INFO]:  MongoDB connected
+2025-11-01 00:06:51 [INFO]: node starting
+2025-11-01 00:06:51 [INFO]: server running at http://localhost:3000
+2025-11-01 00:06:51 [INFO]:  MongoDB connected
+2025-11-01 00:07:22 [INFO]: node starting
+2025-11-01 00:07:22 [INFO]: server running at http://localhost:3000
+2025-11-01 00:07:22 [INFO]:  MongoDB connected
+2025-11-01 00:08:14 [INFO]: node starting
+2025-11-01 00:08:14 [INFO]: server running at http://localhost:3000
+2025-11-01 00:08:14 [INFO]:  MongoDB connected
+2025-11-01 00:09:27 [INFO]: node starting
+2025-11-01 00:09:27 [INFO]: server running at http://localhost:3000
+2025-11-01 00:09:27 [INFO]:  MongoDB connected
+2025-11-01 00:10:58 [INFO]: node starting
+2025-11-01 00:10:58 [INFO]: server running at http://localhost:3000
+2025-11-01 00:10:59 [INFO]:  MongoDB connected
+2025-11-01 00:11:58 [INFO]: node starting
+2025-11-01 00:11:58 [INFO]: server running at http://localhost:3000
+2025-11-01 00:11:59 [INFO]:  MongoDB connected
+2025-11-01 00:13:41 [INFO]: node starting
+2025-11-01 00:13:41 [INFO]: server running at http://localhost:3000
+2025-11-01 00:13:41 [INFO]:  MongoDB connected
+2025-11-01 00:16:36 [INFO]: node starting
+2025-11-01 00:16:36 [INFO]: server running at http://localhost:3000
+2025-11-01 00:16:36 [INFO]:  MongoDB connected
+2025-11-01 00:17:01 [INFO]: node starting
+2025-11-01 00:17:02 [INFO]: server running at http://localhost:3000
+2025-11-01 00:17:58 [INFO]: node starting
+2025-11-01 00:17:58 [INFO]: server running at http://localhost:3000
+2025-11-01 00:17:58 [INFO]:  MongoDB connected
+2025-11-01 00:19:16 [INFO]: node starting
+2025-11-01 00:19:16 [INFO]: server running at http://localhost:3000
+2025-11-01 00:19:17 [INFO]:  MongoDB connected
+2025-11-01 00:19:51 [INFO]: node starting
+2025-11-01 00:19:51 [INFO]: server running at http://localhost:3000
+2025-11-01 00:19:51 [INFO]:  MongoDB connected
+2025-11-01 00:25:35 [INFO]: node starting
+2025-11-01 00:25:35 [INFO]: server running at http://localhost:3000
+2025-11-01 00:25:35 [INFO]:  MongoDB connected
+2025-11-01 00:26:16 [INFO]: node starting
+2025-11-01 00:26:16 [INFO]: server running at http://localhost:3000
+2025-11-01 00:26:16 [INFO]:  MongoDB connected
+2025-11-01 00:27:24 [INFO]: node starting
+2025-11-01 00:27:24 [INFO]: server running at http://localhost:3000
+2025-11-01 00:27:24 [INFO]:  MongoDB connected
+2025-11-01 00:28:22 [INFO]: node starting
+2025-11-01 00:28:22 [INFO]: server running at http://localhost:3000
+2025-11-01 00:28:22 [INFO]:  MongoDB connected
+2025-11-01 00:29:18 [INFO]: node starting
+2025-11-01 00:29:18 [INFO]: server running at http://localhost:3000
+2025-11-01 00:29:18 [INFO]:  MongoDB connected
+2025-11-01 00:30:03 [INFO]: node starting
+2025-11-01 00:30:03 [INFO]: server running at http://localhost:3000
+2025-11-01 00:30:03 [INFO]:  MongoDB connected
+2025-11-01 00:31:09 [INFO]: node starting
+2025-11-01 00:31:09 [INFO]: server running at http://localhost:3000
+2025-11-01 00:31:10 [INFO]:  MongoDB connected
+2025-11-01 00:38:14 [INFO]: node starting
+2025-11-01 00:38:14 [INFO]: server running at http://localhost:3000
+2025-11-01 00:38:14 [INFO]:  MongoDB connected
+2025-11-01 00:39:43 [INFO]: Product offer: 
+2025-11-01 00:39:43 [INFO]: Category offer: [object Object]
+2025-11-01 00:39:43 [INFO]: Current date: Sat Nov 01 2025 00:39:43 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Category has offer object
+2025-11-01 00:39:43 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Discount %: 30
+2025-11-01 00:39:43 [INFO]:  Category offer is VALID
+2025-11-01 00:39:43 [INFO]: Final product discount: 0
+2025-11-01 00:39:43 [INFO]: Final category discount: 30
+2025-11-01 00:39:43 [INFO]: Product offer: 
+2025-11-01 00:39:43 [INFO]: Category offer: 
+2025-11-01 00:39:43 [INFO]: Current date: Sat Nov 01 2025 00:39:43 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Final product discount: 0
+2025-11-01 00:39:43 [INFO]: Final category discount: 0
+2025-11-01 00:39:43 [INFO]: Product offer: 
+2025-11-01 00:39:43 [INFO]: Category offer: 
+2025-11-01 00:39:43 [INFO]: Current date: Sat Nov 01 2025 00:39:43 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Final product discount: 0
+2025-11-01 00:39:43 [INFO]: Final category discount: 0
+2025-11-01 00:39:43 [INFO]: Product offer: 
+2025-11-01 00:39:43 [INFO]: Category offer: [object Object]
+2025-11-01 00:39:43 [INFO]: Current date: Sat Nov 01 2025 00:39:43 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Category has offer object
+2025-11-01 00:39:43 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Discount %: 45
+2025-11-01 00:39:43 [INFO]:  Category offer is VALID
+2025-11-01 00:39:43 [INFO]: Final product discount: 0
+2025-11-01 00:39:43 [INFO]: Final category discount: 45
+2025-11-01 00:39:43 [INFO]: Product offer: 
+2025-11-01 00:39:43 [INFO]: Category offer: 
+2025-11-01 00:39:43 [INFO]: Current date: Sat Nov 01 2025 00:39:43 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Final product discount: 0
+2025-11-01 00:39:43 [INFO]: Final category discount: 0
+2025-11-01 00:39:43 [INFO]: Product offer: 
+2025-11-01 00:39:43 [INFO]: Category offer: 
+2025-11-01 00:39:43 [INFO]: Current date: Sat Nov 01 2025 00:39:43 GMT+0530 (India Standard Time)
+2025-11-01 00:39:43 [INFO]: Final product discount: 0
+2025-11-01 00:39:43 [INFO]: Final category discount: 0
+2025-11-01 00:39:53 [INFO]: Product offer: 
+2025-11-01 00:39:53 [INFO]: Category offer: 
+2025-11-01 00:39:53 [INFO]: Current date: Sat Nov 01 2025 00:39:53 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Final product discount: 0
+2025-11-01 00:39:53 [INFO]: Final category discount: 0
+2025-11-01 00:39:53 [INFO]: Product offer: 
+2025-11-01 00:39:53 [INFO]: Category offer: [object Object]
+2025-11-01 00:39:53 [INFO]: Current date: Sat Nov 01 2025 00:39:53 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Category has offer object
+2025-11-01 00:39:53 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Discount %: 45
+2025-11-01 00:39:53 [INFO]:  Category offer is VALID
+2025-11-01 00:39:53 [INFO]: Final product discount: 0
+2025-11-01 00:39:53 [INFO]: Final category discount: 45
+2025-11-01 00:39:53 [INFO]: Product offer: 
+2025-11-01 00:39:53 [INFO]: Category offer: 
+2025-11-01 00:39:53 [INFO]: Current date: Sat Nov 01 2025 00:39:53 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Final product discount: 0
+2025-11-01 00:39:53 [INFO]: Final category discount: 0
+2025-11-01 00:39:53 [INFO]: Product offer: 
+2025-11-01 00:39:53 [INFO]: Category offer: 
+2025-11-01 00:39:53 [INFO]: Current date: Sat Nov 01 2025 00:39:53 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Final product discount: 0
+2025-11-01 00:39:53 [INFO]: Final category discount: 0
+2025-11-01 00:39:53 [INFO]: Product offer: 
+2025-11-01 00:39:53 [INFO]: Category offer: 
+2025-11-01 00:39:53 [INFO]: Current date: Sat Nov 01 2025 00:39:53 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Final product discount: 0
+2025-11-01 00:39:53 [INFO]: Final category discount: 0
+2025-11-01 00:39:53 [INFO]: Product offer: 
+2025-11-01 00:39:53 [INFO]: Category offer: [object Object]
+2025-11-01 00:39:53 [INFO]: Current date: Sat Nov 01 2025 00:39:53 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Category has offer object
+2025-11-01 00:39:53 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:39:53 [INFO]: Discount %: 30
+2025-11-01 00:39:53 [INFO]:  Category offer is VALID
+2025-11-01 00:39:53 [INFO]: Final product discount: 0
+2025-11-01 00:39:53 [INFO]: Final category discount: 30
+2025-11-01 00:39:58 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:39:58 [INFO]: Category offer: {}
+2025-11-01 00:39:58 [INFO]: Current date: Sat Nov 01 2025 00:39:58 GMT+0530 (India Standard Time)
+2025-11-01 00:39:58 [INFO]: Product has offer object
+2025-11-01 00:39:58 [INFO]: Start date: 
+2025-11-01 00:39:58 [INFO]: End date: 
+2025-11-01 00:39:58 [INFO]: Discount %: 
+2025-11-01 00:39:58 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:39:58 [INFO]: Category has offer object
+2025-11-01 00:39:58 [INFO]: Start date: 
+2025-11-01 00:39:58 [INFO]: End date: 
+2025-11-01 00:39:58 [INFO]: Discount %: 
+2025-11-01 00:39:58 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 00:39:58 [INFO]: Final product discount: 0
+2025-11-01 00:39:58 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: [object Object]
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Category has offer object
+2025-11-01 00:40:24 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Discount %: 45
+2025-11-01 00:40:24 [INFO]:  Category offer is VALID
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 45
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: [object Object]
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Category has offer object
+2025-11-01 00:40:24 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Discount %: 30
+2025-11-01 00:40:24 [INFO]:  Category offer is VALID
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 30
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: [object Object]
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Category has offer object
+2025-11-01 00:40:24 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Discount %: 45
+2025-11-01 00:40:24 [INFO]:  Category offer is VALID
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 45
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: [object Object]
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Category has offer object
+2025-11-01 00:40:24 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Discount %: 30
+2025-11-01 00:40:24 [INFO]:  Category offer is VALID
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 30
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:40:24 [INFO]: Product offer: 
+2025-11-01 00:40:24 [INFO]: Category offer: 
+2025-11-01 00:40:24 [INFO]: Current date: Sat Nov 01 2025 00:40:24 GMT+0530 (India Standard Time)
+2025-11-01 00:40:24 [INFO]: Final product discount: 0
+2025-11-01 00:40:24 [INFO]: Final category discount: 0
+2025-11-01 00:41:06 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:41:06 [INFO]: Category offer: {}
+2025-11-01 00:41:06 [INFO]: Current date: Sat Nov 01 2025 00:41:06 GMT+0530 (India Standard Time)
+2025-11-01 00:41:06 [INFO]: Product has offer object
+2025-11-01 00:41:06 [INFO]: Start date: 
+2025-11-01 00:41:06 [INFO]: End date: 
+2025-11-01 00:41:06 [INFO]: Discount %: 
+2025-11-01 00:41:06 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:41:06 [INFO]: Category has offer object
+2025-11-01 00:41:06 [INFO]: Start date: 
+2025-11-01 00:41:06 [INFO]: End date: 
+2025-11-01 00:41:06 [INFO]: Discount %: 
+2025-11-01 00:41:06 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 00:41:06 [INFO]: Final product discount: 0
+2025-11-01 00:41:06 [INFO]: Final category discount: 0
+2025-11-01 00:41:06 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:41:06 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 00:41:06 [INFO]: Current date: Sat Nov 01 2025 00:41:06 GMT+0530 (India Standard Time)
+2025-11-01 00:41:06 [INFO]: Product has offer object
+2025-11-01 00:41:06 [INFO]: Start date: 
+2025-11-01 00:41:06 [INFO]: End date: 
+2025-11-01 00:41:06 [INFO]: Discount %: 
+2025-11-01 00:41:06 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:41:06 [INFO]: Category has offer object
+2025-11-01 00:41:06 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:41:06 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:41:06 [INFO]: Discount %: 30
+2025-11-01 00:41:06 [INFO]:  Category offer is VALID
+2025-11-01 00:41:06 [INFO]: Final product discount: 0
+2025-11-01 00:41:06 [INFO]: Final category discount: 30
+2025-11-01 00:45:30 [INFO]:  MongoDB connected
+2025-11-01 00:53:27 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:53:27 [INFO]: Category offer: {}
+2025-11-01 00:53:27 [INFO]: Current date: Sat Nov 01 2025 00:53:27 GMT+0530 (India Standard Time)
+2025-11-01 00:53:27 [INFO]: Product has offer object
+2025-11-01 00:53:27 [INFO]: Start date: 
+2025-11-01 00:53:27 [INFO]: End date: 
+2025-11-01 00:53:27 [INFO]: Discount %: 
+2025-11-01 00:53:27 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:27 [INFO]: Category has offer object
+2025-11-01 00:53:27 [INFO]: Start date: 
+2025-11-01 00:53:27 [INFO]: End date: 
+2025-11-01 00:53:27 [INFO]: Discount %: 
+2025-11-01 00:53:27 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:27 [INFO]: Final product discount: 0
+2025-11-01 00:53:27 [INFO]: Final category discount: 0
+2025-11-01 00:53:27 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:53:27 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 00:53:27 [INFO]: Current date: Sat Nov 01 2025 00:53:27 GMT+0530 (India Standard Time)
+2025-11-01 00:53:27 [INFO]: Product has offer object
+2025-11-01 00:53:27 [INFO]: Start date: 
+2025-11-01 00:53:27 [INFO]: End date: 
+2025-11-01 00:53:27 [INFO]: Discount %: 
+2025-11-01 00:53:27 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:27 [INFO]: Category has offer object
+2025-11-01 00:53:27 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:27 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:27 [INFO]: Discount %: 30
+2025-11-01 00:53:27 [INFO]:  Category offer is VALID
+2025-11-01 00:53:27 [INFO]: Final product discount: 0
+2025-11-01 00:53:27 [INFO]: Final category discount: 30
+2025-11-01 00:53:38 [INFO]: Product offer: 
+2025-11-01 00:53:38 [INFO]: Category offer: [object Object]
+2025-11-01 00:53:38 [INFO]: Current date: Sat Nov 01 2025 00:53:38 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Category has offer object
+2025-11-01 00:53:38 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Discount %: 45
+2025-11-01 00:53:38 [INFO]:  Category offer is VALID
+2025-11-01 00:53:38 [INFO]: Final product discount: 0
+2025-11-01 00:53:38 [INFO]: Final category discount: 45
+2025-11-01 00:53:38 [INFO]: Product offer: 
+2025-11-01 00:53:38 [INFO]: Category offer: 
+2025-11-01 00:53:38 [INFO]: Current date: Sat Nov 01 2025 00:53:38 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Final product discount: 0
+2025-11-01 00:53:38 [INFO]: Final category discount: 0
+2025-11-01 00:53:38 [INFO]: Product offer: 
+2025-11-01 00:53:38 [INFO]: Category offer: 
+2025-11-01 00:53:38 [INFO]: Current date: Sat Nov 01 2025 00:53:38 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Final product discount: 0
+2025-11-01 00:53:38 [INFO]: Final category discount: 0
+2025-11-01 00:53:38 [INFO]: Product offer: 
+2025-11-01 00:53:38 [INFO]: Category offer: [object Object]
+2025-11-01 00:53:38 [INFO]: Current date: Sat Nov 01 2025 00:53:38 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Category has offer object
+2025-11-01 00:53:38 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Discount %: 30
+2025-11-01 00:53:38 [INFO]:  Category offer is VALID
+2025-11-01 00:53:38 [INFO]: Final product discount: 0
+2025-11-01 00:53:38 [INFO]: Final category discount: 30
+2025-11-01 00:53:38 [INFO]: Product offer: 
+2025-11-01 00:53:38 [INFO]: Category offer: 
+2025-11-01 00:53:38 [INFO]: Current date: Sat Nov 01 2025 00:53:38 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Final product discount: 0
+2025-11-01 00:53:38 [INFO]: Final category discount: 0
+2025-11-01 00:53:38 [INFO]: Product offer: 
+2025-11-01 00:53:38 [INFO]: Category offer: 
+2025-11-01 00:53:38 [INFO]: Current date: Sat Nov 01 2025 00:53:38 GMT+0530 (India Standard Time)
+2025-11-01 00:53:38 [INFO]: Final product discount: 0
+2025-11-01 00:53:38 [INFO]: Final category discount: 0
+2025-11-01 00:53:42 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:53:42 [INFO]: Category offer: {}
+2025-11-01 00:53:42 [INFO]: Current date: Sat Nov 01 2025 00:53:42 GMT+0530 (India Standard Time)
+2025-11-01 00:53:42 [INFO]: Product has offer object
+2025-11-01 00:53:42 [INFO]: Start date: 
+2025-11-01 00:53:42 [INFO]: End date: 
+2025-11-01 00:53:42 [INFO]: Discount %: 
+2025-11-01 00:53:42 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:42 [INFO]: Category has offer object
+2025-11-01 00:53:42 [INFO]: Start date: 
+2025-11-01 00:53:42 [INFO]: End date: 
+2025-11-01 00:53:42 [INFO]: Discount %: 
+2025-11-01 00:53:42 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:42 [INFO]: Final product discount: 0
+2025-11-01 00:53:42 [INFO]: Final category discount: 0
+2025-11-01 00:53:42 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:53:42 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 00:53:42 [INFO]: Current date: Sat Nov 01 2025 00:53:42 GMT+0530 (India Standard Time)
+2025-11-01 00:53:42 [INFO]: Product has offer object
+2025-11-01 00:53:42 [INFO]: Start date: 
+2025-11-01 00:53:42 [INFO]: End date: 
+2025-11-01 00:53:42 [INFO]: Discount %: 
+2025-11-01 00:53:42 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:42 [INFO]: Category has offer object
+2025-11-01 00:53:42 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:42 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:42 [INFO]: Discount %: 30
+2025-11-01 00:53:42 [INFO]:  Category offer is VALID
+2025-11-01 00:53:42 [INFO]: Final product discount: 0
+2025-11-01 00:53:42 [INFO]: Final category discount: 30
+2025-11-01 00:53:48 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:53:48 [INFO]: Category offer: {}
+2025-11-01 00:53:48 [INFO]: Current date: Sat Nov 01 2025 00:53:48 GMT+0530 (India Standard Time)
+2025-11-01 00:53:48 [INFO]: Product has offer object
+2025-11-01 00:53:48 [INFO]: Start date: 
+2025-11-01 00:53:48 [INFO]: End date: 
+2025-11-01 00:53:48 [INFO]: Discount %: 
+2025-11-01 00:53:48 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:48 [INFO]: Category has offer object
+2025-11-01 00:53:48 [INFO]: Start date: 
+2025-11-01 00:53:48 [INFO]: End date: 
+2025-11-01 00:53:48 [INFO]: Discount %: 
+2025-11-01 00:53:48 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:48 [INFO]: Final product discount: 0
+2025-11-01 00:53:48 [INFO]: Final category discount: 0
+2025-11-01 00:53:48 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:53:48 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 00:53:48 [INFO]: Current date: Sat Nov 01 2025 00:53:48 GMT+0530 (India Standard Time)
+2025-11-01 00:53:48 [INFO]: Product has offer object
+2025-11-01 00:53:48 [INFO]: Start date: 
+2025-11-01 00:53:48 [INFO]: End date: 
+2025-11-01 00:53:48 [INFO]: Discount %: 
+2025-11-01 00:53:48 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:53:48 [INFO]: Category has offer object
+2025-11-01 00:53:48 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:48 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:53:48 [INFO]: Discount %: 30
+2025-11-01 00:53:48 [INFO]:  Category offer is VALID
+2025-11-01 00:53:48 [INFO]: Final product discount: 0
+2025-11-01 00:53:48 [INFO]: Final category discount: 30
+2025-11-01 00:55:58 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:58 [INFO]: Category offer: 
+2025-11-01 00:55:58 [INFO]: Current date: Sat Nov 01 2025 00:55:58 GMT+0530 (India Standard Time)
+2025-11-01 00:55:58 [INFO]: Product has offer object
+2025-11-01 00:55:58 [INFO]: Start date: 
+2025-11-01 00:55:58 [INFO]: End date: 
+2025-11-01 00:55:58 [INFO]: Discount %: 
+2025-11-01 00:55:58 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:58 [INFO]: Final product discount: 0
+2025-11-01 00:55:58 [INFO]: Final category discount: 0
+2025-11-01 00:55:58 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:58 [INFO]: Category offer: 
+2025-11-01 00:55:58 [INFO]: Current date: Sat Nov 01 2025 00:55:58 GMT+0530 (India Standard Time)
+2025-11-01 00:55:58 [INFO]: Product has offer object
+2025-11-01 00:55:58 [INFO]: Start date: 
+2025-11-01 00:55:58 [INFO]: End date: 
+2025-11-01 00:55:58 [INFO]: Discount %: 
+2025-11-01 00:55:58 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:59 [INFO]: Category offer: 
+2025-11-01 00:55:59 [INFO]: Current date: Sat Nov 01 2025 00:55:59 GMT+0530 (India Standard Time)
+2025-11-01 00:55:59 [INFO]: Product has offer object
+2025-11-01 00:55:59 [INFO]: Start date: 
+2025-11-01 00:55:59 [INFO]: End date: 
+2025-11-01 00:55:59 [INFO]: Discount %: 
+2025-11-01 00:55:59 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:59 [INFO]: Category offer: 
+2025-11-01 00:55:59 [INFO]: Current date: Sat Nov 01 2025 00:55:59 GMT+0530 (India Standard Time)
+2025-11-01 00:55:59 [INFO]: Product has offer object
+2025-11-01 00:55:59 [INFO]: Start date: 
+2025-11-01 00:55:59 [INFO]: End date: 
+2025-11-01 00:55:59 [INFO]: Discount %: 
+2025-11-01 00:55:59 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:59 [INFO]: Category offer: 
+2025-11-01 00:55:59 [INFO]: Current date: Sat Nov 01 2025 00:55:59 GMT+0530 (India Standard Time)
+2025-11-01 00:55:59 [INFO]: Product has offer object
+2025-11-01 00:55:59 [INFO]: Start date: 
+2025-11-01 00:55:59 [INFO]: End date: 
+2025-11-01 00:55:59 [INFO]: Discount %: 
+2025-11-01 00:55:59 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:59 [INFO]: Category offer: 
+2025-11-01 00:55:59 [INFO]: Current date: Sat Nov 01 2025 00:55:59 GMT+0530 (India Standard Time)
+2025-11-01 00:55:59 [INFO]: Product has offer object
+2025-11-01 00:55:59 [INFO]: Start date: 
+2025-11-01 00:55:59 [INFO]: End date: 
+2025-11-01 00:55:59 [INFO]: Discount %: 
+2025-11-01 00:55:59 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:59 [INFO]: Category offer: 
+2025-11-01 00:55:59 [INFO]: Current date: Sat Nov 01 2025 00:55:59 GMT+0530 (India Standard Time)
+2025-11-01 00:55:59 [INFO]: Product has offer object
+2025-11-01 00:55:59 [INFO]: Start date: 
+2025-11-01 00:55:59 [INFO]: End date: 
+2025-11-01 00:55:59 [INFO]: Discount %: 
+2025-11-01 00:55:59 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 00:55:59 [INFO]: Category offer: 
+2025-11-01 00:55:59 [INFO]: Current date: Sat Nov 01 2025 00:55:59 GMT+0530 (India Standard Time)
+2025-11-01 00:55:59 [INFO]: Product has offer object
+2025-11-01 00:55:59 [INFO]: Start date: 
+2025-11-01 00:55:59 [INFO]: End date: 
+2025-11-01 00:55:59 [INFO]: Discount %: 
+2025-11-01 00:55:59 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:55:59 [INFO]: Final product discount: 0
+2025-11-01 00:55:59 [INFO]: Final category discount: 0
+2025-11-01 00:55:59 [INFO]: loadOrderSuccess called
+2025-11-01 00:55:59 [INFO]: orderId from params: ORD-43
+2025-11-01 00:55:59 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 00:55:59 [INFO]: order found: yes
+2025-11-01 00:55:59 [INFO]: order details: [object Object]
+2025-11-01 00:55:59 [INFO]: Rendering order-success page
+2025-11-01 00:59:00 [INFO]: Product offer: 
+2025-11-01 00:59:00 [INFO]: Category offer: [object Object]
+2025-11-01 00:59:00 [INFO]: Current date: Sat Nov 01 2025 00:59:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Category has offer object
+2025-11-01 00:59:00 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Discount %: 30
+2025-11-01 00:59:00 [INFO]:  Category offer is VALID
+2025-11-01 00:59:00 [INFO]: Final product discount: 0
+2025-11-01 00:59:00 [INFO]: Final category discount: 30
+2025-11-01 00:59:00 [INFO]: Product offer: 
+2025-11-01 00:59:00 [INFO]: Category offer: 
+2025-11-01 00:59:00 [INFO]: Current date: Sat Nov 01 2025 00:59:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Final product discount: 0
+2025-11-01 00:59:00 [INFO]: Final category discount: 0
+2025-11-01 00:59:00 [INFO]: Product offer: 
+2025-11-01 00:59:00 [INFO]: Category offer: 
+2025-11-01 00:59:00 [INFO]: Current date: Sat Nov 01 2025 00:59:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Final product discount: 0
+2025-11-01 00:59:00 [INFO]: Final category discount: 0
+2025-11-01 00:59:00 [INFO]: Product offer: 
+2025-11-01 00:59:00 [INFO]: Category offer: [object Object]
+2025-11-01 00:59:00 [INFO]: Current date: Sat Nov 01 2025 00:59:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Category has offer object
+2025-11-01 00:59:00 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Discount %: 45
+2025-11-01 00:59:00 [INFO]:  Category offer is VALID
+2025-11-01 00:59:00 [INFO]: Final product discount: 0
+2025-11-01 00:59:00 [INFO]: Final category discount: 45
+2025-11-01 00:59:00 [INFO]: Product offer: 
+2025-11-01 00:59:00 [INFO]: Category offer: 
+2025-11-01 00:59:00 [INFO]: Current date: Sat Nov 01 2025 00:59:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Final product discount: 0
+2025-11-01 00:59:00 [INFO]: Final category discount: 0
+2025-11-01 00:59:00 [INFO]: Product offer: 
+2025-11-01 00:59:00 [INFO]: Category offer: 
+2025-11-01 00:59:00 [INFO]: Current date: Sat Nov 01 2025 00:59:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:00 [INFO]: Final product discount: 0
+2025-11-01 00:59:00 [INFO]: Final category discount: 0
+2025-11-01 00:59:08 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:59:08 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 00:59:08 [INFO]: Current date: Sat Nov 01 2025 00:59:08 GMT+0530 (India Standard Time)
+2025-11-01 00:59:08 [INFO]: Product has offer object
+2025-11-01 00:59:08 [INFO]: Start date: 
+2025-11-01 00:59:08 [INFO]: End date: 
+2025-11-01 00:59:08 [INFO]: Discount %: 
+2025-11-01 00:59:08 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:59:08 [INFO]: Category has offer object
+2025-11-01 00:59:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:08 [INFO]: Discount %: 30
+2025-11-01 00:59:08 [INFO]:  Category offer is VALID
+2025-11-01 00:59:08 [INFO]: Final product discount: 0
+2025-11-01 00:59:08 [INFO]: Final category discount: 30
+2025-11-01 00:59:34 [INFO]: Product offer: 
+2025-11-01 00:59:34 [INFO]: Category offer: [object Object]
+2025-11-01 00:59:34 [INFO]: Current date: Sat Nov 01 2025 00:59:34 GMT+0530 (India Standard Time)
+2025-11-01 00:59:34 [INFO]: Category has offer object
+2025-11-01 00:59:34 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:34 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:34 [INFO]: Discount %: 45
+2025-11-01 00:59:34 [INFO]:  Category offer is VALID
+2025-11-01 00:59:34 [INFO]: Final product discount: 0
+2025-11-01 00:59:34 [INFO]: Final category discount: 45
+2025-11-01 00:59:34 [INFO]: Product offer: 
+2025-11-01 00:59:34 [INFO]: Category offer: [object Object]
+2025-11-01 00:59:34 [INFO]: Current date: Sat Nov 01 2025 00:59:34 GMT+0530 (India Standard Time)
+2025-11-01 00:59:34 [INFO]: Category has offer object
+2025-11-01 00:59:34 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:34 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:34 [INFO]: Discount %: 30
+2025-11-01 00:59:34 [INFO]:  Category offer is VALID
+2025-11-01 00:59:34 [INFO]: Final product discount: 0
+2025-11-01 00:59:34 [INFO]: Final category discount: 30
+2025-11-01 00:59:34 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:34 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: [object Object]
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Category has offer object
+2025-11-01 00:59:35 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Discount %: 45
+2025-11-01 00:59:35 [INFO]:  Category offer is VALID
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 45
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: [object Object]
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Category has offer object
+2025-11-01 00:59:35 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Discount %: 30
+2025-11-01 00:59:35 [INFO]:  Category offer is VALID
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 30
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:35 [INFO]: Product offer: 
+2025-11-01 00:59:35 [INFO]: Category offer: 
+2025-11-01 00:59:35 [INFO]: Current date: Sat Nov 01 2025 00:59:35 GMT+0530 (India Standard Time)
+2025-11-01 00:59:35 [INFO]: Final product discount: 0
+2025-11-01 00:59:35 [INFO]: Final category discount: 0
+2025-11-01 00:59:39 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:59:39 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 00:59:39 [INFO]: Current date: Sat Nov 01 2025 00:59:39 GMT+0530 (India Standard Time)
+2025-11-01 00:59:39 [INFO]: Product has offer object
+2025-11-01 00:59:39 [INFO]: Start date: 
+2025-11-01 00:59:39 [INFO]: End date: 
+2025-11-01 00:59:39 [INFO]: Discount %: 
+2025-11-01 00:59:39 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:59:39 [INFO]: Category has offer object
+2025-11-01 00:59:39 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:39 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 00:59:39 [INFO]: Discount %: 30
+2025-11-01 00:59:39 [INFO]:  Category offer is VALID
+2025-11-01 00:59:39 [INFO]: Final product discount: 0
+2025-11-01 00:59:39 [INFO]: Final category discount: 30
+2025-11-01 00:59:39 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 00:59:39 [INFO]: Category offer: {}
+2025-11-01 00:59:39 [INFO]: Current date: Sat Nov 01 2025 00:59:39 GMT+0530 (India Standard Time)
+2025-11-01 00:59:39 [INFO]: Product has offer object
+2025-11-01 00:59:39 [INFO]: Start date: 
+2025-11-01 00:59:39 [INFO]: End date: 
+2025-11-01 00:59:39 [INFO]: Discount %: 
+2025-11-01 00:59:39 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 00:59:39 [INFO]: Category has offer object
+2025-11-01 00:59:39 [INFO]: Start date: 
+2025-11-01 00:59:39 [INFO]: End date: 
+2025-11-01 00:59:39 [INFO]: Discount %: 
+2025-11-01 00:59:39 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 00:59:39 [INFO]: Final product discount: 0
+2025-11-01 00:59:39 [INFO]: Final category discount: 0
+2025-11-01 01:00:08 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:08 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 01:00:08 [INFO]: Current date: Sat Nov 01 2025 01:00:08 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: Product has offer object
+2025-11-01 01:00:08 [INFO]: Start date: 
+2025-11-01 01:00:08 [INFO]: End date: 
+2025-11-01 01:00:08 [INFO]: Discount %: 
+2025-11-01 01:00:08 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:08 [INFO]: Category has offer object
+2025-11-01 01:00:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: Discount %: 30
+2025-11-01 01:00:08 [INFO]:  Category offer is VALID
+2025-11-01 01:00:08 [INFO]: Final product discount: 0
+2025-11-01 01:00:08 [INFO]: Final category discount: 30
+2025-11-01 01:00:08 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:08 [INFO]: Category offer: {}
+2025-11-01 01:00:08 [INFO]: Current date: Sat Nov 01 2025 01:00:08 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: Product has offer object
+2025-11-01 01:00:08 [INFO]: Start date: 
+2025-11-01 01:00:08 [INFO]: End date: 
+2025-11-01 01:00:08 [INFO]: Discount %: 
+2025-11-01 01:00:08 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:08 [INFO]: Category has offer object
+2025-11-01 01:00:08 [INFO]: Start date: 
+2025-11-01 01:00:08 [INFO]: End date: 
+2025-11-01 01:00:08 [INFO]: Discount %: 
+2025-11-01 01:00:08 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:08 [INFO]: Final product discount: 0
+2025-11-01 01:00:08 [INFO]: Final category discount: 0
+2025-11-01 01:00:08 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:08 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 01:00:08 [INFO]: Current date: Sat Nov 01 2025 01:00:08 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: Product has offer object
+2025-11-01 01:00:08 [INFO]: Start date: 
+2025-11-01 01:00:08 [INFO]: End date: 
+2025-11-01 01:00:08 [INFO]: Discount %: 
+2025-11-01 01:00:08 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:08 [INFO]: Category has offer object
+2025-11-01 01:00:08 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: Discount %: 30
+2025-11-01 01:00:08 [INFO]:  Category offer is VALID
+2025-11-01 01:00:08 [INFO]: Final product discount: 0
+2025-11-01 01:00:08 [INFO]: Final category discount: 30
+2025-11-01 01:00:08 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:08 [INFO]: Category offer: {}
+2025-11-01 01:00:08 [INFO]: Current date: Sat Nov 01 2025 01:00:08 GMT+0530 (India Standard Time)
+2025-11-01 01:00:08 [INFO]: Product has offer object
+2025-11-01 01:00:08 [INFO]: Start date: 
+2025-11-01 01:00:08 [INFO]: End date: 
+2025-11-01 01:00:08 [INFO]: Discount %: 
+2025-11-01 01:00:08 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:08 [INFO]: Category has offer object
+2025-11-01 01:00:08 [INFO]: Start date: 
+2025-11-01 01:00:08 [INFO]: End date: 
+2025-11-01 01:00:08 [INFO]: Discount %: 
+2025-11-01 01:00:08 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:08 [INFO]: Final product discount: 0
+2025-11-01 01:00:08 [INFO]: Final category discount: 0
+2025-11-01 01:00:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:25 [INFO]: Category offer: 
+2025-11-01 01:00:25 [INFO]: Current date: Sat Nov 01 2025 01:00:25 GMT+0530 (India Standard Time)
+2025-11-01 01:00:25 [INFO]: Product has offer object
+2025-11-01 01:00:25 [INFO]: Start date: 
+2025-11-01 01:00:25 [INFO]: End date: 
+2025-11-01 01:00:25 [INFO]: Discount %: 
+2025-11-01 01:00:25 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:25 [INFO]: Final product discount: 0
+2025-11-01 01:00:25 [INFO]: Final category discount: 0
+2025-11-01 01:00:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:25 [INFO]: Category offer: 
+2025-11-01 01:00:25 [INFO]: Current date: Sat Nov 01 2025 01:00:25 GMT+0530 (India Standard Time)
+2025-11-01 01:00:25 [INFO]: Product has offer object
+2025-11-01 01:00:25 [INFO]: Start date: 
+2025-11-01 01:00:25 [INFO]: End date: 
+2025-11-01 01:00:25 [INFO]: Discount %: 
+2025-11-01 01:00:25 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:25 [INFO]: Final product discount: 0
+2025-11-01 01:00:25 [INFO]: Final category discount: 0
+2025-11-01 01:00:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:25 [INFO]: Category offer: 
+2025-11-01 01:00:26 [INFO]: Current date: Sat Nov 01 2025 01:00:25 GMT+0530 (India Standard Time)
+2025-11-01 01:00:26 [INFO]: Product has offer object
+2025-11-01 01:00:26 [INFO]: Start date: 
+2025-11-01 01:00:26 [INFO]: End date: 
+2025-11-01 01:00:26 [INFO]: Discount %: 
+2025-11-01 01:00:26 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:26 [INFO]: Final product discount: 0
+2025-11-01 01:00:26 [INFO]: Final category discount: 0
+2025-11-01 01:00:26 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 01:00:26 [INFO]: Category offer: 
+2025-11-01 01:00:26 [INFO]: Current date: Sat Nov 01 2025 01:00:26 GMT+0530 (India Standard Time)
+2025-11-01 01:00:26 [INFO]: Product has offer object
+2025-11-01 01:00:26 [INFO]: Start date: 
+2025-11-01 01:00:26 [INFO]: End date: 
+2025-11-01 01:00:26 [INFO]: Discount %: 
+2025-11-01 01:00:26 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 01:00:26 [INFO]: Final product discount: 0
+2025-11-01 01:00:26 [INFO]: Final category discount: 0
+2025-11-01 01:00:26 [INFO]: loadOrderSuccess called
+2025-11-01 01:00:26 [INFO]: orderId from params: ORD-44
+2025-11-01 01:00:26 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 01:00:26 [INFO]: order found: yes
+2025-11-01 01:00:26 [INFO]: order details: [object Object]
+2025-11-01 01:00:26 [INFO]: Rendering order-success page
+2025-11-01 06:39:40 [INFO]:  MongoDB connected
+2025-11-01 08:20:38 [INFO]:  MongoDB connected
+2025-11-01 08:27:22 [INFO]: loadOrderSuccess called
+2025-11-01 08:27:22 [INFO]: orderId from params: ORD-44
+2025-11-01 08:27:22 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 08:27:22 [INFO]: order found: yes
+2025-11-01 08:27:22 [INFO]: order details: [object Object]
+2025-11-01 08:27:22 [INFO]: Rendering order-success page
+2025-11-01 08:27:32 [INFO]: Product offer: 
+2025-11-01 08:27:32 [INFO]: Category offer: [object Object]
+2025-11-01 08:27:32 [INFO]: Current date: Sat Nov 01 2025 08:27:32 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Category has offer object
+2025-11-01 08:27:32 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Discount %: 30
+2025-11-01 08:27:32 [INFO]:  Category offer is VALID
+2025-11-01 08:27:32 [INFO]: Final product discount: 0
+2025-11-01 08:27:32 [INFO]: Final category discount: 30
+2025-11-01 08:27:32 [INFO]: Product offer: 
+2025-11-01 08:27:32 [INFO]: Category offer: [object Object]
+2025-11-01 08:27:32 [INFO]: Current date: Sat Nov 01 2025 08:27:32 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Category has offer object
+2025-11-01 08:27:32 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Discount %: 45
+2025-11-01 08:27:32 [INFO]:  Category offer is VALID
+2025-11-01 08:27:32 [INFO]: Final product discount: 0
+2025-11-01 08:27:32 [INFO]: Final category discount: 45
+2025-11-01 08:27:32 [INFO]: Product offer: 
+2025-11-01 08:27:32 [INFO]: Category offer: 
+2025-11-01 08:27:32 [INFO]: Current date: Sat Nov 01 2025 08:27:32 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Final product discount: 0
+2025-11-01 08:27:32 [INFO]: Final category discount: 0
+2025-11-01 08:27:32 [INFO]: Product offer: 
+2025-11-01 08:27:32 [INFO]: Category offer: 
+2025-11-01 08:27:32 [INFO]: Current date: Sat Nov 01 2025 08:27:32 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Final product discount: 0
+2025-11-01 08:27:32 [INFO]: Final category discount: 0
+2025-11-01 08:27:32 [INFO]: Product offer: 
+2025-11-01 08:27:32 [INFO]: Category offer: 
+2025-11-01 08:27:32 [INFO]: Current date: Sat Nov 01 2025 08:27:32 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Final product discount: 0
+2025-11-01 08:27:32 [INFO]: Final category discount: 0
+2025-11-01 08:27:32 [INFO]: Product offer: 
+2025-11-01 08:27:32 [INFO]: Category offer: 
+2025-11-01 08:27:32 [INFO]: Current date: Sat Nov 01 2025 08:27:32 GMT+0530 (India Standard Time)
+2025-11-01 08:27:32 [INFO]: Final product discount: 0
+2025-11-01 08:27:32 [INFO]: Final category discount: 0
+2025-11-01 08:27:38 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 08:27:38 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:27:38 [INFO]: Current date: Sat Nov 01 2025 08:27:38 GMT+0530 (India Standard Time)
+2025-11-01 08:27:38 [INFO]: Product has offer object
+2025-11-01 08:27:38 [INFO]: Start date: 
+2025-11-01 08:27:38 [INFO]: End date: 
+2025-11-01 08:27:38 [INFO]: Discount %: 
+2025-11-01 08:27:38 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:27:38 [INFO]: Category has offer object
+2025-11-01 08:27:38 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:38 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:38 [INFO]: Discount %: 30
+2025-11-01 08:27:38 [INFO]:  Category offer is VALID
+2025-11-01 08:27:38 [INFO]: Final product discount: 0
+2025-11-01 08:27:38 [INFO]: Final category discount: 30
+2025-11-01 08:27:48 [INFO]: Product offer: 
+2025-11-01 08:27:48 [INFO]: Category offer: [object Object]
+2025-11-01 08:27:48 [INFO]: Current date: Sat Nov 01 2025 08:27:48 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Category has offer object
+2025-11-01 08:27:48 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Discount %: 30
+2025-11-01 08:27:48 [INFO]:  Category offer is VALID
+2025-11-01 08:27:48 [INFO]: Final product discount: 0
+2025-11-01 08:27:48 [INFO]: Final category discount: 30
+2025-11-01 08:27:48 [INFO]: Product offer: 
+2025-11-01 08:27:48 [INFO]: Category offer: 
+2025-11-01 08:27:48 [INFO]: Current date: Sat Nov 01 2025 08:27:48 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Final product discount: 0
+2025-11-01 08:27:48 [INFO]: Final category discount: 0
+2025-11-01 08:27:48 [INFO]: Product offer: 
+2025-11-01 08:27:48 [INFO]: Category offer: 
+2025-11-01 08:27:48 [INFO]: Current date: Sat Nov 01 2025 08:27:48 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Final product discount: 0
+2025-11-01 08:27:48 [INFO]: Final category discount: 0
+2025-11-01 08:27:48 [INFO]: Product offer: 
+2025-11-01 08:27:48 [INFO]: Category offer: [object Object]
+2025-11-01 08:27:48 [INFO]: Current date: Sat Nov 01 2025 08:27:48 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Category has offer object
+2025-11-01 08:27:48 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Discount %: 45
+2025-11-01 08:27:48 [INFO]:  Category offer is VALID
+2025-11-01 08:27:48 [INFO]: Final product discount: 0
+2025-11-01 08:27:48 [INFO]: Final category discount: 45
+2025-11-01 08:27:48 [INFO]: Product offer: 
+2025-11-01 08:27:48 [INFO]: Category offer: 
+2025-11-01 08:27:48 [INFO]: Current date: Sat Nov 01 2025 08:27:48 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Final product discount: 0
+2025-11-01 08:27:48 [INFO]: Final category discount: 0
+2025-11-01 08:27:48 [INFO]: Product offer: 
+2025-11-01 08:27:48 [INFO]: Category offer: 
+2025-11-01 08:27:48 [INFO]: Current date: Sat Nov 01 2025 08:27:48 GMT+0530 (India Standard Time)
+2025-11-01 08:27:48 [INFO]: Final product discount: 0
+2025-11-01 08:27:48 [INFO]: Final category discount: 0
+2025-11-01 08:27:53 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 08:27:53 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:27:53 [INFO]: Current date: Sat Nov 01 2025 08:27:53 GMT+0530 (India Standard Time)
+2025-11-01 08:27:53 [INFO]: Product has offer object
+2025-11-01 08:27:53 [INFO]: Start date: 
+2025-11-01 08:27:53 [INFO]: End date: 
+2025-11-01 08:27:53 [INFO]: Discount %: 
+2025-11-01 08:27:53 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:27:53 [INFO]: Category has offer object
+2025-11-01 08:27:53 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:53 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:27:53 [INFO]: Discount %: 30
+2025-11-01 08:27:53 [INFO]:  Category offer is VALID
+2025-11-01 08:27:53 [INFO]: Final product discount: 0
+2025-11-01 08:27:53 [INFO]: Final category discount: 30
+2025-11-01 08:27:53 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 08:27:53 [INFO]: Category offer: {}
+2025-11-01 08:27:53 [INFO]: Current date: Sat Nov 01 2025 08:27:53 GMT+0530 (India Standard Time)
+2025-11-01 08:27:53 [INFO]: Product has offer object
+2025-11-01 08:27:53 [INFO]: Start date: 
+2025-11-01 08:27:53 [INFO]: End date: 
+2025-11-01 08:27:53 [INFO]: Discount %: 
+2025-11-01 08:27:53 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:27:53 [INFO]: Category has offer object
+2025-11-01 08:27:53 [INFO]: Start date: 
+2025-11-01 08:27:53 [INFO]: End date: 
+2025-11-01 08:27:53 [INFO]: Discount %: 
+2025-11-01 08:27:53 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:27:53 [INFO]: Final product discount: 0
+2025-11-01 08:27:53 [INFO]: Final category discount: 0
+2025-11-01 08:28:12 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:28:12 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:28:12 [INFO]: Current date: Sat Nov 01 2025 08:28:12 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: Product has offer object
+2025-11-01 08:28:12 [INFO]: Start date: 
+2025-11-01 08:28:12 [INFO]: End date: 
+2025-11-01 08:28:12 [INFO]: Discount %: 
+2025-11-01 08:28:12 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:28:12 [INFO]: Category has offer object
+2025-11-01 08:28:12 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: Discount %: 30
+2025-11-01 08:28:12 [INFO]:  Category offer is VALID
+2025-11-01 08:28:12 [INFO]: Final product discount: 0
+2025-11-01 08:28:12 [INFO]: Final category discount: 30
+2025-11-01 08:28:12 [INFO]: Product offer: {}
+2025-11-01 08:28:12 [INFO]: Category offer: {}
+2025-11-01 08:28:12 [INFO]: Current date: Sat Nov 01 2025 08:28:12 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: Product has offer object
+2025-11-01 08:28:12 [INFO]: Start date: 
+2025-11-01 08:28:12 [INFO]: End date: 
+2025-11-01 08:28:12 [INFO]: Discount %: 
+2025-11-01 08:28:12 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:28:12 [INFO]: Category has offer object
+2025-11-01 08:28:12 [INFO]: Start date: 
+2025-11-01 08:28:12 [INFO]: End date: 
+2025-11-01 08:28:12 [INFO]: Discount %: 
+2025-11-01 08:28:12 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:28:12 [INFO]: Final product discount: 0
+2025-11-01 08:28:12 [INFO]: Final category discount: 0
+2025-11-01 08:28:12 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:28:12 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:28:12 [INFO]: Current date: Sat Nov 01 2025 08:28:12 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: Product has offer object
+2025-11-01 08:28:12 [INFO]: Start date: 
+2025-11-01 08:28:12 [INFO]: End date: 
+2025-11-01 08:28:12 [INFO]: Discount %: 
+2025-11-01 08:28:12 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:28:12 [INFO]: Category has offer object
+2025-11-01 08:28:12 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: Discount %: 30
+2025-11-01 08:28:12 [INFO]:  Category offer is VALID
+2025-11-01 08:28:12 [INFO]: Final product discount: 0
+2025-11-01 08:28:12 [INFO]: Final category discount: 30
+2025-11-01 08:28:12 [INFO]: Product offer: {}
+2025-11-01 08:28:12 [INFO]: Category offer: {}
+2025-11-01 08:28:12 [INFO]: Current date: Sat Nov 01 2025 08:28:12 GMT+0530 (India Standard Time)
+2025-11-01 08:28:12 [INFO]: Product has offer object
+2025-11-01 08:28:12 [INFO]: Start date: 
+2025-11-01 08:28:12 [INFO]: End date: 
+2025-11-01 08:28:12 [INFO]: Discount %: 
+2025-11-01 08:28:12 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:28:12 [INFO]: Category has offer object
+2025-11-01 08:28:12 [INFO]: Start date: 
+2025-11-01 08:28:12 [INFO]: End date: 
+2025-11-01 08:28:12 [INFO]: Discount %: 
+2025-11-01 08:28:12 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:28:12 [INFO]: Final product discount: 0
+2025-11-01 08:28:12 [INFO]: Final category discount: 0
+2025-11-01 08:29:22 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:29:22 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:29:22 [INFO]: Current date: Sat Nov 01 2025 08:29:22 GMT+0530 (India Standard Time)
+2025-11-01 08:29:22 [INFO]: Product has offer object
+2025-11-01 08:29:22 [INFO]: Start date: 
+2025-11-01 08:29:22 [INFO]: End date: 
+2025-11-01 08:29:22 [INFO]: Discount %: 
+2025-11-01 08:29:22 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:29:22 [INFO]: Category has offer object
+2025-11-01 08:29:22 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:29:22 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:29:22 [INFO]: Discount %: 30
+2025-11-01 08:29:22 [INFO]:  Category offer is VALID
+2025-11-01 08:29:22 [INFO]: Final product discount: 0
+2025-11-01 08:29:22 [INFO]: Final category discount: 30
+2025-11-01 08:29:22 [INFO]: Product offer: {}
+2025-11-01 08:29:22 [INFO]: Category offer: {}
+2025-11-01 08:29:22 [INFO]: Current date: Sat Nov 01 2025 08:29:22 GMT+0530 (India Standard Time)
+2025-11-01 08:29:22 [INFO]: Product has offer object
+2025-11-01 08:29:22 [INFO]: Start date: 
+2025-11-01 08:29:22 [INFO]: End date: 
+2025-11-01 08:29:22 [INFO]: Discount %: 
+2025-11-01 08:29:22 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:29:22 [INFO]: Category has offer object
+2025-11-01 08:29:22 [INFO]: Start date: 
+2025-11-01 08:29:22 [INFO]: End date: 
+2025-11-01 08:29:22 [INFO]: Discount %: 
+2025-11-01 08:29:22 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:29:22 [INFO]: Final product discount: 0
+2025-11-01 08:29:22 [INFO]: Final category discount: 0
+2025-11-01 08:31:04 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:31:04 [INFO]: Category offer: 
+2025-11-01 08:31:04 [INFO]: Current date: Sat Nov 01 2025 08:31:04 GMT+0530 (India Standard Time)
+2025-11-01 08:31:04 [INFO]: Product has offer object
+2025-11-01 08:31:04 [INFO]: Start date: 
+2025-11-01 08:31:04 [INFO]: End date: 
+2025-11-01 08:31:04 [INFO]: Discount %: 
+2025-11-01 08:31:04 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:31:04 [INFO]: Final product discount: 0
+2025-11-01 08:31:04 [INFO]: Final category discount: 0
+2025-11-01 08:31:04 [INFO]: Product offer: {}
+2025-11-01 08:31:04 [INFO]: Category offer: 
+2025-11-01 08:31:04 [INFO]: Current date: Sat Nov 01 2025 08:31:04 GMT+0530 (India Standard Time)
+2025-11-01 08:31:04 [INFO]: Product has offer object
+2025-11-01 08:31:04 [INFO]: Start date: 
+2025-11-01 08:31:04 [INFO]: End date: 
+2025-11-01 08:31:04 [INFO]: Discount %: 
+2025-11-01 08:31:04 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:31:04 [INFO]: Final product discount: 0
+2025-11-01 08:31:04 [INFO]: Final category discount: 0
+2025-11-01 08:31:04 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:31:04 [INFO]: Category offer: 
+2025-11-01 08:31:04 [INFO]: Current date: Sat Nov 01 2025 08:31:04 GMT+0530 (India Standard Time)
+2025-11-01 08:31:04 [INFO]: Product has offer object
+2025-11-01 08:31:04 [INFO]: Start date: 
+2025-11-01 08:31:04 [INFO]: End date: 
+2025-11-01 08:31:04 [INFO]: Discount %: 
+2025-11-01 08:31:04 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:31:04 [INFO]: Final product discount: 0
+2025-11-01 08:31:04 [INFO]: Final category discount: 0
+2025-11-01 08:31:04 [INFO]: Product offer: {}
+2025-11-01 08:31:04 [INFO]: Category offer: 
+2025-11-01 08:31:04 [INFO]: Current date: Sat Nov 01 2025 08:31:04 GMT+0530 (India Standard Time)
+2025-11-01 08:31:04 [INFO]: Product has offer object
+2025-11-01 08:31:04 [INFO]: Start date: 
+2025-11-01 08:31:04 [INFO]: End date: 
+2025-11-01 08:31:04 [INFO]: Discount %: 
+2025-11-01 08:31:04 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:31:04 [INFO]: Final product discount: 0
+2025-11-01 08:31:04 [INFO]: Final category discount: 0
+2025-11-01 08:31:04 [INFO]: loadOrderSuccess called
+2025-11-01 08:31:04 [INFO]: orderId from params: ORD-45
+2025-11-01 08:31:04 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 08:31:04 [INFO]: order found: yes
+2025-11-01 08:31:04 [INFO]: order details: [object Object]
+2025-11-01 08:31:04 [INFO]: Rendering order-success page
+2025-11-01 08:36:18 [INFO]:  MongoDB connected
+2025-11-01 08:40:55 [INFO]: node starting
+2025-11-01 08:40:55 [INFO]: server running at http://localhost:3000
+2025-11-01 08:40:55 [INFO]:  MongoDB connected
+2025-11-01 08:41:19 [INFO]: node starting
+2025-11-01 08:41:20 [INFO]: server running at http://localhost:3000
+2025-11-01 08:41:20 [INFO]:  MongoDB connected
+2025-11-01 08:42:17 [INFO]: node starting
+2025-11-01 08:42:17 [INFO]: server running at http://localhost:3000
+2025-11-01 08:42:18 [INFO]:  MongoDB connected
+2025-11-01 08:42:32 [INFO]: node starting
+2025-11-01 08:42:32 [INFO]: server running at http://localhost:3000
+2025-11-01 08:42:32 [INFO]:  MongoDB connected
+2025-11-01 08:43:03 [INFO]: node starting
+2025-11-01 08:43:03 [INFO]: server running at http://localhost:3000
+2025-11-01 08:43:03 [INFO]:  MongoDB connected
+2025-11-01 08:43:22 [INFO]: node starting
+2025-11-01 08:43:22 [INFO]: server running at http://localhost:3000
+2025-11-01 08:43:22 [INFO]:  MongoDB connected
+2025-11-01 08:43:34 [INFO]: Product offer: 
+2025-11-01 08:43:34 [INFO]: Category offer: [object Object]
+2025-11-01 08:43:34 [INFO]: Current date: Sat Nov 01 2025 08:43:34 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Category has offer object
+2025-11-01 08:43:34 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Discount %: 45
+2025-11-01 08:43:34 [INFO]:  Category offer is VALID
+2025-11-01 08:43:34 [INFO]: Final product discount: 0
+2025-11-01 08:43:34 [INFO]: Final category discount: 45
+2025-11-01 08:43:34 [INFO]: Product offer: 
+2025-11-01 08:43:34 [INFO]: Category offer: [object Object]
+2025-11-01 08:43:34 [INFO]: Current date: Sat Nov 01 2025 08:43:34 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Category has offer object
+2025-11-01 08:43:34 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Discount %: 30
+2025-11-01 08:43:34 [INFO]:  Category offer is VALID
+2025-11-01 08:43:34 [INFO]: Final product discount: 0
+2025-11-01 08:43:34 [INFO]: Final category discount: 30
+2025-11-01 08:43:34 [INFO]: Product offer: 
+2025-11-01 08:43:34 [INFO]: Category offer: 
+2025-11-01 08:43:34 [INFO]: Current date: Sat Nov 01 2025 08:43:34 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Final product discount: 0
+2025-11-01 08:43:34 [INFO]: Final category discount: 0
+2025-11-01 08:43:34 [INFO]: Product offer: 
+2025-11-01 08:43:34 [INFO]: Category offer: 
+2025-11-01 08:43:34 [INFO]: Current date: Sat Nov 01 2025 08:43:34 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Final product discount: 0
+2025-11-01 08:43:34 [INFO]: Final category discount: 0
+2025-11-01 08:43:34 [INFO]: Product offer: 
+2025-11-01 08:43:34 [INFO]: Category offer: 
+2025-11-01 08:43:34 [INFO]: Current date: Sat Nov 01 2025 08:43:34 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Final product discount: 0
+2025-11-01 08:43:34 [INFO]: Final category discount: 0
+2025-11-01 08:43:34 [INFO]: Product offer: 
+2025-11-01 08:43:34 [INFO]: Category offer: 
+2025-11-01 08:43:34 [INFO]: Current date: Sat Nov 01 2025 08:43:34 GMT+0530 (India Standard Time)
+2025-11-01 08:43:34 [INFO]: Final product discount: 0
+2025-11-01 08:43:34 [INFO]: Final category discount: 0
+2025-11-01 08:44:13 [INFO]: Product offer: 
+2025-11-01 08:44:13 [INFO]: Category offer: [object Object]
+2025-11-01 08:44:13 [INFO]: Current date: Sat Nov 01 2025 08:44:13 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Category has offer object
+2025-11-01 08:44:13 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Discount %: 45
+2025-11-01 08:44:13 [INFO]:  Category offer is VALID
+2025-11-01 08:44:13 [INFO]: Final product discount: 0
+2025-11-01 08:44:13 [INFO]: Final category discount: 45
+2025-11-01 08:44:13 [INFO]: Product offer: 
+2025-11-01 08:44:13 [INFO]: Category offer: [object Object]
+2025-11-01 08:44:13 [INFO]: Current date: Sat Nov 01 2025 08:44:13 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Category has offer object
+2025-11-01 08:44:13 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Discount %: 30
+2025-11-01 08:44:13 [INFO]:  Category offer is VALID
+2025-11-01 08:44:13 [INFO]: Final product discount: 0
+2025-11-01 08:44:13 [INFO]: Final category discount: 30
+2025-11-01 08:44:13 [INFO]: Product offer: 
+2025-11-01 08:44:13 [INFO]: Category offer: 
+2025-11-01 08:44:13 [INFO]: Current date: Sat Nov 01 2025 08:44:13 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Final product discount: 0
+2025-11-01 08:44:13 [INFO]: Final category discount: 0
+2025-11-01 08:44:13 [INFO]: Product offer: 
+2025-11-01 08:44:13 [INFO]: Category offer: 
+2025-11-01 08:44:13 [INFO]: Current date: Sat Nov 01 2025 08:44:13 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Final product discount: 0
+2025-11-01 08:44:13 [INFO]: Final category discount: 0
+2025-11-01 08:44:13 [INFO]: Product offer: 
+2025-11-01 08:44:13 [INFO]: Category offer: 
+2025-11-01 08:44:13 [INFO]: Current date: Sat Nov 01 2025 08:44:13 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Final product discount: 0
+2025-11-01 08:44:13 [INFO]: Final category discount: 0
+2025-11-01 08:44:13 [INFO]: Product offer: 
+2025-11-01 08:44:13 [INFO]: Category offer: 
+2025-11-01 08:44:13 [INFO]: Current date: Sat Nov 01 2025 08:44:13 GMT+0530 (India Standard Time)
+2025-11-01 08:44:13 [INFO]: Final product discount: 0
+2025-11-01 08:44:13 [INFO]: Final category discount: 0
+2025-11-01 08:44:20 [INFO]: Product offer: 
+2025-11-01 08:44:20 [INFO]: Category offer: [object Object]
+2025-11-01 08:44:20 [INFO]: Current date: Sat Nov 01 2025 08:44:20 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Category has offer object
+2025-11-01 08:44:20 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Discount %: 45
+2025-11-01 08:44:20 [INFO]:  Category offer is VALID
+2025-11-01 08:44:20 [INFO]: Final product discount: 0
+2025-11-01 08:44:20 [INFO]: Final category discount: 45
+2025-11-01 08:44:20 [INFO]: Product offer: 
+2025-11-01 08:44:20 [INFO]: Category offer: [object Object]
+2025-11-01 08:44:20 [INFO]: Current date: Sat Nov 01 2025 08:44:20 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Category has offer object
+2025-11-01 08:44:20 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Discount %: 30
+2025-11-01 08:44:20 [INFO]:  Category offer is VALID
+2025-11-01 08:44:20 [INFO]: Final product discount: 0
+2025-11-01 08:44:20 [INFO]: Final category discount: 30
+2025-11-01 08:44:20 [INFO]: Product offer: 
+2025-11-01 08:44:20 [INFO]: Category offer: 
+2025-11-01 08:44:20 [INFO]: Current date: Sat Nov 01 2025 08:44:20 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Final product discount: 0
+2025-11-01 08:44:20 [INFO]: Final category discount: 0
+2025-11-01 08:44:20 [INFO]: Product offer: 
+2025-11-01 08:44:20 [INFO]: Category offer: 
+2025-11-01 08:44:20 [INFO]: Current date: Sat Nov 01 2025 08:44:20 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Final product discount: 0
+2025-11-01 08:44:20 [INFO]: Final category discount: 0
+2025-11-01 08:44:20 [INFO]: Product offer: 
+2025-11-01 08:44:20 [INFO]: Category offer: 
+2025-11-01 08:44:20 [INFO]: Current date: Sat Nov 01 2025 08:44:20 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Final product discount: 0
+2025-11-01 08:44:20 [INFO]: Final category discount: 0
+2025-11-01 08:44:20 [INFO]: Product offer: 
+2025-11-01 08:44:20 [INFO]: Category offer: 
+2025-11-01 08:44:20 [INFO]: Current date: Sat Nov 01 2025 08:44:20 GMT+0530 (India Standard Time)
+2025-11-01 08:44:20 [INFO]: Final product discount: 0
+2025-11-01 08:44:20 [INFO]: Final category discount: 0
+2025-11-01 08:44:31 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 08:44:31 [INFO]: Category offer: {}
+2025-11-01 08:44:31 [INFO]: Current date: Sat Nov 01 2025 08:44:31 GMT+0530 (India Standard Time)
+2025-11-01 08:44:31 [INFO]: Product has offer object
+2025-11-01 08:44:31 [INFO]: Start date: 
+2025-11-01 08:44:31 [INFO]: End date: 
+2025-11-01 08:44:31 [INFO]: Discount %: 
+2025-11-01 08:44:31 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:31 [INFO]: Category has offer object
+2025-11-01 08:44:31 [INFO]: Start date: 
+2025-11-01 08:44:31 [INFO]: End date: 
+2025-11-01 08:44:31 [INFO]: Discount %: 
+2025-11-01 08:44:31 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:31 [INFO]: Final product discount: 0
+2025-11-01 08:44:31 [INFO]: Final category discount: 0
+2025-11-01 08:44:31 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 08:44:31 [INFO]: Category offer: {}
+2025-11-01 08:44:31 [INFO]: Current date: Sat Nov 01 2025 08:44:31 GMT+0530 (India Standard Time)
+2025-11-01 08:44:31 [INFO]: Product has offer object
+2025-11-01 08:44:31 [INFO]: Start date: 
+2025-11-01 08:44:31 [INFO]: End date: 
+2025-11-01 08:44:31 [INFO]: Discount %: 
+2025-11-01 08:44:31 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:31 [INFO]: Category has offer object
+2025-11-01 08:44:31 [INFO]: Start date: 
+2025-11-01 08:44:31 [INFO]: End date: 
+2025-11-01 08:44:31 [INFO]: Discount %: 
+2025-11-01 08:44:31 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:31 [INFO]: Final product discount: 0
+2025-11-01 08:44:31 [INFO]: Final category discount: 0
+2025-11-01 08:44:31 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 08:44:31 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:44:31 [INFO]: Current date: Sat Nov 01 2025 08:44:31 GMT+0530 (India Standard Time)
+2025-11-01 08:44:31 [INFO]: Product has offer object
+2025-11-01 08:44:31 [INFO]: Start date: 
+2025-11-01 08:44:31 [INFO]: End date: 
+2025-11-01 08:44:31 [INFO]: Discount %: 
+2025-11-01 08:44:31 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:31 [INFO]: Category has offer object
+2025-11-01 08:44:31 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:31 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:31 [INFO]: Discount %: 30
+2025-11-01 08:44:31 [INFO]:  Category offer is VALID
+2025-11-01 08:44:31 [INFO]: Final product discount: 0
+2025-11-01 08:44:31 [INFO]: Final category discount: 30
+2025-11-01 08:44:46 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:46 [INFO]: Category offer: {}
+2025-11-01 08:44:46 [INFO]: Current date: Sat Nov 01 2025 08:44:46 GMT+0530 (India Standard Time)
+2025-11-01 08:44:46 [INFO]: Product has offer object
+2025-11-01 08:44:46 [INFO]: Start date: 
+2025-11-01 08:44:46 [INFO]: End date: 
+2025-11-01 08:44:46 [INFO]: Discount %: 
+2025-11-01 08:44:46 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:46 [INFO]: Category has offer object
+2025-11-01 08:44:46 [INFO]: Start date: 
+2025-11-01 08:44:46 [INFO]: End date: 
+2025-11-01 08:44:46 [INFO]: Discount %: 
+2025-11-01 08:44:46 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:46 [INFO]: Final product discount: 0
+2025-11-01 08:44:46 [INFO]: Final category discount: 0
+2025-11-01 08:44:46 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:46 [INFO]: Category offer: {}
+2025-11-01 08:44:46 [INFO]: Current date: Sat Nov 01 2025 08:44:46 GMT+0530 (India Standard Time)
+2025-11-01 08:44:46 [INFO]: Product has offer object
+2025-11-01 08:44:46 [INFO]: Start date: 
+2025-11-01 08:44:46 [INFO]: End date: 
+2025-11-01 08:44:46 [INFO]: Discount %: 
+2025-11-01 08:44:46 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:46 [INFO]: Category has offer object
+2025-11-01 08:44:46 [INFO]: Start date: 
+2025-11-01 08:44:46 [INFO]: End date: 
+2025-11-01 08:44:46 [INFO]: Discount %: 
+2025-11-01 08:44:46 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:46 [INFO]: Final product discount: 0
+2025-11-01 08:44:46 [INFO]: Final category discount: 0
+2025-11-01 08:44:46 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:46 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:44:46 [INFO]: Current date: Sat Nov 01 2025 08:44:46 GMT+0530 (India Standard Time)
+2025-11-01 08:44:46 [INFO]: Product has offer object
+2025-11-01 08:44:46 [INFO]: Start date: 
+2025-11-01 08:44:46 [INFO]: End date: 
+2025-11-01 08:44:46 [INFO]: Discount %: 
+2025-11-01 08:44:46 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:46 [INFO]: Category has offer object
+2025-11-01 08:44:46 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:46 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:46 [INFO]: Discount %: 30
+2025-11-01 08:44:46 [INFO]:  Category offer is VALID
+2025-11-01 08:44:46 [INFO]: Final product discount: 0
+2025-11-01 08:44:46 [INFO]: Final category discount: 30
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Discount %: 30
+2025-11-01 08:44:56 [INFO]:  Category offer is VALID
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 30
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Discount %: 30
+2025-11-01 08:44:56 [INFO]:  Category offer is VALID
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 30
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Discount %: 30
+2025-11-01 08:44:56 [INFO]:  Category offer is VALID
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 30
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 0
+2025-11-01 08:44:56 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 08:44:56 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 08:44:56 [INFO]: Current date: Sat Nov 01 2025 08:44:56 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Product has offer object
+2025-11-01 08:44:56 [INFO]: Start date: 
+2025-11-01 08:44:56 [INFO]: End date: 
+2025-11-01 08:44:56 [INFO]: Discount %: 
+2025-11-01 08:44:56 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 08:44:56 [INFO]: Category has offer object
+2025-11-01 08:44:56 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:44:56 [INFO]: Discount %: 30
+2025-11-01 08:44:56 [INFO]:  Category offer is VALID
+2025-11-01 08:44:56 [INFO]: Final product discount: 0
+2025-11-01 08:44:56 [INFO]: Final category discount: 30
+2025-11-01 08:44:56 [INFO]: loadOrderSuccess called
+2025-11-01 08:44:56 [INFO]: orderId from params: ORD-47
+2025-11-01 08:44:56 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 08:44:56 [INFO]: order found: yes
+2025-11-01 08:44:56 [INFO]: order details: [object Object]
+2025-11-01 08:44:56 [INFO]: Rendering order-success page
+2025-11-01 08:45:11 [INFO]: Product offer: 
+2025-11-01 08:45:11 [INFO]: Category offer: [object Object]
+2025-11-01 08:45:11 [INFO]: Current date: Sat Nov 01 2025 08:45:11 GMT+0530 (India Standard Time)
+2025-11-01 08:45:11 [INFO]: Category has offer object
+2025-11-01 08:45:11 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:45:11 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:45:11 [INFO]: Discount %: 45
+2025-11-01 08:45:11 [INFO]:  Category offer is VALID
+2025-11-01 08:45:11 [INFO]: Final product discount: 0
+2025-11-01 08:45:11 [INFO]: Final category discount: 45
+2025-11-01 08:45:12 [INFO]: Product offer: 
+2025-11-01 08:45:12 [INFO]: Category offer: 
+2025-11-01 08:45:12 [INFO]: Current date: Sat Nov 01 2025 08:45:12 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: Final product discount: 0
+2025-11-01 08:45:12 [INFO]: Final category discount: 0
+2025-11-01 08:45:12 [INFO]: Product offer: 
+2025-11-01 08:45:12 [INFO]: Category offer: [object Object]
+2025-11-01 08:45:12 [INFO]: Current date: Sat Nov 01 2025 08:45:12 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: Category has offer object
+2025-11-01 08:45:12 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: Discount %: 30
+2025-11-01 08:45:12 [INFO]:  Category offer is VALID
+2025-11-01 08:45:12 [INFO]: Final product discount: 0
+2025-11-01 08:45:12 [INFO]: Final category discount: 30
+2025-11-01 08:45:12 [INFO]: Product offer: 
+2025-11-01 08:45:12 [INFO]: Category offer: 
+2025-11-01 08:45:12 [INFO]: Current date: Sat Nov 01 2025 08:45:12 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: Final product discount: 0
+2025-11-01 08:45:12 [INFO]: Final category discount: 0
+2025-11-01 08:45:12 [INFO]: Product offer: 
+2025-11-01 08:45:12 [INFO]: Category offer: 
+2025-11-01 08:45:12 [INFO]: Current date: Sat Nov 01 2025 08:45:12 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: Final product discount: 0
+2025-11-01 08:45:12 [INFO]: Final category discount: 0
+2025-11-01 08:45:12 [INFO]: Product offer: 
+2025-11-01 08:45:12 [INFO]: Category offer: 
+2025-11-01 08:45:12 [INFO]: Current date: Sat Nov 01 2025 08:45:12 GMT+0530 (India Standard Time)
+2025-11-01 08:45:12 [INFO]: Final product discount: 0
+2025-11-01 08:45:12 [INFO]: Final category discount: 0
+2025-11-01 09:11:37 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 09:11:37 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:11:37 [INFO]: Current date: Sat Nov 01 2025 09:11:37 GMT+0530 (India Standard Time)
+2025-11-01 09:11:37 [INFO]: Product has offer object
+2025-11-01 09:11:37 [INFO]: Start date: 
+2025-11-01 09:11:37 [INFO]: End date: 
+2025-11-01 09:11:37 [INFO]: Discount %: 
+2025-11-01 09:11:37 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:11:37 [INFO]: Category has offer object
+2025-11-01 09:11:37 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:37 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:37 [INFO]: Discount %: 30
+2025-11-01 09:11:37 [INFO]:  Category offer is VALID
+2025-11-01 09:11:37 [INFO]: Final product discount: 0
+2025-11-01 09:11:37 [INFO]: Final category discount: 30
+2025-11-01 09:11:37 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 09:11:37 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:11:37 [INFO]: Current date: Sat Nov 01 2025 09:11:37 GMT+0530 (India Standard Time)
+2025-11-01 09:11:37 [INFO]: Product has offer object
+2025-11-01 09:11:37 [INFO]: Start date: 
+2025-11-01 09:11:37 [INFO]: End date: 
+2025-11-01 09:11:37 [INFO]: Discount %: 
+2025-11-01 09:11:37 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:11:37 [INFO]: Category has offer object
+2025-11-01 09:11:37 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:37 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:37 [INFO]: Discount %: 30
+2025-11-01 09:11:37 [INFO]:  Category offer is VALID
+2025-11-01 09:11:37 [INFO]: Final product discount: 0
+2025-11-01 09:11:37 [INFO]: Final category discount: 30
+2025-11-01 09:11:47 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:11:47 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:11:47 [INFO]: Current date: Sat Nov 01 2025 09:11:47 GMT+0530 (India Standard Time)
+2025-11-01 09:11:47 [INFO]: Product has offer object
+2025-11-01 09:11:47 [INFO]: Start date: 
+2025-11-01 09:11:47 [INFO]: End date: 
+2025-11-01 09:11:47 [INFO]: Discount %: 
+2025-11-01 09:11:47 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:11:47 [INFO]: Category has offer object
+2025-11-01 09:11:47 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:47 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:47 [INFO]: Discount %: 30
+2025-11-01 09:11:47 [INFO]:  Category offer is VALID
+2025-11-01 09:11:47 [INFO]: Final product discount: 0
+2025-11-01 09:11:47 [INFO]: Final category discount: 30
+2025-11-01 09:11:47 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:11:47 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:11:47 [INFO]: Current date: Sat Nov 01 2025 09:11:47 GMT+0530 (India Standard Time)
+2025-11-01 09:11:47 [INFO]: Product has offer object
+2025-11-01 09:11:47 [INFO]: Start date: 
+2025-11-01 09:11:47 [INFO]: End date: 
+2025-11-01 09:11:47 [INFO]: Discount %: 
+2025-11-01 09:11:47 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:11:47 [INFO]: Category has offer object
+2025-11-01 09:11:47 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:47 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:11:47 [INFO]: Discount %: 30
+2025-11-01 09:11:47 [INFO]:  Category offer is VALID
+2025-11-01 09:11:47 [INFO]: Final product discount: 0
+2025-11-01 09:11:47 [INFO]: Final category discount: 30
+2025-11-01 09:12:27 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:12:27 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:12:27 [INFO]: Current date: Sat Nov 01 2025 09:12:27 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Product has offer object
+2025-11-01 09:12:27 [INFO]: Start date: 
+2025-11-01 09:12:27 [INFO]: End date: 
+2025-11-01 09:12:27 [INFO]: Discount %: 
+2025-11-01 09:12:27 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:12:27 [INFO]: Category has offer object
+2025-11-01 09:12:27 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Discount %: 30
+2025-11-01 09:12:27 [INFO]:  Category offer is VALID
+2025-11-01 09:12:27 [INFO]: Final product discount: 0
+2025-11-01 09:12:27 [INFO]: Final category discount: 30
+2025-11-01 09:12:27 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:12:27 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:12:27 [INFO]: Current date: Sat Nov 01 2025 09:12:27 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Product has offer object
+2025-11-01 09:12:27 [INFO]: Start date: 
+2025-11-01 09:12:27 [INFO]: End date: 
+2025-11-01 09:12:27 [INFO]: Discount %: 
+2025-11-01 09:12:27 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:12:27 [INFO]: Category has offer object
+2025-11-01 09:12:27 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Discount %: 30
+2025-11-01 09:12:27 [INFO]:  Category offer is VALID
+2025-11-01 09:12:27 [INFO]: Final product discount: 0
+2025-11-01 09:12:27 [INFO]: Final category discount: 30
+2025-11-01 09:12:27 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:12:27 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:12:27 [INFO]: Current date: Sat Nov 01 2025 09:12:27 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Product has offer object
+2025-11-01 09:12:27 [INFO]: Start date: 
+2025-11-01 09:12:27 [INFO]: End date: 
+2025-11-01 09:12:27 [INFO]: Discount %: 
+2025-11-01 09:12:27 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:12:27 [INFO]: Category has offer object
+2025-11-01 09:12:27 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Discount %: 30
+2025-11-01 09:12:27 [INFO]:  Category offer is VALID
+2025-11-01 09:12:27 [INFO]: Final product discount: 0
+2025-11-01 09:12:27 [INFO]: Final category discount: 30
+2025-11-01 09:12:27 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:12:27 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:12:27 [INFO]: Current date: Sat Nov 01 2025 09:12:27 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Product has offer object
+2025-11-01 09:12:27 [INFO]: Start date: 
+2025-11-01 09:12:27 [INFO]: End date: 
+2025-11-01 09:12:27 [INFO]: Discount %: 
+2025-11-01 09:12:27 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:12:27 [INFO]: Category has offer object
+2025-11-01 09:12:27 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:12:27 [INFO]: Discount %: 30
+2025-11-01 09:12:27 [INFO]:  Category offer is VALID
+2025-11-01 09:12:27 [INFO]: Final product discount: 0
+2025-11-01 09:12:27 [INFO]: Final category discount: 30
+2025-11-01 09:12:27 [INFO]: loadOrderSuccess called
+2025-11-01 09:12:27 [INFO]: orderId from params: ORD-48
+2025-11-01 09:12:27 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 09:12:27 [INFO]: order found: yes
+2025-11-01 09:12:27 [INFO]: order details: [object Object]
+2025-11-01 09:12:27 [INFO]: Rendering order-success page
+2025-11-01 09:13:57 [INFO]: Product offer: 
+2025-11-01 09:13:57 [INFO]: Category offer: [object Object]
+2025-11-01 09:13:57 [INFO]: Current date: Sat Nov 01 2025 09:13:57 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Category has offer object
+2025-11-01 09:13:57 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Discount %: 30
+2025-11-01 09:13:57 [INFO]:  Category offer is VALID
+2025-11-01 09:13:57 [INFO]: Final product discount: 0
+2025-11-01 09:13:57 [INFO]: Final category discount: 30
+2025-11-01 09:13:57 [INFO]: Product offer: 
+2025-11-01 09:13:57 [INFO]: Category offer: [object Object]
+2025-11-01 09:13:57 [INFO]: Current date: Sat Nov 01 2025 09:13:57 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Category has offer object
+2025-11-01 09:13:57 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Discount %: 45
+2025-11-01 09:13:57 [INFO]:  Category offer is VALID
+2025-11-01 09:13:57 [INFO]: Final product discount: 0
+2025-11-01 09:13:57 [INFO]: Final category discount: 45
+2025-11-01 09:13:57 [INFO]: Product offer: 
+2025-11-01 09:13:57 [INFO]: Category offer: 
+2025-11-01 09:13:57 [INFO]: Current date: Sat Nov 01 2025 09:13:57 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Final product discount: 0
+2025-11-01 09:13:57 [INFO]: Final category discount: 0
+2025-11-01 09:13:57 [INFO]: Product offer: 
+2025-11-01 09:13:57 [INFO]: Category offer: 
+2025-11-01 09:13:57 [INFO]: Current date: Sat Nov 01 2025 09:13:57 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Final product discount: 0
+2025-11-01 09:13:57 [INFO]: Final category discount: 0
+2025-11-01 09:13:57 [INFO]: Product offer: 
+2025-11-01 09:13:57 [INFO]: Category offer: 
+2025-11-01 09:13:57 [INFO]: Current date: Sat Nov 01 2025 09:13:57 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Final product discount: 0
+2025-11-01 09:13:57 [INFO]: Final category discount: 0
+2025-11-01 09:13:57 [INFO]: Product offer: 
+2025-11-01 09:13:57 [INFO]: Category offer: 
+2025-11-01 09:13:57 [INFO]: Current date: Sat Nov 01 2025 09:13:57 GMT+0530 (India Standard Time)
+2025-11-01 09:13:57 [INFO]: Final product discount: 0
+2025-11-01 09:13:57 [INFO]: Final category discount: 0
+2025-11-01 09:14:05 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 09:14:05 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:14:05 [INFO]: Current date: Sat Nov 01 2025 09:14:05 GMT+0530 (India Standard Time)
+2025-11-01 09:14:05 [INFO]: Product has offer object
+2025-11-01 09:14:05 [INFO]: Start date: 
+2025-11-01 09:14:05 [INFO]: End date: 
+2025-11-01 09:14:05 [INFO]: Discount %: 
+2025-11-01 09:14:05 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:14:05 [INFO]: Category has offer object
+2025-11-01 09:14:05 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:05 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:05 [INFO]: Discount %: 30
+2025-11-01 09:14:05 [INFO]:  Category offer is VALID
+2025-11-01 09:14:05 [INFO]: Final product discount: 0
+2025-11-01 09:14:05 [INFO]: Final category discount: 30
+2025-11-01 09:14:11 [INFO]: Product offer: 
+2025-11-01 09:14:11 [INFO]: Category offer: [object Object]
+2025-11-01 09:14:11 [INFO]: Current date: Sat Nov 01 2025 09:14:11 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Category has offer object
+2025-11-01 09:14:11 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Discount %: 45
+2025-11-01 09:14:11 [INFO]:  Category offer is VALID
+2025-11-01 09:14:11 [INFO]: Final product discount: 0
+2025-11-01 09:14:11 [INFO]: Final category discount: 45
+2025-11-01 09:14:11 [INFO]: Product offer: 
+2025-11-01 09:14:11 [INFO]: Category offer: 
+2025-11-01 09:14:11 [INFO]: Current date: Sat Nov 01 2025 09:14:11 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Final product discount: 0
+2025-11-01 09:14:11 [INFO]: Final category discount: 0
+2025-11-01 09:14:11 [INFO]: Product offer: 
+2025-11-01 09:14:11 [INFO]: Category offer: 
+2025-11-01 09:14:11 [INFO]: Current date: Sat Nov 01 2025 09:14:11 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Final product discount: 0
+2025-11-01 09:14:11 [INFO]: Final category discount: 0
+2025-11-01 09:14:11 [INFO]: Product offer: 
+2025-11-01 09:14:11 [INFO]: Category offer: 
+2025-11-01 09:14:11 [INFO]: Current date: Sat Nov 01 2025 09:14:11 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Final product discount: 0
+2025-11-01 09:14:11 [INFO]: Final category discount: 0
+2025-11-01 09:14:11 [INFO]: Product offer: 
+2025-11-01 09:14:11 [INFO]: Category offer: [object Object]
+2025-11-01 09:14:11 [INFO]: Current date: Sat Nov 01 2025 09:14:11 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Category has offer object
+2025-11-01 09:14:11 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Discount %: 30
+2025-11-01 09:14:11 [INFO]:  Category offer is VALID
+2025-11-01 09:14:11 [INFO]: Final product discount: 0
+2025-11-01 09:14:11 [INFO]: Final category discount: 30
+2025-11-01 09:14:11 [INFO]: Product offer: 
+2025-11-01 09:14:11 [INFO]: Category offer: 
+2025-11-01 09:14:11 [INFO]: Current date: Sat Nov 01 2025 09:14:11 GMT+0530 (India Standard Time)
+2025-11-01 09:14:11 [INFO]: Final product discount: 0
+2025-11-01 09:14:11 [INFO]: Final category discount: 0
+2025-11-01 09:14:16 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 09:14:16 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:14:16 [INFO]: Current date: Sat Nov 01 2025 09:14:16 GMT+0530 (India Standard Time)
+2025-11-01 09:14:16 [INFO]: Product has offer object
+2025-11-01 09:14:16 [INFO]: Start date: 
+2025-11-01 09:14:16 [INFO]: End date: 
+2025-11-01 09:14:16 [INFO]: Discount %: 
+2025-11-01 09:14:16 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:14:16 [INFO]: Category has offer object
+2025-11-01 09:14:16 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:16 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:14:16 [INFO]: Discount %: 30
+2025-11-01 09:14:16 [INFO]:  Category offer is VALID
+2025-11-01 09:14:16 [INFO]: Final product discount: 0
+2025-11-01 09:14:16 [INFO]: Final category discount: 30
+2025-11-01 09:14:16 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 09:14:16 [INFO]: Category offer: {}
+2025-11-01 09:14:16 [INFO]: Current date: Sat Nov 01 2025 09:14:16 GMT+0530 (India Standard Time)
+2025-11-01 09:14:16 [INFO]: Product has offer object
+2025-11-01 09:14:16 [INFO]: Start date: 
+2025-11-01 09:14:16 [INFO]: End date: 
+2025-11-01 09:14:16 [INFO]: Discount %: 
+2025-11-01 09:14:16 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:14:16 [INFO]: Category has offer object
+2025-11-01 09:14:16 [INFO]: Start date: 
+2025-11-01 09:14:16 [INFO]: End date: 
+2025-11-01 09:14:16 [INFO]: Discount %: 
+2025-11-01 09:14:16 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 09:14:16 [INFO]: Final product discount: 0
+2025-11-01 09:14:16 [INFO]: Final category discount: 0
+2025-11-01 09:16:04 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:16:04 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:16:04 [INFO]: Current date: Sat Nov 01 2025 09:16:04 GMT+0530 (India Standard Time)
+2025-11-01 09:16:04 [INFO]: Product has offer object
+2025-11-01 09:16:04 [INFO]: Start date: 
+2025-11-01 09:16:04 [INFO]: End date: 
+2025-11-01 09:16:04 [INFO]: Discount %: 
+2025-11-01 09:16:04 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:04 [INFO]: Category has offer object
+2025-11-01 09:16:04 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:16:04 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:16:04 [INFO]: Discount %: 30
+2025-11-01 09:16:04 [INFO]:  Category offer is VALID
+2025-11-01 09:16:04 [INFO]: Final product discount: 0
+2025-11-01 09:16:04 [INFO]: Final category discount: 30
+2025-11-01 09:16:04 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:16:04 [INFO]: Category offer: {}
+2025-11-01 09:16:04 [INFO]: Current date: Sat Nov 01 2025 09:16:04 GMT+0530 (India Standard Time)
+2025-11-01 09:16:04 [INFO]: Product has offer object
+2025-11-01 09:16:04 [INFO]: Start date: 
+2025-11-01 09:16:04 [INFO]: End date: 
+2025-11-01 09:16:04 [INFO]: Discount %: 
+2025-11-01 09:16:04 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:04 [INFO]: Category has offer object
+2025-11-01 09:16:04 [INFO]: Start date: 
+2025-11-01 09:16:04 [INFO]: End date: 
+2025-11-01 09:16:04 [INFO]: Discount %: 
+2025-11-01 09:16:04 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:04 [INFO]: Final product discount: 0
+2025-11-01 09:16:04 [INFO]: Final category discount: 0
+2025-11-01 09:16:43 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:16:43 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:16:43 [INFO]: Current date: Sat Nov 01 2025 09:16:43 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: Product has offer object
+2025-11-01 09:16:43 [INFO]: Start date: 
+2025-11-01 09:16:43 [INFO]: End date: 
+2025-11-01 09:16:43 [INFO]: Discount %: 
+2025-11-01 09:16:43 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:43 [INFO]: Category has offer object
+2025-11-01 09:16:43 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: Discount %: 30
+2025-11-01 09:16:43 [INFO]:  Category offer is VALID
+2025-11-01 09:16:43 [INFO]: Final product discount: 0
+2025-11-01 09:16:43 [INFO]: Final category discount: 30
+2025-11-01 09:16:43 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:16:43 [INFO]: Category offer: {}
+2025-11-01 09:16:43 [INFO]: Current date: Sat Nov 01 2025 09:16:43 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: Product has offer object
+2025-11-01 09:16:43 [INFO]: Start date: 
+2025-11-01 09:16:43 [INFO]: End date: 
+2025-11-01 09:16:43 [INFO]: Discount %: 
+2025-11-01 09:16:43 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:43 [INFO]: Category has offer object
+2025-11-01 09:16:43 [INFO]: Start date: 
+2025-11-01 09:16:43 [INFO]: End date: 
+2025-11-01 09:16:43 [INFO]: Discount %: 
+2025-11-01 09:16:43 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:43 [INFO]: Final product discount: 0
+2025-11-01 09:16:43 [INFO]: Final category discount: 0
+2025-11-01 09:16:43 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:16:43 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 09:16:43 [INFO]: Current date: Sat Nov 01 2025 09:16:43 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: Product has offer object
+2025-11-01 09:16:43 [INFO]: Start date: 
+2025-11-01 09:16:43 [INFO]: End date: 
+2025-11-01 09:16:43 [INFO]: Discount %: 
+2025-11-01 09:16:43 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:43 [INFO]: Category has offer object
+2025-11-01 09:16:43 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: Discount %: 30
+2025-11-01 09:16:43 [INFO]:  Category offer is VALID
+2025-11-01 09:16:43 [INFO]: Final product discount: 0
+2025-11-01 09:16:43 [INFO]: Final category discount: 30
+2025-11-01 09:16:43 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 09:16:43 [INFO]: Category offer: {}
+2025-11-01 09:16:43 [INFO]: Current date: Sat Nov 01 2025 09:16:43 GMT+0530 (India Standard Time)
+2025-11-01 09:16:43 [INFO]: Product has offer object
+2025-11-01 09:16:43 [INFO]: Start date: 
+2025-11-01 09:16:43 [INFO]: End date: 
+2025-11-01 09:16:43 [INFO]: Discount %: 
+2025-11-01 09:16:43 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:43 [INFO]: Category has offer object
+2025-11-01 09:16:43 [INFO]: Start date: 
+2025-11-01 09:16:43 [INFO]: End date: 
+2025-11-01 09:16:43 [INFO]: Discount %: 
+2025-11-01 09:16:43 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 09:16:43 [INFO]: Final product discount: 0
+2025-11-01 09:16:43 [INFO]: Final category discount: 0
+2025-11-01 09:16:43 [INFO]: loadOrderSuccess called
+2025-11-01 09:16:43 [INFO]: orderId from params: ORD-49
+2025-11-01 09:16:43 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 09:16:43 [INFO]: order found: yes
+2025-11-01 09:16:43 [INFO]: order details: [object Object]
+2025-11-01 09:16:43 [INFO]: Rendering order-success page
+2025-11-01 10:18:35 [INFO]: node starting
+2025-11-01 10:18:35 [INFO]: server running at http://localhost:3000
+2025-11-01 10:18:36 [INFO]:  MongoDB connected
+2025-11-01 10:50:53 [INFO]: node starting
+2025-11-01 10:50:53 [INFO]: server running at http://localhost:3000
+2025-11-01 10:50:53 [INFO]:  MongoDB connected
+2025-11-01 10:51:02 [INFO]: node starting
+2025-11-01 10:51:02 [INFO]: server running at http://localhost:3000
+2025-11-01 10:51:02 [INFO]:  MongoDB connected
+2025-11-01 10:51:35 [INFO]: node starting
+2025-11-01 10:51:35 [INFO]: server running at http://localhost:3000
+2025-11-01 10:51:36 [INFO]:  MongoDB connected
+2025-11-01 10:51:51 [INFO]: node starting
+2025-11-01 10:51:51 [INFO]: server running at http://localhost:3000
+2025-11-01 10:51:51 [INFO]:  MongoDB connected
+2025-11-01 10:55:28 [INFO]: node starting
+2025-11-01 10:55:55 [INFO]: node starting
+2025-11-01 10:55:55 [INFO]: server running at http://localhost:3000
+2025-11-01 10:55:55 [INFO]:  MongoDB connected
+2025-11-01 11:27:37 [INFO]: node starting
+2025-11-01 11:27:37 [INFO]: server running at http://localhost:3000
+2025-11-01 11:27:37 [INFO]:  MongoDB connected
+2025-11-01 11:29:06 [INFO]: node starting
+2025-11-01 11:29:06 [INFO]: server running at http://localhost:3000
+2025-11-01 11:29:06 [INFO]:  MongoDB connected
+2025-11-01 11:29:27 [INFO]: node starting
+2025-11-01 11:29:27 [INFO]: server running at http://localhost:3000
+2025-11-01 11:29:27 [INFO]:  MongoDB connected
+2025-11-01 11:30:58 [INFO]: node starting
+2025-11-01 11:30:58 [INFO]: server running at http://localhost:3000
+2025-11-01 11:30:58 [INFO]:  MongoDB connected
+2025-11-01 11:31:34 [INFO]: node starting
+2025-11-01 11:31:34 [INFO]: server running at http://localhost:3000
+2025-11-01 11:31:35 [INFO]:  MongoDB connected
+2025-11-01 11:36:45 [INFO]: node starting
+2025-11-01 11:36:45 [INFO]: server running at http://localhost:3000
+2025-11-01 11:36:46 [INFO]:  MongoDB connected
+2025-11-01 11:50:21 [INFO]: node starting
+2025-11-01 11:50:21 [INFO]: server running at http://localhost:3000
+2025-11-01 11:50:21 [INFO]:  MongoDB connected
+2025-11-01 11:58:55 [INFO]: node starting
+2025-11-01 11:58:55 [INFO]: server running at http://localhost:3000
+2025-11-01 11:58:55 [INFO]:  MongoDB connected
+2025-11-01 12:01:09 [INFO]: node starting
+2025-11-01 12:01:09 [INFO]: server running at http://localhost:3000
+2025-11-01 12:01:09 [INFO]:  MongoDB connected
+2025-11-01 12:02:10 [INFO]: node starting
+2025-11-01 12:02:10 [INFO]: server running at http://localhost:3000
+2025-11-01 12:02:11 [INFO]:  MongoDB connected
+2025-11-01 12:02:45 [INFO]: node starting
+2025-11-01 12:02:45 [INFO]: server running at http://localhost:3000
+2025-11-01 12:02:45 [INFO]:  MongoDB connected
+2025-11-01 12:03:18 [INFO]: node starting
+2025-11-01 12:03:18 [INFO]: server running at http://localhost:3000
+2025-11-01 12:03:18 [INFO]:  MongoDB connected
+2025-11-01 12:03:55 [INFO]: node starting
+2025-11-01 12:03:55 [INFO]: server running at http://localhost:3000
+2025-11-01 12:03:55 [INFO]:  MongoDB connected
+2025-11-01 12:05:36 [INFO]: node starting
+2025-11-01 12:05:36 [INFO]: server running at http://localhost:3000
+2025-11-01 12:05:36 [INFO]:  MongoDB connected
+2025-11-01 12:06:50 [INFO]: node starting
+2025-11-01 12:06:50 [INFO]: server running at http://localhost:3000
+2025-11-01 12:06:50 [INFO]:  MongoDB connected
+2025-11-01 12:08:28 [INFO]: node starting
+2025-11-01 12:08:28 [INFO]: server running at http://localhost:3000
+2025-11-01 12:08:29 [INFO]:  MongoDB connected
+2025-11-01 12:08:53 [INFO]: node starting
+2025-11-01 12:08:53 [INFO]: server running at http://localhost:3000
+2025-11-01 12:08:53 [INFO]:  MongoDB connected
+2025-11-01 12:09:21 [INFO]: node starting
+2025-11-01 12:09:21 [INFO]: server running at http://localhost:3000
+2025-11-01 12:09:21 [INFO]:  MongoDB connected
+2025-11-01 12:09:57 [INFO]: Product offer: 
+2025-11-01 12:09:57 [INFO]: Category offer: 
+2025-11-01 12:09:57 [INFO]: Current date: Sat Nov 01 2025 12:09:57 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Final product discount: 0
+2025-11-01 12:09:57 [INFO]: Final category discount: 0
+2025-11-01 12:09:57 [INFO]: Product offer: 
+2025-11-01 12:09:57 [INFO]: Category offer: [object Object]
+2025-11-01 12:09:57 [INFO]: Current date: Sat Nov 01 2025 12:09:57 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Category has offer object
+2025-11-01 12:09:57 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Discount %: 30
+2025-11-01 12:09:57 [INFO]:  Category offer is VALID
+2025-11-01 12:09:57 [INFO]: Final product discount: 0
+2025-11-01 12:09:57 [INFO]: Final category discount: 30
+2025-11-01 12:09:57 [INFO]: Product offer: 
+2025-11-01 12:09:57 [INFO]: Category offer: 
+2025-11-01 12:09:57 [INFO]: Current date: Sat Nov 01 2025 12:09:57 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Final product discount: 0
+2025-11-01 12:09:57 [INFO]: Final category discount: 0
+2025-11-01 12:09:57 [INFO]: Product offer: 
+2025-11-01 12:09:57 [INFO]: Category offer: [object Object]
+2025-11-01 12:09:57 [INFO]: Current date: Sat Nov 01 2025 12:09:57 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Category has offer object
+2025-11-01 12:09:57 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Discount %: 45
+2025-11-01 12:09:57 [INFO]:  Category offer is VALID
+2025-11-01 12:09:57 [INFO]: Final product discount: 0
+2025-11-01 12:09:57 [INFO]: Final category discount: 45
+2025-11-01 12:09:57 [INFO]: Product offer: 
+2025-11-01 12:09:57 [INFO]: Category offer: 
+2025-11-01 12:09:57 [INFO]: Current date: Sat Nov 01 2025 12:09:57 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Final product discount: 0
+2025-11-01 12:09:57 [INFO]: Final category discount: 0
+2025-11-01 12:09:57 [INFO]: Product offer: 
+2025-11-01 12:09:57 [INFO]: Category offer: 
+2025-11-01 12:09:57 [INFO]: Current date: Sat Nov 01 2025 12:09:57 GMT+0530 (India Standard Time)
+2025-11-01 12:09:57 [INFO]: Final product discount: 0
+2025-11-01 12:09:57 [INFO]: Final category discount: 0
+2025-11-01 12:10:02 [INFO]: Product offer: 
+2025-11-01 12:10:02 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:02 [INFO]: Current date: Sat Nov 01 2025 12:10:02 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Category has offer object
+2025-11-01 12:10:02 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Discount %: 30
+2025-11-01 12:10:02 [INFO]:  Category offer is VALID
+2025-11-01 12:10:02 [INFO]: Final product discount: 0
+2025-11-01 12:10:02 [INFO]: Final category discount: 30
+2025-11-01 12:10:02 [INFO]: Product offer: 
+2025-11-01 12:10:02 [INFO]: Category offer: 
+2025-11-01 12:10:02 [INFO]: Current date: Sat Nov 01 2025 12:10:02 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Final product discount: 0
+2025-11-01 12:10:02 [INFO]: Final category discount: 0
+2025-11-01 12:10:02 [INFO]: Product offer: 
+2025-11-01 12:10:02 [INFO]: Category offer: 
+2025-11-01 12:10:02 [INFO]: Current date: Sat Nov 01 2025 12:10:02 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Final product discount: 0
+2025-11-01 12:10:02 [INFO]: Final category discount: 0
+2025-11-01 12:10:02 [INFO]: Product offer: 
+2025-11-01 12:10:02 [INFO]: Category offer: 
+2025-11-01 12:10:02 [INFO]: Current date: Sat Nov 01 2025 12:10:02 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Final product discount: 0
+2025-11-01 12:10:02 [INFO]: Final category discount: 0
+2025-11-01 12:10:02 [INFO]: Product offer: 
+2025-11-01 12:10:02 [INFO]: Category offer: 
+2025-11-01 12:10:02 [INFO]: Current date: Sat Nov 01 2025 12:10:02 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Final product discount: 0
+2025-11-01 12:10:02 [INFO]: Final category discount: 0
+2025-11-01 12:10:02 [INFO]: Product offer: 
+2025-11-01 12:10:02 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:02 [INFO]: Current date: Sat Nov 01 2025 12:10:02 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Category has offer object
+2025-11-01 12:10:02 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:02 [INFO]: Discount %: 45
+2025-11-01 12:10:02 [INFO]:  Category offer is VALID
+2025-11-01 12:10:02 [INFO]: Final product discount: 0
+2025-11-01 12:10:02 [INFO]: Final category discount: 45
+2025-11-01 12:10:06 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:10:06 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:10:06 [INFO]: Current date: Sat Nov 01 2025 12:10:06 GMT+0530 (India Standard Time)
+2025-11-01 12:10:06 [INFO]: Product has offer object
+2025-11-01 12:10:06 [INFO]: Start date: 
+2025-11-01 12:10:06 [INFO]: End date: 
+2025-11-01 12:10:06 [INFO]: Discount %: 
+2025-11-01 12:10:06 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:10:06 [INFO]: Category has offer object
+2025-11-01 12:10:06 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:06 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:06 [INFO]: Discount %: 30
+2025-11-01 12:10:06 [INFO]:  Category offer is VALID
+2025-11-01 12:10:06 [INFO]: Final product discount: 0
+2025-11-01 12:10:06 [INFO]: Final category discount: 30
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Category has offer object
+2025-11-01 12:10:21 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Discount %: 30
+2025-11-01 12:10:21 [INFO]:  Category offer is VALID
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 30
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Category has offer object
+2025-11-01 12:10:21 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Discount %: 30
+2025-11-01 12:10:21 [INFO]:  Category offer is VALID
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 30
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Category has offer object
+2025-11-01 12:10:21 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Discount %: 45
+2025-11-01 12:10:21 [INFO]:  Category offer is VALID
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 45
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Category has offer object
+2025-11-01 12:10:21 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Discount %: 30
+2025-11-01 12:10:21 [INFO]:  Category offer is VALID
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 30
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Category has offer object
+2025-11-01 12:10:21 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Discount %: 45
+2025-11-01 12:10:21 [INFO]:  Category offer is VALID
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 45
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: [object Object]
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Category has offer object
+2025-11-01 12:10:21 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Discount %: 45
+2025-11-01 12:10:21 [INFO]:  Category offer is VALID
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 45
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:10:21 [INFO]: Product offer: 
+2025-11-01 12:10:21 [INFO]: Category offer: 
+2025-11-01 12:10:21 [INFO]: Current date: Sat Nov 01 2025 12:10:21 GMT+0530 (India Standard Time)
+2025-11-01 12:10:21 [INFO]: Final product discount: 0
+2025-11-01 12:10:21 [INFO]: Final category discount: 0
+2025-11-01 12:11:35 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:11:35 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:11:35 [INFO]: Current date: Sat Nov 01 2025 12:11:35 GMT+0530 (India Standard Time)
+2025-11-01 12:11:35 [INFO]: Product has offer object
+2025-11-01 12:11:35 [INFO]: Start date: 
+2025-11-01 12:11:35 [INFO]: End date: 
+2025-11-01 12:11:35 [INFO]: Discount %: 
+2025-11-01 12:11:35 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:11:35 [INFO]: Category has offer object
+2025-11-01 12:11:35 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:11:35 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:11:35 [INFO]: Discount %: 30
+2025-11-01 12:11:35 [INFO]:  Category offer is VALID
+2025-11-01 12:11:35 [INFO]: Final product discount: 0
+2025-11-01 12:11:35 [INFO]: Final category discount: 30
+2025-11-01 12:11:35 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:11:35 [INFO]: Category offer: {}
+2025-11-01 12:11:35 [INFO]: Current date: Sat Nov 01 2025 12:11:35 GMT+0530 (India Standard Time)
+2025-11-01 12:11:35 [INFO]: Product has offer object
+2025-11-01 12:11:35 [INFO]: Start date: 
+2025-11-01 12:11:35 [INFO]: End date: 
+2025-11-01 12:11:35 [INFO]: Discount %: 
+2025-11-01 12:11:35 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:11:35 [INFO]: Category has offer object
+2025-11-01 12:11:35 [INFO]: Start date: 
+2025-11-01 12:11:35 [INFO]: End date: 
+2025-11-01 12:11:35 [INFO]: Discount %: 
+2025-11-01 12:11:35 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:11:35 [INFO]: Final product discount: 0
+2025-11-01 12:11:35 [INFO]: Final category discount: 0
+2025-11-01 12:11:35 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:11:35 [INFO]: Category offer: {}
+2025-11-01 12:11:35 [INFO]: Current date: Sat Nov 01 2025 12:11:35 GMT+0530 (India Standard Time)
+2025-11-01 12:11:35 [INFO]: Product has offer object
+2025-11-01 12:11:35 [INFO]: Start date: 
+2025-11-01 12:11:35 [INFO]: End date: 
+2025-11-01 12:11:35 [INFO]: Discount %: 
+2025-11-01 12:11:35 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:11:35 [INFO]: Category has offer object
+2025-11-01 12:11:35 [INFO]: Start date: 
+2025-11-01 12:11:35 [INFO]: End date: 
+2025-11-01 12:11:35 [INFO]: Discount %: 
+2025-11-01 12:11:35 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:11:35 [INFO]: Final product discount: 0
+2025-11-01 12:11:35 [INFO]: Final category discount: 0
+2025-11-01 12:12:17 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:12:17 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:12:17 [INFO]: Current date: Sat Nov 01 2025 12:12:17 GMT+0530 (India Standard Time)
+2025-11-01 12:12:17 [INFO]: Product has offer object
+2025-11-01 12:12:17 [INFO]: Start date: 
+2025-11-01 12:12:17 [INFO]: End date: 
+2025-11-01 12:12:17 [INFO]: Discount %: 
+2025-11-01 12:12:17 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:17 [INFO]: Category has offer object
+2025-11-01 12:12:17 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:12:17 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:12:17 [INFO]: Discount %: 30
+2025-11-01 12:12:17 [INFO]:  Category offer is VALID
+2025-11-01 12:12:17 [INFO]: Final product discount: 0
+2025-11-01 12:12:17 [INFO]: Final category discount: 30
+2025-11-01 12:12:17 [INFO]: Product offer: {}
+2025-11-01 12:12:17 [INFO]: Category offer: {}
+2025-11-01 12:12:17 [INFO]: Current date: Sat Nov 01 2025 12:12:17 GMT+0530 (India Standard Time)
+2025-11-01 12:12:17 [INFO]: Product has offer object
+2025-11-01 12:12:17 [INFO]: Start date: 
+2025-11-01 12:12:17 [INFO]: End date: 
+2025-11-01 12:12:17 [INFO]: Discount %: 
+2025-11-01 12:12:17 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:17 [INFO]: Category has offer object
+2025-11-01 12:12:17 [INFO]: Start date: 
+2025-11-01 12:12:17 [INFO]: End date: 
+2025-11-01 12:12:17 [INFO]: Discount %: 
+2025-11-01 12:12:17 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:17 [INFO]: Final product discount: 0
+2025-11-01 12:12:17 [INFO]: Final category discount: 0
+2025-11-01 12:12:17 [INFO]: Product offer: {}
+2025-11-01 12:12:17 [INFO]: Category offer: {}
+2025-11-01 12:12:17 [INFO]: Current date: Sat Nov 01 2025 12:12:17 GMT+0530 (India Standard Time)
+2025-11-01 12:12:17 [INFO]: Product has offer object
+2025-11-01 12:12:17 [INFO]: Start date: 
+2025-11-01 12:12:17 [INFO]: End date: 
+2025-11-01 12:12:17 [INFO]: Discount %: 
+2025-11-01 12:12:17 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:17 [INFO]: Category has offer object
+2025-11-01 12:12:17 [INFO]: Start date: 
+2025-11-01 12:12:17 [INFO]: End date: 
+2025-11-01 12:12:17 [INFO]: Discount %: 
+2025-11-01 12:12:17 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:17 [INFO]: Final product discount: 0
+2025-11-01 12:12:17 [INFO]: Final category discount: 0
+2025-11-01 12:12:51 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:12:51 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:12:51 [INFO]: Current date: Sat Nov 01 2025 12:12:51 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Product has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Category has offer object
+2025-11-01 12:12:51 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Discount %: 30
+2025-11-01 12:12:51 [INFO]:  Category offer is VALID
+2025-11-01 12:12:51 [INFO]: Final product discount: 0
+2025-11-01 12:12:51 [INFO]: Final category discount: 30
+2025-11-01 12:12:51 [INFO]: Product offer: {}
+2025-11-01 12:12:51 [INFO]: Category offer: {}
+2025-11-01 12:12:51 [INFO]: Current date: Sat Nov 01 2025 12:12:51 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Product has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Category has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Final product discount: 0
+2025-11-01 12:12:51 [INFO]: Final category discount: 0
+2025-11-01 12:12:51 [INFO]: Product offer: {}
+2025-11-01 12:12:51 [INFO]: Category offer: {}
+2025-11-01 12:12:51 [INFO]: Current date: Sat Nov 01 2025 12:12:51 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Product has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Category has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Final product discount: 0
+2025-11-01 12:12:51 [INFO]: Final category discount: 0
+2025-11-01 12:12:51 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:12:51 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:12:51 [INFO]: Current date: Sat Nov 01 2025 12:12:51 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Product has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Category has offer object
+2025-11-01 12:12:51 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Discount %: 30
+2025-11-01 12:12:51 [INFO]:  Category offer is VALID
+2025-11-01 12:12:51 [INFO]: Final product discount: 0
+2025-11-01 12:12:51 [INFO]: Final category discount: 30
+2025-11-01 12:12:51 [INFO]: Product offer: {}
+2025-11-01 12:12:51 [INFO]: Category offer: {}
+2025-11-01 12:12:51 [INFO]: Current date: Sat Nov 01 2025 12:12:51 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Product has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Category has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Final product discount: 0
+2025-11-01 12:12:51 [INFO]: Final category discount: 0
+2025-11-01 12:12:51 [INFO]: Product offer: {}
+2025-11-01 12:12:51 [INFO]: Category offer: {}
+2025-11-01 12:12:51 [INFO]: Current date: Sat Nov 01 2025 12:12:51 GMT+0530 (India Standard Time)
+2025-11-01 12:12:51 [INFO]: Product has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Category has offer object
+2025-11-01 12:12:51 [INFO]: Start date: 
+2025-11-01 12:12:51 [INFO]: End date: 
+2025-11-01 12:12:51 [INFO]: Discount %: 
+2025-11-01 12:12:51 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:12:51 [INFO]: Final product discount: 0
+2025-11-01 12:12:51 [INFO]: Final category discount: 0
+2025-11-01 12:12:51 [INFO]: loadOrderSuccess called
+2025-11-01 12:12:51 [INFO]: orderId from params: ORD-50
+2025-11-01 12:12:51 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 12:12:51 [INFO]: order found: yes
+2025-11-01 12:12:51 [INFO]: order details: [object Object]
+2025-11-01 12:12:51 [INFO]: Rendering order-success page
+2025-11-01 12:17:07 [INFO]: Product offer: 
+2025-11-01 12:17:07 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:07 [INFO]: Current date: Sat Nov 01 2025 12:17:07 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Category has offer object
+2025-11-01 12:17:07 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Discount %: 30
+2025-11-01 12:17:07 [INFO]:  Category offer is VALID
+2025-11-01 12:17:07 [INFO]: Final product discount: 0
+2025-11-01 12:17:07 [INFO]: Final category discount: 30
+2025-11-01 12:17:07 [INFO]: Product offer: 
+2025-11-01 12:17:07 [INFO]: Category offer: 
+2025-11-01 12:17:07 [INFO]: Current date: Sat Nov 01 2025 12:17:07 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Final product discount: 0
+2025-11-01 12:17:07 [INFO]: Final category discount: 0
+2025-11-01 12:17:07 [INFO]: Product offer: 
+2025-11-01 12:17:07 [INFO]: Category offer: 
+2025-11-01 12:17:07 [INFO]: Current date: Sat Nov 01 2025 12:17:07 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Final product discount: 0
+2025-11-01 12:17:07 [INFO]: Final category discount: 0
+2025-11-01 12:17:07 [INFO]: Product offer: 
+2025-11-01 12:17:07 [INFO]: Category offer: 
+2025-11-01 12:17:07 [INFO]: Current date: Sat Nov 01 2025 12:17:07 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Final product discount: 0
+2025-11-01 12:17:07 [INFO]: Final category discount: 0
+2025-11-01 12:17:07 [INFO]: Product offer: 
+2025-11-01 12:17:07 [INFO]: Category offer: 
+2025-11-01 12:17:07 [INFO]: Current date: Sat Nov 01 2025 12:17:07 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Final product discount: 0
+2025-11-01 12:17:07 [INFO]: Final category discount: 0
+2025-11-01 12:17:07 [INFO]: Product offer: 
+2025-11-01 12:17:07 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:07 [INFO]: Current date: Sat Nov 01 2025 12:17:07 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Category has offer object
+2025-11-01 12:17:07 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:07 [INFO]: Discount %: 45
+2025-11-01 12:17:07 [INFO]:  Category offer is VALID
+2025-11-01 12:17:07 [INFO]: Final product discount: 0
+2025-11-01 12:17:07 [INFO]: Final category discount: 45
+2025-11-01 12:17:13 [INFO]: Product offer: 
+2025-11-01 12:17:13 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:13 [INFO]: Current date: Sat Nov 01 2025 12:17:13 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Category has offer object
+2025-11-01 12:17:13 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Discount %: 45
+2025-11-01 12:17:13 [INFO]:  Category offer is VALID
+2025-11-01 12:17:13 [INFO]: Final product discount: 0
+2025-11-01 12:17:13 [INFO]: Final category discount: 45
+2025-11-01 12:17:13 [INFO]: Product offer: 
+2025-11-01 12:17:13 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:13 [INFO]: Current date: Sat Nov 01 2025 12:17:13 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Category has offer object
+2025-11-01 12:17:13 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Discount %: 30
+2025-11-01 12:17:13 [INFO]:  Category offer is VALID
+2025-11-01 12:17:13 [INFO]: Final product discount: 0
+2025-11-01 12:17:13 [INFO]: Final category discount: 30
+2025-11-01 12:17:13 [INFO]: Product offer: 
+2025-11-01 12:17:13 [INFO]: Category offer: 
+2025-11-01 12:17:13 [INFO]: Current date: Sat Nov 01 2025 12:17:13 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Final product discount: 0
+2025-11-01 12:17:13 [INFO]: Final category discount: 0
+2025-11-01 12:17:13 [INFO]: Product offer: 
+2025-11-01 12:17:13 [INFO]: Category offer: 
+2025-11-01 12:17:13 [INFO]: Current date: Sat Nov 01 2025 12:17:13 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Final product discount: 0
+2025-11-01 12:17:13 [INFO]: Final category discount: 0
+2025-11-01 12:17:13 [INFO]: Product offer: 
+2025-11-01 12:17:13 [INFO]: Category offer: 
+2025-11-01 12:17:13 [INFO]: Current date: Sat Nov 01 2025 12:17:13 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Final product discount: 0
+2025-11-01 12:17:13 [INFO]: Final category discount: 0
+2025-11-01 12:17:13 [INFO]: Product offer: 
+2025-11-01 12:17:13 [INFO]: Category offer: 
+2025-11-01 12:17:13 [INFO]: Current date: Sat Nov 01 2025 12:17:13 GMT+0530 (India Standard Time)
+2025-11-01 12:17:13 [INFO]: Final product discount: 0
+2025-11-01 12:17:13 [INFO]: Final category discount: 0
+2025-11-01 12:17:17 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:17:17 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:17:17 [INFO]: Current date: Sat Nov 01 2025 12:17:17 GMT+0530 (India Standard Time)
+2025-11-01 12:17:17 [INFO]: Product has offer object
+2025-11-01 12:17:17 [INFO]: Start date: 
+2025-11-01 12:17:17 [INFO]: End date: 
+2025-11-01 12:17:17 [INFO]: Discount %: 
+2025-11-01 12:17:17 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:17:17 [INFO]: Category has offer object
+2025-11-01 12:17:17 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:17 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:17 [INFO]: Discount %: 30
+2025-11-01 12:17:17 [INFO]:  Category offer is VALID
+2025-11-01 12:17:17 [INFO]: Final product discount: 0
+2025-11-01 12:17:17 [INFO]: Final category discount: 30
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Category has offer object
+2025-11-01 12:17:23 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Discount %: 30
+2025-11-01 12:17:23 [INFO]:  Category offer is VALID
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 30
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Category has offer object
+2025-11-01 12:17:23 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Discount %: 45
+2025-11-01 12:17:23 [INFO]:  Category offer is VALID
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 45
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: 
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 0
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Category has offer object
+2025-11-01 12:17:23 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Discount %: 45
+2025-11-01 12:17:23 [INFO]:  Category offer is VALID
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 45
+2025-11-01 12:17:23 [INFO]: Product offer: 
+2025-11-01 12:17:23 [INFO]: Category offer: [object Object]
+2025-11-01 12:17:23 [INFO]: Current date: Sat Nov 01 2025 12:17:23 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Category has offer object
+2025-11-01 12:17:23 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:23 [INFO]: Discount %: 30
+2025-11-01 12:17:23 [INFO]:  Category offer is VALID
+2025-11-01 12:17:23 [INFO]: Final product discount: 0
+2025-11-01 12:17:23 [INFO]: Final category discount: 30
+2025-11-01 12:17:28 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:17:28 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:17:28 [INFO]: Current date: Sat Nov 01 2025 12:17:28 GMT+0530 (India Standard Time)
+2025-11-01 12:17:28 [INFO]: Product has offer object
+2025-11-01 12:17:28 [INFO]: Start date: 
+2025-11-01 12:17:28 [INFO]: End date: 
+2025-11-01 12:17:28 [INFO]: Discount %: 
+2025-11-01 12:17:28 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:17:28 [INFO]: Category has offer object
+2025-11-01 12:17:28 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:28 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:17:28 [INFO]: Discount %: 30
+2025-11-01 12:17:28 [INFO]:  Category offer is VALID
+2025-11-01 12:17:28 [INFO]: Final product discount: 0
+2025-11-01 12:17:28 [INFO]: Final category discount: 30
+2025-11-01 12:17:28 [INFO]: Product offer: MongooseDocument { undefined }
+2025-11-01 12:17:28 [INFO]: Category offer: {}
+2025-11-01 12:17:28 [INFO]: Current date: Sat Nov 01 2025 12:17:28 GMT+0530 (India Standard Time)
+2025-11-01 12:17:28 [INFO]: Product has offer object
+2025-11-01 12:17:28 [INFO]: Start date: 
+2025-11-01 12:17:28 [INFO]: End date: 
+2025-11-01 12:17:28 [INFO]: Discount %: 
+2025-11-01 12:17:28 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:17:28 [INFO]: Category has offer object
+2025-11-01 12:17:28 [INFO]: Start date: 
+2025-11-01 12:17:28 [INFO]: End date: 
+2025-11-01 12:17:28 [INFO]: Discount %: 
+2025-11-01 12:17:28 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:17:28 [INFO]: Final product discount: 0
+2025-11-01 12:17:28 [INFO]: Final category discount: 0
+2025-11-01 12:18:11 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:18:11 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:18:11 [INFO]: Current date: Sat Nov 01 2025 12:18:11 GMT+0530 (India Standard Time)
+2025-11-01 12:18:11 [INFO]: Product has offer object
+2025-11-01 12:18:11 [INFO]: Start date: 
+2025-11-01 12:18:11 [INFO]: End date: 
+2025-11-01 12:18:11 [INFO]: Discount %: 
+2025-11-01 12:18:11 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:11 [INFO]: Category has offer object
+2025-11-01 12:18:11 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:18:11 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:18:11 [INFO]: Discount %: 30
+2025-11-01 12:18:11 [INFO]:  Category offer is VALID
+2025-11-01 12:18:11 [INFO]: Final product discount: 0
+2025-11-01 12:18:11 [INFO]: Final category discount: 30
+2025-11-01 12:18:11 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:18:11 [INFO]: Category offer: {}
+2025-11-01 12:18:11 [INFO]: Current date: Sat Nov 01 2025 12:18:11 GMT+0530 (India Standard Time)
+2025-11-01 12:18:11 [INFO]: Product has offer object
+2025-11-01 12:18:11 [INFO]: Start date: 
+2025-11-01 12:18:11 [INFO]: End date: 
+2025-11-01 12:18:11 [INFO]: Discount %: 
+2025-11-01 12:18:11 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:11 [INFO]: Category has offer object
+2025-11-01 12:18:11 [INFO]: Start date: 
+2025-11-01 12:18:11 [INFO]: End date: 
+2025-11-01 12:18:11 [INFO]: Discount %: 
+2025-11-01 12:18:11 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:11 [INFO]: Final product discount: 0
+2025-11-01 12:18:11 [INFO]: Final category discount: 0
+2025-11-01 12:18:52 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:18:52 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:18:52 [INFO]: Current date: Sat Nov 01 2025 12:18:52 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: Product has offer object
+2025-11-01 12:18:52 [INFO]: Start date: 
+2025-11-01 12:18:52 [INFO]: End date: 
+2025-11-01 12:18:52 [INFO]: Discount %: 
+2025-11-01 12:18:52 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:52 [INFO]: Category has offer object
+2025-11-01 12:18:52 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: Discount %: 30
+2025-11-01 12:18:52 [INFO]:  Category offer is VALID
+2025-11-01 12:18:52 [INFO]: Final product discount: 0
+2025-11-01 12:18:52 [INFO]: Final category discount: 30
+2025-11-01 12:18:52 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:18:52 [INFO]: Category offer: {}
+2025-11-01 12:18:52 [INFO]: Current date: Sat Nov 01 2025 12:18:52 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: Product has offer object
+2025-11-01 12:18:52 [INFO]: Start date: 
+2025-11-01 12:18:52 [INFO]: End date: 
+2025-11-01 12:18:52 [INFO]: Discount %: 
+2025-11-01 12:18:52 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:52 [INFO]: Category has offer object
+2025-11-01 12:18:52 [INFO]: Start date: 
+2025-11-01 12:18:52 [INFO]: End date: 
+2025-11-01 12:18:52 [INFO]: Discount %: 
+2025-11-01 12:18:52 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:52 [INFO]: Final product discount: 0
+2025-11-01 12:18:52 [INFO]: Final category discount: 0
+2025-11-01 12:18:52 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:18:52 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:18:52 [INFO]: Current date: Sat Nov 01 2025 12:18:52 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: Product has offer object
+2025-11-01 12:18:52 [INFO]: Start date: 
+2025-11-01 12:18:52 [INFO]: End date: 
+2025-11-01 12:18:52 [INFO]: Discount %: 
+2025-11-01 12:18:52 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:52 [INFO]: Category has offer object
+2025-11-01 12:18:52 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: Discount %: 30
+2025-11-01 12:18:52 [INFO]:  Category offer is VALID
+2025-11-01 12:18:52 [INFO]: Final product discount: 0
+2025-11-01 12:18:52 [INFO]: Final category discount: 30
+2025-11-01 12:18:52 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:18:52 [INFO]: Category offer: {}
+2025-11-01 12:18:52 [INFO]: Current date: Sat Nov 01 2025 12:18:52 GMT+0530 (India Standard Time)
+2025-11-01 12:18:52 [INFO]: Product has offer object
+2025-11-01 12:18:52 [INFO]: Start date: 
+2025-11-01 12:18:52 [INFO]: End date: 
+2025-11-01 12:18:52 [INFO]: Discount %: 
+2025-11-01 12:18:52 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:52 [INFO]: Category has offer object
+2025-11-01 12:18:52 [INFO]: Start date: 
+2025-11-01 12:18:52 [INFO]: End date: 
+2025-11-01 12:18:52 [INFO]: Discount %: 
+2025-11-01 12:18:52 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:18:52 [INFO]: Final product discount: 0
+2025-11-01 12:18:52 [INFO]: Final category discount: 0
+2025-11-01 12:19:25 [INFO]: Payment Verification Started
+2025-11-01 12:19:25 [INFO]: Razorpay IDs: order_RaNmcYCesEaYu0 pay_RaNmrIOs8OKdZ9
+2025-11-01 12:19:25 [INFO]: Signature from Razorpay: cf2435bbab941c6f60cd10e10013a4f08f2337726e2dadd43c3e711f1d6e92f1
+2025-11-01 12:19:25 [INFO]: Generated Signature: cf2435bbab941c6f60cd10e10013a4f08f2337726e2dadd43c3e711f1d6e92f1
+2025-11-01 12:19:25 [INFO]: Signature verified successfully
+2025-11-01 12:19:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:19:25 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:19:25 [INFO]: Current date: Sat Nov 01 2025 12:19:25 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: Product has offer object
+2025-11-01 12:19:25 [INFO]: Start date: 
+2025-11-01 12:19:25 [INFO]: End date: 
+2025-11-01 12:19:25 [INFO]: Discount %: 
+2025-11-01 12:19:25 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:19:25 [INFO]: Category has offer object
+2025-11-01 12:19:25 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: Discount %: 30
+2025-11-01 12:19:25 [INFO]:  Category offer is VALID
+2025-11-01 12:19:25 [INFO]: Final product discount: 0
+2025-11-01 12:19:25 [INFO]: Final category discount: 30
+2025-11-01 12:19:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:19:25 [INFO]: Category offer: {}
+2025-11-01 12:19:25 [INFO]: Current date: Sat Nov 01 2025 12:19:25 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: Product has offer object
+2025-11-01 12:19:25 [INFO]: Start date: 
+2025-11-01 12:19:25 [INFO]: End date: 
+2025-11-01 12:19:25 [INFO]: Discount %: 
+2025-11-01 12:19:25 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:19:25 [INFO]: Category has offer object
+2025-11-01 12:19:25 [INFO]: Start date: 
+2025-11-01 12:19:25 [INFO]: End date: 
+2025-11-01 12:19:25 [INFO]: Discount %: 
+2025-11-01 12:19:25 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:19:25 [INFO]: Final product discount: 0
+2025-11-01 12:19:25 [INFO]: Final category discount: 0
+2025-11-01 12:19:25 [INFO]: Coupon found in session: BLE23
+2025-11-01 12:19:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:19:25 [INFO]: Category offer: {
+  discountPercentage: 30,
+  startDate: 2025-10-28T00:00:00.000Z,
+  endDate: 2025-11-06T00:00:00.000Z
+}
+2025-11-01 12:19:25 [INFO]: Current date: Sat Nov 01 2025 12:19:25 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: Product has offer object
+2025-11-01 12:19:25 [INFO]: Start date: 
+2025-11-01 12:19:25 [INFO]: End date: 
+2025-11-01 12:19:25 [INFO]: Discount %: 
+2025-11-01 12:19:25 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:19:25 [INFO]: Category has offer object
+2025-11-01 12:19:25 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: Discount %: 30
+2025-11-01 12:19:25 [INFO]:  Category offer is VALID
+2025-11-01 12:19:25 [INFO]: Final product discount: 0
+2025-11-01 12:19:25 [INFO]: Final category discount: 30
+2025-11-01 12:19:25 [INFO]: Product offer: MongooseDocument { null }
+2025-11-01 12:19:25 [INFO]: Category offer: {}
+2025-11-01 12:19:25 [INFO]: Current date: Sat Nov 01 2025 12:19:25 GMT+0530 (India Standard Time)
+2025-11-01 12:19:25 [INFO]: Product has offer object
+2025-11-01 12:19:25 [INFO]: Start date: 
+2025-11-01 12:19:25 [INFO]: End date: 
+2025-11-01 12:19:25 [INFO]: Discount %: 
+2025-11-01 12:19:25 [INFO]:  Product offer is EXPIRED or NOT STARTED
+2025-11-01 12:19:25 [INFO]: Category has offer object
+2025-11-01 12:19:25 [INFO]: Start date: 
+2025-11-01 12:19:25 [INFO]: End date: 
+2025-11-01 12:19:25 [INFO]: Discount %: 
+2025-11-01 12:19:25 [INFO]:  Category offer is EXPIRED or NOT STARTED
+2025-11-01 12:19:25 [INFO]: Final product discount: 0
+2025-11-01 12:19:25 [INFO]: Final category discount: 0
+2025-11-01 12:19:26 [INFO]: Order saved: ORD-51
+2025-11-01 12:19:26 [INFO]: Coupon marked as used cleared from session
+2025-11-01 12:19:26 [INFO]: Stock updated
+2025-11-01 12:19:26 [INFO]: Cart cleared
+2025-11-01 12:19:26 [INFO]: sending response with redirectUrl: /order-success/ORD-51
+2025-11-01 12:19:27 [INFO]: loadOrderSuccess called
+2025-11-01 12:19:27 [INFO]: orderId from params: ORD-51
+2025-11-01 12:19:27 [INFO]: userId: 68d6ad648b19afc1a2fefff0
+2025-11-01 12:19:27 [INFO]: order found: yes
+2025-11-01 12:19:27 [INFO]: order details: [object Object]
+2025-11-01 12:19:27 [INFO]: Rendering order-success page
+2025-11-01 12:30:16 [INFO]: Item Cancellation Refund Calculation:
+2025-11-01 12:30:16 [INFO]: Item ID: 6905ad76a2ea455575b5ed8e
+2025-11-01 12:30:16 [INFO]: Item Price (offer): 3634
+2025-11-01 12:30:16 [INFO]: Quantity: 1
+2025-11-01 12:30:16 [INFO]: Item Total: 3634
+2025-11-01 12:30:16 [INFO]: Coupon Share: 200.97
+2025-11-01 12:30:16 [INFO]: Refund Amount: 3433.03
+2025-11-01 12:30:16 [INFO]: Refunded ₹3433.03 to wallet for item 6905ad76a2ea455575b5ed8e
+2025-11-01 12:44:08 [INFO]: node starting
+2025-11-01 12:44:08 [INFO]: server running at http://localhost:3000
+2025-11-01 12:44:08 [INFO]:  MongoDB connected
+2025-11-01 12:44:19 [INFO]: node starting
+2025-11-01 12:44:19 [INFO]: server running at http://localhost:3000
+2025-11-01 12:44:19 [INFO]:  MongoDB connected
+2025-11-01 12:44:36 [INFO]: node starting
+2025-11-01 12:44:36 [INFO]: server running at http://localhost:3000
+2025-11-01 12:44:36 [INFO]:  MongoDB connected
+2025-11-01 12:47:14 [INFO]: node starting
+2025-11-01 12:47:14 [INFO]: server running at http://localhost:3000
+2025-11-01 12:47:15 [INFO]:  MongoDB connected
+2025-11-01 12:48:20 [INFO]: node starting
+2025-11-01 12:48:20 [INFO]: server running at http://localhost:3000
+2025-11-01 12:48:20 [INFO]:  MongoDB connected
+2025-11-01 12:48:46 [INFO]: node starting
+2025-11-01 12:48:46 [INFO]: server running at http://localhost:3000
+2025-11-01 12:48:46 [INFO]:  MongoDB connected
+2025-11-01 12:49:29 [INFO]: node starting
+2025-11-01 12:49:29 [INFO]: server running at http://localhost:3000
+2025-11-01 12:49:29 [INFO]:  MongoDB connected
+2025-11-01 12:52:11 [INFO]: Product offer: 
+2025-11-01 12:52:11 [INFO]: Category offer: [object Object]
+2025-11-01 12:52:11 [INFO]: Current date: Sat Nov 01 2025 12:52:11 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Category has offer object
+2025-11-01 12:52:11 [INFO]: Start date: Wed Oct 29 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: End date: Sat Nov 08 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Discount %: 45
+2025-11-01 12:52:11 [INFO]:  Category offer is VALID
+2025-11-01 12:52:11 [INFO]: Final product discount: 0
+2025-11-01 12:52:11 [INFO]: Final category discount: 45
+2025-11-01 12:52:11 [INFO]: Product offer: 
+2025-11-01 12:52:11 [INFO]: Category offer: [object Object]
+2025-11-01 12:52:11 [INFO]: Current date: Sat Nov 01 2025 12:52:11 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Category has offer object
+2025-11-01 12:52:11 [INFO]: Start date: Tue Oct 28 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: End date: Thu Nov 06 2025 05:30:00 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Discount %: 30
+2025-11-01 12:52:11 [INFO]:  Category offer is VALID
+2025-11-01 12:52:11 [INFO]: Final product discount: 0
+2025-11-01 12:52:11 [INFO]: Final category discount: 30
+2025-11-01 12:52:11 [INFO]: Product offer: 
+2025-11-01 12:52:11 [INFO]: Category offer: 
+2025-11-01 12:52:11 [INFO]: Current date: Sat Nov 01 2025 12:52:11 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Final product discount: 0
+2025-11-01 12:52:11 [INFO]: Final category discount: 0
+2025-11-01 12:52:11 [INFO]: Product offer: 
+2025-11-01 12:52:11 [INFO]: Category offer: 
+2025-11-01 12:52:11 [INFO]: Current date: Sat Nov 01 2025 12:52:11 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Final product discount: 0
+2025-11-01 12:52:11 [INFO]: Final category discount: 0
+2025-11-01 12:52:11 [INFO]: Product offer: 
+2025-11-01 12:52:11 [INFO]: Category offer: 
+2025-11-01 12:52:11 [INFO]: Current date: Sat Nov 01 2025 12:52:11 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Final product discount: 0
+2025-11-01 12:52:11 [INFO]: Final category discount: 0
+2025-11-01 12:52:11 [INFO]: Product offer: 
+2025-11-01 12:52:11 [INFO]: Category offer: 
+2025-11-01 12:52:11 [INFO]: Current date: Sat Nov 01 2025 12:52:11 GMT+0530 (India Standard Time)
+2025-11-01 12:52:11 [INFO]: Final product discount: 0
+2025-11-01 12:52:11 [INFO]: Final category discount: 0
+2025-11-01 13:18:39 [INFO]: node starting
+2025-11-01 13:18:39 [INFO]: Error: listen EADDRINUSE: address already in use :::3000
+2025-11-01 13:18:39 [INFO]: server running at http://localhost:3000
+2025-11-01 13:18:39 [INFO]:  MongoDB connected

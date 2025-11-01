@@ -128,6 +128,47 @@
     color: #333;
   }
 
+  /* Price Breakdown */
+  .price-breakdown {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .price-breakdown-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .price-row.discount {
+    color: var(--success-green);
+    font-weight: 600;
+  }
+
+  .price-row.total {
+    border-top: 2px solid #dee2e6;
+    padding-top: 12px;
+    margin-top: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .price-row.total .amount {
+    color: var(--primary-teal);
+  }
+
   .timeline {
     margin: 30px 0;
   }
@@ -262,6 +303,30 @@
           <div class="order-id"><%= orderId %></div>
         </div>
 
+        <!-- Price Breakdown -->
+        <% if (order.subtotal || order.discount) { %>
+          <div class="price-breakdown">
+            <div class="price-breakdown-title">💰 Price Breakdown</div>
+            
+            <div class="price-row">
+              <span>Subtotal (After Offers):</span>
+              <span>₹<%= order.subtotal.toFixed(2) %></span>
+            </div>
+
+            <% if (order.discount > 0) { %>
+              <div class="price-row discount">
+                <span>🎁 Coupon Discount:</span>
+                <span>-₹<%= order.discount.toFixed(2) %></span>
+              </div>
+            <% } %>
+
+            <div class="price-row total">
+              <span>Total Amount:</span>
+              <span class="amount">₹<%= order.total.toFixed(2) %></span>
+            </div>
+          </div>
+        <% } %>
+
         <div class="info-grid">
           <div class="info-item">
             <label>Total Amount</label>
@@ -332,7 +397,7 @@
             </div>
             <div class="timeline-content">
               <strong>Payment on Delivery</strong>
-              <small>Please keep cash ready for payment upon delivery</small>
+              <small>Please keep ₹<%= order.total.toFixed(2) %> ready for payment upon delivery</small>
             </div>
           </div>
           <% } else { %>
@@ -344,11 +409,20 @@
             </div>
             <div class="timeline-content">
               <strong>Payment Received</strong>
-              <small>Your payment via Razorpay has been confirmed</small>
+              <small>Your payment via <%= order.paymentMethod %> has been confirmed</small>
             </div>
           </div>
           <% } %>
         </div>
+
+        <% if (order.discount > 0) { %>
+          <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); border-left: 4px solid #28a745; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <p style="margin: 0; color: #155724;">
+              <strong>🎉 Congratulations!</strong><br>
+              <small>You saved ₹<%= order.discount.toFixed(2) %> on this order with coupon discounts!</small>
+            </p>
+          </div>
+        <% } %>
 
         <div style="background: #f0f8ff; border-left: 4px solid #0099ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
           <p style="margin: 0; color: #333;">
