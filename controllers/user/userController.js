@@ -9,130 +9,118 @@ import Wallet from '../../models/walletModel.js';
 import offerController from '../admin/offerController.js';
 
 const getShopPage = async (req, res) => {
-  try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = 8;
-    const skip = (page - 1) * limit;
+try{
+  const page=parseInt(req.query.page) || 1;
+  const limit=8;
+  const skip=(page-1)*limit;
 
-    let filter = {
-      deletedAt:null,
-      isBlocked:false
-    };
-
-    
-    if (req.query.search) {
-      filter.name = { $regex: req.query.search, $options: "i" };
-    }
-
-    
-    if (req.query.category) {
-      const categoryDoc = await Category.findOne({
-        name:{$regex:new RegExp(`^${req.query.category}$`,'i')},
-        isDeleted:false
-      })
-      if (categoryDoc) {
-        filter.categoryId = categoryDoc._id;
-      }
-    }
-
-    
-    if (req.query.brand) {
-      const brandDoc = await Brand.findOne({
-        name:{$regex:new RegExp(`^${req.query.brand}$`,'i')}
-      });
-      if (brandDoc) {
-        filter.brandId = brandDoc._id;
-      }
-    }
-
-    
-    if (req.query.minPrice || req.query.maxPrice) {
-      filter.salesPrice = {};
-      if(req.query.minPrice){
-        filter.salesPrice.$gte= parseInt(req.query.minPrice);
-      }
-      if(req.query.maxPrice){
-        filter.salesPrice.$lte=parseInt(req.query.maxPrice)
-      };
-    }
-
-    
-    let sort = {};
-    if (req.query.sort === "priceLowHigh") {
-      sort.salesPrice = 1;
-    } else if (req.query.sort === "priceHighLow") {
-      sort.salesPrice = -1;
-    } else if (req.query.sort === "aToZ") {
-      sort.name = 1;
-    } else if (req.query.sort === "zToA") {
-      sort.name = -1;
-    } else if (req.query.sort === "newArrivals") {
-      sort.createdAt = -1;
-    }else{
-      sort.createdAt=-1;
-    }
-
-    
-    const productsRaw = await Product.find(filter)
-    .populate('categoryId')
-    .populate('brandId')
-    .skip(skip)
-    .limit(limit)
-    .sort(sort)
-    .lean();
-
-    
-    const products=await Promise.all(
-      productsRaw.map(async(product)=>{
-        const variant=await Variant.findOne({productId:product._id})
-        .sort({createdAt:1})
-        .lean();
-
-        if(!variant) return  null;
-
-        const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
-
-          product,
-          product.categoryId
-        )
-
-        return{
-          ...product,
-          variantId:variant._id,
-          image:variant?.images?.[0] || '/user/assets/imgs/shop/product-placeholder.jpg',
-          offerPrice,
-          discount,
-          hasOffer
-        }
-
-
-      })
-    )
-   
-    const validProducts=products.filter(p=> p!==null);
-    const totalProducts=await Product.countDocuments(filter);
-    const totalPages=Math.ceil(totalProducts/limit);
-
-
-    const brands=await Brand.find();
-    const categories=await Category.find({isDeleted:false});
-
-    res.render("shop", {
-      user: req.session.user || req?.user || null ,
-      products:validProducts,
-      brands,
-      categories,
-      currentPage: page,
-      totalPages,
-      search: req.query.search || "",
-      sortOption: req.query.sort || "",
-      category: req.query.category || "",
-      brand: req.query.brand || "",
-      minPrice: req.query.minPrice || "",
-      maxPrice: req.query.maxPrice || ""
+  let filter={
+    deletedAt:null,
+    isBlocked:false
+  }
+  if(req.query.search){
+    filter.name={$regex:req.query.search,$options:'i'}
+  }
+  if(req.query.category){
+    const categoryDoc=await Category.findOne({
+      name:{$regex:new RegExp(`^${req.query.category}$`,'i')},
+      isDeleted:false
     });
+    if(categoryDoc){
+      filter.categoryId=categoryDoc._id
+    }
+  }
 
-  } catch (err) {
+  if (req.query.brand) {
+  const brandDoc = await Brand.findOne({
+    name: { $regex: new RegExp(`^${req.query.brand}$`, 'i') }
+  });
+  if (brandDoc) {
+    filter.brandId = brandDoc._id;
+  }
+}
+
+if (req.query.minPrice || req.query.maxPrice) {
+  filter.salesPrice = {};
+  if (req.query.minPrice) {
+    filter.salesPrice.$gte = parseInt(req.query.minPrice);
+  }
+  if (req.query.maxPrice) {
+    filter.salesPrice.$lte = parseInt(req.query.maxPrice);
+  }
+}
+
+const productsRaw = await Product.find(filter)
+  .populate('categoryId')
+  .populate('brandId')
+  .lean();
+
+  let products = await Promise.all(
+  productsRaw.map(async (product) => {
+    const variant = await Variant.findOne({ productId: product._id })
+      .sort({ createdAt: 1 })
+      .lean();
+
+    if (!variant) return null;
+
+    const { offerPrice, discount, hasOffer } =
+      offerController.calculateOfferPrice(product, product.categoryId);
+
+    const finalPrice = hasOffer ? offerPrice : product.salesPrice;
+
+    return {
+      ...product,
+      variantId: variant._id,
+      image: variant?.images?.[0] || '/user/assets/imgs/shop/product-placeholder.jpg',
+      offerPrice,
+      discount,
+      hasOffer,
+      finalPrice
+    };
+  })
+);
+
+let validProducts = products.filter(p => p !== null);
+
+if (req.query.sort === "priceLowHigh") {
+  validProducts.sort((a, b) => a.finalPrice - b.finalPrice);
+} else if (req.query.sort === "priceHighLow") {
+  validProducts.sort((a, b) => b.finalPrice - a.finalPrice);
+} else if (req.query.sort === "aToZ") {
+  validProducts.sort((a, b) => a.name.localeCompare(b.name));
+} else if (req.query.sort === "zToA") {
+  validProducts.sort((a, b) => b.name.localeCompare(a.name));
+} else if (req.query.sort === "newArrivals") {
+  validProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+} else {
+  validProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+}
+
+const totalProducts = validProducts.length;
+const totalPages = Math.ceil(totalProducts / limit);
+validProducts = validProducts.slice(skip, skip + limit);
+
+const brands = await Brand.find();
+const categories = await Category.find({ isDeleted: false });
+
+res.render("shop", {
+  user: req.session.user || req?.user || null,
+  products: validProducts,
+  brands,
+  categories,
+  currentPage: page,
+  totalPages,
+  search: req.query.search || "",
+  sortOption: req.query.sort || "",
+  category: req.query.category || "",
+  brand: req.query.brand || "",
+  minPrice: req.query.minPrice || "",
+  maxPrice: req.query.maxPrice || ""
+});
+
+
+
+} catch (err) {
     console.error("Error fetching products:", err);
     res.status(500).send("Server error");
   }
@@ -145,16 +133,24 @@ const getProductDetail = async (req, res) => {
    if (!productId.match(/^[0-9a-fA-F]{24}$/)) {
       return res.status(400).send('Invalid product ID');
     }
-    const product = await Product.findById(productId)
-                    .populate('categoryId')
-                    .lean();
+    const product = await Product.findOne({
+      _id:productId,
+      isBlocked:false,
+      deletedAt:null
+    })
+      .populate('categoryId')
+      .lean();
     
     if(!product){
-      return res.status(400).send('Product not found')
+      return res.redirect('/shop')
     }
     
     
-    const variants = await Variant.find({ productId: productId });
+    const variants = await Variant.find({ productId:productId,isBlocked:false});
+
+    if(variants.length ===0){
+      return res.redirect('/shop');
+    }
 
     const user = req.session?.user  || req?.user;
 
@@ -163,7 +159,7 @@ const getProductDetail = async (req, res) => {
     const category=product.categoryId;
     
     let cartItems = [];
-if (user) {
+    if (user) {
   const cart = await Cart.find({ userId: user._id, productId });
   cartItems = cart.map(item => ({
     variantId: item.variantId.toString(),
@@ -174,9 +170,9 @@ if (user) {
     let wishlistVariantIds=[];
     if(user){
       const wishlistItems=await Wishlist.find({userId:user._id,productId});
-      console.log("wishlistItems:",wishlistItems)
+      
       wishlistVariantIds=wishlistItems.map(item=>item.variantId.toString());
-      console.log("alreaady  exist variants:",wishlistVariantIds)
+      
     }
 
 
@@ -190,13 +186,46 @@ if (user) {
       savings:hasOffer ?Math.round(product.salesPrice-offerPrice) :0
     }
 
-    console.log('product with offer:',{
-      name:productWithOffer.name,
-      salesPrice:productWithOffer.salesPrice,
-      offerPrice:productWithOffer.offerPrice,
-      discount:productWithOffer.discount,
-      hasOffer:productWithOffer.hasOffer
+    const similarProductRaw=await Product.find({
+      categoryId:category._id,
+      _id:{$ne:productId},
+      deletedAt:null,
+      isBlocked:false
     })
+    .limit(8)
+    .populate('categoryId')
+    .lean();
+
+    const similarProducts=await Promise.all(
+      similarProductRaw.map(async (prod)=>{
+        const variant=await Variant.findOne({
+          productId:prod._id,
+          isBlocked:false,
+          deletedAt:null
+        })
+        .sort({createdAt:1})
+        .lean();
+
+        if(!variant) return null;
+
+        const{offerPrice:simOfferPrice,discount:simDiscount,hasOffer:simHasOffer}=
+        offerController.calculateOfferPrice(prod,prod.categoryId);
+
+        return {
+          ...prod,
+          variantId:variant._id,
+          image:variant?.images?.[0] || '/user/assets/imgs/shop/product-placeholder.jpg',
+          offerPrice:Math.round(simOfferPrice),
+          discount:simDiscount,
+          hasOffer:simHasOffer,
+          finalPrice:simHasOffer?Math.round(simOfferPrice) :prod.salesPrice
+        }
+      })
+    );
+
+    const validSimilarProducts=similarProducts.filter(p=>p !==null);
+
+
 
 
     res.render("productDetail", {
@@ -206,8 +235,8 @@ if (user) {
       brand,
       category,
       wishlistVariantIds,
-      cartItems
-    
+      cartItems,
+    similarProducts:validSimilarProducts
     });
   } catch (error) {
     console.error('product detail error:',error);

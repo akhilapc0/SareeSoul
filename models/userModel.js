@@ -26,7 +26,11 @@ const userSchema = new mongoose.Schema({
 });
 
 
+
+
 userSchema.pre('save',function(next){
+
+  
 
   if(!this.referralCode){
     const random =Math.floor(1000 + Math.random()*9000);
@@ -35,5 +39,8 @@ userSchema.pre('save',function(next){
   }
  next();
 });
+
+
+
 
 export default  mongoose.model('User', userSchema);

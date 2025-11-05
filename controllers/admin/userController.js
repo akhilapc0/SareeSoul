@@ -43,9 +43,10 @@ const getUserList=async(req,res)=>{
 
 const toggleUserBlockStatus=async(req,res)=>{
     try{
-        console.log("jdfj")
+        
         const userId=req.params.id;
         const user=await User.findById(userId);
+
         if(!user || user.isAdmin){
           return  res.status(404).send('user is not found ')
         }

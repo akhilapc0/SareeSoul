@@ -15,6 +15,7 @@ async(accessToken,refreshToken,Profile,done)=>{
 try{
     let user=await User.findOne({googleId:Profile.id})
   if (user) {
+    console.log("user:",user)
     if (user.isBlocked) {
         return done(null, false, { message: "Your account has been blocked" });
     }
@@ -22,11 +23,23 @@ try{
 }
 
     else{
+        let isFound=await User.findOne({email:Profile.emails[0].value})
+        
+        if(isFound){
+            if (isFound.isBlocked) {
+        return done(null, false, { message: "Your account has been blocked" });
+    }
+    return done(null, isFound);
+
+        }
         const fullName = Profile.displayName || "";
         
         const nameParts = fullName.split(" "); 
         const firstName = nameParts[0] || ""; 
         const lastName = nameParts.slice(1).join(" ") || ""; 
+        
+         
+
 
         const user = new User({
         firstName: firstName,
@@ -34,6 +47,7 @@ try{
         email: Profile.emails[0].value,
         googleId: Profile.id
         });
+
         await user.save();
         return done(null,user)
     }

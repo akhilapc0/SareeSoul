@@ -39,7 +39,7 @@
       <div class="content-header">
         <div>
           <h2 class="content-title card-title">Edit Category</h2>
-          <p>Create a new saree category</p>
+          <p>Update saree category details</p>
         </div>
         <div>
           <a href="/admin/categories" class="btn btn-outline-secondary">
@@ -51,7 +51,7 @@
       <div class="card mb-4">
         <header class="card-header">
           <h4 class="card-title">Category Information</h4>
-          <small class="text-muted">Fill in the details below to create a new category</small>
+          <small class="text-muted">Fill in the details below to update the category</small>
         </header>
 
         <div class="card-body">
@@ -93,15 +93,15 @@
 
             <!-- Backend Error Message -->
             <% if (error) { %>
-              <div id="backendError"   class="text-danger mb-3"><%= error %></div>
+              <div id="backendError" class="text-danger mb-3"><%= error %></div>
             <% } %>
 
             <hr class="my-4">
 
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="submit" class="btn btn-primary">
-                  <i class="material-icons md-add"></i> edit Category
+                <button type="submit" id="submitBtn" class="btn btn-primary">
+                  <i class="material-icons md-edit"></i> Update Category
                 </button>
               </div>
             </div>
@@ -118,52 +118,66 @@
 
   <!-- Frontend Validation -->
   <script>
+    let isSubmitting = false; // Prevent double submission
+
     document.getElementById("editCategoryForm").addEventListener("submit", function (e) {
+      // Prevent double submission
+      if (isSubmitting) {
+        e.preventDefault();
+        return;
+      }
+
       const name = document.getElementById("name").value.trim();
       const description = document.getElementById("description").value.trim();
-       
+      const submitBtn = document.getElementById("submitBtn");
 
       let isValid = true;
 
       // Clear previous errors
       document.getElementById("nameError").textContent = "";
       document.getElementById("descError").textContent = "";
-      document.getElementById('backendError').textContent="";
+      const backendError = document.getElementById('backendError');
+      if (backendError) backendError.textContent = "";
 
-      if (name.length<3) {
-        document.getElementById("nameError").textContent = "Category name should have 3 characters";
+      if (name.length < 3) {
+        document.getElementById("nameError").textContent = "Category name should have at least 3 characters";
         isValid = false;
       }
 
-      if (description.length<10) {
-        document.getElementById("descError").textContent = "Description have atleast 10 characters";
+      if (description.length < 10) {
+        document.getElementById("descError").textContent = "Description should have at least 10 characters";
         isValid = false;
       }
 
       if (!isValid) {
-        e.preventDefault(); 
+        e.preventDefault();
+        return;
       }
+
+      // If valid, disable button and set submitting flag
+      isSubmitting = true;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Updating...';
     });
   </script>
 
- <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const success = urlParams.get('success');
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
 
-  if (success === 'true') {
-    Swal.fire({
-      icon: 'success',
-      title: 'Success',
-      text: 'Category edited successfully!',
-      confirmButtonColor: '#3085d6'
-    }).then(() => {
-      const url = new URL(window.location);
-      url.searchParams.delete('success');
-      window.history.replaceState({}, document.title, url);
-    });
-  }
-</script>
-
+    if (success === 'true') {
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: 'Category updated successfully!',
+        confirmButtonColor: '#3085d6'
+      }).then(() => {
+        const url = new URL(window.location);
+        url.searchParams.delete('success');
+        window.history.replaceState({}, document.title, url);
+      });
+    }
+  </script>
 
 </body>
 </html>

@@ -896,3 +896,64 @@ Cannot read properties of undefined (reading 'forEach')
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-10-31 21:18:58 [ERROR]: (node:56128) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-11-03 14:48:19 [ERROR]: (node:46804) [DEP0044] DeprecationWarning: The `util.isArray` API is deprecated. Please use `Array.isArray()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2025-11-03 15:35:37 [ERROR]: MongoServerError: E11000 duplicate key error collection: sareeSoul.users index: email_1 dup key: { email: "akhilapc0@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\collection.js:157:16)
+2025-11-03 15:36:15 [ERROR]: MongoServerError: E11000 duplicate key error collection: sareeSoul.users index: email_1 dup key: { email: "akhilapc0@gmail.com" }
+    at InsertOneOperation.execute (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongodb\lib\collection.js:157:16)
+2025-11-03 16:16:43 [ERROR]: ReferenceError: profile is not defined
+    at Strategy._verify (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/passport.js:26:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-03 16:17:22 [ERROR]: TokenError: Bad Request
+    at OAuth2Strategy.parseErrorResponse (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\passport-oauth2\lib\strategy.js:373:12)
+    at OAuth2Strategy._createOAuthError (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\passport-oauth2\lib\strategy.js:420:16)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\passport-oauth2\lib\strategy.js:177:45
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\oauth\lib\oauth2.js:196:18
+    at passBackControl (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\oauth\lib\oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\oauth\lib\oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-11-03 16:17:46 [ERROR]: CastError: Cast to ObjectId failed for value "{ email: 'akhilapc0@gmail.com' }" (type Object) at path "_id" for model "User"
+    at SchemaObjectId.cast (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\cast.js:319:34)
+    at Query.cast (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Strategy._verify (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/passport.js:26:21)
+2025-11-03 16:19:09 [ERROR]: CastError: Cast to ObjectId failed for value "{ email: 'akhilapc0@gmail.com' }" (type Object) at path "_id" for model "User"
+    at SchemaObjectId.cast (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\cast.js:319:34)
+    at Query.cast (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Strategy._verify (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/config/passport.js:26:21)
+2025-11-03 16:21:14 [ERROR]: TokenError: Bad Request
+    at OAuth2Strategy.parseErrorResponse (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\passport-oauth2\lib\strategy.js:373:12)
+    at OAuth2Strategy._createOAuthError (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\passport-oauth2\lib\strategy.js:420:16)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\passport-oauth2\lib\strategy.js:177:45
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\oauth\lib\oauth2.js:196:18
+    at passBackControl (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\oauth\lib\oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\oauth\lib\oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-11-04 10:27:40 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
+2025-11-04 10:27:55 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }

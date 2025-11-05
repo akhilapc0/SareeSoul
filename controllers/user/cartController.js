@@ -22,6 +22,17 @@ const loadCart = async (req, res) => {
         path: 'items.variantId',
         select: 'colour stock images isBlocked deletedAt'
       });
+      
+
+      // let totalCount=0;
+
+      // if(cart && cart.items.length >0){
+      //   totalCount=cart.items.reduce((sum,item)=>sum+item.quantity,0);
+
+      // }
+      // console.log('total cart items count:',totalCount)
+
+
 
     const items = cart ? cart.items : [];
 
@@ -103,12 +114,13 @@ const addToCart = async (req, res) => {
     }
     
     let cart = await Cart.findOne({ userId });
+    console.log("cart is :",cart);
     if (!cart) cart = new Cart({ userId, items: [] });
 
     
     const existingItem = cart.items.find(item => item.variantId.toString() === variantId.toString());
 
-     
+     console.log(existingItem);
 
     if (existingItem) {
       

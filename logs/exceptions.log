@@ -23771,3 +23771,19 @@ ReferenceError: addMoneyToWallet is not defined
     at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-11-01 16:36:20 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/wishlistRoutes.js:11:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-11-01 16:36:49 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as delete] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/wishlistRoutes.js:11:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)

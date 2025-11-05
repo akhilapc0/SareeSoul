@@ -90,7 +90,7 @@
       removeButtons.forEach(btn => {
         btn.addEventListener('click', async function() {
           const id = this.dataset.id;
-
+          // console.log('id: ',id)
           const confirmDelete = await Swal.fire({
             title: "Are you sure?",
             text: "This item will be removed from your wishlist.",
@@ -102,7 +102,7 @@
 
           if (confirmDelete.isConfirmed) {
             try {
-              const response = await fetch(`/remove/${id}`, {
+              const response = await fetch(`/wishlist/remove/${id}`, {
                 method: "DELETE",
               });
               const data = await response.json();

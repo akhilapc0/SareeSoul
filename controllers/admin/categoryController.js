@@ -60,11 +60,22 @@ const postAddCategory = async (req, res) => {
         formData: { name, description },
       });
     }
+
+    name=name.toLowerCase().trim();
+    description=description.trim();
+
+    const existingCategory=await Category.findOne({name,isDeleted:false});
+    if(existingCategory){
+      return res.render('add-category',{
+        error:"Category already exists",
+        formData:{name:req.body.name,description}
+      })
+    }
       
-    let category=new Category({name,description});
+    const category=new Category({name,description});
     await category.save();
 
-    res.redirect("/admin/categories/add?success=true")
+   return  res.redirect("/admin/categories?success=true")
   
     
 
@@ -79,7 +90,7 @@ const postAddCategory = async (req, res) => {
       })
     }
 
-    res.render("add-category",{
+   return  res.render("add-category",{
       error:"server error.please try again",
       formData:{name:req.body.name,description:req.body.description}
     })
@@ -91,7 +102,7 @@ const getEditCategory=async(req,res)=>{
     const categoryId=req.params.id;
     const category=await Category.findById(categoryId);
     if(!category){
-       res.redirect('/admin/categories')
+      return  res.redirect('/admin/categories')
     }
     return res.render('edit-category', {
       category,            
@@ -114,7 +125,7 @@ const getEditCategory=async(req,res)=>{
 const postEditCategory=async(req,res)=>{
   try{
     const categoryId=req.params.id;
-    const {name,description}=req.body;
+    let {name,description}=req.body;
     const {error}=categoryValidation.validate({name,description});
     if(error){
       return res.render('edit-category',{
@@ -122,6 +133,22 @@ const postEditCategory=async(req,res)=>{
         category:{name,description,_id:categoryId}
       })
     }
+    name=name.toLowerCase().trim();
+    description=description.trim();
+
+    const existingCategory=await Category.findOne({
+      name,
+      isDeleted:false,
+      _id:{$ne:categoryId}
+    })
+
+    if(existingCategory){
+      return res.render('edit-category',{
+        error:'Category alreday exists',
+        category:{name:req.body.name,description,_id:categoryId}
+      });
+    }
+
     await Category.findByIdAndUpdate(categoryId,{name,description});
     res.redirect(`/admin/categories/edit/${categoryId}?success=true`)
 
@@ -132,13 +159,13 @@ const postEditCategory=async(req,res)=>{
     if(error.code ===11000){
       return res.render('edit-category',{
         error:"category already exists",
-        category:{name,description,_id:categoryId}
+        category:{name:req.body.name,description:req.body.description,_id:categoryId}
 
-      })
+      });
     }
     return res.render('edit-category',{
       error:"error edit category",
-      category:{name,description}
+      category:{name:req.body.name,description:req.body.description,_id:categoryId}
     })
 
   }
@@ -167,7 +194,7 @@ const deleteCategory=async(req,res)=>{
       if(!category){
         return res.status(404).json({success:false,message:"category not found"})
       }
-      await Category.findByIdAndDelete(categoryId)
+      await Category.findByIdAndUpdate(categoryId,{isDeleted:true})
       res.json({success:true,message:"category deleted successfully"})
   }
   catch(error){

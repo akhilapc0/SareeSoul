@@ -8,6 +8,6 @@ const router = express.Router();
 router.post("/add", isLoggedIn,checkBlock,addToWishlist);
 router.get("/wishlist/data",isLoggedIn,checkBlock,getWishlist);
 router.get("/wishlist", isLoggedIn, checkBlock, renderWishlistPage);
-router.delete("/remove/:id", isLoggedIn, checkBlock, removeFromWishlist);
+router.delete("/wishlist/remove/:id",removeFromWishlist);
 export default router;
 

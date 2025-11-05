@@ -55,6 +55,12 @@
         object-fit: cover;
         cursor: pointer;
       }
+
+      .clear-filters-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
     </style>
 </head>
 
@@ -64,13 +70,13 @@
     <div class="container mt-4">
 
       <!-- Search + Filter Form -->
-      <form method="GET" action="/shop" class="row g-3 mb-4">
+      <form method="GET" action="/shop" class="row g-3 mb-4" id="filterForm">
         <div class="col-md-3">
-          <input type="text" name="search" class="form-control" placeholder="Search products..." value="<%= search %>">
+          <input type="text" name="search" id="searchInput" class="form-control" placeholder="Search products..." value="<%= search %>">
         </div>
 
         <div class="col-md-2">
-          <select name="category" class="form-select">
+          <select name="category" id="categorySelect" class="form-select">
             <option value="">All Categories</option>
             <% categories.forEach(cat=> { %>
               <option value="<%= cat.name %>" <%=category===cat.name?'selected':'' %>><%= cat.name %>
@@ -80,7 +86,7 @@
         </div>
 
         <div class="col-md-2">
-          <select name="brand" class="form-select">
+          <select name="brand" id="brandSelect" class="form-select">
             <option value="">All Brands</option>
             <% brands.forEach(br=> { %>
               <option value="<%= br.name %>" <%=brand===br.name?'selected':'' %>><%= br.name %>
@@ -90,12 +96,12 @@
         </div>
 
         <div class="col-md-2 d-flex">
-          <input type="number" name="minPrice" class="form-control" placeholder="Min" value="<%= minPrice %>">
-          <input type="number" name="maxPrice" class="form-control ms-1" placeholder="Max" value="<%= maxPrice %>">
+          <input type="number" name="minPrice" id="minPrice" class="form-control" placeholder="Min" value="<%= minPrice %>">
+          <input type="number" name="maxPrice" id="maxPrice" class="form-control ms-1" placeholder="Max" value="<%= maxPrice %>">
         </div>
 
         <div class="col-md-2">
-          <select name="sort" class="form-select">
+          <select name="sort" id="sortSelect" class="form-select">
             <option value="">Default</option>
             <option value="priceLowHigh" <%=sortOption==='priceLowHigh' ?'selected':'' %>>Price: Low to High</option>
             <option value="priceHighLow" <%=sortOption==='priceHighLow' ?'selected':'' %>>Price: High to Low</option>
@@ -109,6 +115,19 @@
           <button type="submit" class="btn btn-primary w-100">Go</button>
         </div>
       </form>
+
+      <!-- Clear Filters Button (only shows when filters are active) -->
+      <% if (search || category || brand || minPrice || maxPrice || sortOption) { %>
+        <div class="mb-3">
+          <button type="button" class="btn btn-outline-secondary clear-filters-btn" onclick="clearAllFilters()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            Clear All Filters
+          </button>
+        </div>
+      <% } %>
 
       <!-- Products Grid -->
       <div class="row">
@@ -157,8 +176,6 @@
                           data-variantid="<%= product.variantId %>">
                           Add to Cart
                         </button>
-
-
                       </div>
                 </div>
               </div>
@@ -186,55 +203,69 @@
 
     <%- include('./partials/footer') %>
 
+    <!-- Clear Filters Function -->
     <script>
-  document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', async (e) => {
-      const productId = e.target.getAttribute('data-productid');
-      const variantId = e.target.getAttribute('data-variantid');
-
-      try {
-        const res = await fetch('/cart', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ productId,variantId, quantity: 1 })
-        });
-
-        const data = await res.json();
-
-        if (res.ok) {
-          Swal.fire({
-            icon: 'success',
-            title: 'Added to Cart!',
-            text: data.message || 'Product successfully added.',
-            showCancelButton: true,
-            confirmButtonText: 'Go to Cart',
-            cancelButtonText: 'Continue Shopping',
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#aaa'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              window.location.href = '/cart';
-            }
-          });
-        } else {
-          Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: data.message || 'Something went wrong.'
-          });
-        }
-      } catch (err) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Failed to add to cart. Please try again.'
-        });
+      function clearAllFilters() {
+        document.getElementById('searchInput').value = '';
+        document.getElementById('categorySelect').value = '';
+        document.getElementById('brandSelect').value = '';
+        document.getElementById('minPrice').value = '';
+        document.getElementById('maxPrice').value = '';
+        document.getElementById('sortSelect').value = '';
+        
+        // Submit the form to reload with cleared filters
+        document.getElementById('filterForm').submit();
       }
-    });
-  });
-</script>
+    </script>
 
+    <!-- Add to Cart Script -->
+    <script>
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', async (e) => {
+          const productId = e.target.getAttribute('data-productid');
+          const variantId = e.target.getAttribute('data-variantid');
 
+          try {
+            const res = await fetch('/cart', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ productId, variantId, quantity: 1 })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Added to Cart!',
+                text: data.message || 'Product successfully added.',
+                showCancelButton: true,
+                confirmButtonText: 'Go to Cart',
+                cancelButtonText: 'Continue Shopping',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#aaa'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '/cart';
+                }
+              });
+            } else {
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: data.message || 'Something went wrong.'
+              });
+            }
+          } catch (err) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Failed to add to cart. Please try again.'
+            });
+          }
+        });
+      });
+    </script>
 
 </body>
 
