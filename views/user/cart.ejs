@@ -1,123 +1,215 @@
 <%- include('partials/head') %>
 
 <style>
-/* Cart Page Styles */
-.cart-item {
+/* Clean Modern Cart Design */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f7fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Simple Page Header */
+.page-header {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.btn-continue-shopping {
+  padding: 0.6rem 1.5rem;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
-.cart-item:hover {
-  background-color: #f8f9fa;
+.btn-continue-shopping:hover {
+  background: #667eea;
+  color: white;
 }
 
-.cart-item img {
-  transition: transform 0.3s ease;
+/* Clean Cart Item Card */
+.cart-item-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
 }
 
-.cart-item img:hover {
-  transform: scale(1.05);
+.cart-item-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Quantity Controls */
-.input-group .btn {
-  padding: 0.375rem 0.75rem;
-  border-color: #dee2e6;
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
 }
 
-.input-group .btn:hover:not(:disabled) {
-  background-color: #e9ecef;
-  border-color: #adb5bd;
+.image-wrapper {
+  position: relative;
 }
 
-.input-group .btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.quantity-input {
-  max-width: 60px;
-  font-weight: 600;
-  border-left: 0;
-  border-right: 0;
-}
-
-/* Simplified Price Display */
-.item-price {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #212529;
-}
-
-.item-price.has-discount {
-  color: #28a745;
-}
-
-.price-original {
-  font-size: 0.85rem;
-  color: #6c757d;
-  text-decoration: line-through;
-  margin-left: 0.5rem;
-}
-
-/* Compact Discount Badge */
-.discount-badge {
+.offer-tag {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  background: #ff6b6b;
   color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-/* Stock Warning - More Subtle */
-.stock-warning {
-  font-size: 0.75rem;
-  color: #856404;
-  background: #fff3cd;
-  padding: 2px 8px;
-  border-radius: 3px;
-  display: inline-block;
-}
-
-/* Summary Card */
-.sticky-top {
-  position: sticky;
-  top: 100px;
-  z-index: 10;
-}
-
-@media (max-width: 991px) {
-  .sticky-top {
-    position: relative;
-    top: 0;
-  }
-}
-
-/* Empty Cart */
-.bi-cart-x {
-  opacity: 0.3;
-}
-
-/* Savings Alert - More Subtle */
-.savings-highlight {
-  background: linear-gradient(to right, #d4edda, #c3e6cb);
-  border-left: 4px solid #28a745;
-  padding: 12px 16px;
+  padding: 4px 10px;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(255, 107, 107, 0.3);
 }
 
-/* Remove Button Styling */
+/* Product Info */
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+  text-decoration: none;
+  display: block;
+}
+
+.product-name:hover {
+  color: #667eea;
+}
+
+.product-variant {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+}
+
+/* SIMPLIFIED PRICE - Only show final price */
+.item-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 0.5rem;
+}
+
+.item-price.discounted {
+  color: #28a745;
+}
+
+.price-compare {
+  font-size: 0.85rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+/* Quantity Controls - Cleaner */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: white;
+  color: #495057;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.qty-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.qty-value {
+  width: 45px;
+  text-align: center;
+  font-weight: 600;
+  color: #1a1a1a;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+}
+
+/* Remove Button */
 .btn-remove {
   color: #dc3545;
+  background: transparent;
+  border: none;
   font-size: 0.85rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  padding: 4px 0;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
 }
 
 .btn-remove:hover {
@@ -125,265 +217,408 @@
   text-decoration: underline;
 }
 
-/* Card Shadow Effects */
-.card {
-  transition: box-shadow 0.3s ease;
+/* Clean Summary Card */
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 100px;
 }
 
-/* Cleaner Summary Layout */
-.summary-row {
-  padding: 10px 0;
+.summary-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.summary-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.summary-row.total {
-  border-top: 2px solid #dee2e6;
-  padding-top: 16px;
-  margin-top: 8px;
-}
-
-.summary-label {
-  color: #6c757d;
+  padding: 0.7rem 0;
   font-size: 0.95rem;
 }
 
-.summary-value {
-  font-weight: 600;
-  font-size: 1rem;
+.summary-line .label {
+  color: #6c757d;
+  font-weight: 500;
 }
 
-.summary-value.discount {
+.summary-line .value {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.summary-line.discount .value {
   color: #28a745;
 }
 
-.summary-value.total {
-  color: #0d6efd;
-  font-size: 1.5rem;
+.summary-line.shipping .value {
+  color: #28a745;
+  font-weight: 700;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .cart-item {
-    padding: 1rem !important;
-  }
-  
-  .item-price {
-    font-size: 1rem;
-  }
-  
-  .summary-value.total {
-    font-size: 1.3rem;
-  }
+.summary-divider {
+  height: 1px;
+  background: #e9ecef;
+  margin: 0.8rem 0;
 }
 
-/* Payment Options - Cleaner */
-.payment-icons {
-  display: flex;
-  gap: 12px;
-  font-size: 1.5rem;
-  opacity: 0.7;
+.summary-total {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem 0;
 }
 
-.product-title {
+.summary-total .summary-line {
+  padding: 0;
+}
+
+.summary-total .label {
   font-size: 1rem;
-  font-weight: 600;
-  color: #212529;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.summary-total .value {
+  font-size: 1.6rem;
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Savings Banner - Subtle */
+.savings-banner {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 0.9rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.savings-banner strong {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Checkout Button */
+.btn-checkout {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-decoration: none;
-  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
-.product-title:hover {
-  color: #0d6efd;
+.btn-checkout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+  color: white;
 }
 
-.product-meta {
-  font-size: 0.85rem;
+.btn-shop {
+  width: 100%;
+  padding: 0.9rem;
+  background: white;
+  color: #667eea;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-shop:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+/* Empty Cart */
+.empty-cart {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  color: #dee2e6;
+  margin-bottom: 1.5rem;
+}
+
+.empty-cart h4 {
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.empty-cart p {
   color: #6c757d;
-  margin-top: 4px;
+  margin-bottom: 2rem;
+}
+
+.btn-start-shopping {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-start-shopping:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+  color: white;
+}
+
+/* Stock Warning - Subtle */
+.stock-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: #856404;
+  background: #fff3cd;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .summary-card {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 1rem 0.8rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .cart-item-card {
+    padding: 1rem;
+  }
+
+  .product-image {
+    height: 100px;
+  }
+
+  .item-price {
+    font-size: 1.1rem;
+  }
+
+  .quantity-wrapper {
+    justify-content: flex-start;
+    margin-top: 0.8rem;
+  }
+
+  .summary-total .value {
+    font-size: 1.4rem;
+  }
 }
 </style>
 
 <body>
   <%- include('partials/header') %>
 
-  <div class="container my-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="mb-0">Shopping Cart</h2>
-      <a href="/shop" class="btn btn-outline-primary">
+  <div class="cart-container">
+    <!-- Clean Header -->
+    <div class="page-header">
+      <h2><i class="bi bi-cart3"></i> Shopping Cart <% if (items.length > 0) { %>(<%= items.length %>)<% } %></h2>
+      <a href="/shop" class="btn-continue-shopping">
         <i class="bi bi-arrow-left"></i> Continue Shopping
       </a>
     </div>
 
     <% if (items.length === 0) { %>
-      <div class="text-center py-5">
-        <div class="mb-4">
-          <i class="bi bi-cart-x" style="font-size: 5rem; color: #ddd;"></i>
+      <!-- Empty Cart -->
+      <div class="empty-cart">
+        <div class="empty-icon">
+          <i class="bi bi-cart-x"></i>
         </div>
-        <h4 class="mb-3">Your cart is empty</h4>
-        <p class="text-muted mb-4">Looks like you haven't added anything to your cart yet</p>
-        <a href="/shop" class="btn btn-primary btn-lg">Start Shopping</a>
+        <h4>Your cart is empty</h4>
+        <p>Explore our beautiful saree collection</p>
+        <a href="/shop" class="btn-start-shopping">
+          <i class="bi bi-shop"></i> Start Shopping
+        </a>
       </div>
     <% } else { %>
       <div class="row g-4">
-        <!-- Cart Items Section -->
+        <!-- Cart Items -->
         <div class="col-lg-8">
-          <div class="card shadow-sm border-0">
-            <div class="card-header bg-white border-bottom">
-              <h5 class="mb-0">Cart Items (<%= items.length %>)</h5>
-            </div>
-            <div class="card-body p-0">
-              <% items.forEach((item, index) => { %>
-                <div class="cart-item p-4 <%= index !== items.length - 1 ? 'border-bottom' : '' %>">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 col-3">
-                      <div class="position-relative">
-                        <img
-                          src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>"
-                          alt="<%= item.productId.name %>"
-                          class="img-fluid rounded"
-                          style="border: 1px solid #eee;">
-                        <% if (item.hasOffer) { %>
-                          <span class="discount-badge">
-                            <%= item.discount %>% OFF
-                          </span>
-                        <% } %>
-                      </div>
+          <% items.forEach((item) => { %>
+            <div class="cart-item-card">
+              <div class="row align-items-center g-3">
+                <!-- Image -->
+                <div class="col-md-2 col-3">
+                  <div class="image-wrapper">
+                    <img
+                      src="<%= item.variantId.images && item.variantId.images[0] ? item.variantId.images[0] : '/images/placeholder.jpg' %>"
+                      alt="<%= item.productId.name %>"
+                      class="product-image">
+                    <% if (item.hasOffer) { %>
+                      <span class="offer-tag"><%= item.discount %>% OFF</span>
+                    <% } %>
+                  </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="col-md-6 col-9">
+                  <div class="product-info">
+                    <a href="/product/<%= item.productId._id %>" class="product-name">
+                      <%= item.productId.name %>
+                    </a>
+
+                    <div>
+                      <span class="product-variant">
+                        <i class="bi bi-palette"></i> <%= item.variantId.colour %>
+                      </span>
                     </div>
 
-                    <!-- Product Details -->
-                    <div class="col-md-5 col-9">
-                      <a href="/product/<%= item.productId._id %>" class="product-title d-block mb-1">
-                        <%= item.productId.name %>
-                      </a>
-                      <div class="product-meta">
-                        <span class="me-3">
-                          <i class="bi bi-palette"></i> <%= item.variantId.colour %>
-                        </span>
-                        <% if (item.variantId.stock < 10) { %>
-                          <span class="stock-warning">
-                            Only <%= item.variantId.stock %> left
-                          </span>
-                        <% } %>
+                    <% if (item.variantId.stock < 10 && item.variantId.stock > 0) { %>
+                      <div class="stock-alert">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        Only <%= item.variantId.stock %> left
                       </div>
-                      
-                      <!-- Simplified Price Display -->
-                      <div class="mt-2">
-                        <span class="item-price <%= item.hasOffer ? 'has-discount' : '' %>">
-                          ₹<%= item.offerPrice %>
-                        </span>
-                        <% if (item.hasOffer) { %>
-                          <span class="price-original">₹<%= item.productId.salesPrice %></span>
-                        <% } %>
-                      </div>
-                    </div>
+                    <% } %>
 
-                    <!-- Quantity Controls -->
-                    <div class="col-md-3 col-6">
-                      <label class="form-label small text-muted mb-1">Quantity</label>
-                      <div class="input-group" style="max-width: 130px;">
-                        <button 
-                          class="btn btn-outline-secondary btn-decrement"
-                          data-variant-id="<%= item.variantId._id %>"
-                          type="button">
-                          <i class="bi bi-dash"></i>
-                        </button>
-                        <input 
-                          type="text" 
-                          class="form-control text-center quantity-input"
-                          value="<%= item.quantity %>" 
-                          readonly>
-                        <button 
-                          class="btn btn-outline-secondary btn-increment"
-                          data-variant-id="<%= item.variantId._id %>"
-                          type="button"
-                          <%= item.quantity >= item.variantId.stock ? 'disabled' : '' %>>
-                          <i class="bi bi-plus"></i>
-                        </button>
-                      </div>
-                    </div>
-
-                    <!-- Item Total -->
-                    <div class="col-md-2 col-6 text-end">
-                      <label class="form-label small text-muted d-block mb-1">Total</label>
-                      <div class="item-price <%= item.hasOffer ? 'has-discount' : '' %>">
-                        ₹<%= item.itemTotal.toFixed(0) %>
-                      </div>
-                      
-                      <button 
-                        class="btn-remove d-block mt-2"
-                        data-variant-id="<%= item.variantId._id %>"
-                        style="border: none; background: none; cursor: pointer;">
-                        <i class="bi bi-trash"></i> Remove
-                      </button>
+                    <!-- SIMPLIFIED PRICE - Only final price -->
+                    <div class="item-price <%= item.hasOffer ? 'discounted' : '' %>">
+                      ₹<%= item.itemTotal.toFixed(2) %>
+                      <% if (item.hasOffer) { %>
+                        <span class="price-compare">₹<%= item.itemOriginalTotal.toFixed(2) %></span>
+                      <% } %>
                     </div>
                   </div>
                 </div>
-              <% }); %>
+
+                <!-- Quantity & Actions -->
+                <div class="col-md-4 col-12">
+                  <div class="d-flex flex-column align-items-md-end gap-2">
+                    <!-- Quantity -->
+                    <div class="quantity-wrapper">
+                      <span class="qty-label">Qty:</span>
+                      <div class="quantity-control">
+                        <button 
+                          class="qty-btn btn-decrement"
+                          data-variant-id="<%= item.variantId._id %>"
+                          <%= item.quantity <= 1 ? 'disabled' : '' %>>
+                          −
+                        </button>
+                        <input 
+                          type="text" 
+                          class="qty-value"
+                          value="<%= item.quantity %>" 
+                          readonly>
+                        <button 
+                          class="qty-btn btn-increment"
+                          data-variant-id="<%= item.variantId._id %>"
+                          <%= item.quantity >= item.variantId.stock || item.quantity >= 5 ? 'disabled' : '' %>>
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Remove -->
+                    <button 
+                      class="btn-remove"
+                      data-variant-id="<%= item.variantId._id %>">
+                      <i class="bi bi-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          <% }); %>
         </div>
 
-        <!-- Order Summary Section -->
+        <!-- Summary -->
         <div class="col-lg-4">
-          <div class="card shadow-sm border-0 sticky-top" style="top: 100px;">
-            <div class="card-header bg-white border-bottom">
-              <h5 class="mb-0">Order Summary</h5>
+          <div class="summary-card">
+            <h3 class="summary-title">Order Summary</h3>
+
+            <div class="summary-line">
+              <span class="label">Subtotal (<%= items.length %> items)</span>
+              <span class="value">₹<%= originalSubtotal %></span>
             </div>
-            <div class="card-body">
-              <!-- Simplified Price Breakdown -->
-              <div class="summary-row">
-                <span class="summary-label">Subtotal</span>
-                <span class="summary-value">₹<%= originalSubtotal %></span>
+
+            <% if (parseFloat(totalSavings) > 0) { %>
+              <div class="summary-line discount">
+                <span class="label">Discount</span>
+                <span class="value">-₹<%= totalSavings %></span>
               </div>
+            <% } %>
 
-              <% if (parseFloat(totalSavings) > 0) { %>
-                <div class="summary-row">
-                  <span class="summary-label">
-                    <i class="bi bi-tag-fill"></i> Discount
-                  </span>
-                  <span class="summary-value discount">-₹<%= totalSavings %></span>
-                </div>
-              <% } %>
+            <div class="summary-line shipping">
+              <span class="label">Shipping</span>
+              <span class="value">FREE</span>
+            </div>
 
-              <div class="summary-row">
-                <span class="summary-label">Shipping</span>
-                <span class="summary-value" style="color: #28a745;">FREE</span>
-              </div>
+            <div class="summary-divider"></div>
 
-              <div class="summary-row total">
-                <span class="summary-label" style="font-size: 1.1rem; color: #212529; font-weight: 600;">Total</span>
-                <span class="summary-value total">₹<%= offerSubtotal %></span>
-              </div>
-
-              <% if (parseFloat(totalSavings) > 0) { %>
-                <div class="savings-highlight mt-3">
-                  <i class="bi bi-check-circle-fill"></i> 
-                  You're saving <strong>₹<%= totalSavings %></strong> on this order!
-                </div>
-              <% } %>
-
-              <!-- Action Buttons -->
-              <a href="/checkout" class="btn btn-primary w-100 mb-2 py-2 mt-4">
-                <i class="bi bi-lock"></i> Proceed to Checkout
-              </a>
-              <a href="/shop" class="btn btn-outline-secondary w-100 py-2">
-                <i class="bi bi-arrow-left"></i> Continue Shopping
-              </a>
-
-              <!-- Payment Options Info -->
-              <div class="mt-4 pt-3 border-top text-center">
-                <p class="small text-muted mb-2">We Accept</p>
-                <div class="payment-icons justify-content-center">
-                  <span title="Cards">💳</span>
-                  <span title="Cash on Delivery">💵</span>
-                  <span title="Wallet">👛</span>
-                  <span title="UPI">🏦</span>
-                </div>
+            <div class="summary-total">
+              <div class="summary-line">
+                <span class="label">Total</span>
+                <span class="value">₹<%= offerSubtotal %></span>
               </div>
             </div>
+
+            <% if (parseFloat(totalSavings) > 0) { %>
+              <div class="savings-banner">
+                🎉 You save <strong>₹<%= totalSavings %></strong>
+              </div>
+            <% } %>
+
+            <a href="/checkout" class="btn-checkout">
+              <i class="bi bi-lock-fill"></i> Proceed to Checkout
+            </a>
+            <a href="/shop" class="btn-shop">
+              <i class="bi bi-arrow-left"></i> Continue Shopping
+            </a>
           </div>
         </div>
       </div>
@@ -398,16 +633,17 @@
     document.addEventListener('DOMContentLoaded', function () {
       const incrementBtns = document.querySelectorAll('.btn-increment');
       const decrementBtns = document.querySelectorAll('.btn-decrement');
+      const removeBtns = document.querySelectorAll('.btn-remove');
 
       incrementBtns.forEach(btn => {
         btn.addEventListener('click', function () {
-          updateQuantity(this.dataset.variantId, 'increment');
+          if (!this.disabled) updateQuantity(this.dataset.variantId, 'increment');
         });
       });
 
       decrementBtns.forEach(btn => {
         btn.addEventListener('click', function () {
-          updateQuantity(this.dataset.variantId, 'decrement');
+          if (!this.disabled) updateQuantity(this.dataset.variantId, 'decrement');
         });
       });
 
@@ -422,48 +658,41 @@
           const data = await response.json();
 
           if (response.ok) {
-            Swal.fire({
-              icon: "success",
-              title: "Updated!",
-              text: data.message,
-              timer: 1500,
-              showConfirmButton: false
-            }).then(() => {
-              location.reload();
-            });
+            location.reload();
           } else {
             Swal.fire({
               icon: "warning",
-              title: "Limit Reached",
-              text: data.message || "Cannot update quantity further"
+              title: "Cannot Update",
+              text: data.message,
+              confirmButtonColor: '#667eea'
             });
           }
         } catch (error) {
-          console.error('Error:', error);
           Swal.fire({
             icon: "error",
-            title: "Server Error",
-            text: "An error occurred while updating quantity"
+            title: "Error",
+            text: "An error occurred",
+            confirmButtonColor: '#dc3545'
           });
         }
       }
 
-      const removeButtons = document.querySelectorAll('.btn-remove');
-      removeButtons.forEach(btn => {
+      removeBtns.forEach(btn => {
         btn.addEventListener('click', async function () {
           const variantId = this.dataset.variantId;
 
-          const confirmDelete = await Swal.fire({
-            title: "Remove Item?",
-            text: "This item will be removed from your cart.",
+          const result = await Swal.fire({
+            title: "Remove item?",
+            text: "This will be removed from your cart.",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonText: "Yes, remove it",
+            confirmButtonText: "Yes, remove",
             cancelButtonText: "Cancel",
-            confirmButtonColor: '#dc3545'
+            confirmButtonColor: '#dc3545',
+            cancelButtonColor: '#6c757d'
           });
 
-          if (confirmDelete.isConfirmed) {
+          if (result.isConfirmed) {
             try {
               const response = await fetch(`/remove/${variantId}`, {
                 method: "DELETE",
@@ -474,24 +703,23 @@
                 Swal.fire({
                   icon: "success",
                   title: "Removed!",
-                  text: data.message,
-                  timer: 1500,
+                  timer: 1200,
                   showConfirmButton: false
-                }).then(() => {
-                  location.reload();
-                });
+                }).then(() => location.reload());
               } else {
                 Swal.fire({
                   icon: "error",
-                  title: "Oops",
-                  text: data.message || "Failed to remove item"
+                  title: "Error",
+                  text: data.message,
+                  confirmButtonColor: '#dc3545'
                 });
               }
             } catch (error) {
               Swal.fire({
                 icon: "error",
-                title: "Server Error",
-                text: "Something went wrong"
+                title: "Error",
+                text: "Something went wrong",
+                confirmButtonColor: '#dc3545'
               });
             }
           }

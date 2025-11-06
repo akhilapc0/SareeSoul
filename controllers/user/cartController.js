@@ -16,33 +16,40 @@ const loadCart = async (req, res) => {
       .populate({
         path: 'items.productId',
         populate: { path: 'categoryId' },
-        select: 'name description actualPrice salesPrice categoryId brandId isBlocked deletedAt'
+        select: 'name description actualPrice salesPrice categoryId brandId isBlocked deletedAt offer'
       })
       .populate({
         path: 'items.variantId',
         select: 'colour stock images isBlocked deletedAt'
       });
-      
-
-      // let totalCount=0;
-
-      // if(cart && cart.items.length >0){
-      //   totalCount=cart.items.reduce((sum,item)=>sum+item.quantity,0);
-
-      // }
-      // console.log('total cart items count:',totalCount)
 
 
 
-    const items = cart ? cart.items : [];
 
-    // Calculate subtotals with offer prices
+    if(!cart || !cart.items || cart.items.length ===0){
+      return res.render('cart',{
+        items:[],
+        originalSubtotal:'0.00',
+        offerSubtotal:'0.00',
+        totalSavings:'0.00',
+        user
+      })
+    }
+
+    
     let originalSubtotal = 0;
     let offerSubtotal = 0;
     let totalSavings = 0;
 
-    const itemsWithOffers = items
-      .filter(item => item.productId && !item.productId.isBlocked && !item.variantId.isBlocked)
+    const itemsWithOffers = cart.items
+      .filter(item => {
+      return item.productId &&
+             item.variantId &&
+            !item.productId.isBlocked && 
+            !item.productId.deletedAt &&
+            !item.variantId.isBlocked &&
+            !item.variantId.deletedAt;
+  })
       .map(item => {
         const { offerPrice, discount, hasOffer } = offerController.calculateOfferPrice(
           item.productId,
@@ -58,7 +65,9 @@ const loadCart = async (req, res) => {
         totalSavings += itemSavings;
 
         return {
-          ...item.toObject(),
+          productId:item.productId,
+          variantId:item.variantId,
+          quantity:item.quantity,
           offerPrice: Math.round(offerPrice),
           discount,
           hasOffer,
@@ -76,7 +85,7 @@ const loadCart = async (req, res) => {
       user
     });
   } catch (err) {
-    console.error(err);
+    console.error('Error loading cart:',err);
     res.status(500).send('Server error');
   }
 };

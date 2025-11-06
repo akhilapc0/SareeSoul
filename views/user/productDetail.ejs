@@ -602,9 +602,10 @@
 
 .similar-product-image {
   width: 100%;
-  height: 350px;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   transition: transform 0.4s ease;
+  background-color: #f8f9fa;
 }
 
 .similar-product-card:hover .similar-product-image {
@@ -697,7 +698,7 @@
   }
 
   .similar-product-image {
-    height: 220px;
+    aspect-ratio: 3 / 4;
   }
 
   .similar-section-title {
@@ -707,7 +708,8 @@
 
   .similar-product-info {
     padding: 15px;
-  }}
+  }
+}
   </style>
 </head>
 
@@ -912,6 +914,8 @@
                     src="<%= simProduct.image %>" 
                     alt="<%= simProduct.name %>"
                     class="similar-product-image"
+                    onerror="this.onerror=null; this.src='/images/placeholder-saree.jpg';"
+                    loading="lazy"
                   >
                 </a>
 

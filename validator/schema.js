@@ -298,7 +298,19 @@ export const addressValidation = Joi.object({
       "string.max": "State must be less than 50 characters",
       "string.pattern.base": "State can only contain letters, spaces, hyphens, and apostrophes"
     }),
-
+country:Joi.string()
+    .trim()
+    .min(2)
+    .max(50)
+    .pattern(/^[a-zA-Z\s'-]+$/)
+    .default('India')
+    .optional()
+    .messages({
+      "string.min":"Country must be at least 2 charaters",
+      "string.max":'Country must be less than 50 characters',
+      "string.pattern.base":'Country can only letters,spaces,hyphens,and apostrophes'
+    })
+,
   pincode: Joi.string()
     .trim()
     .pattern(/^[0-9]{6}$/)

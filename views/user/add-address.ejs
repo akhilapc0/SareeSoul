@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <%- include('./partials/head') %>
+   <!-- Google Places API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.GOOGLE_MAPS_API_KEY %>&libraries=places"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
@@ -412,8 +415,55 @@
         transform: translateY(0);
       }
     }
+      .pac-container {
+      z-index: 10000;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-xl);
+      border: 2px solid var(--accent-color);
+      margin-top: 8px;
+    }
+
+    .pac-item {
+      padding: 12px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid var(--border-color);
+      transition: background 0.2s ease;
+    }
+
+    .pac-item:hover {
+      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--success-color);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--success-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .search-hint {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .search-icon {
+      font-size: 1.2rem;
+    }
   </style>
 
+  
   <body>
     <div class="screen-overlay"></div>
     
@@ -423,7 +473,7 @@
         <div class="content-header">
           <div>
             <h2 class="content-title card-title">Add New Address</h2>
-            <p>Add a new delivery address to your account</p>
+            <p>Add a new delivery address (verified with Google Maps)</p>
           </div>
           <div>
             <a href="/my-address" class="btn btn-outline-secondary">
@@ -435,7 +485,7 @@
         <div class="card mb-4">
           <header class="card-header">
             <h4 class="card-title">Address Details</h4>
-            <small class="text-muted">Fill in your address information below</small>
+            <small class="text-muted">Start typing your address for smart suggestions</small>
           </header>
 
           <div class="card-body">
@@ -458,6 +508,28 @@
                     <div id="phoneError" class="text-danger" style="display: none;"></div>
                   </div>
 
+                  <!-- 🔍 GOOGLE PLACES SEARCH -->
+                  <div class="mb-4">
+                    <div class="form-floating">
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        id="addressSearch" 
+                        placeholder="Search your address..." 
+                        autocomplete="off"
+                      />
+                      <label for="addressSearch">🔍 Search Your Address (Google)</label>
+                    </div>
+                    <div class="search-hint">
+                      <span class="search-icon">💡</span>
+                      <span>Type your area, street, or landmark - Google will auto-fill the details below</span>
+                    </div>
+                    <div id="addressVerified" class="verified-badge" style="display: none;">
+                      <i class="material-icons">check_circle</i>
+                      Address verified with Google Maps
+                    </div>
+                  </div>
+
                   <div class="mb-4">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="house" name="house" placeholder="House/Apartment Number" />
@@ -468,32 +540,32 @@
 
                   <div class="mb-4">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="street" name="street" placeholder="Street Name" />
-                      <label for="street">Street Name</label>
+                      <input type="text" class="form-control" id="street" name="street" placeholder="Street Name" readonly />
+                      <label for="street">Street Name (Auto-filled)</label>
                     </div>
                     <div id="streetError" class="text-danger" style="display: none;"></div>
                   </div>
 
                   <div class="mb-4">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="city" name="city" placeholder="City" />
-                      <label for="city">City</label>
+                      <input type="text" class="form-control" id="city" name="city" placeholder="City" readonly />
+                      <label for="city">City (Auto-filled)</label>
                     </div>
                     <div id="cityError" class="text-danger" style="display: none;"></div>
                   </div>
 
                   <div class="mb-4">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="state" name="state" placeholder="State" />
-                      <label for="state">State</label>
+                      <input type="text" class="form-control" id="state" name="state" placeholder="State" readonly />
+                      <label for="state">State (Auto-filled)</label>
                     </div>
                     <div id="stateError" class="text-danger" style="display: none;"></div>
                   </div>
 
                   <div class="mb-4">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Pincode" />
-                      <label for="pincode">Pincode</label>
+                      <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Pincode" readonly />
+                      <label for="pincode">Pincode (Auto-filled)</label>
                     </div>
                     <div id="pincodeError" class="text-danger" style="display: none;"></div>
                   </div>
@@ -523,6 +595,99 @@
     <script src="/admin/assets/js/main.js"></script>
 
     <script>
+      // 🌍 GOOGLE PLACES AUTOCOMPLETE
+      let autocomplete;
+      let addressVerified = false;
+
+      function initAutocomplete() {
+        const input = document.getElementById('addressSearch');
+        
+        // Restrict to India only
+        autocomplete = new google.maps.places.Autocomplete(input, {
+          types: ['address'],
+          componentRestrictions: { country: 'in' }
+        });
+
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        const place = autocomplete.getPlace();
+        
+        if (!place.geometry) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Invalid Address',
+            text: 'Please select a valid address from the suggestions',
+            confirmButtonColor: '#3182ce'
+          });
+          return;
+        }
+
+        // Clear previous values
+        document.getElementById('street').value = '';
+        document.getElementById('city').value = '';
+        document.getElementById('state').value = '';
+        document.getElementById('pincode').value = '';
+
+        let street = '';
+        let city = '';
+        let state = '';
+        let pincode = '';
+
+        // Parse address components
+        for (const component of place.address_components) {
+          const types = component.types;
+
+          if (types.includes('street_number')) {
+            street = component.long_name + ' ';
+          }
+          if (types.includes('route')) {
+            street += component.long_name;
+          }
+          if (types.includes('sublocality_level_1') || types.includes('sublocality')) {
+            if (!city) city = component.long_name;
+          }
+          if (types.includes('locality')) {
+            city = component.long_name;
+          }
+          if (types.includes('administrative_area_level_1')) {
+            state = component.long_name;
+          }
+          if (types.includes('postal_code')) {
+            pincode = component.long_name;
+          }
+        }
+
+        // Fill form fields
+        document.getElementById('street').value = street || '';
+        document.getElementById('city').value = city || '';
+        document.getElementById('state').value = state || '';
+        document.getElementById('pincode').value = pincode || '';
+
+        // Mark as verified and valid
+        if (street && city && state && pincode) {
+          ['street', 'city', 'state', 'pincode'].forEach(field => {
+            document.getElementById(field).classList.add('is-valid');
+            document.getElementById(field).classList.remove('is-invalid');
+          });
+          
+          document.getElementById('addressVerified').style.display = 'flex';
+          addressVerified = true;
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Address Verified!',
+            text: 'Google has verified your address details',
+            timer: 2000,
+            showConfirmButton: false
+          });
+        }
+      }
+
+      // Initialize on page load
+      window.addEventListener('load', initAutocomplete);
+
       // Enhanced validation functions
       function showError(fieldId, message) {
         const errorDiv = document.getElementById(fieldId + 'Error');
@@ -548,10 +713,10 @@
         input.classList.remove('is-invalid', 'is-valid');
       }
 
-      // Real-time validation
+      // Real-time validation for Name
       document.getElementById('name').addEventListener('input', function() {
         const value = this.value.trim();
-        const nameRegex = /^[a-zA-Z\s'-]+$/; // Only letters, spaces, hyphens, and apostrophes
+        const nameRegex = /^[a-zA-Z\s'-]+$/;
         
         if (value.length === 0) {
           clearError('name');
@@ -566,6 +731,7 @@
         }
       });
 
+      // Real-time validation for Phone
       document.getElementById('phone').addEventListener('input', function() {
         const value = this.value.trim();
         const phoneRegex = /^[0-9]{10}$/;
@@ -579,51 +745,21 @@
         }
       });
 
-      document.getElementById('city').addEventListener('input', function() {
-        const value = this.value.trim();
-        const cityRegex = /^[a-zA-Z\s'-]+$/; // Only letters, spaces, hyphens, and apostrophes
-        
-        if (value.length === 0) {
-          clearError('city');
-        } else if (value.length < 2) {
-          showError('city', 'City must be at least 2 characters');
-        } else if (!cityRegex.test(value)) {
-          showError('city', 'City can only contain letters, spaces, hyphens, and apostrophes');
-        } else {
-          showSuccess('city');
-        }
-      });
-
-      document.getElementById('state').addEventListener('input', function() {
-        const value = this.value.trim();
-        const stateRegex = /^[a-zA-Z\s'-]+$/; // Only letters, spaces, hyphens, and apostrophes
-        
-        if (value.length === 0) {
-          clearError('state');
-        } else if (value.length < 2) {
-          showError('state', 'State must be at least 2 characters');
-        } else if (!stateRegex.test(value)) {
-          showError('state', 'State can only contain letters, spaces, hyphens, and apostrophes');
-        } else {
-          showSuccess('state');
-        }
-      });
-
-      document.getElementById('pincode').addEventListener('input', function() {
-        const value = this.value.trim();
-        const pincodeRegex = /^[0-9]{6}$/;
-        
-        if (value.length === 0) {
-          clearError('pincode');
-        } else if (!pincodeRegex.test(value)) {
-          showError('pincode', 'Pincode must be exactly 6 digits');
-        } else {
-          showSuccess('pincode');
-        }
-      });
-
+      // Form submission
       document.getElementById("addAddressForm").addEventListener("submit", async function (e) {
         e.preventDefault();
+
+        // Check if address is verified
+        if (!addressVerified) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Address Not Verified',
+            text: 'Please select your address from Google suggestions first',
+            confirmButtonColor: '#3182ce'
+          });
+          document.getElementById('addressSearch').focus();
+          return;
+        }
 
         // Clear all previous errors
         const errorFields = ['name', 'phone', 'house', 'street', 'city', 'state', 'pincode', 'backend'];
@@ -633,11 +769,6 @@
             errorDiv.style.display = 'none';
             errorDiv.textContent = '';
           }
-        });
-
-        // Clear input validation classes
-        document.querySelectorAll('.form-control').forEach(input => {
-          input.classList.remove('is-invalid', 'is-valid');
         });
 
         const formData = {
@@ -652,21 +783,13 @@
 
         let isValid = true;
 
-        // Enhanced validation patterns
-        const nameRegex = /^[a-zA-Z\s'-]+$/; // Only letters, spaces, hyphens, apostrophes
+        // Validation
+        const nameRegex = /^[a-zA-Z\s'-]+$/;
         const phoneRegex = /^[0-9]{10}$/;
         const pincodeRegex = /^[0-9]{6}$/;
-        const textRegex = /^[a-zA-Z\s'-]+$/; // For city and state
 
-        // Validate each field with proper error messages
-        if (formData.name.length < 2) {
-          showError('name', 'Name must be at least 2 characters');
-          isValid = false;
-        } else if (formData.name.length > 50) {
-          showError('name', 'Name must be less than 50 characters');
-          isValid = false;
-        } else if (!nameRegex.test(formData.name)) {
-          showError('name', 'Name can only contain letters, spaces, hyphens, and apostrophes');
+        if (formData.name.length < 2 || !nameRegex.test(formData.name)) {
+          showError('name', 'Please enter a valid name');
           isValid = false;
         }
 
@@ -677,38 +800,6 @@
 
         if (formData.house.length < 1) {
           showError('house', 'House number is required');
-          isValid = false;
-        } else if (formData.house.length > 100) {
-          showError('house', 'House number must be less than 100 characters');
-          isValid = false;
-        }
-
-        if (formData.street.length < 2) {
-          showError('street', 'Street name is required');
-          isValid = false;
-        } else if (formData.street.length > 100) {
-          showError('street', 'Street name must be less than 100 characters');
-          isValid = false;
-        }
-
-        if (formData.city.length < 2) {
-          showError('city', 'City is required');
-          isValid = false;
-        } else if (!textRegex.test(formData.city)) {
-          showError('city', 'City can only contain letters, spaces, hyphens, and apostrophes');
-          isValid = false;
-        }
-
-        if (formData.state.length < 2) {
-          showError('state', 'State is required');
-          isValid = false;
-        } else if (!textRegex.test(formData.state)) {
-          showError('state', 'State can only contain letters, spaces, hyphens, and apostrophes');
-          isValid = false;
-        }
-
-        if (!pincodeRegex.test(formData.pincode)) {
-          showError('pincode', 'Pincode must be exactly 6 digits');
           isValid = false;
         }
 
@@ -721,9 +812,7 @@
         try {
           const res = await fetch("/add-address", {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
           });
 
@@ -739,15 +828,9 @@
           Swal.fire({
             icon: "success",
             title: "Success",
-            text: data.message || "Address added successfully!",
-            confirmButtonColor: "#3182ce",
-            confirmButtonText: "Continue"
+            text: "Address added successfully!",
+            confirmButtonColor: "#3182ce"
           }).then(() => {
-            document.getElementById("addAddressForm").reset();
-            // Clear all validation states
-            document.querySelectorAll('.form-control').forEach(input => {
-              input.classList.remove('is-invalid', 'is-valid');
-            });
             window.location.href = "/my-address";
           });
         } catch (err) {
