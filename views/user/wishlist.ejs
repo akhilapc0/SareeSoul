@@ -1,24 +1,299 @@
-<%- include('partials/head') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+  <title>My Wishlist - Saree Soul</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <style>
+    :root {
+      --primary-color: #667eea;
+      --danger-color: #dc3545;
+      --success-color: #28a745;
+      --border-light: #e9ecef;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .wishlist-header {
+      background: white;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .wishlist-header h2 {
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+
+    .wishlist-header .breadcrumb {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Loading State */
+    .loading-container {
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Empty State */
+    .empty-wishlist {
+      background: white;
+      border-radius: 12px;
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .empty-wishlist i {
+      font-size: 4rem;
+      color: #e0e0e0;
+      margin-bottom: 1.5rem;
+    }
+
+    .empty-wishlist h4 {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .empty-wishlist p {
+      color: #999;
+      margin-bottom: 2rem;
+    }
+
+    /* Wishlist Card */
+    .wishlist-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .wishlist-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .wishlist-item {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      transition: background-color 0.2s ease;
+    }
+
+    .wishlist-item:last-child {
+      border-bottom: none;
+    }
+
+    .wishlist-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    /* Product Image */
+    .product-image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #f8f9fa;
+    }
+
+    .product-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-image-wrapper:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Product Info */
+    .product-info h6 {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .product-info .product-variant {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #666;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info .product-price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--success-color);
+      margin-top: 0.5rem;
+    }
+
+    /* Stock Badge */
+    .stock-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .stock-badge.in-stock {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .stock-badge.low-stock {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .stock-badge.out-of-stock {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-add-cart {
+      background: #000;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-add-cart:hover:not(:disabled) {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    .btn-add-cart:disabled {
+      background: #6c757d;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .btn-remove {
+      background: transparent;
+      color: var(--danger-color);
+      border: 1px solid var(--danger-color);
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-remove:hover {
+      background: var(--danger-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .wishlist-item {
+        padding: 1rem;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .btn-add-cart,
+      .btn-remove {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .product-info h6 {
+        font-size: 0.9rem;
+      }
+
+      .product-info .product-price {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
 
 <body>
   <%- include('partials/header') %>
 
-  <div class="container my-5">
-    <h2 class="mb-4">My Wishlist</h2>
-
-    <div id="wishlist-container">
-      <div class="text-center py-5">
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+  <!-- Wishlist Header -->
+  <div class="wishlist-header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h2><i class="bi bi-heart-fill text-danger me-2"></i>My Wishlist</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+            </ol>
+          </nav>
         </div>
-        <p class="mt-3 text-muted">Loading your wishlist...</p>
+        <a href="/shop" class="btn btn-outline-primary">
+          <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Content -->
+  <div class="container mb-5">
+    <div id="wishlist-container">
+      <!-- Loading State -->
+      <div class="loading-container">
+        <div class="text-center">
+          <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-3 text-muted">Loading your wishlist...</p>
+        </div>
       </div>
     </div>
   </div>
 
   <%- include('partials/footer') %>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     async function loadWishlist() {
       try {
@@ -29,59 +304,156 @@
 
         if (!data.wishlist || data.wishlist.length === 0) {
           container.innerHTML = `
-            <div class="alert alert-info text-center">
-              <p class="mb-3">Your wishlist is empty</p>
-              <a href="/shop" class="btn btn-primary">Continue Shopping</a>
+            <div class="empty-wishlist">
+              <i class="bi bi-heart"></i>
+              <h4>Your Wishlist is Empty</h4>
+              <p>Save your favorite sarees here to easily find them later</p>
+              <a href="/shop" class="btn btn-primary btn-lg">
+                <i class="bi bi-shop me-2"></i>Start Shopping
+              </a>
             </div>
           `;
           return;
         }
 
         container.innerHTML = `
-          <div class="row">
-            <div class="col-12">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  ${data.wishlist.map(item => `
-                    <div class="wishlist-item border-bottom pb-3 mb-3" data-id="${item._id}">
-                      <div class="row align-items-center">
-                        <div class="col-md-2">
+          <div class="wishlist-card">
+            ${data.wishlist.map(item => {
+              const stock = item.variantId?.stock || 0;
+              const isOutOfStock = stock === 0;
+              const isLowStock = stock > 0 && stock < 5;
+              
+              let stockBadge = '';
+              if (isOutOfStock) {
+                stockBadge = '<span class="stock-badge out-of-stock">Out of Stock</span>';
+              } else if (isLowStock) {
+                stockBadge = `<span class="stock-badge low-stock">Only ${stock} left</span>`;
+              } else {
+                stockBadge = '<span class="stock-badge in-stock">In Stock</span>';
+              }
+
+              return `
+                <div class="wishlist-item" data-id="${item._id}">
+                  <div class="row align-items-center g-3">
+                    <!-- Product Image -->
+                    <div class="col-md-2 col-3">
+                      <a href="/product/${item.productId?._id || '#'}">
+                        <div class="product-image-wrapper">
                           <img src="${item.variantId?.images?.[0] || '/images/placeholder.jpg'}" 
-                               alt="${item.productId?.name || 'Product'}" 
-                               class="img-fluid rounded">
+                               alt="${item.productId?.name || 'Product'}"
+                               loading="lazy">
                         </div>
-                        <div class="col-md-5">
-                          <h6 class="mb-1">${item.productId?.name || 'Product'}</h6>
-                          <small class="text-muted">Color: ${item.variantId?.colour || 'N/A'}</small>
+                      </a>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="col-md-5 col-9">
+                      <div class="product-info">
+                        <h6>${item.productId?.name || 'Product'}</h6>
+                        <div class="product-variant">
+                          <i class="bi bi-palette"></i>
+                          <span>${item.variantId?.colour || 'N/A'}</span>
                         </div>
-                        <div class="col-md-3 text-center">
-                          <p class="mb-0 fw-bold">₹${item.productId?.salesPrice || '0'}</p>
-                        </div>
-                        <div class="col-md-2 text-end">
-                          <button class="btn btn-danger btn-sm btn-remove" data-id="${item._id}">
-                            Remove
-                          </button>
-                        </div>
+                        ${stockBadge}
+                        <div class="product-price">₹${item.productId?.salesPrice || '0'}</div>
                       </div>
                     </div>
-                  `).join('')}
+
+                    <!-- Action Buttons -->
+                    <div class="col-md-5 col-12">
+                      <div class="action-buttons justify-content-md-end">
+                        <button 
+                          class="btn-add-cart" 
+                          data-product-id="${item.productId?._id}"
+                          data-variant-id="${item.variantId?._id}"
+                          ${isOutOfStock ? 'disabled' : ''}>
+                          <i class="bi bi-cart-plus"></i>
+                          ${isOutOfStock ? 'Out of Stock' : 'Add to Cart'}
+                        </button>
+                        <button class="btn-remove" data-id="${item._id}">
+                          <i class="bi bi-trash"></i>
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              `;
+            }).join('')}
           </div>
         `;
 
-        // Attach event listeners to remove buttons
+        // Attach event listeners
+        attachAddToCartListeners();
         attachRemoveListeners();
       } catch (error) {
         console.error('Error loading wishlist:', error);
         document.getElementById('wishlist-container').innerHTML = `
-          <div class="alert alert-danger text-center">
-            <p class="mb-3">Error loading wishlist</p>
-            <button class="btn btn-primary" onclick="loadWishlist()">Try Again</button>
+          <div class="empty-wishlist">
+            <i class="bi bi-exclamation-circle text-danger"></i>
+            <h4>Error Loading Wishlist</h4>
+            <p>Something went wrong. Please try again.</p>
+            <button class="btn btn-primary" onclick="loadWishlist()">
+              <i class="bi bi-arrow-clockwise me-2"></i>Try Again
+            </button>
           </div>
         `;
       }
+    }
+
+    function attachAddToCartListeners() {
+      const addToCartButtons = document.querySelectorAll('.btn-add-cart');
+      
+      addToCartButtons.forEach(btn => {
+        btn.addEventListener('click', async function() {
+          if (this.disabled) return;
+
+          const productId = this.dataset.productId;
+          const variantId = this.dataset.variantId;
+
+          try {
+            const response = await fetch('/cart', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ productId, variantId, quantity: 1 })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Added to Cart!',
+                text: data.message || 'Product successfully added to cart.',
+                showCancelButton: true,
+                confirmButtonText: 'Go to Cart',
+                cancelButtonText: 'Continue Shopping',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#6c757d'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '/cart';
+                } else {
+                  // Item removed from wishlist after adding to cart, reload
+                  loadWishlist();
+                }
+              });
+            } else {
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: data.message || 'Failed to add to cart'
+              });
+            }
+          } catch (error) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Server Error',
+              text: 'Failed to add to cart. Please try again.'
+            });
+          }
+        });
+      });
     }
 
     function attachRemoveListeners() {
@@ -90,14 +462,16 @@
       removeButtons.forEach(btn => {
         btn.addEventListener('click', async function() {
           const id = this.dataset.id;
-          // console.log('id: ',id)
+          
           const confirmDelete = await Swal.fire({
-            title: "Are you sure?",
+            title: "Remove from Wishlist?",
             text: "This item will be removed from your wishlist.",
             icon: "warning",
             showCancelButton: true,
             confirmButtonText: "Yes, remove it",
             cancelButtonText: "Cancel",
+            confirmButtonColor: '#dc3545',
+            cancelButtonColor: '#6c757d'
           });
 
           if (confirmDelete.isConfirmed) {
@@ -108,18 +482,11 @@
               const data = await response.json();
 
               if (response.ok) {
-                Swal.fire({
-                  icon: "success",
-                  title: "Removed!",
-                  text: data.message,
-                  timer: 1500,
-                  showConfirmButton: false
-                });
-
-                // Remove item from DOM
+                // Fade out animation
                 const item = document.querySelector(`[data-id="${id}"]`);
-                item.style.transition = 'opacity 0.3s';
+                item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                 item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
                 
                 setTimeout(() => {
                   item.remove();
@@ -128,13 +495,25 @@
                   const remainingItems = document.querySelectorAll('.wishlist-item');
                   if (remainingItems.length === 0) {
                     document.getElementById('wishlist-container').innerHTML = `
-                      <div class="alert alert-info text-center">
-                        <p class="mb-3">Your wishlist is empty</p>
-                        <a href="/shop" class="btn btn-primary">Continue Shopping</a>
+                      <div class="empty-wishlist">
+                        <i class="bi bi-heart"></i>
+                        <h4>Your Wishlist is Empty</h4>
+                        <p>Save your favorite sarees here to easily find them later</p>
+                        <a href="/shop" class="btn btn-primary btn-lg">
+                          <i class="bi bi-shop me-2"></i>Start Shopping
+                        </a>
                       </div>
                     `;
                   }
                 }, 300);
+
+                Swal.fire({
+                  icon: "success",
+                  title: "Removed!",
+                  text: data.message,
+                  timer: 1500,
+                  showConfirmButton: false
+                });
               } else {
                 Swal.fire({
                   icon: "error",

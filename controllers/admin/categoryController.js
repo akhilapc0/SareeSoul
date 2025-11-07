@@ -19,10 +19,35 @@ const getCategoryList=async(req,res)=>{
                             .sort({createdAt:-1})
                             .skip((page-1)*limit)
                             .limit(limit)
+
+const currentDate =new Date();
+const categoriesWithOfferStatus=categories.map((cat)=>{
+  let isOfferActive=false;
+  let isOfferUpcoming=false;
+  let isOfferExpired=false;
+
+  if(cat.offer){
+    const start=new Date(cat.offer.startDate);
+    const end=new Date(cat.offer.endDate);
+
+    if(currentDate >=start && currentDate <=end) isOfferActive=true;
+    else if(currentDate < start) isOfferUpcoming=true;
+    else if(currentDate > end) isOfferExpired=true;
+  }
+
+  return {
+    ...cat.toObject(),
+    isOfferActive,
+    isOfferUpcoming,
+    isOfferExpired
+  }
+})
+
+
         const totalPages=Math.ceil(totalCategories/limit);
         
        return res.render('category-list',{
-            categories,
+            categories:categoriesWithOfferStatus,
              currentPage:page,
              totalPages,
             search

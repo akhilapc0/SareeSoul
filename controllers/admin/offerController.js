@@ -21,7 +21,31 @@ const addProductOffer =async(req,res)=>{
             message:"Discount must be between 1-100%"
         });
     }
-    if(new Date(startDate) >= new Date(endDate)){
+    
+    const start=new Date(startDate);
+    const end=new Date(endDate);
+
+    if(isNaN(start) || isNaN(end)){
+        return res.status(400).json({
+            success:false,
+            message:"Invalid date format"
+        })
+    }
+
+    const tomorrow=new Date();
+    tomorrow.setDate(tomorrow.getDate()+1);
+    tomorrow.setHours(0,0,0,0);
+    start.setHours(0,0,0,0);
+    end.setHours(0,0,0,0);
+
+    if(start < tomorrow){
+        return res.status(400).json({
+            success:false,
+            message:"Start date must be at least tomorrow or later"
+        })
+    }
+
+    if(end <=start){
         return res.status(400).json({
             success:false,
             message:"End date must be after start date"
@@ -37,8 +61,8 @@ const addProductOffer =async(req,res)=>{
     }
     product.offer={
         discountPercentage:Number(discountPercentage),
-        startDate:new Date(startDate),
-        endDate:new Date(endDate)
+        startDate:start,
+        endDate:end,
     }
     await product.save();
 
@@ -107,10 +131,33 @@ const addCategoryOffer=async(req,res)=>{
             })
         }
 
-        if(new Date(startDate) >= new Date(endDate)){
+       
+        const start=new Date(startDate);
+        const end=new Date(endDate);
+        if(isNaN(start) || isNaN(end)){
+            return res.status(400).json({
+                succes:false,
+                message:"Invalid date format"
+            })
+        }
+
+        const tomorrow=new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(0,0,0,0);
+        start.setHours(0,0,0,0);
+        end.setHours(0,0,0,0);
+
+        if(start < tomorrow){
             return res.status(400).json({
                 success:false,
-                message:"End date must be after start  date"
+                message:"start date must be at least tomorrow or later"
+            })
+        }
+
+        if(end <=start){
+            return res.status(400).json({
+                success:false,
+                message:"End date must be after start date"
             })
         }
 
@@ -123,8 +170,8 @@ const addCategoryOffer=async(req,res)=>{
         }
         category.offer={
             discountPercentage:Number(discountPercentage),
-            startDate:new Date(startDate),
-            endDate:new Date(endDate)
+            startDate:start,
+            endDate:end,
         }
 
         await category.save();

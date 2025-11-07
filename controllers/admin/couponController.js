@@ -40,9 +40,23 @@ export const addCoupon =async(req,res)=>{
             return res.status(400).json({success:false,message:"Discount must be between 1 and 100"});
         }
 
-        if(new Date(validityDate) < new Date()){
-            return res.status(400).json({success:false,message:"Validity date must be in the future"});
+        const selectedDate=new Date(validityDate);
+        const tomorrow=new Date();
+        tomorrow.setDate(tomorrow.getDate()+1);
+        tomorrow.setHours(0,0,0,0);
+        selectedDate.setHours(0,0,0,0);
+
+        if(selectedDate < tomorrow){
+            return res.status(400).json({
+                success:false,
+                message:"Validity date must be at least tomorrow or later"
+            });
+
         }
+
+
+
+
         if(minCartAmount < 0){
                 return res.status(400).json({success:false,message:"Minimum cart amount cannot be negative "})
         }
@@ -56,7 +70,7 @@ export const addCoupon =async(req,res)=>{
         const newCoupon =new Coupon({
             code:code.trim().toUpperCase(),
             discountValue:Number(discountValue),
-            validityDate:new Date(validityDate),
+            validityDate:selectedDate,
             minCartAmount :Number(minCartAmount),
             maxDiscount:Number(maxDiscount),
             usageLimit:Number(usageLimit)

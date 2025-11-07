@@ -5,6 +5,8 @@ import flash from 'connect-flash';
 import dotenv from 'dotenv';
 import passport from './config/passport.js';
 import {flashMessageMiddleware, setUserLocals} from './middlewares/userAuth.js'; 
+import getCartCount from './middlewares/cartCount.js';
+import getWishlistCount from './middlewares/wishlistCount.js';
 import logger from './logger.js';
 import './config/db.js';
 
@@ -66,8 +68,8 @@ app.set('views', [
 ]);
 
 
-
-
+app.use(getCartCount);
+app.use(getWishlistCount);
 app.use('/', userRoutes);
 app.use('/admin', adminRoutes);
 

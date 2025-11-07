@@ -223,6 +223,103 @@
                     </div>
         </div>
 
+
+        <!-- Cancel/Return Reason Modal -->
+        <div class="modal fade" id="reasonModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reasonModalTitle">Reason</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <select id="reasonSelect" class="form-select">
+                            <option value="" disabled selected>Select reason</option>
+                            <option value="Ordered by mistake">Ordered by mistake</option>
+                            <option value="Found better price">Found better price</option>
+                            <option value="Product not required">Product not required</option>
+                            <option value="Damaged item">Damaged item</option>
+                            <option value="other">Other</option>
+                        </select>
+        
+                        <textarea id="otherReason" class="form-control mt-3" rows="3" placeholder="Enter reason..."
+                            style="display:none;"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="submitReasonBtn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<script>
+    let currentAction = "";
+    let currentOrderId = "";
+    let currentItemId = "";
+
+    document.getElementById("reasonSelect").addEventListener("change", function () {
+        document.getElementById("otherReason").style.display =
+            this.value === "other" ? "block" : "none";
+    });
+
+    function openReasonModal(orderId, itemId, actionType) {
+        currentAction = actionType;
+        currentOrderId = orderId;
+        currentItemId = itemId;
+
+        const modalTitle = document.getElementById("reasonModalTitle");
+        if (actionType.includes("cancel")) modalTitle.textContent = "Cancel Reason";
+        else modalTitle.textContent = "Return Reason";
+
+        const reasonSelect = document.getElementById("reasonSelect");
+        reasonSelect.value = "";
+        document.getElementById("otherReason").style.display = "none";
+        document.getElementById("otherReason").value = "";
+
+        const modal = new bootstrap.Modal(document.getElementById("reasonModal"));
+        modal.show();
+    }
+
+    document.getElementById("submitReasonBtn").addEventListener("click", async function () {
+        const dropdown = document.getElementById("reasonSelect");
+        const otherText = document.getElementById("otherReason");
+        const reason = dropdown.value === "other" ? otherText.value.trim() : dropdown.value;
+
+        if (!reason) {
+            Swal.fire("Error!", "Please select or enter a reason.", "error");
+            return;
+        }
+
+        let url = "";
+        if (currentAction === "cancelOrder") url = `/orders/${currentOrderId}/cancel`;
+        if (currentAction === "cancelItem") url = `/orders/${currentOrderId}/item/${currentItemId}/cancel`;
+        if (currentAction === "returnOrder") url = `/orders/${currentOrderId}/return`;
+        if (currentAction === "returnItem") url = `/orders/${currentOrderId}/item/${currentItemId}/return`;
+
+        try {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ reason })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                Swal.fire("Success", data.message || "Action completed", "success")
+                    .then(() => location.reload());
+            } else {
+                Swal.fire("Error", data.message || "Action failed", "error");
+            }
+        } catch (err) {
+            console.error(err);
+            Swal.fire("Error", "Server error", "error");
+        }
+    });
+</script>
+
+
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <%- include('./partials/footer') %>
@@ -230,6 +327,8 @@
 
             <!-- JS functions for cancel/return items & order -->
             <script src="/js/orderActions.js"></script> <!-- Move your JS functions to a separate file -->
+
+
 </body>
 
 </html>

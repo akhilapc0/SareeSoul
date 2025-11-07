@@ -1,419 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head') %>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<style>
-  .search-input-wrapper {
-    position: relative;
-    width: 100%;
-  }
-
-  .search-clear-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: transparent;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #999;
-    display: none;
-  }
-
-  .search-clear-btn.visible {
-    display: block;
-  }
-
-  .action-buttons {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    min-width: 200px;
-  }
-
-  .action-buttons .btn {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    white-space: nowrap;
-  }
-
-  /* Offer badge styling */
-  .offer-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-left: 8px;
-  }
-
-  .price-info {
-    font-size: 0.85rem;
-    color: #666;
-  }
-
-  .offer-price {
-    color: #28a745;
-    font-weight: bold;
-  }
-
-  .original-price {
-    text-decoration: line-through;
-    color: #999;
-    margin-left: 8px;
-  }
-
-  @media (max-width: 992px) {
-    .action-buttons {
-      min-width: 180px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .action-buttons {
-      flex-direction: column;
-      min-width: auto;
+  <style>
+    .search-input-wrapper {
+      position: relative;
       width: 100%;
     }
-    
+
+    .search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #999;
+      display: none;
+    }
+
+    .search-clear-btn.visible {
+      display: block;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      min-width: 200px;
+    }
+
     .action-buttons .btn {
-      width: 100%;
-      margin-bottom: 2px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      white-space: nowrap;
     }
-  }
-</style>
 
-<body>
-  <div class="screen-overlay"></div>
-  <%- include('./partials/sidebar') %>
-  <main class="main-wrap">
-    <%- include('./partials/header') %>
-    <section class="content-main">
-      <div class="content-header">
-        <div>
-          <h2 class="content-title card-title">Product List</h2>
-          <p>Manage your saree Products</p>
-        </div>
-        <div>
-          <a href="/admin/products/add" class="btn btn-primary">Add Product</a>
-        </div>
-      </div>
+    /* Offer badge styling */
+    .offer-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-left: 8px;
+    }
 
-      <div class="card mb-4">
-        <header class="card-header">
-          <form action="/admin/products" method="GET" class="d-flex gap-2">
-            <div class="search-input-wrapper flex-grow-1">
-              <input type="text" name="search" id="searchInput" class="form-control"
-                placeholder="Search by product name..." value="<%= search %>" oninput="toggleClearButton()" />
-              <button type="button" class="search-clear-btn" id="clearSearchBtn" onclick="clearSearch()">×</button>
-            </div>
-          </form>
-        </header>
+    .price-info {
+      font-size: 0.85rem;
+      color: #666;
+    }
 
-        <div class="card-body">
-          <% if (products.length === 0) { %>
-            <p>No products found.</p>
-          <% } %>
+    .offer-price {
+      color: #28a745;
+      font-weight: bold;
+    }
 
-          <% products.forEach(product => { %>
-            <article class="itemlist">
-              <div class="row align-items-center">
-                <div class="col-lg-7 col-md-6 col-sm-6 col-8 flex-grow-1 col-name">
-                  <div class="info">
-                    <h6 class="mb-0">
-                      <%= product.name %>
-                      <!-- Show offer badge if there's an active offer -->
-                      <% if (product.hasOffer) { %>
-                        <span class="offer-badge"><%= product.discount %>% OFF</span>
-                      <% } %>
-                    </h6>
-                    
-                    <!-- Show price information -->
-                    <div class="price-info mt-1">
-                      <% if (product.hasOffer) { %>
-                        <span class="offer-price">₹<%= product.offerPrice %></span>
-                        <span class="original-price">₹<%= product.salesPrice %></span>
-                      <% } else { %>
-                        <span>₹<%= product.salesPrice %></span>
-                      <% } %>
-                    </div>
-                    
-                    <small>Status: 
-                      <span class="badge <%= product.isBlocked ? 'bg-danger' : 'bg-success' %>">
-                        <%= product.isBlocked ? 'Blocked' : 'Active' %>
-                      </span>
-                    </small><br/>
-                    <small>Created: <%= product.createdAt.toDateString() %></small>
-                  </div>
-                </div>
+    .original-price {
+      text-decoration: line-through;
+      color: #999;
+      margin-left: 8px;
+    }
 
-                <div class="col-lg-5 col-md-6 col-sm-6 col-4 col-action text-end">
-                  <div class="action-buttons">
+    @media (max-width: 992px) {
+      .action-buttons {
+        min-width: 180px;
+      }
+    }
 
-                    <!-- Offer Management Buttons -->
-                    <% if (product.offer && product.offer.discountPercentage) { %>
-                      <!-- Product has an offer - show Remove button -->
-                      <button class="btn btn-sm btn-secondary" onclick="removeProductOffer('<%= product._id %>')">
-                        Remove Offer
-                      </button>
-                    <% } else { %>
-                      <!-- No offer - show Add button -->
-                      <button class="btn btn-sm btn-primary" onclick="addProductOffer('<%= product._id %>')">
-                        Add Offer
-                      </button>
-                    <% } %>
+    @media (max-width: 768px) {
+      .action-buttons {
+        flex-direction: column;
+        min-width: auto;
+        width: 100%;
+      }
 
-                    <a href="/admin/products/<%= product._id %>/variants" class="btn btn-sm btn-info">
-                      Variants
-                    </a>
-                    
-                    <% if (product.isBlocked) { %>
-                      <button class="btn btn-sm btn-success" onclick="toggleBlock('<%= product._id %>', false)">Unblock</button>
-                    <% } else { %>
-                      <button class="btn btn-sm btn-danger" onclick="toggleBlock('<%= product._id %>', true)">Block</button>
-                    <% } %>
-                    
-                    <a href="/admin/products/edit/<%= product._id %>" class="btn btn-sm btn-warning">
-                      Edit
-                    </a>
-                    
-                    <button class="btn btn-sm btn-danger delete-product-btn" data-product-id="<%= product._id %>">
-                      Delete
-                    </button>
-                  </div>
-                </div>
+      .action-buttons .btn {
+        width: 100%;
+        margin-bottom: 2px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="screen-overlay"></div>
+    <%- include('./partials/sidebar') %>
+      <main class="main-wrap">
+        <%- include('./partials/header') %>
+          <section class="content-main">
+            <div class="content-header">
+              <div>
+                <h2 class="content-title card-title">Product List</h2>
+                <p>Manage your saree Products</p>
               </div>
-            </article>
-          <% }) %>
+              <div>
+                <a href="/admin/products/add" class="btn btn-primary">Add Product</a>
+              </div>
+            </div>
 
-          <!-- Pagination -->
-          <% if (totalPages > 1) { %>
-            <nav>
-              <ul class="pagination justify-content-center">
-                <% for (let i = 1; i <= totalPages; i++) { %>
-                  <li class="page-item <%= i === currentPage ? 'active' : '' %>">
-                    <a class="page-link" href="?page=<%= i %>&search=<%= search %>"><%= i %></a>
-                  </li>
-                <% } %>
-              </ul>
-            </nav>
-          <% } %>
-        </div>
+            <div class="card mb-4">
+              <header class="card-header">
+                <form action="/admin/products" method="GET" class="d-flex gap-2">
+                  <div class="search-input-wrapper flex-grow-1">
+                    <input type="text" name="search" id="searchInput" class="form-control"
+                      placeholder="Search by product name..." value="<%= search %>" oninput="toggleClearButton()" />
+                    <button type="button" class="search-clear-btn" id="clearSearchBtn"
+                      onclick="clearSearch()">×</button>
+                  </div>
+                </form>
+              </header>
+
+              <div class="card-body">
+                <% if (products.length===0) { %>
+                  <p>No products found.</p>
+                  <% } %>
+
+                    <% products.forEach(product=> { %>
+                      <article class="itemlist">
+                        <div class="row align-items-center">
+                          <div class="col-lg-7 col-md-6 col-sm-6 col-8 flex-grow-1 col-name">
+                            <div class="info">
+                              <h6 class="mb-0">
+                                <%= product.name %>
+                                  <!-- Show offer badge if there's an active offer -->
+                                  <% if (product.offerStatus==='active' ) { %>
+                                    <span class="offer-badge bg-success">
+                                      <%= product.discount %>% OFF
+                                    </span>
+                                    <% } else if (product.offerStatus==='upcoming' ) { %>
+                                      <span class="offer-badge bg-info">Upcoming Offer</span>
+                                      <% } else if (product.offerStatus==='expired' ) { %>
+                                        <span class="offer-badge bg-secondary">Expired Offer</span>
+                                        <% } %>
+
+
+                                        <% if (product.offer && product.offer.startDate && product.offer.endDate) { %>
+  <div class="text-muted small mt-1">
+    <% if (product.offerStatus === 'active') { %>
+      Active:
+      <%= new Date(product.offer.startDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %>
+      →
+      <%= new Date(product.offer.endDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %>
+    <% } else if (product.offerStatus === 'upcoming') { %>
+      Starts:
+      <%= new Date(product.offer.startDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %>
+    <% } else if (product.offerStatus === 'expired') { %>
+      Expired on
+      <%= new Date(product.offer.endDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %>
+    <% } %>
+  </div>
+<% } %>
+
+
+                              </h6>
+
+                              <!-- Show price information -->
+                              <div class="price-info mt-1">
+                                <% if (product.hasOffer) { %>
+                                  <span class="offer-price">₹<%= product.offerPrice %></span>
+                                  <span class="original-price">₹<%= product.salesPrice %></span>
+                                  <% } else { %>
+                                    <span>₹<%= product.salesPrice %></span>
+                                    <% } %>
+                              </div>
+
+                              <small>Status:
+                                <span class="badge <%= product.isBlocked ? 'bg-danger' : 'bg-success' %>">
+                                  <%= product.isBlocked ? 'Blocked' : 'Active' %>
+                                </span>
+                              </small><br />
+                              <small>Created: <%= product.createdAt.toDateString() %></small>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-5 col-md-6 col-sm-6 col-4 col-action text-end">
+                            <div class="action-buttons">
+
+                              <!-- Offer Management Buttons -->
+                              <% if (product.offer && product.offer.discountPercentage) { %>
+                                <!-- Product has an offer - show Remove button -->
+                                <button class="btn btn-sm btn-secondary"
+                                  onclick="removeProductOffer('<%= product._id %>')">
+                                  Remove Offer
+                                </button>
+                                <% } else { %>
+                                  <!-- No offer - show Add button -->
+                                  <button class="btn btn-sm btn-primary"
+                                    onclick="addProductOffer('<%= product._id %>')">
+                                    Add Offer
+                                  </button>
+                                  <% } %>
+
+                                    <a href="/admin/products/<%= product._id %>/variants" class="btn btn-sm btn-info">
+                                      Variants
+                                    </a>
+
+                                    <% if (product.isBlocked) { %>
+                                      <button class="btn btn-sm btn-success"
+                                        onclick="toggleBlock('<%= product._id %>', false)">Unblock</button>
+                                      <% } else { %>
+                                        <button class="btn btn-sm btn-danger"
+                                          onclick="toggleBlock('<%= product._id %>', true)">Block</button>
+                                        <% } %>
+
+                                          <a href="/admin/products/edit/<%= product._id %>"
+                                            class="btn btn-sm btn-warning">
+                                            Edit
+                                          </a>
+
+                                          <button class="btn btn-sm btn-danger delete-product-btn"
+                                            data-product-id="<%= product._id %>">
+                                            Delete
+                                          </button>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+
+                        <!-- Pagination -->
+                        <% if (totalPages> 1) { %>
+                          <nav>
+                            <ul class="pagination justify-content-center">
+                              <% for (let i=1; i <=totalPages; i++) { %>
+                                <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+                                  <a class="page-link" href="?page=<%= i %>&search=<%= search %>">
+                                    <%= i %>
+                                  </a>
+                                </li>
+                                <% } %>
+                            </ul>
+                          </nav>
+                          <% } %>
+              </div>
+            </div>
+          </section>
+          <%- include('./partials/footer') %>
+      </main>
+
+      <script>
+        function toggleClearButton() {
+          const input = document.getElementById('searchInput');
+          const clearBtn = document.getElementById('clearSearchBtn');
+          clearBtn.classList.toggle('visible', input.value.trim().length > 0);
+        }
+
+        function clearSearch() {
+          const input = document.getElementById('searchInput');
+          input.value = '';
+          document.querySelector('form').submit();
+        }
+
+        toggleClearButton();
+
+        // ========================================
+        // OFFER MANAGEMENT FUNCTIONS
+        // ========================================
+
+        // Add Product Offer
+        async function addProductOffer(productId) {
+          // Calculate tomorrow’s date (for min start date)
+          const tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          const minStart = tomorrow.toISOString().split("T")[0];
+
+          const { value: formValues } = await Swal.fire({
+            title: 'Add Product Offer',
+            html: `
+      <div style="text-align: left;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600;">Discount Percentage (%)</label>
+        <input id="discount" type="number" min="1" max="100" class="swal2-input" placeholder="Enter discount %" style="width: 90%;">
+
+        <label style="display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 600;">Start Date</label>
+        <input id="startDate" type="date" class="swal2-input" min="${minStart}" style="width: 90%;">
+
+        <label style="display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 600;">End Date</label>
+        <input id="endDate" type="date" class="swal2-input" style="width: 90%;">
       </div>
-    </section>
-    <%- include('./partials/footer') %>
-  </main>
+    `,
+            focusConfirm: false,
+            showCancelButton: true,
+            confirmButtonText: 'Add Offer',
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#6c757d',
+            preConfirm: () => {
+              const discount = document.getElementById('discount').value;
+              const startDate = document.getElementById('startDate').value;
+              const endDate = document.getElementById('endDate').value;
 
-  <script>
-    function toggleClearButton() {
-      const input = document.getElementById('searchInput');
-      const clearBtn = document.getElementById('clearSearchBtn');
-      clearBtn.classList.toggle('visible', input.value.trim().length > 0);
-    }
+              // Frontend checks (same as backend)
+              if (!discount || !startDate || !endDate) {
+                Swal.showValidationMessage('All fields are required!');
+                return false;
+              }
 
-    function clearSearch() {
-      const input = document.getElementById('searchInput');
-      input.value = '';
-      document.querySelector('form').submit();
-    }
+              if (discount < 1 || discount > 100) {
+                Swal.showValidationMessage('Discount must be between 1-100%');
+                return false;
+              }
 
-    toggleClearButton();
+              const today = new Date();
+              today.setHours(0, 0, 0, 0);
+              const start = new Date(startDate);
+              const end = new Date(endDate);
+              start.setHours(0, 0, 0, 0);
+              end.setHours(0, 0, 0, 0);
 
-    // ========================================
-    // OFFER MANAGEMENT FUNCTIONS
-    // ========================================
+              const tomorrow = new Date(today);
+              tomorrow.setDate(today.getDate() + 1);
 
-    // Add Product Offer
-    async function addProductOffer(productId) {
-      const { value: formValues } = await Swal.fire({
-        title: 'Add Product Offer',
-        html: `
-          <div style="text-align: left;">
-            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Discount Percentage (%)</label>
-            <input id="discount" type="number" min="1" max="100" class="swal2-input" placeholder="Enter discount %" style="width: 90%;">
-            
-            <label style="display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 600;">Start Date</label>
-            <input id="startDate" type="date" class="swal2-input" style="width: 90%;">
-            
-            <label style="display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 600;">End Date</label>
-            <input id="endDate" type="date" class="swal2-input" style="width: 90%;">
-          </div>
-        `,
-        focusConfirm: false,
-        showCancelButton: true,
-        confirmButtonText: 'Add Offer',
-        confirmButtonColor: '#28a745',
-        cancelButtonColor: '#6c757d',
-        preConfirm: () => {
-          const discount = document.getElementById('discount').value;
-          const startDate = document.getElementById('startDate').value;
-          const endDate = document.getElementById('endDate').value;
+              if (start < tomorrow) {
+                Swal.showValidationMessage('Start date must be at least tomorrow or later');
+                return false;
+              }
 
-          if (!discount || !startDate || !endDate) {
-            Swal.showValidationMessage('All fields are required!');
-            return false;
-          }
+              if (end <= start) {
+                Swal.showValidationMessage('End date must be after start date');
+                return false;
+              }
 
-          if (discount < 1 || discount > 100) {
-            Swal.showValidationMessage('Discount must be between 1-100%');
-            return false;
-          }
-
-          if (new Date(startDate) >= new Date(endDate)) {
-            Swal.showValidationMessage('End date must be after start date');
-            return false;
-          }
-
-          return { discount, startDate, endDate };
-        }
-      });
-
-      if (formValues) {
-        try {
-          const res = await fetch(`/admin/offer/product/add-offer/${productId}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              discountPercentage: formValues.discount,
-              startDate: formValues.startDate,
-              endDate: formValues.endDate
-            })
+              return { discount, startDate, endDate };
+            }
           });
 
-          const data = await res.json();
+          if (formValues) {
+            try {
+              const res = await fetch(`/admin/offer/product/add-offer/${productId}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  discountPercentage: formValues.discount,
+                  startDate: formValues.startDate,
+                  endDate: formValues.endDate
+                })
+              });
 
-          if (data.success) {
-            Swal.fire({
-              icon: 'success',
-              title: 'Offer Added!',
-              text: data.message,
-              timer: 1500,
-              showConfirmButton: false
-            }).then(() => location.reload());
-          } else {
-            Swal.fire('Error', data.message, 'error');
+              const data = await res.json();
+
+              if (data.success) {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Offer Added!',
+                  text: data.message,
+                  timer: 1500,
+                  showConfirmButton: false
+                }).then(() => location.reload());
+              } else {
+                Swal.fire('Error', data.message, 'error');
+              }
+            } catch (err) {
+              Swal.fire('Error', 'Server error: ' + err, 'error');
+            }
           }
-        } catch (err) {
-          Swal.fire('Error', 'Server error: ' + err, 'error');
         }
-      }
-    }
 
-    // Remove Product Offer
-    async function removeProductOffer(productId) {
-      const result = await Swal.fire({
-        title: 'Remove Offer?',
-        text: 'Are you sure you want to remove this offer?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#d33',
-        cancelButtonColor: '#6c757d',
-        confirmButtonText: 'Yes, remove it!'
-      });
 
-      if (result.isConfirmed) {
-        try {
-          const res = await fetch(`/admin/offer/product/remove-offer/${productId}`, {
-            method: 'DELETE'
+
+
+        // Remove Product Offer
+        async function removeProductOffer(productId) {
+          const result = await Swal.fire({
+            title: 'Remove Offer?',
+            text: 'Are you sure you want to remove this offer?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#6c757d',
+            confirmButtonText: 'Yes, remove it!'
           });
 
-          const data = await res.json();
+          if (result.isConfirmed) {
+            try {
+              const res = await fetch(`/admin/offer/product/remove-offer/${productId}`, {
+                method: 'DELETE'
+              });
 
-          if (data.success) {
-            Swal.fire({
-              icon: 'success',
-              title: 'Offer Removed!',
-              text: data.message,
-              timer: 1500,
-              showConfirmButton: false
-            }).then(() => location.reload());
-          } else {
-            Swal.fire('Error', data.message, 'error');
+              const data = await res.json();
+
+              if (data.success) {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Offer Removed!',
+                  text: data.message,
+                  timer: 1500,
+                  showConfirmButton: false
+                }).then(() => location.reload());
+              } else {
+                Swal.fire('Error', data.message, 'error');
+              }
+            } catch (err) {
+              Swal.fire('Error', 'Server error: ' + err, 'error');
+            }
           }
-        } catch (err) {
-          Swal.fire('Error', 'Server error: ' + err, 'error');
-        }
-      }
-    }
-
-    // Toggle Block/Unblock
-    async function toggleBlock(productId, block) {
-      try {
-        const res = await fetch(`/admin/products/block/${productId}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ isBlocked: block })
-        });
-
-        const data = await res.json();
-
-        if (!res.ok) {
-          Swal.fire({ icon: "error", title: "Error", text: data.message || "Something went wrong" });
-          return;
         }
 
-        Swal.fire({
-          icon: "success",
-          title: block ? "Blocked" : "Unblocked",
-          text: data.message
-        }).then(() => location.reload());
-
-      } catch (err) {
-        Swal.fire({ icon: "error", title: "Error", text: "Server error: " + err });
-      }
-    }
-  </script>
-
-  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
-  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/admin/assets/js/main.js"></script>
-
-  <!-- SweetAlert Delete -->
-  <script>
-    document.querySelectorAll('.delete-product-btn').forEach(button => {
-      button.addEventListener('click', async () => {
-        const productId = button.getAttribute('data-product-id');
-
-        const result = await Swal.fire({
-          title: 'Are you sure?',
-          text: 'You are about to delete this product and all its variants.',
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#d33',
-          cancelButtonColor: '#aaa',
-          confirmButtonText: 'Yes, delete it!'
-        });
-
-        if (result.isConfirmed) {
+        // Toggle Block/Unblock
+        async function toggleBlock(productId, block) {
           try {
-            const res = await fetch(`/admin/products/delete/${productId}`, {
-              method: 'DELETE'
-            }); 
+            const res = await fetch(`/admin/products/block/${productId}`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ isBlocked: block })
+            });
 
             const data = await res.json();
 
-            if (data.success) {
-              Swal.fire({
-                icon: 'success',
-                title: 'Product deleted successfully',
-                showConfirmButton: false,
-                timer: 1500
-              }).then(() => location.reload());
-            } else {
-              Swal.fire('Error', data.message || 'Failed to delete product', 'error');
+            if (!res.ok) {
+              Swal.fire({ icon: "error", title: "Error", text: data.message || "Something went wrong" });
+              return;
             }
+
+            Swal.fire({
+              icon: "success",
+              title: block ? "Blocked" : "Unblocked",
+              text: data.message
+            }).then(() => location.reload());
+
           } catch (err) {
-            Swal.fire('Error', 'Something went wrong', 'error');
+            Swal.fire({ icon: "error", title: "Error", text: "Server error: " + err });
           }
         }
-      });
-    });
-  </script>
-</body>
+      </script>
+
+      <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+      <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/admin/assets/js/main.js"></script>
+
+      <!-- SweetAlert Delete -->
+      <script>
+        document.querySelectorAll('.delete-product-btn').forEach(button => {
+          button.addEventListener('click', async () => {
+            const productId = button.getAttribute('data-product-id');
+
+            const result = await Swal.fire({
+              title: 'Are you sure?',
+              text: 'You are about to delete this product and all its variants.',
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#d33',
+              cancelButtonColor: '#aaa',
+              confirmButtonText: 'Yes, delete it!'
+            });
+
+            if (result.isConfirmed) {
+              try {
+                const res = await fetch(`/admin/products/delete/${productId}`, {
+                  method: 'DELETE'
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Product deleted successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }).then(() => location.reload());
+                } else {
+                  Swal.fire('Error', data.message || 'Failed to delete product', 'error');
+                }
+              } catch (err) {
+                Swal.fire('Error', 'Something went wrong', 'error');
+              }
+            }
+          });
+        });
+      </script>
+  </body>
+
 </html>

@@ -71,6 +71,7 @@ const productsRaw = await Product.find(filter)
     return {
       ...product,
       variantId: variant._id,
+      stock:variant.stock,
       image: variant?.images?.[0] || '/user/assets/imgs/shop/product-placeholder.jpg',
       offerPrice,
       discount,
@@ -251,7 +252,17 @@ const getMyReferrals = async(req, res) => {
     const user=await User.findById(userId);
     const referrals=await User.find({referredBy:userId});
     const wallet =await Wallet.findOne({userId});
-    const totalEarnings =wallet ?wallet.balance:0;
+    
+let totalEarnings = 0;
+    if (wallet) {
+    
+      const referralTransactions = wallet.transactions.filter(
+        t => t.reason && t.reason.startsWith("Referral reward")
+      );
+      totalEarnings = referralTransactions.reduce((sum, t) => sum + t.amount, 0);
+    }
+
+
     const totalReferrals =referrals.length;
     res.render('my-referrals',{
       referralCode:user.referralCode,

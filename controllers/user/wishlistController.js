@@ -26,12 +26,21 @@ export const getWishlist=async(req,res)=>{
     try{
         const userId=req.user._id;
         const wishlistItems= await Wishlist.find({userId})
-                            .populate('productId','name salesPrice')
-                            .populate('variantId','colour images')
-        res.status(200).json({wishlist:wishlistItems})
+                            .populate('productId','name salesPrice isBlocked deletedAt')
+                            .populate('variantId','colour images stock isBlocked deletedAt');
+
+        const activeItems=wishlistItems.filter(item=>{
+          return item.productId &&
+                  item.variantId &&
+                  !item.productId.isBlocked &&
+                  !item.productId.deletedAt &&
+                  !item.variantId.isBlocked &&
+                  !item.variantId.deletedAt;
+        });                    
+        res.status(200).json({wishlist:activeItems})
     }
     catch(error){
-        console.error(error);
+        console.error(error); 
         res.status(500).json({message:"something went wrong"})
     }
 }

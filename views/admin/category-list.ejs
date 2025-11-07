@@ -117,8 +117,21 @@
                                 <%= category.name %>
                                 <!-- Show offer badge if category has an active offer -->
                                 <% if (category.offer && category.offer.discountPercentage) { %>
-                                  <span class="offer-badge"><%= category.offer.discountPercentage %>% OFF</span>
-                                <% } %>
+                                  <% if (category.isOfferActive) { %>
+                                    <span class="badge bg-success">
+                                      <%= category.offer.discountPercentage %>% OFF
+                                    </span>
+                                    <% } else if (category.isOfferUpcoming) { %>
+                                      <span class="badge bg-secondary">
+                                        Upcoming: <%= category.offer.discountPercentage %>%
+                                      </span>
+                                      <% } else if (category.isOfferExpired) { %>
+                                        <span class="badge bg-danger">
+                                          Expired
+                                        </span>
+                                        <% } %>
+                                          <% } %>
+
                               </h6>
 
                               <!-- Show offer dates if active -->
@@ -245,27 +258,42 @@
             confirmButtonColor: '#28a745',
             cancelButtonColor: '#6c757d',
             preConfirm: () => {
-              const discount = document.getElementById('discount').value;
-              const startDate = document.getElementById('startDate').value;
-              const endDate = document.getElementById('endDate').value;
+  const discount = document.getElementById('discount').value;
+  const startDate = document.getElementById('startDate').value;
+  const endDate = document.getElementById('endDate').value;
 
-              if (!discount || !startDate || !endDate) {
-                Swal.showValidationMessage('All fields are required!');
-                return false;
-              }
+  if (!discount || !startDate || !endDate) {
+    Swal.showValidationMessage('All fields are required!');
+    return false;
+  }
 
-              if (discount < 1 || discount > 100) {
-                Swal.showValidationMessage('Discount must be between 1-100%');
-                return false;
-              }
+  if (discount < 1 || discount > 100) {
+    Swal.showValidationMessage('Discount must be between 1-100%');
+    return false;
+  }
 
-              if (new Date(startDate) >= new Date(endDate)) {
-                Swal.showValidationMessage('End date must be after start date');
-                return false;
-              }
+  const start = new Date(startDate);
+  const end = new Date(endDate);
 
-              return { discount, startDate, endDate };
-            }
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setHours(0, 0, 0, 0);
+  start.setHours(0, 0, 0, 0);
+  end.setHours(0, 0, 0, 0);
+
+  if (start < tomorrow) {
+    Swal.showValidationMessage('Start date must be at least tomorrow or later');
+    return false;
+  }
+
+  if (end <= start) {
+    Swal.showValidationMessage('End date must be after start date');
+    return false;
+  }
+
+  return { discount, startDate, endDate };
+}
+
           });
 
           if (formValues) {

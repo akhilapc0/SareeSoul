@@ -3,6 +3,15 @@
 
 <head>
     <style>
+        /* Logo Styling */
+        .logo img {
+            background: #ffffff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            object-fit: contain;
+            display: block;
+        }
+
         /* Dropdown CSS */
         .has-submenu {
             position: relative;
@@ -59,6 +68,36 @@
             color: #007bff;
             padding-left: 25px;
         }
+
+        /* Cart Badge Styling */
+        .mini-cart-icon {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cart-count-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff4444;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            min-width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4px;
+            line-height: 1;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-count-badge.hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -97,8 +136,11 @@
         <div class="header-bottom header-bottom-bg-color sticky-bar">
             <div class="container">
                 <div class="header-wrap header-space-between position-relative main-nav">
+
                     <div class="logo logo-width-1">
-                        <a href="/home"><span>sareesoul</span></a>
+                        <a href="/home">
+                            <img src="/user/assets/imgs/theme/icons/logo.png" alt="Saree Soul" style="width: 150px; height: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
+                        </a>
                     </div>
 
                     <div class="header-nav d-none d-lg-flex" style="width: 100%;">
@@ -114,7 +156,6 @@
                                             <li><a href="/my-address">My Address</a></li>
                                             <li><a href="/my-order">My Order</a></li>
                                             <li><a href="/my-referrals">My Referrals</a></li>
-
                                         </ul>
                                     </li>
                                     <li><a href="page-about.html">About Us</a></li>
@@ -123,14 +164,26 @@
                         </div>
 
                         <div class="header-action-2" style="margin-left: auto;">
+
                             <div class="header-action-icon-2">
-                                <a href="/wishlist">
+                                <a class="mini-cart-icon" href="/wishlist">
                                     <i class="fi-rs-heart"></i>
+                                    <% if (typeof wishlistCount !=='undefined' && wishlistCount> 0) { %>
+                                        <span class="cart-count-badge">
+                                            <%= wishlistCount %>
+                                        </span>
+                                        <% } %>
                                 </a>
                             </div>
+
+
+
                             <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="/cart">
                                     <i class="fi-rs-shopping-cart"></i>
+                                    <% if (typeof cartCount !== 'undefined' && cartCount > 0) { %>
+                                        <span class="cart-count-badge"><%= cartCount %></span>
+                                    <% } %>
                                 </a>
                             </div>
                         </div>
@@ -139,17 +192,26 @@
                     <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%
                     </p>
                     <div class="header-action-right d-block d-lg-none">
+
+
                         <div class="header-action-2">
+                            
                             <div class="header-action-icon-2">
                                 <a href="/wishlist">
                                     <i class="fi-rs-heart"></i>
                                 </a>
                             </div>
+
+
                             <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="/cart">
                                     <i class="fi-rs-shopping-cart"></i>
+                                    <% if (typeof cartCount !== 'undefined' && cartCount > 0) { %>
+                                        <span class="cart-count-badge"><%= cartCount %></span>
+                                    <% } %>
                                 </a>
                             </div>
+
                             <div class="header-action-icon-2 d-block d-lg-none">
                                 <div class="burger-icon burger-icon-white">
                                     <span class="burger-icon-top"></span>
@@ -157,6 +219,8 @@
                                     <span class="burger-icon-bottom"></span>
                                 </div>
                             </div>
+
+                            
                         </div>
                     </div>
                 </div>

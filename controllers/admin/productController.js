@@ -42,18 +42,24 @@ const loadProductList = async (req, res) => {
           product.categoryId
         );
 
-        console.log('product:',product.name);
-        console.log('category:',product.categoryId?.name);
-        console.log('offer price:',offerPrice);
-        console.log('Discount:',discount);
-        console.log('Has offer:',hasOffer);
-        console.log('---');
+         let offerStatus = null;
+
+  if (product.offer && product.offer.startDate && product.offer.endDate) {
+    const now = new Date();
+    const start = new Date(product.offer.startDate);
+    const end = new Date(product.offer.endDate);
+
+    if (now < start) offerStatus = 'upcoming';
+    else if (now >= start && now <= end) offerStatus = 'active';
+    else offerStatus = 'expired';
+  }
 
         return {
           ...product.toObject(),
           offerPrice,
           discount,
-          hasOffer
+          hasOffer,
+          offerStatus
         }
       });
 
