@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<style>
+  :root {
+    --primary-teal: #008B8B;
+    --primary-teal-dark: #006B6B;
+    --success-green: #28a745;
+    --danger-red: #dc3545;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .sales-report-container {
+    padding: 30px;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .page-title {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .btn-back {
+    background: white;
+    color: #666;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .btn-back:hover {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  /* Filter Section */
+  .filter-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
+  }
+
+  .filter-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: end;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+
+  .form-control, .form-select {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+
+  .form-control:focus, .form-select:focus {
+    border-color: var(--primary-teal);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 139, 139, 0.1);
+  }
+
+  .btn-generate {
+    background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: fit-content;
+  }
+
+  .btn-generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 139, 139, 0.3);
+  }
+
+  /* Summary Cards */
+  .summary-section {
+    margin-bottom: 30px;
+  }
+
+  .summary-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .summary-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--primary-teal);
+    transition: all 0.3s;
+  }
+
+  .summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .summary-card.orders {
+    border-left-color: #3498db;
+  }
+
+  .summary-card.sales {
+    border-left-color: #2ecc71;
+  }
+
+  .summary-card.discount {
+    border-left-color: #e74c3c;
+  }
+
+  .summary-card.coupon {
+    border-left-color: #f39c12;
+  }
+
+  .summary-label {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .summary-value {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .summary-icon {
+    font-size: 2.5rem;
+    opacity: 0.2;
+    float: right;
+    margin-top: -10px;
+  }
+
+  /* Order Details Section */
+  .details-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+  }
+
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .details-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .download-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-download {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-pdf {
+    background: #dc3545;
+    color: white;
+  }
+
+  .btn-pdf:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+  }
+
+  .btn-excel {
+    background: #28a745;
+    color: white;
+  }
+
+  .btn-excel:hover {
+    background: #218838;
+    transform: translateY(-2px);
+  }
+
+  /* Table Styles */
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto; 
+  }
+
+  thead {
+    background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+  }
+
+ th, td {
+  padding: 12px 15px !important;
+  text-align: left;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+th {
+  font-weight: 600;
+  background-color: #f8f9fa; /* optional for clarity */
+}
+
+
+  tbody tr:hover {
+    background: #f8f9fa;
+  }
+
+  .status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .status-delivered {
+    background: #d4edda;
+    color: #155724;
+  }
+
+  .status-pending {
+    background: #fff3cd;
+    color: #856404;
+  }
+
+  .status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+  }
+
+  .empty-state i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.3;
+  }
+
+  @media (max-width: 768px) {
+    .filter-row {
+      grid-template-columns: 1fr;
+    }
+
+    .summary-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .download-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-download {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<body>
+  <div class="screen-overlay"></div>
+  <%- include('./partials/sidebar') %>
+  
+  <main class="main-wrap">
+    <%- include('./partials/header') %>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <section class="content-main sales-report-container">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h2 class="page-title">📊 Sales Report</h2>
+        <a href="/admin/orders" class="btn-back">
+          <i class="bi bi-arrow-left me-2"></i>Back to Orders
+        </a>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filter-card">
+        <form id="reportForm">
+          <div class="filter-row">
+            <div class="form-group">
+              <label class="form-label">Report Type</label>
+              <select class="form-select" id="reportType" name="reportType">
+                <option value="custom">Custom Date Range</option>
+                <option value="daily">Today</option>
+                <option value="weekly">This Week</option>
+                <option value="monthly">This Month</option>
+                <option value="yearly">This Year</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="fromDateGroup">
+              <label class="form-label">From Date</label>
+              <input type="date" class="form-control" id="fromDate" name="fromDate">
+            </div>
+
+            <div class="form-group" id="toDateGroup">
+              <label class="form-label">To Date</label>
+              <input type="date" class="form-control" id="toDate" name="toDate">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn-generate">
+                <i class="bi bi-file-earmark-bar-graph me-2"></i>Generate Report
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="summary-section">
+        <h3 class="summary-title">Sales Summary</h3>
+        <div class="summary-grid">
+          <div class="summary-card orders">
+            <span class="summary-icon">📦</span>
+            <div class="summary-label">Total Orders</div>
+            <div class="summary-value" id="totalOrders">0</div>
+          </div>
+
+          <div class="summary-card sales">
+            <span class="summary-icon">💰</span>
+            <div class="summary-label">Total Sales Amount</div>
+            <div class="summary-value" id="totalSales">₹0.00</div>
+          </div>
+
+          <div class="summary-card discount">
+            <span class="summary-icon">🏷️</span>
+            <div class="summary-label">Total Discount</div>
+            <div class="summary-value" id="totalDiscount">₹0.00</div>
+          </div>
+
+          <div class="summary-card coupon">
+            <span class="summary-icon">🎟️</span>
+            <div class="summary-label">Total Coupon Discount</div>
+            <div class="summary-value" id="totalCoupon">₹0.00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Details Section -->
+      <div class="details-card">
+        <div class="details-header">
+          <h3 class="details-title">Order Details</h3>
+          <div class="download-buttons">
+            <button class="btn-download btn-pdf" onclick="downloadPDF()">
+              <i class="bi bi-file-pdf"></i>Download PDF
+            </button>
+            <button class="btn-download btn-excel" onclick="downloadExcel()">
+              <i class="bi bi-file-excel"></i>Download Excel
+            </button>
+          </div>
+        </div>
+
+        <div class="table-container" id="tableContainer">
+          <div class="empty-state">
+            <i class="bi bi-file-earmark-bar-graph"></i>
+            <h4>No Report Generated</h4>
+            <p>Select filters and click "Generate Report" to view sales data</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./partials/footer') %>
+  </main>
+
+  <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/admin/assets/js/main.js"></script>
+
+  <script>
+    let currentReportData = null;
+
+    // Handle report type change
+    document.getElementById('reportType').addEventListener('change', function() {
+      const fromDateGroup = document.getElementById('fromDateGroup');
+      const toDateGroup = document.getElementById('toDateGroup');
+      
+      if (this.value === 'custom') {
+        fromDateGroup.style.display = 'block';
+        toDateGroup.style.display = 'block';
+      } else {
+        fromDateGroup.style.display = 'none';
+        toDateGroup.style.display = 'none';
+      }
+    });
+
+    // Generate Report
+    document.getElementById('reportForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const reportType = document.getElementById('reportType').value;
+      const fromDate = document.getElementById('fromDate').value;
+      const toDate = document.getElementById('toDate').value;
+
+      // Validation for custom date range
+      if (reportType === 'custom' && (!fromDate || !toDate)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Missing Dates',
+          text: 'Please select both From and To dates',
+          confirmButtonColor: '#008B8B'
+        });
+        return;
+      }
+
+      if (reportType === 'custom' && new Date(fromDate) > new Date(toDate)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid Date Range',
+          text: 'From date cannot be after To date',
+          confirmButtonColor: '#008B8B'
+        });
+        return;
+      }
+
+      try {
+        const response = await fetch('/admin/sales-report/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportType, fromDate, toDate })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          currentReportData = data;
+          updateSummary(data.summary);
+          updateTable(data.orders);
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: data.message,
+            confirmButtonColor: '#008B8B'
+          });
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to generate report',
+          confirmButtonColor: '#008B8B'
+        });
+      }
+    });
+
+    function updateSummary(summary) {
+      document.getElementById('totalOrders').textContent = summary.totalOrders;
+      document.getElementById('totalSales').textContent = `₹${summary.totalSales.toFixed(2)}`;
+      document.getElementById('totalDiscount').textContent = `₹${summary.totalDiscount.toFixed(2)}`;
+      document.getElementById('totalCoupon').textContent = `₹${summary.totalCouponDiscount.toFixed(2)}`;
+    }
+
+    function updateTable(orders) {
+      const container = document.getElementById('tableContainer');
+
+      if (orders.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <i class="bi bi-inbox"></i>
+            <h4>No Orders Found</h4>
+            <p>No orders match the selected criteria</p>
+          </div>
+        `;
+        return;
+      }
+
+      const tableHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Discount</th>
+              <th>Coupon Discount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${orders.map(order => `
+              <tr>
+                <td><strong>${order.orderId}</strong></td>
+                <td>${order.customerName}</td>
+                <td>${new Date(order.createdAt).toLocaleDateString('en-IN')}</td>
+                <td>₹${order.total.toFixed(2)}</td>
+                <td>₹${order.discount.toFixed(2)}</td>
+                <td>₹${order.couponDiscount.toFixed(2)}</td>
+                <td>
+                  <span class="status-badge status-${order.status.toLowerCase()}">
+                    ${order.status}
+                  </span>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+
+      container.innerHTML = tableHTML;
+    }
+
+    async function downloadPDF() {
+      if (!currentReportData) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'No Report',
+          text: 'Please generate a report first',
+          confirmButtonColor: '#008B8B'
+        });
+        return;
+      }
+
+      try {
+        const response = await fetch('/admin/sales-report/download-pdf', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(currentReportData)
+        });
+
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `sales-report-${Date.now()}.pdf`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      } catch (error) {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to download PDF',
+          confirmButtonColor: '#008B8B'
+        });
+      }
+    }
+
+    async function downloadExcel() {
+      if (!currentReportData) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'No Report',
+          text: 'Please generate a report first',
+          confirmButtonColor: '#008B8B'
+        });
+        return;
+      }
+
+      try {
+        const response = await fetch('/admin/sales-report/download-excel', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(currentReportData)
+        });
+
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `sales-report-${Date.now()}.xlsx`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      } catch (error) {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to download Excel',
+          confirmButtonColor: '#008B8B'
+        });
+      }
+    }
+  </script>
+</body>
+</html>

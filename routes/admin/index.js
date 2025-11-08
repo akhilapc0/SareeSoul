@@ -10,6 +10,7 @@ import productRoutes from './productRoutes.js'
 import userRoutes from './userRoutes.js';
 import couponRoutes from './couponRoutes.js';
 import offerRoutes from './offerRoutes.js';
+import salesReportRoutes from './salesReportRoutes.js';
 
 
 const router=express.Router();
@@ -23,5 +24,5 @@ router.use('/',productRoutes);
 router.use('/',userRoutes);
 router.use('/coupons',couponRoutes);
 router.use('/offer',offerRoutes);
-
+router.use('/', salesReportRoutes);
 export default router;

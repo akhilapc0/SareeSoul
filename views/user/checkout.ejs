@@ -251,7 +251,7 @@
       overflow: hidden;
     }
 
-    .coupon-item::before {
+    /* .coupon-item::before {
       content: '';
       position: absolute;
       top: 0;
@@ -260,13 +260,13 @@
       height: 100%;
       background: var(--primary-teal);
       transition: width 0.3s ease;
-    }
+    } */
 
-    .coupon-item:hover {
+    /* .coupon-item:hover {
       border-color: var(--primary-teal);
       box-shadow: 0 4px 12px rgba(0, 139, 139, 0.2);
       transform: translateY(-2px);
-    }
+    } */
 
     .coupon-item:hover::before {
       width: 100%;
@@ -674,6 +674,7 @@
         // Apply Coupon Function
         async function applyCoupon(couponCode) {
           try {
+            console.log("asdfghj")
             const response = await fetch('/coupon/apply', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },

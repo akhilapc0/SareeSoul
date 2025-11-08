@@ -957,3 +957,20 @@ Cannot read properties of undefined (reading 'forEach')
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 2025-11-04 10:27:40 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
 2025-11-04 10:27:55 [ERROR]: Error in postAddBrand: E11000 duplicate key error collection: sareeSoul.brands index: name_1 collation: { locale: "en", caseLevel: false, caseFirst: "off", strength: 2, numericOrdering: false, alternate: "non-ignorable", maxVariable: "punct", normalization: false, backwards: false, version: "57.1" } dup key: { name: "CollationKey(0x47454f37594d010a)" }
+2025-11-08 09:54:42 [ERROR]: Error: Failed to lookup view "sales-report" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at getSalesReportPage (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/salesReportController.js:7:9)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at Function.handle (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:186:3)
+    at router (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:342:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
