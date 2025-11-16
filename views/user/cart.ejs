@@ -1,7 +1,7 @@
 <%- include('partials/head') %>
 
 <style>
-/* Clean Modern Cart Design */
+
 * {
   box-sizing: border-box;
 }
@@ -17,7 +17,6 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Simple Page Header */
 .page-header {
   background: white;
   padding: 1.5rem 2rem;
@@ -52,7 +51,6 @@ body {
   color: white;
 }
 
-/* Clean Cart Item Card */
 .cart-item-card {
   background: white;
   border-radius: 12px;
@@ -66,7 +64,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Product Image */
 .product-image {
   width: 100%;
   height: 140px;
@@ -92,7 +89,6 @@ body {
   box-shadow: 0 2px 6px rgba(255, 107, 107, 0.3);
 }
 
-/* Product Info */
 .product-info {
   flex: 1;
 }
@@ -122,7 +118,6 @@ body {
   margin-bottom: 0.6rem;
 }
 
-/* SIMPLIFIED PRICE - Only show final price */
 .item-price {
   font-size: 1.3rem;
   font-weight: 700;
@@ -142,7 +137,6 @@ body {
   font-weight: 400;
 }
 
-/* Quantity Controls - Cleaner */
 .quantity-wrapper {
   display: flex;
   align-items: center;
@@ -200,7 +194,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Remove Button */
 .btn-remove {
   color: #dc3545;
   background: transparent;
@@ -217,7 +210,6 @@ body {
   text-decoration: underline;
 }
 
-/* Clean Summary Card */
 .summary-card {
   background: white;
   border-radius: 12px;
@@ -292,7 +284,6 @@ body {
   font-weight: 700;
 }
 
-/* Savings Banner - Subtle */
 .savings-banner {
   background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   padding: 0.9rem;
@@ -309,7 +300,6 @@ body {
   font-size: 1rem;
 }
 
-/* Checkout Button */
 .btn-checkout {
   width: 100%;
   padding: 1rem;
@@ -358,7 +348,6 @@ body {
   color: #667eea;
 }
 
-/* Empty Cart */
 .empty-cart {
   text-align: center;
   padding: 5rem 2rem;
@@ -406,7 +395,6 @@ body {
   color: white;
 }
 
-/* Stock Warning - Subtle */
 .stock-alert {
   display: inline-flex;
   align-items: center;
@@ -419,7 +407,93 @@ body {
   margin-top: 0.3rem;
 }
 
-/* Responsive */
+/* NEW: Pagination Styles */
+.pagination-wrapper {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-info {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pagination-btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #495057;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.pagination-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #495057;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.page-number:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.page-number.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
 @media (max-width: 991px) {
   .summary-card {
     position: relative;
@@ -459,6 +533,16 @@ body {
   .summary-total .value {
     font-size: 1.4rem;
   }
+
+  .pagination-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .page-numbers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 </style>
 
@@ -466,16 +550,17 @@ body {
   <%- include('partials/header') %>
 
   <div class="cart-container">
-    <!-- Clean Header -->
     <div class="page-header">
-      <h2><i class="bi bi-cart3"></i> Shopping Cart <% if (items.length > 0) { %>(<%= items.length %>)<% } %></h2>
+      <h2>
+        <i class="bi bi-cart3"></i> Shopping Cart 
+        <% if (totalItems > 0) { %>(<%= totalItems %>)<% } %>
+      </h2>
       <a href="/shop" class="btn-continue-shopping">
         <i class="bi bi-arrow-left"></i> Continue Shopping
       </a>
     </div>
 
-    <% if (items.length === 0) { %>
-      <!-- Empty Cart -->
+    <% if (totalItems === 0) { %>
       <div class="empty-cart">
         <div class="empty-icon">
           <i class="bi bi-cart-x"></i>
@@ -488,12 +573,10 @@ body {
       </div>
     <% } else { %>
       <div class="row g-4">
-        <!-- Cart Items -->
         <div class="col-lg-8">
           <% items.forEach((item) => { %>
             <div class="cart-item-card">
               <div class="row align-items-center g-3">
-                <!-- Image -->
                 <div class="col-md-2 col-3">
                   <div class="image-wrapper">
                     <img
@@ -506,7 +589,6 @@ body {
                   </div>
                 </div>
 
-                <!-- Product Details -->
                 <div class="col-md-6 col-9">
                   <div class="product-info">
                     <a href="/product/<%= item.productId._id %>" class="product-name">
@@ -526,7 +608,6 @@ body {
                       </div>
                     <% } %>
 
-                    <!-- SIMPLIFIED PRICE - Only final price -->
                     <div class="item-price <%= item.hasOffer ? 'discounted' : '' %>">
                       ₹<%= item.itemTotal.toFixed(2) %>
                       <% if (item.hasOffer) { %>
@@ -536,10 +617,8 @@ body {
                   </div>
                 </div>
 
-                <!-- Quantity & Actions -->
                 <div class="col-md-4 col-12">
                   <div class="d-flex flex-column align-items-md-end gap-2">
-                    <!-- Quantity -->
                     <div class="quantity-wrapper">
                       <span class="qty-label">Qty:</span>
                       <div class="quantity-control">
@@ -563,7 +642,6 @@ body {
                       </div>
                     </div>
 
-                    <!-- Remove -->
                     <button 
                       class="btn-remove"
                       data-variant-id="<%= item.variantId._id %>">
@@ -574,15 +652,48 @@ body {
               </div>
             </div>
           <% }); %>
+
+          <!-- Pagination Controls -->
+          <% if (totalPages > 1) { %>
+            <div class="pagination-wrapper">
+              <div class="pagination-info">
+                Showing <%= ((currentPage - 1) * limit) + 1 %>-<%= Math.min(currentPage * limit, totalItems) %> of <%= totalItems %> items
+              </div>
+
+              <div class="pagination-controls">
+                <a href="/cart?page=<%= currentPage - 1 %>" 
+                   class="pagination-btn <%= !hasPrevPage ? 'disabled' : '' %>">
+                  <i class="bi bi-chevron-left"></i> Previous
+                </a>
+
+                <div class="page-numbers">
+                  <% for (let i = 1; i <= totalPages; i++) { %>
+                    <% if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) { %>
+                      <a href="/cart?page=<%= i %>" 
+                         class="page-number <%= i === currentPage ? 'active' : '' %>">
+                        <%= i %>
+                      </a>
+                    <% } else if (i === currentPage - 3 || i === currentPage + 3) { %>
+                      <span class="page-number disabled">...</span>
+                    <% } %>
+                  <% } %>
+                </div>
+
+                <a href="/cart?page=<%= currentPage + 1 %>" 
+                   class="pagination-btn <%= !hasNextPage ? 'disabled' : '' %>">
+                  Next <i class="bi bi-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          <% } %>
         </div>
 
-        <!-- Summary -->
         <div class="col-lg-4">
           <div class="summary-card">
             <h3 class="summary-title">Order Summary</h3>
 
             <div class="summary-line">
-              <span class="label">Subtotal (<%= items.length %> items)</span>
+              <span class="label">Subtotal (<%= totalItems %> items)</span>
               <span class="value">₹<%= originalSubtotal %></span>
             </div>
 
@@ -658,7 +769,10 @@ body {
           const data = await response.json();
 
           if (response.ok) {
-            location.reload();
+            // Maintain current page after update
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentPage = urlParams.get('page') || '1';
+            window.location.href = `/cart?page=${currentPage}`;
           } else {
             Swal.fire({
               icon: "warning",
@@ -705,7 +819,11 @@ body {
                   title: "Removed!",
                   timer: 1200,
                   showConfirmButton: false
-                }).then(() => location.reload());
+                }).then(() => {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const currentPage = urlParams.get('page') || '1';
+                  window.location.href = `/cart?page=${currentPage}`;
+                });
               } else {
                 Swal.fire({
                   icon: "error",

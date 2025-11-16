@@ -14,10 +14,29 @@ try{
   const limit=8;
   const skip=(page-1)*limit;
 
+  let minPrice=req.query.minPrice ? parseFloat(req.query.minPrice):null;
+  let maxPrice=req.query.maxPrice ?parseFloat(req.query.maxPrice):null;
+  let priceError=null;
+
+  if(minPrice !==null && (isNaN(minPrice)|| minPrice <0)){
+    priceError="Minimum price must be a valid positive number";
+    minPrice=null;
+  }
+  if(maxPrice !==null &&(isNaN(maxPrice)|| maxPrice <0)){
+    priceError="Maximum price cannot be greater than maximum price";
+    maxPrice=null;
+  }
+  if(minPrice !==null && maxPrice !==null && minPrice > maxPrice){
+    priceError="minimum price cannot be greater than maximum price";
+
+    [minPrice,maxPrice]=[maxPrice,minPrice];
+  }
+
   let filter={
     deletedAt:null,
     isBlocked:false
   }
+
   if(req.query.search){
     filter.name={$regex:req.query.search,$options:'i'}
   }
@@ -40,13 +59,13 @@ try{
   }
 }
 
-if (req.query.minPrice || req.query.maxPrice) {
-  filter.salesPrice = {};
-  if (req.query.minPrice) {
-    filter.salesPrice.$gte = parseInt(req.query.minPrice);
+if(minPrice !==null || maxPrice !==null){
+  filter.salesPrice={};
+  if(minPrice !==null){
+    filter.salesPrice.$gte=minPrice;
   }
-  if (req.query.maxPrice) {
-    filter.salesPrice.$lte = parseInt(req.query.maxPrice);
+  if(maxPrice !==null){
+    filter.salesPrice.$lte=maxPrice;
   }
 }
 
@@ -116,7 +135,8 @@ res.render("shop", {
   category: req.query.category || "",
   brand: req.query.brand || "",
   minPrice: req.query.minPrice || "",
-  maxPrice: req.query.maxPrice || ""
+  maxPrice: req.query.maxPrice || "",
+  priceError:priceError
 });
 
 

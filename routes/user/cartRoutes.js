@@ -13,5 +13,6 @@ router.post('/update-quantity',isLoggedIn,checkBlock,cartController.updateQuanti
 router.delete('/remove/:variantId',isLoggedIn,checkBlock, cartController.removeCartItem);
 
 
+
 export default router;
 

@@ -1,8 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import path from 'path';
 import session from 'express-session';
 import flash from 'connect-flash';
-import dotenv from 'dotenv';
+
 import passport from './config/passport.js';
 import {flashMessageMiddleware, setUserLocals} from './middlewares/userAuth.js'; 
 import getCartCount from './middlewares/cartCount.js';
@@ -17,7 +19,7 @@ import userRoutes from './routes/user/index.js';
 import  adminRoutes from './routes/admin/index.js';
 
 
-dotenv.config();
+
 
 
 const app = express();

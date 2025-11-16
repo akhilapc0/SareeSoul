@@ -5,6 +5,9 @@ import Wishlist from '../../models/wishlistModel.js';
 import User from '../../models/userModel.js';
 import offerController from '../admin/offerController.js';
 
+
+
+
 const loadCart = async (req, res) => {
   try {
     const userId = req.session?.user?._id || req.session?.passport?.user;
@@ -12,7 +15,12 @@ const loadCart = async (req, res) => {
 
     const user = req.session?.user || await User.findById(userId);
    
+    const page=parseInt(req.query.page) || 1;
+    const limit=parseInt(req.query.limit) ||5;
+    const skip=(page-1)*limit;
+
     const cart = await Cart.findOne({ userId })
+    
       .populate({
         path: 'items.productId',
         populate: { path: 'categoryId' },
@@ -24,7 +32,7 @@ const loadCart = async (req, res) => {
       });
 
 
-
+     
 
     if(!cart || !cart.items || cart.items.length ===0){
       return res.render('cart',{
@@ -32,16 +40,18 @@ const loadCart = async (req, res) => {
         originalSubtotal:'0.00',
         offerSubtotal:'0.00',
         totalSavings:'0.00',
-        user
+        user,
+        currentPage:1,
+        totalPages:0,
+        totalItems:0,
+        hasNextPage:false,
+        hasPrevPage:false
+
       })
     }
-
     
-    let originalSubtotal = 0;
-    let offerSubtotal = 0;
-    let totalSavings = 0;
 
-    const itemsWithOffers = cart.items
+    const validItems = cart.items
       .filter(item => {
       return item.productId &&
              item.variantId &&
@@ -50,40 +60,72 @@ const loadCart = async (req, res) => {
             !item.variantId.isBlocked &&
             !item.variantId.deletedAt;
   })
-      .map(item => {
-        const { offerPrice, discount, hasOffer } = offerController.calculateOfferPrice(
-          item.productId,
-          item.productId.categoryId
-        );
+  .reverse();
 
-        const itemOriginalPrice = item.quantity * item.productId.salesPrice;
-        const itemOfferPrice = item.quantity * Math.round(offerPrice);
-        const itemSavings = hasOffer ? (itemOriginalPrice - itemOfferPrice) : 0;
+  const totalItems=validItems.length;
+  const totalPages=Math.ceil(totalItems/limit);
+  const paginatedItems=validItems.slice(skip,skip+limit)
 
-        originalSubtotal += itemOriginalPrice;
-        offerSubtotal += itemOfferPrice;
-        totalSavings += itemSavings;
+let originalSubtotal=0;
+let offerSubtotal=0;
+let totalSavings=0;
 
-        return {
-          productId:item.productId,
-          variantId:item.variantId,
-          quantity:item.quantity,
-          offerPrice: Math.round(offerPrice),
-          discount,
-          hasOffer,
-          itemTotal: itemOfferPrice,
-          itemOriginalTotal: itemOriginalPrice,
-          itemSavings
-        };
-      });
+validItems.forEach(item=>{
+  const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
+    item.productId,
+    item.productId.categoryId
+  );
 
-    res.render('cart', {
-      items: itemsWithOffers,
-      originalSubtotal: originalSubtotal.toFixed(2),
-      offerSubtotal: offerSubtotal.toFixed(2),
-      totalSavings: totalSavings.toFixed(2),
-      user
-    });
+  const itemOriginalPrice=item.quantity *item.productId.salesPrice;
+  const itemOfferPrice=item.quantity*Math.round(offerPrice);
+  const itemSavings=hasOffer?(itemOriginalPrice-itemOfferPrice):0;
+
+  originalSubtotal +=itemOriginalPrice;
+  offerSubtotal +=itemOfferPrice;
+  totalSavings  +=itemSavings;
+
+});
+
+const itemsWithOffers=paginatedItems.map(item=>{
+  const {offerPrice,discount,hasOffer}=offerController.calculateOfferPrice(
+    item.productId,
+    item.productId.categoryId
+  )
+
+  const itemOriginalPrice=item.quantity *item.productId.salesPrice;
+  const itemOfferPrice=item.quantity *Math.round(offerPrice);
+  const itemSavings=hasOffer?(itemOriginalPrice-itemOfferPrice):0;
+
+  return {
+    productId:item.productId,
+    variantId:item.variantId,
+    quantity:item.quantity,
+    offerPrice:Math.round(offerPrice),
+    discount,
+    hasOffer,
+    itemTotal:itemOfferPrice,
+    itemOriginalTotal:itemOriginalPrice,
+    itemSavings
+  }
+
+});
+
+res.render('cart',{
+  items:itemsWithOffers,
+  originalSubtotal:originalSubtotal.toFixed(2),
+  offerSubtotal:offerSubtotal.toFixed(2),
+  totalSavings:totalSavings.toFixed(2),
+  user,
+  currentPage:page,
+  totalPages,
+  totalItems,
+  hasNextPage:page < totalPages,
+  hasPrevPage:page >1,
+  limit
+})
+
+
+
   } catch (err) {
     console.error('Error loading cart:',err);
     res.status(500).send('Server error');
@@ -123,7 +165,7 @@ const addToCart = async (req, res) => {
     }
     
     let cart = await Cart.findOne({ userId });
-    console.log("cart is :",cart);
+    
     if (!cart) cart = new Cart({ userId, items: [] });
 
     
@@ -231,7 +273,9 @@ const cartController={
   loadCart,
   addToCart,
   updateQuantity,
-  removeCartItem
+  removeCartItem,
+  
+
 }
 
 export default cartController;

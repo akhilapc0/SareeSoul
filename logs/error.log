@@ -974,3 +974,252 @@ Cannot read properties of undefined (reading 'forEach')
     at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
     at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:342:13)
     at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+2025-11-09 13:34:00 [ERROR]: error loading categories: ReferenceError: page is not defined
+2025-11-09 20:18:44 [ERROR]: error fethcing cart COUNT: TypeError: cart.items.reduct is not a function
+2025-11-09 20:18:46 [ERROR]: error fethcing cart COUNT: TypeError: cart.items.reduct is not a function
+2025-11-09 20:20:40 [ERROR]: error fethcing cart COUNT: ReferenceError: totalCount is not defined
+2025-11-09 20:20:43 [ERROR]: error fethcing cart COUNT: ReferenceError: totalCount is not defined
+2025-11-10 09:28:10 [ERROR]: Error loading cart: ReferenceError: items is not defined
+2025-11-10 11:49:30 [ERROR]: ReferenceError: err is not defined
+    at offerTotal (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/cartController.js:47:50)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-10 11:51:16 [ERROR]: error in finding totalValue: ReferenceError: item is not defined
+2025-11-10 14:27:36 [ERROR]: Error loading cart: TypeError: {(intermediate value)}.sort is not a function
+2025-11-11 09:26:28 [ERROR]: Error loading cart: TypeError: Assignment to constant variable.
+2025-11-15 17:31:52 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 17:34:12 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 17:39:29 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 17:44:39 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 17:50:22 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 18:30:09 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 18:32:40 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 18:43:21 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 19:50:50 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 19:50:50 [ERROR]: Error details: 
+2025-11-15 19:53:58 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 19:53:58 [ERROR]: Error details: 
+2025-11-15 19:56:30 [ERROR]: Error creating Razorpay order: [object Object]
+2025-11-15 19:56:30 [ERROR]: Error details: 
+2025-11-15 20:05:29 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:05:29 [ERROR]: [object Object]
+2025-11-15 20:05:29 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:05:29 [ERROR]: Status code: 400
+2025-11-15 20:05:29 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:05:29 [ERROR]: Error message: 
+2025-11-15 20:08:41 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:08:41 [ERROR]: [object Object]
+2025-11-15 20:08:41 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:08:41 [ERROR]: Status code: 400
+2025-11-15 20:08:41 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:08:41 [ERROR]: Error message: 
+2025-11-15 20:10:34 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:10:34 [ERROR]: [object Object]
+2025-11-15 20:10:34 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:10:34 [ERROR]: Status code: 400
+2025-11-15 20:10:34 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:10:34 [ERROR]: Error message: 
+2025-11-15 20:22:33 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:22:33 [ERROR]: [object Object]
+2025-11-15 20:22:33 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:22:33 [ERROR]: Status code: 400
+2025-11-15 20:22:33 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:22:33 [ERROR]: Error message: 
+2025-11-15 20:24:38 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:24:38 [ERROR]: [object Object]
+2025-11-15 20:24:38 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:24:38 [ERROR]: Status code: 400
+2025-11-15 20:24:38 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:24:38 [ERROR]: Error message: 
+2025-11-15 20:31:00 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:31:00 [ERROR]: [object Object]
+2025-11-15 20:31:00 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:31:00 [ERROR]: Status code: 400
+2025-11-15 20:31:00 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:31:00 [ERROR]: Error message: 
+2025-11-15 20:34:16 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:34:16 [ERROR]: [object Object]
+2025-11-15 20:34:16 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:34:16 [ERROR]: Status code: 400
+2025-11-15 20:34:16 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:34:16 [ERROR]: Error message: 
+2025-11-15 20:34:45 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:34:45 [ERROR]: [object Object]
+2025-11-15 20:34:45 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:34:45 [ERROR]: Status code: 400
+2025-11-15 20:34:45 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:34:45 [ERROR]: Error message: 
+2025-11-15 20:35:51 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:35:51 [ERROR]: [object Object]
+2025-11-15 20:35:51 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:35:51 [ERROR]: Status code: 400
+2025-11-15 20:35:51 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:35:51 [ERROR]: Error message: 
+2025-11-15 20:36:41 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:36:41 [ERROR]: [object Object]
+2025-11-15 20:36:41 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:36:41 [ERROR]: Status code: 400
+2025-11-15 20:36:41 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:36:41 [ERROR]: Error message: 
+2025-11-15 20:44:04 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:44:04 [ERROR]: [object Object]
+2025-11-15 20:44:04 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:44:04 [ERROR]: Status code: 400
+2025-11-15 20:44:04 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:44:04 [ERROR]: Error message: 
+2025-11-15 20:48:01 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:48:01 [ERROR]: [object Object]
+2025-11-15 20:48:01 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:48:01 [ERROR]: Status code: 400
+2025-11-15 20:48:01 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:48:01 [ERROR]: Error message: 
+2025-11-15 20:52:48 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:52:48 [ERROR]: [object Object]
+2025-11-15 20:52:48 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:52:48 [ERROR]: Status code: 400
+2025-11-15 20:52:48 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:52:48 [ERROR]: Error message: 
+2025-11-15 20:56:11 [ERROR]: Error creating Razorpay order:
+2025-11-15 20:56:11 [ERROR]: [object Object]
+2025-11-15 20:56:11 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 20:56:11 [ERROR]: Status code: 400
+2025-11-15 20:56:11 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 20:56:11 [ERROR]: Error message: 
+2025-11-15 21:06:21 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:06:21 [ERROR]: [object Object]
+2025-11-15 21:06:21 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:06:21 [ERROR]: Status code: 400
+2025-11-15 21:06:21 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:06:21 [ERROR]: Error message: 
+2025-11-15 21:18:40 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:18:40 [ERROR]: [object Object]
+2025-11-15 21:18:40 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:18:40 [ERROR]: Status code: 400
+2025-11-15 21:18:40 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:18:40 [ERROR]: Error message: 
+2025-11-15 21:41:00 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:41:00 [ERROR]: [object Object]
+2025-11-15 21:41:00 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:41:00 [ERROR]: Status code: 400
+2025-11-15 21:41:00 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:41:00 [ERROR]: Error message: 
+2025-11-15 21:44:19 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:44:19 [ERROR]: [object Object]
+2025-11-15 21:44:19 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:44:19 [ERROR]: Status code: 400
+2025-11-15 21:44:19 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:44:19 [ERROR]: Error message: 
+2025-11-15 21:48:37 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:48:37 [ERROR]: [object Object]
+2025-11-15 21:48:37 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:48:37 [ERROR]: Status code: 400
+2025-11-15 21:48:37 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:48:37 [ERROR]: Error message: 
+2025-11-15 21:49:28 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:49:28 [ERROR]: [object Object]
+2025-11-15 21:49:28 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:49:28 [ERROR]: Status code: 400
+2025-11-15 21:49:28 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:49:28 [ERROR]: Error message: 
+2025-11-15 21:49:44 [ERROR]: Error creating Razorpay order:
+2025-11-15 21:49:44 [ERROR]: [object Object]
+2025-11-15 21:49:44 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-15 21:49:44 [ERROR]: Status code: 400
+2025-11-15 21:49:44 [ERROR]: Razorpay error object: [object Object]
+2025-11-15 21:49:44 [ERROR]: Error message: 
+2025-11-16 00:43:16 [ERROR]: Error creating Razorpay order:
+2025-11-16 00:43:16 [ERROR]: [object Object]
+2025-11-16 00:43:16 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-16 00:43:16 [ERROR]: Status code: 400
+2025-11-16 00:43:16 [ERROR]: Razorpay error object: [object Object]
+2025-11-16 00:43:16 [ERROR]: Error message: 
+2025-11-16 00:48:33 [ERROR]: Error creating Razorpay order:
+2025-11-16 00:48:33 [ERROR]: [object Object]
+2025-11-16 00:48:33 [ERROR]: Full error (JSON): {
+  "statusCode": 400,
+  "error": {}
+}
+2025-11-16 00:48:33 [ERROR]: Status code: 400
+2025-11-16 00:48:33 [ERROR]: Razorpay error object: [object Object]
+2025-11-16 00:48:33 [ERROR]: Error message: 
+2025-11-16 00:59:43 [ERROR]: 
+=== WALLET ORDER CREATION ERROR ===
+2025-11-16 00:59:43 [ERROR]: Error name: 
+2025-11-16 00:59:43 [ERROR]: Error message: 
+2025-11-16 00:59:43 [ERROR]: Status code: 400
+2025-11-16 00:59:43 [ERROR]: 
+--- Full Error Object ---
+2025-11-16 00:59:43 [ERROR]: Error keys: statusCode,error
+2025-11-16 00:59:43 [ERROR]: Error: [object Object]
+2025-11-16 00:59:43 [ERROR]: 
+--- Razorpay Error Details ---
+2025-11-16 00:59:43 [ERROR]: Error object: [object Object]
+2025-11-16 00:59:43 [ERROR]: Error description: receipt: the length must be no more than 40.
+2025-11-16 00:59:43 [ERROR]: Error reason: input_validation_failed
+2025-11-16 00:59:43 [ERROR]: Error field: 
+2025-11-16 00:59:43 [ERROR]: Error code: BAD_REQUEST_ERROR

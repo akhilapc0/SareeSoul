@@ -7,7 +7,8 @@ const getCategoryList=async(req,res)=>{
         
         const search=(req.query.search?.trim())||'';
 
-        const page= Number(req.query.page) || 1;
+       const page= Number(req.query.page) || 1;
+        
         const limit=5;
         const filter={
             isDeleted:false,
@@ -74,32 +75,30 @@ const loadAddCategory = async (req, res) => {
 const postAddCategory = async (req, res) => {
   
   try {
-    let  { name, description } = req.body;
+    
 
 
-    let  { error } = categoryValidation.validate({ name, description });
+    const  { error,value } = categoryValidation.validate(req.body);
 
     if (error) {
       return res.render("add-category", {
         error: "All fields are required",
-        formData: { name, description },
+        formData: req.body,
       });
     }
 
-    name=name.toLowerCase().trim();
-    description=description.trim();
+    const {name,description}=value;
 
     const existingCategory=await Category.findOne({name,isDeleted:false});
     if(existingCategory){
       return res.render('add-category',{
         error:"Category already exists",
-        formData:{name:req.body.name,description}
+        formData:req.body,
       })
     }
       
-    const category=new Category({name,description});
-    await category.save();
-
+   await Category.create({name,description});
+   
    return  res.redirect("/admin/categories?success=true")
   
     
