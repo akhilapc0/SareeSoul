@@ -1,3 +1,6 @@
+
+import {notFoundHandler,errorHandler} from './middlewares/errorHandler.js';
+
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
@@ -77,7 +80,8 @@ app.use('/admin', adminRoutes);
 
 
 
-console.log("node starting");
+app.use(notFoundHandler);
+app.use(errorHandler)
 
 
 const PORT = process.env.PORT || 3000;

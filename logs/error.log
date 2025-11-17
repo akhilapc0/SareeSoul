@@ -1223,3 +1223,75 @@ Cannot read properties of undefined (reading 'forEach')
 2025-11-16 00:59:43 [ERROR]: Error reason: input_validation_failed
 2025-11-16 00:59:43 [ERROR]: Error field: 
 2025-11-16 00:59:43 [ERROR]: Error code: BAD_REQUEST_ERROR
+2025-11-17 10:56:21 [ERROR]: Error: Not found -/admin/user/assets/imgs/people/avatar4.jpg
+2025-11-17 10:56:21 [ERROR]: Error: Failed to lookup view "error" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at errorHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:22:28)
+    at Layer.handleError (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:116:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:340:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at notFoundHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:5:5)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:342:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at Immediate.next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at Immediate.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:688:15)
+    at process.processImmediate (node:internal/timers:493:21)
+2025-11-17 10:56:30 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-17 10:56:30 [ERROR]: Error: Failed to lookup view "error" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at errorHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:22:28)
+    at Layer.handleError (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:116:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:340:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at notFoundHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:5:5)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:342:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at Immediate.next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at Immediate.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:688:15)
+    at process.processImmediate (node:internal/timers:493:21)
+2025-11-17 10:56:35 [ERROR]: Error: Not found -/admin/users1
+2025-11-17 10:56:35 [ERROR]: Error: Failed to lookup view "error" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at errorHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:22:28)
+    at Layer.handleError (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:116:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:340:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at notFoundHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:5:5)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:342:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at Immediate.next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at Immediate.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:688:15)
+    at process.processImmediate (node:internal/timers:493:21)
+2025-11-17 10:56:53 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-17 10:56:53 [ERROR]: Error: Failed to lookup view "error" in views directories "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\user" or "C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin"
+    at Function.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:909:7)
+    at errorHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:22:28)
+    at Layer.handleError (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:116:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:340:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at notFoundHandler (file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/middlewares/errorHandler.js:5:5)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:342:13)
+    at C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:297:9
+    at processParams (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:582:12)
+    at Immediate.next (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:291:5)
+    at Immediate.<anonymous> (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:688:15)
+    at process.processImmediate (node:internal/timers:493:21)
