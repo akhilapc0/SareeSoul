@@ -23989,3 +23989,20 @@ ReferenceError: notFoundHandler is not defined
     at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-11-22 12:58:14 [ERROR]: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:699:11)
+    at ServerResponse.header (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:684:10)
+    at ServerResponse.contentType (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:514:15)
+    at ServerResponse.send (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:136:14)
+    at done (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:905:10)
+    at renderTick (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:154:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+2025-11-22 13:00:34 [ERROR]: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:699:11)
+    at ServerResponse.header (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:684:10)
+    at ServerResponse.send (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:161:12)
+    at done (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:905:10)
+    at renderTick (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:154:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)

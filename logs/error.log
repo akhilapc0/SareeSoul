@@ -1895,3 +1895,86 @@ totalRevenue is not defined
 2025-11-22 11:16:43 [ERROR]: Error: Not found -/admin/products/69214e3c59bd2cee206d248d/variants/assets/imgs/theme/favicon.svg
 2025-11-22 11:19:14 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
 2025-11-22 11:21:57 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 12:06:12 [ERROR]: Error: Not found -/admin/dashboard/k
+2025-11-22 12:37:06 [ERROR]: Error: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\dashboard.ejs:98
+    96|               <h6>Total Revenue</h6>
+    97|             </div>
+ >> 98|             <div class="stat-value">₹<%= totalRevenue.toLocaleString('en-IN') %></div>
+    99|             <div class="stat-change <%= revenueChange >= 0 ? 'positive' : 'negative' %>">
+    100|               <i class="fas fa-arrow-<%= revenueChange >= 0 ? 'up' : 'down' %>"></i>
+    101|               <%= Math.abs(revenueChange) %>%
+
+totalRevenue is not defined
+2025-11-22 12:40:05 [ERROR]: Error: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\dashboard.ejs:98
+    96|               <h6>Total Revenue</h6>
+    97|             </div>
+ >> 98|             <div class="stat-value">₹<%= totalRevenue.toLocaleString('en-IN') %></div>
+    99|             <div class="stat-change <%= revenueChange >= 0 ? 'positive' : 'negative' %>">
+    100|               <i class="fas fa-arrow-<%= revenueChange >= 0 ? 'up' : 'down' %>"></i>
+    101|               <%= Math.abs(revenueChange) %>%
+
+totalRevenue is not defined
+2025-11-22 12:42:11 [ERROR]: Error: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\dashboard.ejs:98
+    96|               <h6>Total Revenue</h6>
+    97|             </div>
+ >> 98|             <div class="stat-value">₹<%= totalRevenue.toLocaleString('en-IN') %></div>
+    99|             <div class="stat-change <%= revenueChange >= 0 ? 'positive' : 'negative' %>">
+    100|               <i class="fas fa-arrow-<%= revenueChange >= 0 ? 'up' : 'down' %>"></i>
+    101|               <%= Math.abs(revenueChange) %>%
+
+totalRevenue is not defined
+2025-11-22 12:58:14 [ERROR]: Error: Cannot set headers after they are sent to the client
+2025-11-22 13:00:34 [ERROR]: Error: C:\Users\Lenovo\Desktop\P_SAREE SOUL\views\admin\dashboard.ejs:98
+    96|               <h6>Total Revenue</h6>
+    97|             </div>
+ >> 98|             <div class="stat-value">₹<%= totalRevenue.toLocaleString('en-IN') %></div>
+    99|             <div class="stat-change <%= revenueChange >= 0 ? 'positive' : 'negative' %>">
+    100|               <i class="fas fa-arrow-<%= revenueChange >= 0 ? 'up' : 'down' %>"></i>
+    101|               <%= Math.abs(revenueChange) %>%
+
+totalRevenue is not defined
+2025-11-22 13:03:06 [ERROR]: Error: isAdmin is not defined
+2025-11-22 13:06:15 [ERROR]: Error: Cannot read properties of undefined (reading 'isAdmin')
+2025-11-22 13:09:51 [ERROR]: Error: Cannot read properties of undefined (reading 'isAdmin')
+2025-11-22 13:10:46 [ERROR]: Error: Cannot read properties of undefined (reading 'isAdmin')
+2025-11-22 13:10:55 [ERROR]: Error: Cannot read properties of undefined (reading 'isAdmin')
+2025-11-22 13:23:27 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 13:23:42 [ERROR]: Error: Not found -/admin/kjbkbdfibjd
+2025-11-22 14:25:15 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:25:17 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:25:18 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:25:20 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:25:22 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:25:23 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:25:26 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:46:31 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:46:43 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:46:44 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:50:11 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 14:50:11 [ERROR]: Error: Not found -/favicon.ico
+2025-11-22 15:00:00 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:01:57 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:02:59 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:03:49 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:04:43 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:06:46 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:07:42 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 15:09:13 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 17:11:02 [ERROR]: Error: Not found -/images/default-profile.png
+2025-11-22 18:51:32 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 18:51:32 [ERROR]: Error: Not found -/admin/coupons/assets/imgs/theme/favicon.svg
+2025-11-22 18:55:12 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 19:34:12 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 19:35:33 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 19:35:33 [ERROR]: Error: Not found -/admin/products/6921c327d8fababa809cacfd/assets/imgs/theme/favicon.svg
+2025-11-22 19:35:35 [ERROR]: Error: Not found -/admin/products/6921c327d8fababa809cacfd/variants/assets/imgs/theme/favicon.svg
+2025-11-22 19:57:15 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 19:57:23 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 19:58:21 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 19:58:21 [ERROR]: Error: Not found -/admin/products/6921c87fd8fababa809cae18/assets/imgs/theme/favicon.svg
+2025-11-22 19:58:23 [ERROR]: Error: Not found -/admin/products/6921c87fd8fababa809cae18/variants/assets/imgs/theme/favicon.svg
+2025-11-22 20:08:21 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 20:13:12 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 20:27:39 [ERROR]: Error: Not found -/images/default-profile.png
+2025-11-22 20:33:50 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js
+2025-11-22 20:34:32 [ERROR]: Error: Not found -/admin/assets/js/bootstrap.bundle.min.js

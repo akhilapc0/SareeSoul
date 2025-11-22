@@ -8,6 +8,7 @@ import Coupon from '../../models/couponModel.js';
 import Wallet from '../../models/walletModel.js';
 import Product from '../../models/productModel.js';
 import Variant from '../../models/variantModel.js';
+
 import offerController from '../admin/offerController.js';
 
 const getRegisterPage = (req, res) => {

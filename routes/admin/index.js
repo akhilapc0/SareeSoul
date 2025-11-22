@@ -2,7 +2,6 @@ import express from'express';
 
 
 import authRoutes from './authRoutes.js';
-import dashboardRoutes from './dashboardRoutes.js';
 import categoryRoutes from './categoryRoutes.js';
 import brandRoutes from './brandRoutes.js';
 import variantRoutes from './variantRoutes.js';
@@ -11,13 +10,14 @@ import productRoutes from './productRoutes.js'
 import userRoutes from './userRoutes.js';
 import couponRoutes from './couponRoutes.js';
 import offerRoutes from './offerRoutes.js';
+
+import dashboardRoutes from './dashboardRoutes.js';
 import salesReportRoutes from './salesReportRoutes.js';
 
 
 
 const router=express.Router();
 
-router.use('/', dashboardRoutes);
 router.use('/',authRoutes);
 router.use('/',categoryRoutes);
 router.use('/',brandRoutes);
@@ -28,5 +28,6 @@ router.use('/',userRoutes);
 router.use('/coupons',couponRoutes);
 router.use('/offer',offerRoutes);
 router.use('/', salesReportRoutes);
+router.use('/', dashboardRoutes);
 
 export default router;
