@@ -20,7 +20,7 @@ export const errorHandler=(err,req,res,next)=>{
         statusCode,
         message:err.message || 'something went wrong',
         user:req.session?.user || null,
-        filter: req.query?.filter || 'weekly' // ADD THIS LINE
+        filter: req.query?.filter || 'weekly' 
     })
 }
 
