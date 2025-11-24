@@ -4,13 +4,37 @@ import Coupon from '../../models/couponModel.js';
 export const getCoupons =async(req,res)=>{
     try{
 
-        const coupons = await Coupon.find().sort({ createdAt: -1})
-        res.render('coupon-list',{coupons,success:null,error:null})
+        const page=parseInt(req.query.page) || 1;
+        const limit=6;
+        const skip=(page-1)*limit;
+        const totalCoupons=await Coupon.countDocuments();
+        const totalPages=Math.ceil(totalCoupons/limit);
+
+        const coupons = await Coupon.find()
+                .sort({ createdAt: -1})
+                .skip(skip)
+                .limit(limit)
+
+        res.render('coupon-list',{
+            coupons,
+            currentPage:page,
+            totalPages,
+            totalCoupons,
+            success:null,
+            error:null
+        })
     }
     catch(error){
         console.log('Error fetching coupons:',error);
 
-        res.render('coupon-list',{coupons:[],success:null,error:"Error loading coupons"})
+        res.render('coupon-list',{
+            coupons:[],
+            currentPage:1,
+            totalPages:1,
+            totalCoupons:0,
+            success:null,
+            error:"Error loading coupons"
+        })
     }
 }
 

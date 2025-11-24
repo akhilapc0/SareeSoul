@@ -126,6 +126,55 @@
     box-shadow: 0 6px 12px rgba(0, 139, 139, 0.3);
     color: white;
   }
+
+  .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  padding: 10px 16px;
+  border: 2px solid #008B8B;
+  background: white;
+  color: #008B8B;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: #008B8B;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pagination-btn.active {
+  background: #008B8B;
+  color: white;
+}
+
+.pagination-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #999;
+}
+
+.pagination-info {
+  color: #666;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+}
+
 </style>
 
 <body>
@@ -233,6 +282,38 @@
           </div>
         <% }) %>
       <% } %>
+
+
+      <% if (totalPages > 1) { %>
+        <div class="pagination">
+          <% if (currentPage > 1) { %>
+            <a href="?page=<%= currentPage - 1 %>" class="pagination-btn">
+              <i class="bi bi-chevron-left"></i> Previous
+            </a>
+          <% } else { %>
+            <span class="pagination-btn disabled">
+              <i class="bi bi-chevron-left"></i> Previous
+            </span>
+          <% } %>
+
+          <span class="pagination-info">
+            Page <%= currentPage %> of <%= totalPages %>
+          </span>
+
+          <% if (currentPage < totalPages) { %>
+            <a href="?page=<%= currentPage + 1 %>" class="pagination-btn">
+              Next <i class="bi bi-chevron-right"></i>
+            </a>
+          <% } else { %>
+            <span class="pagination-btn disabled">
+              Next <i class="bi bi-chevron-right"></i>
+            </span>
+          <% } %>
+        </div>
+      <% } %>
+    
+
+
     </section>
 
     <%- include('./partials/footer') %>
