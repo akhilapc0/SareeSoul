@@ -25,6 +25,8 @@
                 <input type="file" name="image" class="form-control" accept="image/*" onchange="previewImage(event)">
                 <div class="mt-2">
                   <img id="preview" src="<%= user.image ? user.image : '/images/default-profile.png' %>" 
+
+                  
                        alt="Profile Preview"
                        class="rounded-circle border" width="70" height="70" style="object-fit: cover;">
                 </div>

@@ -2,7 +2,16 @@ import  bcrypt from 'bcryptjs';
 import  User from '../../models/userModel.js';
 
 const getAdminLogin=async(req,res)=>{
-    res.render('admin-login',{error:null})
+
+    if(req.session?.admin?.isAdmin){
+        
+        return res.redirect('/admin/dashboard')
+    }
+    res.render('admin-login',{error:null});
+    
+
+    
+
 }
 
 const postAdminLogin=async(req,res)=>{
@@ -32,16 +41,6 @@ const postAdminLogin=async(req,res)=>{
     }
 }
 
-const getDashboard=async(req,res)=>{
-    try{
-        
-        res.render('dashboard',{admin:req.session.admin})
-    }
-    catch(error){
-        console.error(error);
-        res.send('something went wrong')
-    }
-}
 
 const adminLogout=async(req,res)=>{
     try{
@@ -60,11 +59,22 @@ const adminLogout=async(req,res)=>{
 }
 
 
+const hostLogin= async(req,res)=>{
+  try{
+
+    return res.  redirect('/admin/login')
+  }
+  catch(error){
+console.log(error)
+  }
+}
+
 
 const authController={
     getAdminLogin,
     postAdminLogin,
-    getDashboard,
-    adminLogout
+    
+    adminLogout,
+     hostLogin
 }
 export default authController;

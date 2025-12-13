@@ -8,6 +8,7 @@ import Coupon from '../../models/couponModel.js';
 import Wallet from '../../models/walletModel.js';
 import Product from '../../models/productModel.js';
 import Variant from '../../models/variantModel.js';
+
 import offerController from '../admin/offerController.js';
 
 const getRegisterPage = (req, res) => {
@@ -538,6 +539,15 @@ const getHomePage = async(req, res) => {
 
 };
 
+const hostHome= async(req,res)=>{
+  try{
+
+    return res.  redirect('/home')
+  }
+  catch(error){
+console.log(error)
+  }
+}
 
 const authController = {
   getRegisterPage,
@@ -553,7 +563,8 @@ const authController = {
   postForgotPassword,
   getChangePassword,
   getChangePassword,
-  postChangePassword
+  postChangePassword,
+  hostHome
 };
 
 

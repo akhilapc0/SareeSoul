@@ -1,0 +1,211 @@
+<div class="account-sidebar">
+  <ul class="sidebar-menu">
+    <li>
+      <a href="/profile" class="<%= typeof currentPage !== 'undefined' && currentPage === 'profile' ? 'active' : '' %>">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/wallet" class="<%= typeof currentPage !== 'undefined' && currentPage === 'wallet' ? 'active' : '' %>">
+        <i class="fas fa-wallet"></i>
+        <span>Wallet</span>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/my-address" class="<%= typeof currentPage !== 'undefined' && currentPage === 'address' ? 'active' : '' %>">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Addresses</span>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/my-order" class="<%= typeof currentPage !== 'undefined' && currentPage === 'orders' ? 'active' : '' %>">
+        <i class="fas fa-shopping-bag"></i>
+        <span>Orders</span>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/my-referrals" class="<%= typeof currentPage !== 'undefined' && currentPage === 'referrals' ? 'active' : '' %>">
+        <i class="fas fa-users"></i>
+        <span>Referrals</span>
+        <i class="fas fa-chevron-right arrow"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+.account-sidebar {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.account-sidebar:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 6px;
+}
+
+.sidebar-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  color: #495057;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  border-radius: 8px;
+}
+
+.sidebar-menu a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0;
+  width: 4px;
+  background: #0d6efd;
+  border-radius: 0 4px 4px 0;
+  transition: height 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+  background: #f8f9fa;
+  color: #0d6efd;
+  padding-left: 20px;
+}
+
+.sidebar-menu a:hover::before {
+  height: 60%;
+}
+
+.sidebar-menu a.active {
+  background: linear-gradient(135deg, #e7f3ff 0%, #f0f9ff 100%);
+  color: #0d6efd;
+  font-weight: 600;
+  border: 1px solid #b6d4fe;
+}
+
+.sidebar-menu a.active::before {
+  height: 60%;
+}
+
+.sidebar-menu a i:first-child {
+  min-width: 24px;
+  font-size: 1.1rem;
+  margin-right: 12px;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-menu a:hover i:first-child {
+  transform: scale(1.1);
+}
+
+.sidebar-menu a .arrow {
+  margin-left: auto;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-menu a:hover .arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.sidebar-menu a.active .arrow {
+  opacity: 1;
+}
+
+.sidebar-menu a span {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .account-sidebar {
+    position: relative;
+    top: 0;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .sidebar-menu li {
+    margin-bottom: 0;
+  }
+
+  .sidebar-menu a {
+    flex-direction: column;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 0.875rem;
+  }
+
+  .sidebar-menu a i:first-child {
+    margin-right: 0;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+  }
+
+  .sidebar-menu a .arrow {
+    display: none;
+  }
+
+  .sidebar-menu a:hover {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-menu a {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 14px 16px;
+  }
+
+  .sidebar-menu a i:first-child {
+    margin-right: 12px;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+
+  .sidebar-menu a .arrow {
+    display: block;
+  }
+}
+</style>

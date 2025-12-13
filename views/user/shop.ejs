@@ -331,7 +331,7 @@
   </style>
 </head>
 
-<body>
+<body> 
   <%- include('./partials/header') %>
 
   <div class="container mt-4">
@@ -495,8 +495,7 @@
   </div>
 
   <%- include('./partials/footer') %>
-
-  <script>
+<script>
     function clearAllFilters() {
       document.getElementById('searchInput').value = '';
       document.getElementById('categorySelect').value = '';
@@ -514,7 +513,6 @@
       
       let errorMessage = null;
       
-      // Check if values are valid numbers
       if (document.getElementById('minPrice').value && (isNaN(minPrice) || minPrice < 0)) {
         errorMessage = 'Minimum price must be a valid positive number';
       } else if (document.getElementById('maxPrice').value && (isNaN(maxPrice) || maxPrice < 0)) {
@@ -543,21 +541,17 @@
       const minValue = parseFloat(minPriceInput.value);
       const maxValue = parseFloat(maxPriceInput.value);
       
-      // Remove previous invalid classes
       minPriceInput.classList.remove('is-invalid');
       maxPriceInput.classList.remove('is-invalid');
       
-      // Validate minimum price
       if (minPriceInput.value && (isNaN(minValue) || minValue < 0)) {
         minPriceInput.classList.add('is-invalid');
       }
       
-      // Validate maximum price
       if (maxPriceInput.value && (isNaN(maxValue) || maxValue < 0)) {
         maxPriceInput.classList.add('is-invalid');
       }
       
-      // Check if min > max
       if (!isNaN(minValue) && !isNaN(maxValue) && minValue > maxValue) {
         minPriceInput.classList.add('is-invalid');
         maxPriceInput.classList.add('is-invalid');
@@ -567,120 +561,194 @@
     minPriceInput.addEventListener('input', validatePriceInputs);
     maxPriceInput.addEventListener('input', validatePriceInputs);
 
+
+
     // Wishlist Functionality
-    document.querySelectorAll('.wishlist-heart').forEach(heart => {
-      heart.addEventListener('click', async function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const productId = this.getAttribute('data-product-id');
-        const variantId = this.getAttribute('data-variant-id');
-        const isActive = this.classList.contains('active');
+document.querySelectorAll('.wishlist-heart').forEach(heart => {
+  heart.addEventListener('click', async function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const productId = this.getAttribute('data-product-id');
+    const variantId = this.getAttribute('data-variant-id');
+    const isActive = this.classList.contains('active');
 
-        if (isActive) {
+    if (isActive) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Already in Wishlist',
+        text: 'This item is already in your wishlist',
+        timer: 1500,
+        showConfirmButton: false
+      });
+      return;
+    }
+
+    try {
+      console.log('Sending wishlist request:', { productId, variantId });
+      
+      const response = await fetch('/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json',
+          'Accept':'application/json'
+         },
+        body: JSON.stringify({ productId, variantId })
+      });
+
+      console.log('Response status:', response.status);
+
+      // Check if response is JSON
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        throw new Error('Server returned non-JSON response');
+      }
+
+      const data = await response.json();
+      console.log('Response data:', data);
+
+      if (response.ok) {
+        this.classList.add('active');
+        this.querySelector('i').classList.remove('bi-heart');
+        this.querySelector('i').classList.add('bi-heart-fill');
+        this.setAttribute('title', 'In Wishlist');
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Added to Wishlist!',
+          text: data.message || 'Product added to your wishlist',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      } else {
+        // Handle authentication required
+        if (response.status === 401 || response.status === 403) {
           Swal.fire({
-            icon: 'info',
-            title: 'Already in Wishlist',
-            text: 'This item is already in your wishlist',
-            timer: 1500,
-            showConfirmButton: false
-          });
-          return;
-        }
-
-        try {
-          const response = await fetch('/add', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ productId, variantId })
-          });
-
-          const data = await response.json();
-
-          if (response.ok) {
-            this.classList.add('active');
-            this.querySelector('i').classList.remove('bi-heart');
-            this.querySelector('i').classList.add('bi-heart-fill');
-            this.setAttribute('title', 'In Wishlist');
-
-            Swal.fire({
-              icon: 'success',
-              title: 'Added to Wishlist!',
-              text: data.message || 'Product added to your wishlist',
-              timer: 1500,
-              showConfirmButton: false
-            });
-          } else {
-            if (response.status === 401) {
-              Swal.fire({
-                icon: 'warning',
-                title: 'Login Required',
-                text: 'Please login to add items to wishlist',
-                showCancelButton: true,
-                confirmButtonText: 'Login',
-                cancelButtonText: 'Cancel',
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#6c757d'
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = '/login';
-                }
-              });
-            } else {
-              Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: data.message || 'Failed to add to wishlist'
-              });
+            icon: 'warning',
+            title: 'Login Required',
+            html: '<p style="font-size: 16px; color: #666;">Please login to add items to your wishlist</p>',
+            showCancelButton: true,
+            confirmButtonText: '<i class="fas fa-sign-in-alt"></i> Login Now',
+            cancelButtonText: 'Cancel',
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#6c757d'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = `/login?redirect=/shop`;
             }
-          }
-        } catch (error) {
-          console.error('Error:', error);
+          });
+        } else {
           Swal.fire({
             icon: 'error',
-            title: 'Error',
-            text: 'Failed to add to wishlist. Please try again.'
+            title: 'Oops!',
+            text: data.message || 'Unable to add to wishlist. Please try again.',
+            confirmButtonColor: '#d33'
           });
         }
+      }
+    } catch (error) {
+      console.error('Wishlist Error:', error);
+      
+      // Show more specific error message
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: error.message || 'Failed to add to wishlist. Please try again.',
+        confirmButtonColor: '#d33'
       });
-    });
+    }
+  });
+});
 
-    // Add to Cart
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', async (e) => {
-        if (e.target.disabled) return;
-        
-        const productId = e.target.getAttribute('data-productid');
-        const variantId = e.target.getAttribute('data-variantid');
-        try {
-          const res = await fetch('/cart', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ productId, variantId, quantity: 1 })
-          });
-          const data = await res.json();
 
-          if (res.ok) {
-            Swal.fire({
-              icon: 'success',
-              title: 'Added to Cart!',
-              text: data.message || 'Product successfully added.',
-              showCancelButton: true,
-              confirmButtonText: 'Go to Cart',
-              cancelButtonText: 'Continue Shopping',
-              confirmButtonColor: '#3085d6',
-              cancelButtonColor: '#aaa'
-            }).then((result) => {
-              if (result.isConfirmed) window.location.href = '/cart';
-            });
-          } else {
-            Swal.fire({ icon: 'error', title: 'Error', text: data.message || 'Something went wrong.' });
+
+
+    // Add to Cart Functionality
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', async (e) => {
+    if (e.target.disabled) return;
+    
+    const productId = e.target.getAttribute('data-productid');
+    const variantId = e.target.getAttribute('data-variantid');
+    
+    try {
+      console.log('Sending cart request:', { productId, variantId, quantity: 1 });
+      
+      const res = await fetch('/cart', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json',
+          'Accept':'application/json'
+         },
+        body: JSON.stringify({ productId, variantId, quantity: 1 })
+      });
+      
+      console.log('Cart response status:', res.status);
+
+      // Check if response is JSON
+      const contentType = res.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        console.error('Non-JSON response received');
+        throw new Error('Server returned non-JSON response');
+      }
+
+      const data = await res.json();
+      console.log('Cart response data:', data);
+
+      if (res.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Added to Cart!',
+          text: data.message || 'Product successfully added to your cart',
+          showCancelButton: true,
+          confirmButtonText: '<i class="fas fa-shopping-cart"></i> Go to Cart',
+          cancelButtonText: 'Continue Shopping',
+          confirmButtonColor: '#28a745',
+          cancelButtonColor: '#6c757d'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '/cart';
           }
-        } catch (err) {
-          Swal.fire({ icon: 'error', title: 'Error', text: 'Failed to add to cart. Please try again.' });
+        });
+      } else {
+        // Handle authentication required
+        if (res.status === 401 || res.status === 403) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Login Required',
+            html: '<p style="font-size: 16px; color: #666;">Please login to add items to your cart</p>',
+            showCancelButton: true,
+            confirmButtonText: '<i class="fas fa-sign-in-alt"></i> Login Now',
+            cancelButtonText: 'Cancel',
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#6c757d'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = `/login?redirect=/shop`;
+            }
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Unable to Add',
+            text: data.message || 'Unable to add product to cart. Please try again.',
+            confirmButtonColor: '#d33'
+          });
         }
+      }
+    } catch (err) {
+      console.error('Cart Error:', err);
+      
+      // Show more specific error message
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: err.message || 'Failed to add to cart. Please try again.',
+        confirmButtonColor: '#d33'
       });
-    });
+    }
+  });
+});
+
+
   </script>
 </body>
 </html>

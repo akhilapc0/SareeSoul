@@ -8,10 +8,18 @@ export async function isLoggedIn(req, res, next) {
   
   try{
   const userId=req.session?.user?._id || req.session?.passport?.user;
-  if(!userId) return  res.redirect('/login');
+  if(!userId){
+    if(req.xhr || req.headers.accept?.includes("application/json")){
+      return res.status(401).json({success:false,message:'Login required '})
+    }
+    return  res.redirect('/login');
+  }
 
   const user=await User.findById(userId);
   if(!user){
+    if(req.xhr || req.headers.accept?.includes('application/json')){
+      return res.status(401).json({success:false,message:'User not found'})
+    }
     return res.redirect('/login')
   }
   req.user=user;
@@ -19,6 +27,9 @@ export async function isLoggedIn(req, res, next) {
 }
 catch(error){
   console.error(error);
+  if(req.xhr || req.headers.accept?.includes('application/json')){
+    return res.status(500).json({success:false})
+  }
   res.redirect('/login')
 }
 }
@@ -42,6 +53,10 @@ export async function checkBlock(req, res, next) {
      
       req.session.destroy(err => {
         if (err) console.log('Session destroy error:', err);
+
+        if(req.xhr || req.headers.accept?.includes("application/json")){
+          return res.status(403).json({success:false,message:'User is blocked'})
+        }
         return res.redirect('/login');
       });
       return;
@@ -51,6 +66,9 @@ export async function checkBlock(req, res, next) {
     next();
   } catch (error) {
     console.log(error);
+    if(req.xhr || req.headers.accept?.includes("application/json")){
+      return res.status(500).json({success:false})
+    }
     res.redirect('/login');
   }
 }

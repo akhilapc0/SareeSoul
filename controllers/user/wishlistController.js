@@ -25,9 +25,18 @@ import Wishlist from "../../models/wishlistModel.js";
 export const getWishlist=async(req,res)=>{
     try{
         const userId=req.user._id;
+        const page=parseInt(req.query.page)|| 1;
+        const limit=parseInt(req.query.limit) || 5;
+        const skip=(page-1)*limit;
+
+        const totalItems=await Wishlist.countDocuments({userId});
+
         const wishlistItems= await Wishlist.find({userId})
                             .populate('productId','name salesPrice isBlocked deletedAt')
-                            .populate('variantId','colour images stock isBlocked deletedAt');
+                            .populate('variantId','colour images stock isBlocked deletedAt')
+                            .sort({createdAt:-1})
+                            .skip(skip)
+                            .limit(limit)
 
         const activeItems=wishlistItems.filter(item=>{
           return item.productId &&
@@ -36,8 +45,22 @@ export const getWishlist=async(req,res)=>{
                   !item.productId.deletedAt &&
                   !item.variantId.isBlocked &&
                   !item.variantId.deletedAt;
-        });                    
-        res.status(200).json({wishlist:activeItems})
+        });
+
+        const totalPages=Math.ceil(totalItems/limit);
+
+        res.status(200).json({
+          wishlist:activeItems,
+          pagination:{
+            currentPage:page,
+            totalPages:totalPages,
+            totalItems:totalItems,
+            itemsPerPage:limit,
+            hasNextPage:page < totalPages,
+            hasPrevPage: page > 1
+          }
+
+        })
     }
     catch(error){
         console.error(error); 

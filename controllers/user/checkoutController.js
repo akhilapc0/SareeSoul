@@ -30,7 +30,7 @@ const loadCheckout = async (req, res) => {
       return res.redirect('/cart');
     }
 
-    // Check stock
+    
     for (let item of cart.items) {
       if (!item.variantId || item.variantId.stock < item.quantity) {
         req.flash('error_msg', `Out of stock: ${item.productId.name}`);
@@ -146,7 +146,7 @@ const placeOrder = async (req, res) => {
       }
     }
 
-    // Calculate subtotal WITH OFFER PRICES (FIXED)
+    
     const subtotal = calculateOfferSubtotal(cart.items);
 
     let discount = 0;
@@ -205,7 +205,7 @@ const placeOrder = async (req, res) => {
 
       await wallet.save();
 
-      // Prepare order items with offer prices
+      
       const orderItems = cart.items.map(i => {
         const { offerPrice } = offerController.calculateOfferPrice(
           i.productId,
@@ -215,7 +215,7 @@ const placeOrder = async (req, res) => {
           productId: i.productId._id,
           variantId: i.variantId._id,
           quantity: i.quantity,
-          price: Math.round(offerPrice) // Store offer price, not sales price
+          price: Math.round(offerPrice) 
         };
       });
 
@@ -258,7 +258,12 @@ const placeOrder = async (req, res) => {
     }
 
     if (paymentMethod === 'COD') {
-      // Prepare order items with offer prices
+
+      if(total >1000){
+        req.flash('error_msg','COD is not allowed for orders above Rs 1000');
+        return res.redirect('/checkout')
+      }
+      
       const orderItems = cart.items.map(i => {
         const { offerPrice } = offerController.calculateOfferPrice(
           i.productId,
@@ -268,7 +273,7 @@ const placeOrder = async (req, res) => {
           productId: i.productId._id,
           variantId: i.variantId._id,
           quantity: i.quantity,
-          price: Math.round(offerPrice) // Store offer price, not sales price
+          price: Math.round(offerPrice) 
         };
       });
 
@@ -405,7 +410,7 @@ const verifyPayment = async (req, res) => {
       return res.json({ success: false, message: "Invalid address" });
     }
 
-    // Calculate subtotal WITH OFFER PRICES (FIXED)
+    
     const subtotal = calculateOfferSubtotal(cart.items);
 
     let discount = 0;
@@ -419,7 +424,7 @@ const verifyPayment = async (req, res) => {
 
     const total = subtotal - discount;
 
-    // Prepare order items with offer prices
+    
     const orderItems = cart.items.map((i) => {
       const { offerPrice } = offerController.calculateOfferPrice(
         i.productId,
@@ -429,7 +434,7 @@ const verifyPayment = async (req, res) => {
         productId: i.productId._id,
         variantId: i.variantId._id,
         quantity: i.quantity,
-        price: Math.round(offerPrice) // Store offer price, not sales price
+        price: Math.round(offerPrice) 
       };
     });
 
