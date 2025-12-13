@@ -59,11 +59,22 @@ const adminLogout=async(req,res)=>{
 }
 
 
+const hostLogin= async(req,res)=>{
+  try{
+
+    return res.  redirect('/admin/login')
+  }
+  catch(error){
+console.log(error)
+  }
+}
+
 
 const authController={
     getAdminLogin,
     postAdminLogin,
     
-    adminLogout
+    adminLogout,
+     hostLogin
 }
 export default authController;

@@ -24006,3 +24006,53 @@ Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the cli
     at done (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\response.js:905:10)
     at renderTick (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\express\lib\view.js:154:23)
     at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+2025-11-25 10:47:06 [ERROR]: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/admin/categoryController.js:8:28
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-12-04 16:28:41 [ERROR]: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/authController.js:542:12
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-12-04 16:32:27 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/authRoutes.js:33:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-12-04 16:38:34 [ERROR]: uncaughtException: argument handler is required
+TypeError: argument handler is required
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:221:13)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/authRoutes.js:33:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-12-04 16:43:47 [ERROR]: uncaughtException: new1 is not defined
+ReferenceError: new1 is not defined
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/controllers/user/authController.js:566:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-12-04 16:43:56 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/user/authRoutes.js:33:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+2025-12-12 10:30:08 [ERROR]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (C:\Users\Lenovo\Desktop\P_SAREE SOUL\node_modules\router\index.js:448:19)
+    at file:///C:/Users/Lenovo/Desktop/P_SAREE%20SOUL/routes/admin/authRoutes.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)

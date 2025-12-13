@@ -1,6 +1,11 @@
 import Category from '../../models/categoryModel.js';
 import  {categoryValidation} from '../../validator/schema.js';
 
+import Product from '../../models/productModel.js';
+import variant from '../../models/variantModel.js';
+
+
+
 const getCategoryList=async(req,res)=>{
 
     try{

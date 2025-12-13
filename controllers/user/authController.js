@@ -539,6 +539,15 @@ const getHomePage = async(req, res) => {
 
 };
 
+const hostHome= async(req,res)=>{
+  try{
+
+    return res.  redirect('/home')
+  }
+  catch(error){
+console.log(error)
+  }
+}
 
 const authController = {
   getRegisterPage,
@@ -554,7 +563,8 @@ const authController = {
   postForgotPassword,
   getChangePassword,
   getChangePassword,
-  postChangePassword
+  postChangePassword,
+  hostHome
 };
 
 

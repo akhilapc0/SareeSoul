@@ -30,6 +30,8 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
     res.redirect('/home')
 })
 
+router.get('/',authController.hostHome)
+
 router.get('/home',checkBlock, authController.getHomePage);
 
 export default router;
