@@ -84,7 +84,7 @@ const loadProductList = async (req, res) => {
 
 const loadAddProduct = async (req, res) => {
   try {
-    const categories = await Category.find({});
+    const categories = await Category.find({isDeleted:false});
     const brands = await Brand.find({});
     
 
@@ -102,7 +102,7 @@ const loadAddProduct = async (req, res) => {
 
 const postAddProduct = async (req, res) => {
   try {
-    console.log("djfkdjfk")
+    
     const { error, value } = productValidation.validate(req.body, { abortEarly: false });
     if (error) {
       const errors = {};
@@ -193,7 +193,7 @@ const getEditProduct = async (req, res) => {
 
    
     
-    const categories = await Category.find({});
+    const categories = await Category.find({isDeleted:false});
     const brands = await Brand.find({});
 
     

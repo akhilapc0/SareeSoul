@@ -76,7 +76,7 @@
               </header>
 
               <div class="card-body">
-                <form action="/admin/brands/edit/<%= brand._id %>" method="POST" id="editBrandForm">
+                <form action="/admin/brands/edit/<%= brand._id %>" method="POST" id="editBrandForm" data-brandid="<%= brand._id %>" data-currentimage="<%= brand.image %>"   >
                   <div class="row">
                     <div class="col-lg-8">
                       <!-- Brand Name Field -->
@@ -156,108 +156,11 @@
       </main>
 
       <script src="/admin/assets/js/vendors/jquery-3.6.0.min.js"></script>
-      <script src="/admin/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/admin/assets/js/vendors/bootstrap.bundle.min.js"></script>
       <script src="/admin/assets/js/main.js"></script>
 
-      <script>
-        document.getElementById("brandImage").addEventListener("change", function () {
-          const file = this.files[0];
-          const preview = document.getElementById("previewImage");
-          const previewBox=document.getElementById('previewBox')
-
-          if (file) {
-            previewBox.style.display='block';
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              preview.src = e.target.result; // new image preview
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-      </script>
-
-      <!-- Frontend Validation -->
-      <script>
-
-        document.getElementById("editBrandForm").addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const formData = new FormData();
-          const name = document.getElementById("name").value.trim();
-          formData.append('name', name)
-          const description = document.getElementById("description").value.trim();
-          formData.append('description', description);
-          const brandImage = document.getElementById('brandImage').files[0];
-          formData.append('brandImage', brandImage);
-          const brandId = "<%= brand._id %>";
-          const currentImage = "<%= brand.image %>"
-          
-          const submitBtn=document.getElementById('submitBtn');
-          let isValid = true;
-
-          // Clear previous errors
-          document.getElementById("nameError").textContent = "";
-          document.getElementById("descError").textContent = "";
-          document.getElementById("backendError").textContent = "";
-
-          if (name.length < 3) {
-            document.getElementById("nameError").textContent = "Brand name should have 3 characters";
-            isValid = false;
-          }
-
-          if (description.length < 10) {
-            document.getElementById("descError").textContent = "Description have atleast 10 characters";
-            isValid = false;
-          }
-          if (!brandImage && !currentImage) {
-            document.getElementById('imageError').textContent = "Image is required";
-            isValid = false;
-          }
-
-          if (!isValid) return;
-          
-          try {
-            submitBtn.disabled=true;
-            const res = await fetch(`/admin/brands/edit/${brandId}`, {
-              method: "POST",
-
-              body: formData,
-            })
-            console.log(res)
-
-            const data = await res.json();
-            if (!res.ok) {
-              document.getElementById('backendError').textContent = data.error || "something went wrong";
-              return;
-            }
-            Swal.fire({
-              icon: "success",
-              title: "success",
-              text: data.message || "Brand edited successfully",
-              confirmButtonColor: "#3085d6"
-            }).then(() => {
-              document.getElementById('editBrandForm').reset();
-              window.location.reload()
-            });
-          }
-          catch (error) {
-            document.getElementById("backendError").textContent = "server error try again " + error;
-          }
-          finally{
-            submitBtn.disabled=false;
-          }
-
-        });
-      </script>
-
-<script>
-
-  const brandImage = document.getElementById('brandImage').files[0];
-  const previewBox = document.getElementById("previewBox");
-
-if(!brandImage){
-  previewBox.style.display='none'; 
-}
-</script>
+      
+      <script src="/admin/assets/js/edit-brand.js"></script>
 
 
   </body>

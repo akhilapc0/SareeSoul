@@ -113,7 +113,11 @@
               </header>
 
               <div class="card-body">
-                <form id="editVariantForm" enctype="multipart/form-data">
+                <form id="editVariantForm" enctype="multipart/form-data"
+                data-productid="<%= product._id %>"
+                data-variantid="<%= variant._id %>"
+                data-maximages="<%= maxImageSize %>"
+                >
                   <div class="row">
                     <div class="col-lg-8">
 
@@ -145,7 +149,8 @@
                             <div style="position:relative;">
                               <img src="<%= img %>" class="img-thumb" />
                               <input type="hidden" name="existingImages" value="<%= img %>" />
-                              <button type="button" class="remove-btn" onclick="removeExisting(this)">×</button>
+                              <button type="button" class="remove-btn remove-existing">×</button>
+
                             </div>
                             <% }) %>
                         </div>
@@ -196,142 +201,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-      <script>
-        const MAX_IMAGES = <%=maxImageSize%>;
-        let newFiles = [];
-        let cropper;
+      <script src="/admin/assets/js/edit-variant.js"></script>
 
-        // Remove existing image
-        function removeExisting(btn) {
-          btn.parentElement.remove();
-        }
-
-        const imagesInput = document.getElementById("images");
-        const newPreview = document.getElementById("newImagePreview");
-
-        imagesInput.addEventListener("change", (e) => {
-          const file = e.target.files[0];
-          if (!file) return;
-
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            document.getElementById("cropperImage").src = event.target.result;
-            document.getElementById("cropperModal").style.display = "flex";
-
-            if (cropper) cropper.destroy();
-            cropper = new Cropper(document.getElementById("cropperImage"), {
-              aspectRatio: 1,
-              viewMode: 1
-            });
-          };
-          reader.readAsDataURL(file);
-
-          imagesInput.value = ""; 
-        });
-
-        function closeCropper() {
-          document.getElementById("cropperModal").style.display = "none";
-          if (cropper) cropper.destroy();
-        }
-
-        document.getElementById("cropConfirm").addEventListener("click", () => {
-          cropper.getCroppedCanvas({ width: 500, height: 500 }).toBlob((blob) => {
-            const croppedFile = new File([blob], "cropped_" + Date.now() + ".jpg", { type: "image/jpeg" });
-
-            // Check total images count
-            const keptImages = Array.from(document.querySelectorAll("input[name='existingImages']")).map(i => i.value);
-            if (keptImages.length + newFiles.length + 1 > MAX_IMAGES) {
-              alert(`Max ${MAX_IMAGES}images allowed`);
-              closeCropper();
-              return;
-            }
-
-            newFiles.push(croppedFile);
-            previewNewImage(croppedFile);
-          });
-          closeCropper();
-        });
-
-        function previewNewImage(file) {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const div = document.createElement("div");
-            div.style.position = "relative";
-
-            const img = document.createElement("img");
-            img.src = e.target.result;
-            img.className = "img-thumb";
-
-            const removeBtn = document.createElement("button");
-            removeBtn.className = "remove-btn";
-            removeBtn.textContent = "×";
-            removeBtn.onclick = () => {
-              newFiles = newFiles.filter(f => f !== file);
-              div.remove();
-            };
-
-            div.appendChild(img);
-            div.appendChild(removeBtn);
-            newPreview.appendChild(div);
-          };
-          reader.readAsDataURL(file);
-        }
-
-        // Submit handler
-        document.getElementById("editVariantForm").addEventListener("submit", async (e) => {
-          e.preventDefault();
-
-          const colour = document.getElementById("colour").value.trim();
-          const stock = document.getElementById("stock").value.trim();
-          const keptImages = Array.from(document.querySelectorAll("input[name='existingImages']")).map(input => input.value);
-
-          document.getElementById("colourError").textContent = "";
-          document.getElementById("stockError").textContent = "";
-          document.getElementById("imagesError").textContent = "";
-          document.getElementById("backendError").textContent = "";
-
-          let totalCount = keptImages.length + newFiles.length;
-          if (totalCount === 0) {
-            document.getElementById("imagesError").textContent = "At least one image is required";
-            return;
-          }
-          if (totalCount > MAX_IMAGES) {
-            document.getElementById("imagesError").textContent = `Max ${MAX_IMAGES} images allowed`;
-            return;
-          }
-
-          const formData = new FormData();
-          formData.append("colour", colour);
-          formData.append("stock", stock);
-          keptImages.forEach(url => formData.append("existingImages", url));
-          newFiles.forEach(file => formData.append("images", file));
-
-        
-
-          try {
-            const res = await fetch("/admin/products/<%= product._id %>/variants/edit/<%= variant._id %>", {
-              method: "POST",
-              body: formData
-            });
-            const data = await res.json();
-
-            if (!res.ok) {
-              document.getElementById("backendError").textContent = data.message || "Something went wrong";
-              return;
-            }
-
-            Swal.fire({ icon: "success", title: "Updated!", text: data.message })
-              .then(() => { window.location.href = "/admin/products/<%= product._id %>/variants"; });
-
-          } catch (err) {
-            document.getElementById("backendError").textContent = "Server error: " + err;
-          }
-        });
-
-  
-
-
-      </script>
   </body>
 
 </html>
