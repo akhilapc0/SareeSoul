@@ -60,27 +60,23 @@ The project is developed using EJS for the frontend, Node.js and Express.js for 
 1. Clone the repository
    ```bash
    git clone https://github.com/akhilapc0/SareeSoul.git
-   
 2.Navigate to the project directory
 
-cd SareeSoul
-
-
+    cd SareeSoul
+  
 3.Install dependencies
 
-npm install
-
-
+    npm install
+  
 4.Create a .env file and add the required environment variables
 
 5.Start the server
 
-npm start
-
-
+    npm start
+  
 6.Open the application in your browser
 
-http://localhost:3000
+    http://localhost:3000
 
 🌍 Deployment
 
@@ -93,6 +89,8 @@ This project was built to gain real-world experience in developing a complete e-
 
 👩‍💻 Author
 
-Akhila P.C
-B.Tech in Computer Science
-MERN Stack Developer
+ Akhila P.C
+ 
+ B.Tech in Computer Science
+
+ MERN Stack Developer
